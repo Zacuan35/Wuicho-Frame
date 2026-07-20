@@ -3572,7 +3572,8 @@ main {
   color: var(--color-canvas);
 }
 .btn-primary:hover {
-  filter: brightness(0.92);
+  background-color: color-mix(in srgb, var(--brand-primary) 88%, black);
+  border-color: color-mix(in srgb, var(--brand-primary) 88%, black);
 }
 
 /* # Btn-secondary
@@ -3615,7 +3616,8 @@ main {
   color: var(--color-canvas);
 }
 .btn-success:hover {
-  filter: brightness(0.92);
+  background-color: color-mix(in srgb, #22C55E 88%, black);
+  border-color: color-mix(in srgb, #22C55E 88%, black);
 }
 
 /* # Btn-warning
@@ -3626,7 +3628,8 @@ main {
   color: var(--color-canvas);
 }
 .btn-warning:hover {
-  filter: brightness(0.92);
+  background-color: color-mix(in srgb, #F59E0B 88%, black);
+  border-color: color-mix(in srgb, #F59E0B 88%, black);
 }
 
 /* # Btn-danger
@@ -3637,7 +3640,8 @@ main {
   color: var(--color-canvas);
 }
 .btn-danger:hover {
-  filter: brightness(0.92);
+  background-color: color-mix(in srgb, #F43F5E 88%, black);
+  border-color: color-mix(in srgb, #F43F5E 88%, black);
 }
 
 /* =====================

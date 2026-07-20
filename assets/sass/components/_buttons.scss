@@ -58,7 +58,10 @@
   border-color: var(--brand-primary);
   color: var(--color-canvas);
 
-  &:hover { filter: brightness(0.92); }
+  &:hover {
+    background-color: color-mix(in srgb, var(--brand-primary) 88%, black);
+    border-color: color-mix(in srgb, var(--brand-primary) 88%, black);
+  }
 }
 
 /* # Btn-secondary
@@ -97,7 +100,10 @@
   border-color: $success-color;
   color: var(--color-canvas);
 
-  &:hover { filter: brightness(0.92); }
+  &:hover {
+    background-color: color-mix(in srgb, $success-color 88%, black);
+    border-color: color-mix(in srgb, $success-color 88%, black);
+  }
 }
 
 /* # Btn-warning
@@ -107,7 +113,10 @@
   border-color: $warning-color;
   color: var(--color-canvas);
 
-  &:hover { filter: brightness(0.92); }
+  &:hover {
+    background-color: color-mix(in srgb, $warning-color 88%, black);
+    border-color: color-mix(in srgb, $warning-color 88%, black);
+  }
 }
 
 /* # Btn-danger
@@ -117,7 +126,10 @@
   border-color: $danger-color;
   color: var(--color-canvas);
 
-  &:hover { filter: brightness(0.92); }
+  &:hover {
+    background-color: color-mix(in srgb, $danger-color 88%, black);
+    border-color: color-mix(in srgb, $danger-color 88%, black);
+  }
 }
 
 /* =====================
