@@ -205,7 +205,7 @@ b {
 /* # Labes
 ----------------------------------------------- */
 .label { color: $white-color; }
-.label-primary { background-color: var(--color-border-strong); }
+.label-primary { background-color: var(--brand-primary); }
 .label-danger { background-color: $danger-color; }
 .label-success { background-color: $success-color; }
-.label-info { background-color: var(--brand-primary); }
+.label-info { background-color: var(--color-info-text); }
