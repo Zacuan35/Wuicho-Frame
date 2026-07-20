@@ -74,7 +74,7 @@
   .navbar-link:hover {background-color: var(--color-border);}
 
   &.active {
-    color: var(--color-accent); 
+    color: var(--brand-primary); 
     font-weight: bold;
   }
 }
@@ -194,7 +194,7 @@
     top: 100%;
     left: 0;
     min-width: 200px;
-    background-color: var(--color-control);
+    background-color: var(--color-border-strong);
     a {
       color: var(--color-surface);
       &:hover {background-color: var(--color-border-strong);}

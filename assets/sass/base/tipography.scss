@@ -9,19 +9,19 @@
 
 /* # Variables
 ----------------------------------------------- */
-$primary-font: "Montserrat", serif;
-$secondary-font: "Roboto", serif;
+/* var(--font-display) / var(--font-body) ahora viven en theme/theme.scss
+   (junto con --font-display / --font-body) */
 
 /* # Tipography
 ----------------------------------------------- */
 body, form, label, input, textarea, select, a, .btn{
-  font-family:$secondary-font;
+  font-family:var(--font-body);
   font-size: 1rem; /*font-size:16px;*/
   line-height: 1.1875rem;
   font-weight: 300;  
 }
 p,ul,ol {
-  font-family:$secondary-font;
+  font-family:var(--font-body);
   font-size: 1rem;  
   font-weight: 300;  
   padding: 0;
@@ -38,7 +38,7 @@ p.lead{
   font-weight: 300;
 }
 th,td {
-  font-family:$secondary-font;
+  font-family:var(--font-body);
   font-weight: 300;  
   font-size:1rem;  
 }
@@ -46,10 +46,10 @@ th,td {
 a{font-size:1rem;}
 
 small, .small {  
-  font-family:$secondary-font;
+  font-family:var(--font-body);
   font-weight: normal;
   line-height: 1;
-  //color: var(--color-control);
+  //color: var(--color-border-strong);
   font-size: 80%;  
 }
 
@@ -58,7 +58,7 @@ b,strong {font-weight: bold;}
 /*Títulos*/
 h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6 {
-  font-family:$primary-font;
+  font-family:var(--font-display);
   font-weight: 700;
   //margin: 0 0 0.25rem 0;
   margin: 0;
@@ -76,7 +76,7 @@ h4, .h4 { font-size: 1.1rem; }
 h5, .h5 { font-size: 1rem; }
 h6, .h6 { font-size: 0.9rem; }
 h2.teaser {
-  font-family:$secondary-font;
+  font-family:var(--font-body);
   font-size: 2rem;
   font-weight: 700;
   font-style: italic;

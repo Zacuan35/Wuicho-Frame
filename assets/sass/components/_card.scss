@@ -66,12 +66,23 @@
     h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
     p{color:var(--color-surface);}
     i {color: var(--color-surface);}
-    border-color:$warning-color;    
+    border-color:$warning-color;
     .card-header,
     .card-footer {
       border-color: $warning-color;
-    }    
-  }    
+    }
+  }
+  &.card-info {
+    background-color:color-mix(in srgb, var(--brand-primary) 90%, $white-color);
+    h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
+    p{color:var(--color-surface);}
+    i {color: var(--color-surface);}
+    border-color:var(--brand-primary);
+    .card-header,
+    .card-footer {
+      border-color: var(--brand-primary);
+    }
+  }
 }
 
 //Si la tarjeta tiene enlace
@@ -89,5 +100,8 @@ a.card {
   }
   &.card-warning {
     &:hover{background-color: lighten($warning-color, 10%);}
+  }
+  &.card-info {
+    &:hover{background-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);}
   }
 }

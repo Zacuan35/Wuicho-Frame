@@ -21,12 +21,12 @@
 
     &.danger i,
     &.danger p {
-      color: var(--color-danger);
+      color: var(--color-danger-text);
     }
 
     &.warning i,
     &.warning p{
-      color: var(--color-warning);
+      color: var(--color-warning-text);
     }
 
     &.highlight i,
@@ -36,7 +36,7 @@
 
     &.success i,
     &.success p     {
-      color: var(--color-success);
+      color: var(--color-success-text);
     }
   }
 
@@ -66,12 +66,12 @@
 
     i {
       transition: color 0.2s ease;
-      color: var(--color-control);
+      color: var(--color-border-strong);
       font-size: 2rem;
     }
 
     p {
-      color: var(--color-control);
+      color: var(--color-border-strong);
       transition: color 0.2s ease;
       font-weight: bold;
       font-size: 90%;
@@ -82,14 +82,14 @@
     &.danger:hover p,
     &.danger.active i,
     &.danger.active p {
-      color: var(--color-danger);
+      color: var(--color-danger-text);
     }
 
     &.warning:hover i,
     &.warning:hover p,
     &.warning.active i,
     &.warning.active p{
-      color: var(--color-warning);
+      color: var(--color-warning-text);
     }
 
     &.highlight:hover i,
@@ -103,7 +103,7 @@
     &.success:hover p,
     &.success.active i,
     &.success.active p     {
-      color: var(--color-success);
+      color: var(--color-success-text);
     }
   }
 }
@@ -219,7 +219,7 @@ canvas {
       background: $success-color;
       color: #fff;
     }
-    h6 {color: var(--color-success);}
+    h6 {color: var(--color-success-text);}
     p {color: var(--color-text-primary);}
   }
 
@@ -231,7 +231,7 @@ canvas {
       transform: scale(1.05);
     }
 
-    h6 {color: var(--color-success);}
+    h6 {color: var(--color-success-text);}
     p {color: var(--color-text-primary);}
   }
 }
@@ -278,7 +278,7 @@ canvas {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: $primary-font;
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: 2rem;
     color: var(--brand-primary);    
@@ -319,11 +319,11 @@ canvas {
 # Tutorial-link
 ===================== */
 .tutorial_link{
-  font-family:$primary-font;
+  font-family:var(--font-display);
   font-size:1rem;
   font-weight: 700;
-  color:var(--color-control);
-  i{color:var(--color-control);}
+  color:var(--color-border-strong);
+  i{color:var(--color-border-strong);}
   &:hover{
     color: var(--brand-primary);
     i{color:var(--brand-primary);}

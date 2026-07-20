@@ -13,7 +13,7 @@ table {
 }
 
 thead {
-  background-color: var(--color-accent);
+  background-color: var(--brand-primary);
   color: $white-color;
 }
 
@@ -41,8 +41,8 @@ td, th {
 ----------------------------------------------- */
 tr.new {
   background-color: var(--color-success-bg) !important;
-  color: var(--color-success);
-  p{color: var(--color-success);}
+  color: var(--color-success-text);
+  p{color: var(--color-success-text);}
   /*
   td small{
     color:$success-color;

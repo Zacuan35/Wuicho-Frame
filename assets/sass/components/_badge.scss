@@ -61,20 +61,26 @@
 ===================== */
 .badge-success {
     background-color: var(--color-success-bg);
-    border-color: var(--color-success);
-    color: var(--color-success);
+    border-color: var(--color-success-text);
+    color: var(--color-success-text);
 }
 
 .badge-warning {
     background-color: var(--color-warning-bg);
-    border-color: var(--color-warning);
-    color: var(--color-warning);
+    border-color: var(--color-warning-text);
+    color: var(--color-warning-text);
 }
 
 .badge-danger {
     background-color: var(--color-danger-bg);
-    border-color: var(--color-danger);
-    color: var(--color-danger);
+    border-color: var(--color-danger-text);
+    color: var(--color-danger-text);
+}
+
+.badge-info {
+    background-color: var(--color-info-bg);
+    border-color: var(--color-info-text);
+    color: var(--color-info-text);
 }
 
 /* =====================
