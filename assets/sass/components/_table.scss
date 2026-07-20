@@ -13,36 +13,36 @@ table {
 }
 
 thead {
-  background-color: var(--sixty-color);
+  background-color: var(--color-accent);
   color: $white-color;
 }
 
 tbody tr{
-  background-color:var(--primary-color); 
+  background-color:var(--color-surface); 
   cursor: pointer;
 
   &:nth-child(even) {
-    background-color: var(--tertiary-color); 
+    background-color: var(--color-border); 
   }
   
   &:hover {
-    background-color: var(--fourth-color); 
+    background-color: var(--color-border-strong); 
   }  
 }
 
 td, th {
   padding: 8px;
   font-size: 0.750rem; 
-  border: 1px solid var(--tertiary-color);
+  border: 1px solid var(--color-border);
   text-align: left;
 }
 
 /* # Mensaje de celda agregada
 ----------------------------------------------- */
 tr.new {
-  background-color:lighten($success-color, 40%) !important;
-  color: $success-color;
-  p{color: $success-color;}
+  background-color: var(--color-success-bg) !important;
+  color: var(--color-success);
+  p{color: var(--color-success);}
   /*
   td small{
     color:$success-color;

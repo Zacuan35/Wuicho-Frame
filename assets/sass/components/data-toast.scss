@@ -13,7 +13,7 @@
   max-width: 320px;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
-  color: var(--primary-color);
+  color: var(--color-surface);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,12 +32,12 @@
 
 .toast.success {background-color: $success-color;}
 .toast.error {background-color: $danger-color;}
-.toast.info {background-color: var(--highlight-color);}
+.toast.info {background-color: var(--brand-primary);}
 
 .toast button {
   background: none;
   border: none;
-  color: var(--primary-color);
+  color: var(--color-surface);
   font-size: 1rem;
   cursor: pointer;
 }

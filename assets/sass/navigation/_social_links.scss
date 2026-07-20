@@ -19,7 +19,7 @@ ul.social-links {
   background-color:transparent;
 
   i{
-    color: var(--highlight-color);
+    color: var(--brand-primary);
   }
 
   &:hover{    
@@ -42,7 +42,7 @@ ul.social-links {
 .bg-darker {
   .social-links a{
     i{
-      color: var(--fifth-color);
+      color: var(--color-control);
     }
   }  
 }

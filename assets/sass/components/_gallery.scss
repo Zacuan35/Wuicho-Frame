@@ -3,9 +3,9 @@
 ===================== */
 .gallery-section {
   .gallery-body {
-    background-color: var(--primary-color);
+    background-color: var(--color-surface);
     padding: 1rem 0.5rem;
-    border: 1px solid var(--tertiary-color);
+    border: 1px solid var(--color-border);
     border-radius: 0.5rem 0.5rem 0 0;
     height: auto;
 
@@ -13,7 +13,7 @@
 
     #imagenDestacada {
       border-radius: 0.5rem;
-      border: 3px solid $success-color;
+      border: 3px solid var(--color-success);
       margin-bottom: 1rem;
     }
 
@@ -28,7 +28,7 @@
             position: absolute;
             top: 6px;
             right: 6px;
-            background-color: var(--primary-color);
+            background-color: var(--color-surface);
             border-radius: 50%;
             padding: 3px;  
             display: flex;
@@ -40,14 +40,14 @@
           }
 
           .thumbnail-icon i {
-            color: var(--secondary-color); 
+            color: var(--color-canvas); 
             font-size: 14px; 
           }
 
           /* Cambio cuando la miniatura está seleccionada */
           &.selected .thumbnail-icon i {
             content: '\f00c'; /* Ícono de check */
-            color: $success-color; 
+            color: var(--color-success); 
           }
 
           img {
@@ -65,9 +65,9 @@
   }
 
   .gallery-footer {
-    background-color: var(--secondary-color);
+    background-color: var(--color-canvas);
     padding: 1rem 0.5rem;
-    border: 1px solid var(--tertiary-color);
+    border: 1px solid var(--color-border);
     border-radius: 0 0 0.5rem 0.5rem;
     margin-top: -1px;
 
@@ -79,7 +79,7 @@
 /* # Thumbnail seleccionado
 ----------------------------------------------- */
 .thumbnail.selected img {
-  border: 3px solid $success-color; 
+  border: 3px solid var(--color-success); 
   opacity: 1 !important; 
 }
 

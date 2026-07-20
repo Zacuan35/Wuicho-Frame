@@ -80,32 +80,32 @@
 /* # Colours
 ----------------------------------------------- */
 .sidebar a {
-  color: var(--primary-text-color);
+  color: var(--color-text-primary);
   &:hover {
    text-decoration: none;
   }
 }
 
 .sidebar-menu > li > a > i {
-	color: var(--highlight-color);
+	color: var(--brand-primary);
 }
 .sidebar-menu > li > a:hover,
 .sidebar-menu > li.active > a {
-  background: var(--secondary-color);
-  color: var(--highlight-color);
-  border-left-color: var(--highlight-color);
+  background: var(--color-canvas);
+  color: var(--brand-primary);
+  border-left-color: var(--brand-primary);
 
-  i{color: var(--highlight-color);}
+  i{color: var(--brand-primary);}
 }
 .sidebar-menu > li > .treeview-menu {
-  background: var(--secondary-color);
+  background: var(--color-canvas);
 }
 
 .treeview-menu > li > a {
-  color: var(--primary-text-color);
+  color: var(--color-text-primary);
 }
 .treeview-menu > li.active > a,
 .treeview-menu > li > a:hover {
-  color: var(--highlight-color);
+  color: var(--brand-primary);
   font-weight: bold;
 }

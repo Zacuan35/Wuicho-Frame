@@ -177,21 +177,21 @@
 Colour theme
 ========================== */
  .wrapper {
-  background: var(--sixty-color);
+  background: var(--color-accent);
 }
 
 /* ===========
  Sidebar
  ========== */
 .main-sidebar {
-  background-color: var(--primary-color);
+  background-color: var(--color-surface);
 }
 
 /* # Sidebar-footer
 ----------------------------------------------- */
 .sidebar-footer{
-  background-color: var(--primary-text-color);
-  color:var(--primary-color);
+  background-color: var(--color-text-primary);
+  color:var(--color-surface);
 }
 
 /* ===========
@@ -199,7 +199,7 @@ Colour theme
  ========== */
  .content-wrapper {
   /*background-color: #ecf0f5;*/
-  background-color: var(--secondary-color);
+  background-color: var(--color-canvas);
 }
 
 /* ===========
@@ -207,8 +207,8 @@ Colour theme
  ========== */
  /*
  .dashboard-footer {
-    background: var(--primary-color);
-    color: var(--seventy-color);
+    background: var(--color-surface);
+    color: var(--color-accent-strong);
     padding: 15px;
     border-top: 1px solid #eee;    
   }

@@ -37,9 +37,9 @@
   align-items: center;
 
   padding: 1rem;
-  border: 1px solid var(--tertiary-color);
+  border: 1px solid var(--color-border);
   border-radius: 0.5rem;
-  background-color: var(--primary-color);
+  background-color: var(--color-surface);
 
   transition: all 0.2s ease;
 
@@ -52,8 +52,8 @@
 ===================== */
 
 .tg-head .tg-row {
-  background-color: var(--tertiary-color);
-  color: var(--highlight-color);
+  background-color: var(--color-border);
+  color: var(--brand-primary);
   font-weight: bold;
 }
 
@@ -62,11 +62,11 @@
 ===================== */
 
 .tg-body .tg-row:nth-child(even) {
-  background-color: var(--secondary-color);
+  background-color: var(--color-canvas);
 }
 
 .tg-body .tg-row:hover {
-  background-color: var(--tertiary-color);
+  background-color: var(--color-border);
 }
 
 /* =====================
@@ -131,19 +131,19 @@
 ===================== */
 
 .tg-row.success {
-  background-color: rgba($success-color, 0.1);
-  border-color: $success-color;
+  background-color: var(--color-success-bg);
+  border-color: var(--color-success);
 }
 
 .tg-row.warning {
-  background-color: rgba($warning-color, 0.1);
-  border-color: $warning-color;
+  background-color: var(--color-warning-bg);
+  border-color: var(--color-warning);
 }
 
 .tg-row.success .tg-cell {
-  color: $success-color;
+  color: var(--color-success);
 }
 
 .tg-row.warning .tg-cell {
-  color: $warning-color;
+  color: var(--color-warning);
 }

@@ -3,36 +3,54 @@
 ===================== */
 /* Light theme*/
 :root {
-  --primary-color: #ffffff;
-  --secondary-color: #ebf5f8;
-  --tertiary-color: #cedaf8;
-  --fourth-color: #A3B9F1;
-  --fifth-color: #7A99E1;
-  --sixty-color: #528BD7;
-  --seventy-color: #1A6AB4;
-  --primary-text-color: #30363d;
-  --highlight-color: #1464C3;
+  --color-surface: #ffffff;
+  --color-canvas: #ebf5f8;
+  --color-border: #cedaf8;
+  --color-border-strong: #A3B9F1;
+  --color-control: #7A99E1;
+  --color-accent: #528BD7;
+  --color-accent-strong: #1A6AB4;
+  --color-text-primary: #30363d;
+  --color-text-muted: #6B7280;
+  --brand-primary: #1464C3;
+
+  /* Estados: texto/borde (contraste ajustado para fondos claros) */
+  --color-success: #15803D;
+  --color-success-bg: #DCFCE7;
+  --color-warning: #B45309;
+  --color-warning-bg: #FEF3C7;
+  --color-danger: #B91C1C;
+  --color-danger-bg: #FEE2E2;
 }
 
 /* Dark theme */
 body.dark-mode {
-  --primary-color: #0D0F12;   
-  --secondary-color: #1C2026; 
-  --tertiary-color: #21262C;
-  --fourth-color: #262C33;
-  --fifth-color: #2B3138;
-  --sixty-color: #313740;
-  --seventy-color: #383F48;
-  --primary-text-color: #cecece;
-  --highlight-color: #3891ff;
+  --color-surface: #0D0F12;
+  --color-canvas: #1C2026;
+  --color-border: #21262C;
+  --color-border-strong: #262C33;
+  --color-control: #2B3138;
+  --color-accent: #313740;
+  --color-accent-strong: #383F48;
+  --color-text-primary: #cecece;
+  --color-text-muted: #9CA3AF;
+  --brand-primary: #3891ff;
+
+  /* Estados: versión clara/vívida sobre fondos oscuros */
+  --color-success: #4ADE80;
+  --color-success-bg: rgba(74, 222, 128, 0.12);
+  --color-warning: #FBBF24;
+  --color-warning-bg: rgba(251, 191, 36, 0.12);
+  --color-danger: #F87171;
+  --color-danger-bg: rgba(248, 113, 113, 0.12);
 }
 
-/*Fixed colors*/
+/*Fixed colors (iguales en ambos temas, para fondos sólidos: botones, banners, labels)*/
 $white-color:#ffffff;
 $gray-color:#5c5c5c;
 $dark-color:#000000;
 $success-color:#16A34A;
-$warning-color:#db9a17;
+$warning-color:#D97706;
 $danger-color:#DC2626;
 
 /* =================
@@ -43,93 +61,93 @@ $danger-color:#DC2626;
 /*Background color*/
 body::-webkit-scrollbar {
   width: 10px;
-  background-color: var(--primary-color);
+  background-color: var(--color-surface);
 }
 
 /*Bar color*/
 body::-webkit-scrollbar-thumb {
-  background: var(--fifth-color);
+  background: var(--color-control);
 }
 
 body {
-  background-color: var(--secondary-color);
-  color: var(--primary-text-color);
-  
+  background-color: var(--color-canvas);
+  color: var(--color-text-primary);
+
 }
 
 /* # General colors
 ----------------------------------------------- */
 p, ul, ol, small {
-  color: var(--primary-text-color);
+  color: var(--color-text-primary);
   &.small{
-    color: $gray-color;
+    color: var(--color-text-muted);
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--highlight-color);
+  color: var(--brand-primary);
   small{
-    color: var(--highlight-color);
+    color: var(--brand-primary);
   }
 }
 
 a {
-  color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);
-  
+  color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
+
   //Estados de botón
   &:hover, &:active, &:focus {
-    color: var(--highlight-color);
+    color: var(--brand-primary);
   }
 }
 
 b {
-  color: var(--highlight-color);
+  color: var(--brand-primary);
 }
 
 /* # Text-color
 ----------------------------------------------- */
-.text-inverted { color: var(--primary-color); }
-.text-success { color: $success-color; }
-.text-danger { color: $danger-color; }
-.text-warning { color: $warning-color; }
+.text-inverted { color: var(--color-surface); }
+.text-success { color: var(--color-success); }
+.text-danger { color: var(--color-danger); }
+.text-warning { color: var(--color-warning); }
 
 /* # StatusTitle
 ----------------------------------------------- */
 .StatusTitle-Success{
-  i,h1,h2,h3,h4,h5{color:$success-color;}
+  i,h1,h2,h3,h4,h5{color:var(--color-success);}
 }
 .StatusTitle-Danger{
-  i,h1,h2,h3,h4,h5{color:$danger-color;}
+  i,h1,h2,h3,h4,h5{color:var(--color-danger);}
 }
 .StatusTitle-Warning{
-  i,h1,h2,h3,h4,h5{color:$warning-color;}
+  i,h1,h2,h3,h4,h5{color:var(--color-warning);}
 }
 
 /* # Background colors
 ----------------------------------------------- */
 .bg-default {
-  background-color: var(--primary-color);
-  p, ul { color: var(--primary-text-color); }
-  b { color:var(--highlight-color);}
+  background-color: var(--color-surface);
+  p, ul { color: var(--color-text-primary); }
+  b { color:var(--brand-primary);}
 }
 
 .bg-light {
-  background-color: var(--secondary-color);
-  a, p, ul { color: var(--primary-text-color); }
-  b { color: var(--seventy-color); }
+  background-color: var(--color-canvas);
+  a, p, ul { color: var(--color-text-primary); }
+  b { color: var(--color-accent-strong); }
 }
 
 .bg-dark {
-  background-color: var(--tertiary-color);
-  a, p, ul { color: var(--primary-color); }
-  b { color: var(--seventy-color); }
+  background-color: var(--color-border);
+  a, p, ul { color: var(--color-surface); }
+  b { color: var(--color-accent-strong); }
 }
 
 .bg-darker {
-  background-color: var(--primary-text-color);
-  h1, h2, h3 { color: var(--primary-color); }
-  a, p, ul { color: var(--primary-color); }
-  b { color: var(--seventy-color); }
+  background-color: var(--color-text-primary);
+  h1, h2, h3 { color: var(--color-surface); }
+  a, p, ul { color: var(--color-surface); }
+  b { color: var(--color-accent-strong); }
 }
 
 .bg-success {
@@ -145,6 +163,6 @@ b {
 /* # Labes
 ----------------------------------------------- */
 .label { color: $white-color; }
-.label-primary { background-color: var(--fourth-color); }
+.label-primary { background-color: var(--color-border-strong); }
 .label-danger { background-color: $danger-color; }
 .label-success { background-color: $success-color; }

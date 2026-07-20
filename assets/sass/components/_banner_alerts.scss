@@ -10,26 +10,26 @@
   transition: opacity .5s ease, transform .5s ease;
 
   &.alert-success{
-    background-color: rgba($success-color, 0.1);
-    border: 1px solid $success-color;
+    background-color: var(--color-success-bg);
+    border: 1px solid var(--color-success);
     p,i{
-      color:$success-color;
+      color:var(--color-success);
       font-weight:500;
     }
   }
   &.alert-warning{
-    background-color: rgba($warning-color, 0.1);
-    border: 1px solid $warning-color;
+    background-color: var(--color-warning-bg);
+    border: 1px solid var(--color-warning);
     p,i{
-      color:$warning-color;
+      color:var(--color-warning);
       font-weight:500;
-    }    
+    }
   }
   &.alert-danger{
-    background-color: rgba($danger-color, 0.1);
-    border: 1px solid $danger-color;
+    background-color: var(--color-danger-bg);
+    border: 1px solid var(--color-danger);
     p,i{
-      color:$danger-color;
+      color:var(--color-danger);
       font-weight:500;
     }
   }
@@ -42,13 +42,13 @@
 
   p{
     margin: 0;
-    color:var(--primary-color);
+    color:var(--color-surface);
   }
 
   .btn-close {
     box-sizing: content-box;
     background-color: inherit;
-    color: var(--primary-color);
+    color: var(--color-surface);
     padding: 0.5rem;
     border: 0;
     opacity: .5;

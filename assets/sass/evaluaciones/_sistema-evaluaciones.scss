@@ -8,12 +8,12 @@
     gap: 0.5rem;
 
     i {
-      color: var(--fourth-color);
+      color: var(--color-border-strong);
       font-size: 2rem;
     }
 
     p {
-      color: var(--fourth-color);
+      color: var(--color-border-strong);
       font-weight: bold;
       font-size: 90%;
       margin: 0;
@@ -21,22 +21,22 @@
 
     &.danger i,
     &.danger p {
-      color: $danger-color;
+      color: var(--color-danger);
     }
 
     &.warning i,
     &.warning p{
-      color: $warning-color;
+      color: var(--color-warning);
     }
 
     &.highlight i,
     &.highlight p {
-      color:var(--highlight-color);
+      color:var(--brand-primary);
     }
 
     &.success i,
     &.success p     {
-      color: $success-color;
+      color: var(--color-success);
     }
   }
 
@@ -66,12 +66,12 @@
 
     i {
       transition: color 0.2s ease;
-      color: var(--fifth-color);
+      color: var(--color-control);
       font-size: 2rem;
     }
 
     p {
-      color: var(--fifth-color);
+      color: var(--color-control);
       transition: color 0.2s ease;
       font-weight: bold;
       font-size: 90%;
@@ -82,28 +82,28 @@
     &.danger:hover p,
     &.danger.active i,
     &.danger.active p {
-      color: $danger-color;
+      color: var(--color-danger);
     }
 
     &.warning:hover i,
     &.warning:hover p,
     &.warning.active i,
     &.warning.active p{
-      color: $warning-color;
+      color: var(--color-warning);
     }
 
     &.highlight:hover i,
     &.highlight:hover p,
     &.highlight.active i,
     &.highlight.active p {
-      color:var(--highlight-color);
+      color:var(--brand-primary);
     }
 
     &.success:hover i,
     &.success:hover p,
     &.success.active i,
     &.success.active p     {
-      color: $success-color;
+      color: var(--color-success);
     }
   }
 }
@@ -120,14 +120,14 @@
     align-items: center;
     gap:0.5rem;
     padding: 0 1rem;
-    border-right: 1px solid var(--fourth-color);
+    border-right: 1px solid var(--color-border-strong);
     &:last-child {
       border-right: none;
       /*
-      background-color: var(--highlight-color);
-      h5{color:var(--primary-color);}
+      background-color: var(--brand-primary);
+      h5{color:var(--color-surface);}
       .contributor-text{
-        p{color:var(--primary-color);}
+        p{color:var(--color-surface);}
       }
       padding: 0.5rem;
       border-radius: 0.5rem;
@@ -141,7 +141,7 @@
       p{
         font-size: 80%;
         line-height: 0.850rem;
-        color:var(--primary-text-color);
+        color:var(--color-text-primary);
         font-weight: 400;
       }
     }
@@ -197,7 +197,7 @@ canvas {
       font-size: 24px;
       font-weight: 900;
       background: lighten($gray-color, 30%);
-      color: var(--primary-color);
+      color: var(--color-surface);
       flex-shrink: 0;
     }
 
@@ -219,8 +219,8 @@ canvas {
       background: $success-color;
       color: #fff;
     }
-    h6 {color: $success-color;}
-    p {color: var(--primary-text-color);}
+    h6 {color: var(--color-success);}
+    p {color: var(--color-text-primary);}
   }
 
   /* Activo */
@@ -231,8 +231,8 @@ canvas {
       transform: scale(1.05);
     }
 
-    h6 {color: $success-color;}
-    p {color: var(--primary-text-color);}
+    h6 {color: var(--color-success);}
+    p {color: var(--color-text-primary);}
   }
 }
 
@@ -257,7 +257,7 @@ canvas {
 ===================== */
 .box{
   padding: 1rem;
-  background-color: var(--tertiary-color);
+  background-color: var(--color-border);
   border-radius: 1rem;
   /*border:1px solid lighten($gray-color, 50%);*/
 }
@@ -272,8 +272,8 @@ canvas {
   .item {
     width: 3.5rem;
     height: 3.5rem;
-    background-color: var(--primary-color);
-    border: 1px solid var(--highlight-color);
+    background-color: var(--color-surface);
+    border: 1px solid var(--brand-primary);
     border-radius: 0.4rem;
     display: flex;
     align-items: center;
@@ -281,19 +281,19 @@ canvas {
     font-family: $primary-font;
     font-weight: 700;
     font-size: 2rem;
-    color: var(--highlight-color);    
+    color: var(--brand-primary);    
     transition: transform 0.2s ease;
     cursor: pointer;
 
     &:hover {
       transform: translateY(-2px);
-      background-color: var(--highlight-color);
-      color: var(--primary-color);
+      background-color: var(--brand-primary);
+      color: var(--color-surface);
     }
 
     &.active{
-      background-color: var(--highlight-color);
-      color: var(--primary-color);
+      background-color: var(--brand-primary);
+      color: var(--color-surface);
     }
   }
 
@@ -322,11 +322,11 @@ canvas {
   font-family:$primary-font;
   font-size:1rem;
   font-weight: 700;
-  color:var(--fifth-color);
-  i{color:var(--fifth-color);}
+  color:var(--color-control);
+  i{color:var(--color-control);}
   &:hover{
-    color: var(--highlight-color);
-    i{color:var(--highlight-color);}
+    color: var(--brand-primary);
+    i{color:var(--brand-primary);}
   }
 }
 

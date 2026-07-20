@@ -113,23 +113,23 @@
 /* # Logo
 ----------------------------------------------- */
 .main-header .logo {
-  background-color: var(--primary-color);
+  background-color: var(--color-surface);
   border-bottom: 0px solid transparent;
 }
 .main-header .logo:hover {
-  background: var(--secondary-color);
+  background: var(--color-canvas);
 }
 
 /* # Sidebar-navbar
 ----------------------------------------------- */
  .main-header .sidebar-navbar {
-  background-color: var(--primary-color);
+  background-color: var(--color-surface);
 }
 /* # Sidebar-toggle
 ----------------------------------------------- */
 .main-header .sidebar-navbar .sidebar-toggle {
-  color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);
+  color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
 }
 .main-header .sidebar-navbar .sidebar-toggle:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--color-canvas);
 }
