@@ -236,14 +236,11 @@
         ========================================== -->
         <section class="content-body">
           <div class="grid gap-5">
-
+            <h4>Color de marca</h4>
+            <p class="small" style="margin-bottom:1rem">Colores fijos, iguales en modo claro y oscuro.</p>
             <!-- ====== Card: Marca ====== -->
             <div class="card">
-              <header class="card-header">
-                <h4>Color de marca</h4>
-              </header>
               <div class="card-body">
-                <p class="small" style="margin-bottom:1rem">Colores fijos, iguales en modo claro y oscuro.</p>
                 <div class="flex flex-wrap gap-4">
                   <div class="swatch-item" style="width:110px">
                     <div style="height:64px;border-radius:var(--radius-md);background:var(--brand-primary);margin-bottom:8px"></div>
@@ -283,14 +280,13 @@
                 </div>
               </div>
             </div>
+          
+            <h4>Color semántico (se adapta al tema)</h4>
+            <p class="small" style="margin-bottom:1rem">Superficies, texto y bordes: cambian de valor entre modo claro y oscuro pero conservan su función. Por eso se muestra el nombre de la variable en vez de un hex fijo.</p>
 
             <!-- ====== Card: Semántico ====== -->
             <div class="card">
-              <header class="card-header">
-                <h4>Color semántico (se adapta al tema)</h4>
-              </header>
               <div class="card-body">
-                <p class="small" style="margin-bottom:1rem">Superficies, texto y bordes: cambian de valor entre modo claro y oscuro pero conservan su función. Por eso se muestra el nombre de la variable en vez de un hex fijo.</p>
                 <div class="flex flex-wrap gap-4">
                   <div class="swatch-item" style="width:110px">
                     <div style="height:64px;border-radius:var(--radius-md);border:1px solid var(--color-border);background:var(--color-canvas);margin-bottom:8px"></div>
@@ -336,14 +332,12 @@
               </div>
             </div>
 
+            <h4>Color de estado</h4>
+            <p class="small" style="margin-bottom:1rem">Para feedback: éxito, error, advertencia e información. Cada estado tiene su variable de fondo (bg) y su variable de texto (text).</p>            
+
             <!-- ====== Card: Estado ====== -->
             <div class="card">
-              <header class="card-header">
-                <h4>Color de estado</h4>
-              </header>
-              <div class="card-body">
-                <p class="small" style="margin-bottom:1rem">Para feedback: éxito, error, advertencia e información. Cada estado tiene su variable de fondo (bg) y su variable de texto (text).</p>
-
+              <div class="card-body">                
                 <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;color:var(--color-text-muted)">Fondo (bg)</p>
                 <div class="flex flex-wrap gap-4" style="margin-bottom:1.5rem">
                   <div class="swatch-item" style="width:110px">
@@ -367,38 +361,42 @@
                     <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-info-bg</p>
                   </div>
                 </div>
-
-                <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;color:var(--color-text-muted)">Texto (text)</p>
-                <div class="flex flex-wrap gap-4">
-                  <div class="swatch-item" style="width:110px">
-                    <div style="height:64px;border-radius:var(--radius-md);background:var(--color-success-text);margin-bottom:8px"></div>
-                    <p style="font-size:11px;font-weight:700;margin:0">Success text</p>
-                    <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-success-text</p>
-                  </div>
-                  <div class="swatch-item" style="width:110px">
-                    <div style="height:64px;border-radius:var(--radius-md);background:var(--color-danger-text);margin-bottom:8px"></div>
-                    <p style="font-size:11px;font-weight:700;margin:0">Danger text</p>
-                    <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-danger-text</p>
-                  </div>
-                  <div class="swatch-item" style="width:110px">
-                    <div style="height:64px;border-radius:var(--radius-md);background:var(--color-warning-text);margin-bottom:8px"></div>
-                    <p style="font-size:11px;font-weight:700;margin:0">Warning text</p>
-                    <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-warning-text</p>
-                  </div>
-                  <div class="swatch-item" style="width:110px">
-                    <div style="height:64px;border-radius:var(--radius-md);background:var(--color-info-text);margin-bottom:8px"></div>
-                    <p style="font-size:11px;font-weight:700;margin:0">Info text</p>
-                    <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-info-text</p>
-                  </div>
-                </div>
-              </div>
+              </div>              
             </div>
+
+                <div class="card">
+                  <div class="card-body">                
+                    <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;color:var(--color-text-muted)">Texto (text)</p>
+
+                    <div class="flex flex-wrap gap-4">
+                      <div class="swatch-item" style="width:110px">
+                        <div style="height:64px;border-radius:var(--radius-md);background:var(--color-success-text);margin-bottom:8px"></div>
+                        <p style="font-size:11px;font-weight:700;margin:0">Success text</p>
+                        <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-success-text</p>
+                      </div>
+                      <div class="swatch-item" style="width:110px">
+                        <div style="height:64px;border-radius:var(--radius-md);background:var(--color-danger-text);margin-bottom:8px"></div>
+                        <p style="font-size:11px;font-weight:700;margin:0">Danger text</p>
+                        <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-danger-text</p>
+                      </div>
+                      <div class="swatch-item" style="width:110px">
+                        <div style="height:64px;border-radius:var(--radius-md);background:var(--color-warning-text);margin-bottom:8px"></div>
+                        <p style="font-size:11px;font-weight:700;margin:0">Warning text</p>
+                        <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-warning-text</p>
+                      </div>
+                      <div class="swatch-item" style="width:110px">
+                        <div style="height:64px;border-radius:var(--radius-md);background:var(--color-info-text);margin-bottom:8px"></div>
+                        <p style="font-size:11px;font-weight:700;margin:0">Info text</p>
+                        <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-info-text</p>
+                      </div>
+                    </div>                    
+                  </div>
+                </div>            
+
+            <h4>Los 4 estados en componentes reales</h4>
 
             <!-- ====== Card: En componentes reales ====== -->
             <div class="card">
-              <header class="card-header">
-                <h4>Los 4 estados en componentes reales</h4>
-              </header>
               <div class="card-body flex flex-wrap gap-2">
                 <span class="badge badge-success">Success</span>
                 <span class="badge badge-danger">Danger</span>
