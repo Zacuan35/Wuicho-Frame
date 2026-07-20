@@ -15,8 +15,9 @@ ul.social-links {
   border-radius: 1rem;
   font-size:1rem; 
   text-align:center;
-  color:red; 
-  background-color:transparent;
+  color:red;
+  background-color: var(--color-surface);
+  border: 1px solid $border-subtle;
 
   i{
     color: var(--brand-primary);

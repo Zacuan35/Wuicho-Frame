@@ -6722,7 +6722,8 @@ ul.social-links {
   font-size: 1rem;
   text-align: center;
   color: red;
-  background-color: transparent;
+  background-color: var(--color-surface);
+  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
 }
 .social-links a i {
   color: var(--brand-primary);
