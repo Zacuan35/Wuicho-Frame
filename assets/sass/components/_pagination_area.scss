@@ -19,41 +19,22 @@
 	}
 }
 
-/* Pagination */
-.pagination {
-	display: flex;     
-	align-items: center;
-	gap: 1rem;   
-
-	ul {
-		display: flex;
-		gap: 0.250rem;
-			
-		a, 
-		strong{
-			display:block; 
-			padding:8px 15px; 
-			background-color: var(--color-border);
-			color:color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
-			background-clip:padding-box; 
-			font-weight:bold;
-			border-radius: 0.3rem;
-			transition: background-color 0.5s ease, color 0.5s ease;
-		}   
-			
-		a:hover{
-			background-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
-			color: var(--color-border);
-			i{color: var(--color-border);}
-		}  
-			
-		.current *{
-			background-color:color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
-			color:var(--color-canvas); 
-		}            
-	}     
-
+/* Pagination (componente de WuichoFrame) */
+.pagination { display: flex; align-items: center; gap: 6px; }
+.page-btn {
+	min-width: 36px; height: 36px; padding: 0 10px;
+	display: inline-flex; align-items: center; justify-content: center;
+	border-radius: var(--radius-sm);
+	border: 1px solid var(--color-border);
+	background: var(--color-surface);
+	color: var(--color-text-secondary);
+	font-size: 0.85rem; font-weight: 600;
+	transition: all var(--transition-base);
 }
+.page-btn i { font-size: 0.85rem; }
+.page-btn:hover { border-color: var(--color-border-strong); background: var(--color-surface-alt); }
+.page-btn.is-active { background: var(--brand-primary); border-color: var(--brand-primary); color: $white-color; }
+.page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 
 
 /* # Tablet ------------------------------------------ */
@@ -83,11 +64,6 @@ Tabletas verticales o celulares horizontales*/
 
   }
 
-	.pagination {
-		flex-direction: column;
-		gap:0.5rem;
-	}	  
-
 }
 
 /*A partir de 1024px se aplicarán estos estilos => 1024px
@@ -96,6 +72,5 @@ Tabletas horizontales*/
 	
   /* # Pagination-Área */
   .pagination-area {}
-  .pagination {flex-direction: row;}	  
-	
+
 }
