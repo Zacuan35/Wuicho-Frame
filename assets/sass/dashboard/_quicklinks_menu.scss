@@ -104,6 +104,9 @@
 .quicklinks-menu > li > a > i{
   color: var(--brand-primary);
 }
+.quicklinks-menu .dropdown-menu li a > i {
+  color: var(--brand-primary);
+}
 .quicklinks-menu > li > a:hover,
 .quicklinks-menu > li > a:focus {
   background-color: var(--color-canvas);
