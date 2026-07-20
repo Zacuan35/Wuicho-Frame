@@ -1341,6 +1341,18 @@ Tabletas horizontales */
 }
 /*=> 1536px Igual o mayor a 1536px se aplicarán los siguientes estilos */
 /* =====================
+# DOC PREVIEW
+Contenedor para mostrar ejemplos en la documentación (fondo punteado),
+en vez de meter los ejemplos dentro de .card.
+===================== */
+.doc-preview {
+  padding: 24px;
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-alt);
+}
+
+/* =====================
 # CSS GRID - GAP - SPAN
 ===================== */
 /* # Grid css
