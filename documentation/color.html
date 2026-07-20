@@ -235,56 +235,144 @@
         <!-- Content-body
         ========================================== -->
         <section class="content-body">
-          <div class="doc-block">
-            <h4 class="doc-block__title">Color de marca</h4>
-            <p class="doc-block__desc">Colores fijos, iguales en modo claro y oscuro.</p>
+          <div class="grid gap-5">
+            <h4>Color de marca</h4>
+            <p class="small" style="margin-bottom:1rem">Colores fijos, iguales en modo claro y oscuro.</p>
             <div class="doc-preview flex flex-wrap gap-4">
-              <div class="swatch"><div class="swatch__chip" style="background:var(--brand-primary)"></div><p class="swatch__label">Primary</p><p class="swatch__hex">--brand-primary</p></div>
-              <div class="swatch"><div class="swatch__chip" style="background:var(--brand-primary-hover)"></div><p class="swatch__label">Primary hover</p><p class="swatch__hex">--brand-primary-hover</p></div>
-              <div class="swatch"><div class="swatch__chip" style="background:var(--brand-primary-soft)"></div><p class="swatch__label">Primary soft</p><p class="swatch__hex">--brand-primary-soft</p></div>
-              <div class="swatch"><div class="swatch__chip" style="background:var(--brand-teal)"></div><p class="swatch__label">Teal</p><p class="swatch__hex">--brand-teal</p></div>
-              <div class="swatch"><div class="swatch__chip" style="background:var(--brand-amber)"></div><p class="swatch__label">Amber</p><p class="swatch__hex">--brand-amber</p></div>
-              <div class="swatch"><div class="swatch__chip" style="background:var(--brand-rose)"></div><p class="swatch__label">Rose</p><p class="swatch__hex">--brand-rose</p></div>
-              <div class="swatch"><div class="swatch__chip" style="background:var(--brand-green)"></div><p class="swatch__label">Green</p><p class="swatch__hex">--brand-green</p></div>
-            </div>
-
-            <h4 class="doc-block__title" style="margin-top:24px">Color semántico (se adapta al tema)</h4>
-            <p class="doc-block__desc">Superficies, texto y bordes: cambian de valor entre modo claro y oscuro pero conservan su función. Por eso se muestra el nombre de la variable en vez de un hex fijo.</p>
-            <div class="doc-preview flex flex-wrap gap-4">
-              <div class="swatch"><div class="swatch__chip" style="background:var(--color-canvas)"></div><p class="swatch__label">Canvas</p><p class="swatch__hex">--color-canvas</p></div>
-              <div class="swatch"><div class="swatch__chip" style="background:var(--color-surface)"></div><p class="swatch__label">Surface</p><p class="swatch__hex">--color-surface</p></div>
-              <div class="swatch"><div class="swatch__chip" style="background:var(--color-surface-alt)"></div><p class="swatch__label">Surface alt</p><p class="swatch__hex">--color-surface-alt</p></div>
-              <div class="swatch"><div class="swatch__chip" style="background:var(--color-text-primary)"></div><p class="swatch__label">Texto primario</p><p class="swatch__hex">--color-text-primary</p></div>
-              <div class="swatch"><div class="swatch__chip" style="background:var(--color-text-secondary)"></div><p class="swatch__label">Texto secundario</p><p class="swatch__hex">--color-text-secondary</p></div>
-              <div class="swatch"><div class="swatch__chip" style="background:var(--color-text-muted)"></div><p class="swatch__label">Texto muted</p><p class="swatch__hex">--color-text-muted</p></div>
-              <div class="swatch"><div class="swatch__chip" style="background:var(--color-border)"></div><p class="swatch__label">Borde</p><p class="swatch__hex">--color-border</p></div>
-              <div class="swatch"><div class="swatch__chip" style="background:var(--color-border-strong)"></div><p class="swatch__label">Borde fuerte</p><p class="swatch__hex">--color-border-strong</p></div>
-            </div>
-
-            <h4 class="doc-block__title" style="margin-top:24px">Color de estado</h4>
-            <p class="doc-block__desc">Para feedback: éxito, error, advertencia e información. Cada estado tiene su variable de fondo (bg) y su variable de texto (text).</p>
-            <div class="doc-preview stacked">
-              <div>
-                <p class="doc-preview__label">Fondo (bg)</p>
-                <div class="flex flex-wrap gap-4">
-                  <div class="swatch"><div class="swatch__chip" style="background:var(--color-success-bg)"></div><p class="swatch__label">Success bg</p><p class="swatch__hex">--color-success-bg</p></div>
-                  <div class="swatch"><div class="swatch__chip" style="background:var(--color-danger-bg)"></div><p class="swatch__label">Danger bg</p><p class="swatch__hex">--color-danger-bg</p></div>
-                  <div class="swatch"><div class="swatch__chip" style="background:var(--color-warning-bg)"></div><p class="swatch__label">Warning bg</p><p class="swatch__hex">--color-warning-bg</p></div>
-                  <div class="swatch"><div class="swatch__chip" style="background:var(--color-info-bg)"></div><p class="swatch__label">Info bg</p><p class="swatch__hex">--color-info-bg</p></div>
-                </div>
+              <div class="swatch-item" style="width:110px">
+                <div style="height:64px;border-radius:var(--radius-md);background:var(--brand-primary);margin-bottom:8px"></div>
+                <p style="font-size:11px;font-weight:700;margin:0">Primary</p>
+                <p style="font-size:11px;color:var(--color-text-muted);margin:0">--brand-primary</p>
               </div>
-              <div>
-                <p class="doc-preview__label">Texto (text)</p>
-                <div class="flex flex-wrap gap-4">
-                  <div class="swatch"><div class="swatch__chip" style="background:var(--color-success-text)"></div><p class="swatch__label">Success text</p><p class="swatch__hex">--color-success-text</p></div>
-                  <div class="swatch"><div class="swatch__chip" style="background:var(--color-danger-text)"></div><p class="swatch__label">Danger text</p><p class="swatch__hex">--color-danger-text</p></div>
-                  <div class="swatch"><div class="swatch__chip" style="background:var(--color-warning-text)"></div><p class="swatch__label">Warning text</p><p class="swatch__hex">--color-warning-text</p></div>
-                  <div class="swatch"><div class="swatch__chip" style="background:var(--color-info-text)"></div><p class="swatch__label">Info text</p><p class="swatch__hex">--color-info-text</p></div>
-                </div>
+              <div class="swatch-item" style="width:110px">
+                <div style="height:64px;border-radius:var(--radius-md);background:var(--brand-primary-hover);margin-bottom:8px"></div>
+                <p style="font-size:11px;font-weight:700;margin:0">Primary hover</p>
+                <p style="font-size:11px;color:var(--color-text-muted);margin:0">--brand-primary-hover</p>
+              </div>
+              <div class="swatch-item" style="width:110px">
+                <div style="height:64px;border-radius:var(--radius-md);border:1px solid var(--color-border);background:var(--brand-primary-soft);margin-bottom:8px"></div>
+                <p style="font-size:11px;font-weight:700;margin:0">Primary soft</p>
+                <p style="font-size:11px;color:var(--color-text-muted);margin:0">--brand-primary-soft</p>
+              </div>
+              <div class="swatch-item" style="width:110px">
+                <div style="height:64px;border-radius:var(--radius-md);background:var(--brand-teal);margin-bottom:8px"></div>
+                <p style="font-size:11px;font-weight:700;margin:0">Teal</p>
+                <p style="font-size:11px;color:var(--color-text-muted);margin:0">--brand-teal</p>
+              </div>
+              <div class="swatch-item" style="width:110px">
+                <div style="height:64px;border-radius:var(--radius-md);background:var(--brand-amber);margin-bottom:8px"></div>
+                <p style="font-size:11px;font-weight:700;margin:0">Amber</p>
+                <p style="font-size:11px;color:var(--color-text-muted);margin:0">--brand-amber</p>
+              </div>
+              <div class="swatch-item" style="width:110px">
+                <div style="height:64px;border-radius:var(--radius-md);background:var(--brand-rose);margin-bottom:8px"></div>
+                <p style="font-size:11px;font-weight:700;margin:0">Rose</p>
+                <p style="font-size:11px;color:var(--color-text-muted);margin:0">--brand-rose</p>
+              </div>
+              <div class="swatch-item" style="width:110px">
+                <div style="height:64px;border-radius:var(--radius-md);background:var(--brand-green);margin-bottom:8px"></div>
+                <p style="font-size:11px;font-weight:700;margin:0">Green</p>
+                <p style="font-size:11px;color:var(--color-text-muted);margin:0">--brand-green</p>
               </div>
             </div>
 
-            <h4 class="doc-block__title" style="margin-top:24px">Los 4 estados en componentes reales</h4>
+            <h4>Color semántico (se adapta al tema)</h4>
+            <p class="small" style="margin-bottom:1rem">Superficies, texto y bordes: cambian de valor entre modo claro y oscuro pero conservan su función. Por eso se muestra el nombre de la variable en vez de un hex fijo.</p>
+            <div class="doc-preview flex flex-wrap gap-4">
+              <div class="swatch-item" style="width:110px">
+                <div style="height:64px;border-radius:var(--radius-md);border:1px solid var(--color-border);background:var(--color-canvas);margin-bottom:8px"></div>
+                <p style="font-size:11px;font-weight:700;margin:0">Canvas</p>
+                <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-canvas</p>
+              </div>
+              <div class="swatch-item" style="width:110px">
+                <div style="height:64px;border-radius:var(--radius-md);border:1px solid var(--color-border);background:var(--color-surface);margin-bottom:8px"></div>
+                <p style="font-size:11px;font-weight:700;margin:0">Surface</p>
+                <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-surface</p>
+              </div>
+              <div class="swatch-item" style="width:110px">
+                <div style="height:64px;border-radius:var(--radius-md);border:1px solid var(--color-border);background:var(--color-surface-alt);margin-bottom:8px"></div>
+                <p style="font-size:11px;font-weight:700;margin:0">Surface alt</p>
+                <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-surface-alt</p>
+              </div>
+              <div class="swatch-item" style="width:110px">
+                <div style="height:64px;border-radius:var(--radius-md);background:var(--color-text-primary);margin-bottom:8px"></div>
+                <p style="font-size:11px;font-weight:700;margin:0">Texto primario</p>
+                <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-text-primary</p>
+              </div>
+              <div class="swatch-item" style="width:110px">
+                <div style="height:64px;border-radius:var(--radius-md);background:var(--color-text-secondary);margin-bottom:8px"></div>
+                <p style="font-size:11px;font-weight:700;margin:0">Texto secundario</p>
+                <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-text-secondary</p>
+              </div>
+              <div class="swatch-item" style="width:110px">
+                <div style="height:64px;border-radius:var(--radius-md);background:var(--color-text-muted);margin-bottom:8px"></div>
+                <p style="font-size:11px;font-weight:700;margin:0">Texto muted</p>
+                <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-text-muted</p>
+              </div>
+              <div class="swatch-item" style="width:110px">
+                <div style="height:64px;border-radius:var(--radius-md);background:var(--color-border);margin-bottom:8px"></div>
+                <p style="font-size:11px;font-weight:700;margin:0">Borde</p>
+                <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-border</p>
+              </div>
+              <div class="swatch-item" style="width:110px">
+                <div style="height:64px;border-radius:var(--radius-md);background:var(--color-border-strong);margin-bottom:8px"></div>
+                <p style="font-size:11px;font-weight:700;margin:0">Borde fuerte</p>
+                <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-border-strong</p>
+              </div>
+            </div>
+
+            <h4>Color de estado</h4>
+            <p class="small" style="margin-bottom:1rem">Para feedback: éxito, error, advertencia e información. Cada estado tiene su variable de fondo (bg) y su variable de texto (text).</p>
+            <div class="doc-preview">
+              <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;color:var(--color-text-muted)">Fondo (bg)</p>
+              <div class="flex flex-wrap gap-4" style="margin-bottom:1.5rem">
+                <div class="swatch-item" style="width:110px">
+                  <div style="height:64px;border-radius:var(--radius-md);background:var(--color-success-bg);margin-bottom:8px"></div>
+                  <p style="font-size:11px;font-weight:700;margin:0">Success bg</p>
+                  <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-success-bg</p>
+                </div>
+                <div class="swatch-item" style="width:110px">
+                  <div style="height:64px;border-radius:var(--radius-md);background:var(--color-danger-bg);margin-bottom:8px"></div>
+                  <p style="font-size:11px;font-weight:700;margin:0">Danger bg</p>
+                  <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-danger-bg</p>
+                </div>
+                <div class="swatch-item" style="width:110px">
+                  <div style="height:64px;border-radius:var(--radius-md);background:var(--color-warning-bg);margin-bottom:8px"></div>
+                  <p style="font-size:11px;font-weight:700;margin:0">Warning bg</p>
+                  <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-warning-bg</p>
+                </div>
+                <div class="swatch-item" style="width:110px">
+                  <div style="height:64px;border-radius:var(--radius-md);background:var(--color-info-bg);margin-bottom:8px"></div>
+                  <p style="font-size:11px;font-weight:700;margin:0">Info bg</p>
+                  <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-info-bg</p>
+                </div>
+              </div>
+              <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;color:var(--color-text-muted)">Texto (text)</p>
+              <div class="flex flex-wrap gap-4">
+                <div class="swatch-item" style="width:110px">
+                  <div style="height:64px;border-radius:var(--radius-md);background:var(--color-success-text);margin-bottom:8px"></div>
+                  <p style="font-size:11px;font-weight:700;margin:0">Success text</p>
+                  <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-success-text</p>
+                </div>
+                <div class="swatch-item" style="width:110px">
+                  <div style="height:64px;border-radius:var(--radius-md);background:var(--color-danger-text);margin-bottom:8px"></div>
+                  <p style="font-size:11px;font-weight:700;margin:0">Danger text</p>
+                  <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-danger-text</p>
+                </div>
+                <div class="swatch-item" style="width:110px">
+                  <div style="height:64px;border-radius:var(--radius-md);background:var(--color-warning-text);margin-bottom:8px"></div>
+                  <p style="font-size:11px;font-weight:700;margin:0">Warning text</p>
+                  <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-warning-text</p>
+                </div>
+                <div class="swatch-item" style="width:110px">
+                  <div style="height:64px;border-radius:var(--radius-md);background:var(--color-info-text);margin-bottom:8px"></div>
+                  <p style="font-size:11px;font-weight:700;margin:0">Info text</p>
+                  <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-info-text</p>
+                </div>
+              </div>
+            </div>
+
+            <h4>Los 4 estados en componentes reales</h4>
             <div class="doc-preview flex flex-wrap gap-2">
               <span class="badge badge-success">Success</span>
               <span class="badge badge-danger">Danger</span>
