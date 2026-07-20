@@ -22,7 +22,7 @@
   padding: 0.375rem 0.75rem;
   background-color: var(--color-surface);
   color:var(--color-text-primary);
-  border: 1px solid var(--color-border);
+  border: 1px solid $border-subtle;
   border-radius: 0.25rem;
   font-size:0.875rem;  
   line-height: 1.5;
@@ -52,9 +52,9 @@
   display: none;
   width: 100%;
   max-height: 170px;
-  border-left: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-  border-right: 1px solid var(--color-border);
+  border-left: 1px solid $border-subtle;
+  border-bottom: 1px solid $border-subtle;
+  border-right: 1px solid $border-subtle;
   background: var(--color-surface);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
   overflow-x: hidden;
@@ -74,7 +74,7 @@
     background: var(--color-canvas);
   }
   &:not(:last-child) {
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid $border-subtle;
   }  
 }
 .multi-select_label {

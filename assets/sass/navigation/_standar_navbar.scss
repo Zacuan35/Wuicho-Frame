@@ -71,7 +71,7 @@
   text-decoration: none;
   padding: 20px 15px;
   display: block;
-  .navbar-link:hover {background-color: var(--color-border);}
+  .navbar-link:hover {background-color: $fill-subtle;}
 
   &.active {
     color: var(--brand-primary); 
@@ -124,7 +124,7 @@
     text-decoration: none;
     color: #eee;
     font-size:0.875rem;
-    &:hover {background-color: var(--color-border);}
+    &:hover {background-color: $fill-subtle;}
   }
 }
 

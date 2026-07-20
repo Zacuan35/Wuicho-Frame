@@ -65,10 +65,10 @@
 ----------------------------------------------- */
 .btn-secondary {
   background-color: var(--color-canvas);
-  border-color: var(--color-border);
+  border-color: $border-subtle;
   color: var(--color-text-primary);
 
-  &:hover { background-color: var(--color-border); }
+  &:hover { background-color: $fill-subtle; }
 }
 
 /* # Btn-outline
