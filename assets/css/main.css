@@ -3569,7 +3569,7 @@ main {
 .btn-primary {
   background-color: var(--brand-primary);
   border-color: var(--brand-primary);
-  color: var(--color-canvas);
+  color: #ffffff;
 }
 .btn-primary:hover {
   background-color: color-mix(in srgb, var(--brand-primary) 88%, black);
@@ -3613,7 +3613,7 @@ main {
 .btn-success {
   background-color: #22C55E;
   border-color: #22C55E;
-  color: var(--color-canvas);
+  color: #ffffff;
 }
 .btn-success:hover {
   background-color: color-mix(in srgb, #22C55E 88%, black);
@@ -3625,7 +3625,7 @@ main {
 .btn-warning {
   background-color: #F59E0B;
   border-color: #F59E0B;
-  color: var(--color-canvas);
+  color: #ffffff;
 }
 .btn-warning:hover {
   background-color: color-mix(in srgb, #F59E0B 88%, black);
@@ -3637,7 +3637,7 @@ main {
 .btn-danger {
   background-color: #F43F5E;
   border-color: #F43F5E;
-  color: var(--color-canvas);
+  color: #ffffff;
 }
 .btn-danger:hover {
   background-color: color-mix(in srgb, #F43F5E 88%, black);
@@ -3689,22 +3689,22 @@ main {
 }
 .button-left:hover {
   background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  color: var(--color-canvas);
+  color: #ffffff;
 }
 .button-left:hover i {
-  color: var(--color-canvas);
+  color: #ffffff;
 }
 
 /* # Botón derecho
 ----------------------------------------------- */
 .button-right {
   background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  color: var(--color-canvas);
+  color: #ffffff;
   border: 1px solid color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
   border-radius: 0 0.25rem 0.25rem 0;
 }
 .button-right i {
-  color: var(--color-canvas);
+  color: #ffffff;
 }
 .button-right:hover {
   background-color: var(--brand-primary);
