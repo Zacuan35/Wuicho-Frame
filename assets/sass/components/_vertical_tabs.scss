@@ -3,31 +3,39 @@
 ===================== */
 .vertical-tabs-container {
   display: flex;
-  border: 1px solid $border-subtle;
+  align-items: flex-start;
+  gap: 28px;
 
   .vertical-tabs {
-    width: 200px;
-    padding-top: 20px;
-    background-color: var(--color-canvas);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 180px;
+    flex-shrink: 0;
     border-right: 1px solid $border-subtle;
-  
+
     .vertical-tab {
-      padding: 10px 15px;
+      padding: 10px 16px;
+      margin-right: -1px;
       cursor: pointer;
-      background-color: var(--color-canvas);
-      color: var(--color-text-primary);      
-      transition: background-color 0.3s ease;      
+      background: transparent;
+      color: var(--color-text-muted);
+      border-right: 2px solid transparent;
+      text-align: left;
       font-family: var(--font-body);
       font-size: 1rem;
-      text-align: center;
-      font-weight: 300;
+      font-weight: 600;
+      transition: color var(--transition-base), border-color var(--transition-base), background-color var(--transition-base);
 
-      &.active,
-      &:hover {        
-        background-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
-        color:var(--color-surface);         
-        font-weight: 600;
-      }      
+      &:hover {
+        color: var(--color-text-primary);
+      }
+
+      &.active {
+        color: var(--brand-primary);
+        border-color: var(--brand-primary);
+        background-color: color-mix(in srgb, var(--brand-primary) 10%, var(--color-surface));
+      }
     }
 
   }
@@ -35,13 +43,12 @@
 }
 
 .vertical-tab-content {
-  flex-grow: 1;
-  background-color: var(--color-surface);
-  padding: 20px;
+  flex: 1;
+  min-width: 0;
 
   .vertical-tab-pane {
     display: none;
-    &.active {display: block;}      
+    &.active { display: block; }
   }
-  
+
 }

@@ -3484,31 +3484,32 @@ main {
 .breadcrumb ol li {
   color: var(--color-text-primary);
   font-size: 0.75rem;
-  text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 600;
 }
 .breadcrumb ol li::after {
   content: "/";
   margin: 0 0.5rem;
-  color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  color: var(--color-text-muted);
 }
 .breadcrumb ol li:last-child::after {
   content: "";
 }
 .breadcrumb ol li a {
-  color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  color: var(--color-text-muted);
   font-size: 0.75rem;
+  font-weight: 400;
+  transition: color var(--transition-base);
 }
 .breadcrumb ol li a:hover {
-  text-decoration: underline;
   color: var(--brand-primary);
 }
 .breadcrumb ol li a:hover .icon {
   color: var(--brand-primary);
 }
 .breadcrumb ol li a .icon {
-  color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  color: var(--color-text-muted);
   margin-right: 0.25rem;
+  transition: color var(--transition-base);
 }
 
 /* =====================
@@ -4717,21 +4718,19 @@ table.dataTable thead th.sorting_desc:after {
 .tabs-container {
   width: 100%;
   margin: auto;
-  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
-  border-radius: 0.5rem;
 }
-.tabs-container .tabs {
+
+.tabs {
   display: flex;
   flex-wrap: wrap;
-  background-color: var(--color-canvas);
+  gap: 4px;
   border-bottom: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
-  border-radius: 0.5rem 0.5rem 0 0;
 }
-.tabs-container .tabs.tabs-center {
+.tabs.tabs-center {
   justify-content: center;
 }
 @media (max-width: 768px) {
-  .tabs-container .tabs {
+  .tabs {
     flex-direction: column;
     align-items: stretch;
   }
@@ -4740,30 +4739,35 @@ table.dataTable thead th.sorting_desc:after {
 /* # Tabs button
 ----------------------------------------------- */
 .tab-button {
-  padding: 10px 20px;
+  padding: 10px 16px;
   border: none;
-  background: var(--color-canvas);
-  color: var(--color-text-primary);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: transparent;
+  color: var(--color-text-muted);
   cursor: pointer;
   text-align: center;
-  transition: background 0.3s;
-  outline: none;
   font-family: var(--font-body);
   font-size: 1rem;
-  font-weight: 300;
-}
-.tab-button.active, .tab-button:hover, .tab-button:focus {
-  background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  color: var(--color-surface);
   font-weight: 600;
+  transition: color var(--transition-base), border-color var(--transition-base);
+}
+.tab-button:hover {
+  color: var(--color-text-primary);
+}
+.tab-button.active {
+  color: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+.tab-button:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
 }
 
 /* # Tab-content
 ----------------------------------------------- */
 .tab-content {
-  background-color: var(--color-surface);
-  padding: 20px;
-  border-radius: 0.5rem;
+  padding-top: 20px;
 }
 .tab-content .tab-pane {
   display: none;
@@ -4968,35 +4972,42 @@ html {
 ===================== */
 .vertical-tabs-container {
   display: flex;
-  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  align-items: flex-start;
+  gap: 28px;
 }
 .vertical-tabs-container .vertical-tabs {
-  width: 200px;
-  padding-top: 20px;
-  background-color: var(--color-canvas);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 180px;
+  flex-shrink: 0;
   border-right: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
 }
 .vertical-tabs-container .vertical-tabs .vertical-tab {
-  padding: 10px 15px;
+  padding: 10px 16px;
+  margin-right: -1px;
   cursor: pointer;
-  background-color: var(--color-canvas);
-  color: var(--color-text-primary);
-  transition: background-color 0.3s ease;
+  background: transparent;
+  color: var(--color-text-muted);
+  border-right: 2px solid transparent;
+  text-align: left;
   font-family: var(--font-body);
   font-size: 1rem;
-  text-align: center;
-  font-weight: 300;
-}
-.vertical-tabs-container .vertical-tabs .vertical-tab.active, .vertical-tabs-container .vertical-tabs .vertical-tab:hover {
-  background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  color: var(--color-surface);
   font-weight: 600;
+  transition: color var(--transition-base), border-color var(--transition-base), background-color var(--transition-base);
+}
+.vertical-tabs-container .vertical-tabs .vertical-tab:hover {
+  color: var(--color-text-primary);
+}
+.vertical-tabs-container .vertical-tabs .vertical-tab.active {
+  color: var(--brand-primary);
+  border-color: var(--brand-primary);
+  background-color: color-mix(in srgb, var(--brand-primary) 10%, var(--color-surface));
 }
 
 .vertical-tab-content {
-  flex-grow: 1;
-  background-color: var(--color-surface);
-  padding: 20px;
+  flex: 1;
+  min-width: 0;
 }
 .vertical-tab-content .vertical-tab-pane {
   display: none;
