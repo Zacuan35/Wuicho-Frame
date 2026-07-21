@@ -1348,6 +1348,127 @@ en vez de meter los ejemplos dentro de .card.
 }
 
 /* =====================
+# OTHERS
+===================== */
+.label {
+  display: inline;
+  padding: 0.2em 0.6em 0.3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+}
+
+/* # Background images
+----------------------------------------------- */
+.bg-img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-attach {
+  background-attachment: fixed;
+}
+
+/* # Container filter with background image
+----------------------------------------------- */
+.overlay {
+  position: relative;
+  z-index: 1;
+  color: var(--color-surface);
+  background-color: inherit;
+}
+.overlay::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -1;
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.overlay.light::after {
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+/* # Overlay-settings
+----------------------------------------------- */
+.overlay-settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 98%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.img-container:hover .overlay-settings {
+  opacity: 1;
+}
+
+/* # VideoWrapper
+----------------------------------------------- */
+.videoWrapper {
+  position: relative;
+  padding-bottom: 51.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe, .videoWrapper object, .videoWrapper embed, .videoWrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* =====================
+# BAJAR EL FOOTER
+===================== */
+/* # 1ra opción
+----------------------------------------------- */
+/*
+html, body {        
+  height: 100%;
+  display: flex;
+  flex-direction: column;        
+}
+main{flex: 1;}
+*/
+/* # 2da opción
+----------------------------------------------- */
+/*html, body {
+  height: 100% !important;
+}
+*/
+body,
+.wrapper.fixed {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* flex-grow: 1 - flex-shrink: 1 - flex-basis: 0 */
+}
+
+/*Layout*/
+/* =====================
 # CSS GRID - GAP - SPAN
 ===================== */
 /* # Grid css
@@ -2252,64 +2373,6 @@ Tabletas horizontales */
   }
   .xxl\:gap-64 {
     gap: 16rem;
-  }
-}
-/* =====================
-# CONTAINER
-===================== */
-.container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.container-fluid {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* =====================
-# MEDIAQUERIES
-===================== */
-/* # Mobile ------------------------------------------
-A partir de 640px se aplicarán estos estilos => 640px
-Celulares horizontales
---------------------------------------------------- */
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-/* # Tablet ------------------------------------------ */
-/*A partir de 768px se aplicarán estos estilos => 768px
-Tabletas verticales o celulares horizontales*/
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-/*A partir de 1024px se aplicarán estos estilos => 1024px
-Tabletas horizontales*/
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-/* # Desktop
----------------------------------------------------- */
-/*A partir de 1280px se aplicarán estos estilos => 1280px
-Tabletas horizontales */
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-/*A partir de 1536px se aplicarán estos estilos => 1536px
-Tabletas horizontales */
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
   }
 }
 /* =====================
@@ -3234,125 +3297,63 @@ Tabletas horizontales */
   }
 }
 /* =====================
-# OTHERS
+# CONTAINER
 ===================== */
-.label {
-  display: inline;
-  padding: 0.2em 0.6em 0.3em;
-  font-size: 75%;
-  font-weight: bold;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: 0.25em;
-}
-
-/* # Background images
------------------------------------------------ */
-.bg-img {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.bg-attach {
-  background-attachment: fixed;
-}
-
-/* # Container filter with background image
------------------------------------------------ */
-.overlay {
-  position: relative;
-  z-index: 1;
-  color: var(--color-surface);
-  background-color: inherit;
-}
-.overlay::after {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
+.container {
   width: 100%;
-  height: 100%;
-  content: "";
-  z-index: -1;
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.65);
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.overlay.light::after {
-  background-color: rgba(255, 255, 255, 0.55);
-}
-
-/* # Overlay-settings
------------------------------------------------ */
-.overlay-settings {
-  position: absolute;
-  top: 0;
-  left: 0;
+.container-fluid {
   width: 100%;
-  height: 100%;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 98%);
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  padding: 20px;
-}
-
-.img-container:hover .overlay-settings {
-  opacity: 1;
-}
-
-/* # VideoWrapper
------------------------------------------------ */
-.videoWrapper {
-  position: relative;
-  padding-bottom: 51.25%; /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-}
-.videoWrapper iframe, .videoWrapper object, .videoWrapper embed, .videoWrapper video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* =====================
-# BAJAR EL FOOTER
+# MEDIAQUERIES
 ===================== */
-/* # 1ra opción
------------------------------------------------ */
-/*
-html, body {        
-  height: 100%;
-  display: flex;
-  flex-direction: column;        
+/* # Mobile ------------------------------------------
+A partir de 640px se aplicarán estos estilos => 640px
+Celulares horizontales
+--------------------------------------------------- */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
 }
-main{flex: 1;}
-*/
-/* # 2da opción
------------------------------------------------ */
-/*html, body {
-  height: 100% !important;
+/* # Tablet ------------------------------------------ */
+/*A partir de 768px se aplicarán estos estilos => 768px
+Tabletas verticales o celulares horizontales*/
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
 }
-*/
-body,
-.wrapper.fixed {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+/*A partir de 1024px se aplicarán estos estilos => 1024px
+Tabletas horizontales*/
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
 }
-
-main {
-  flex: 1; /* flex-grow: 1 - flex-shrink: 1 - flex-basis: 0 */
+/* # Desktop
+---------------------------------------------------- */
+/*A partir de 1280px se aplicarán estos estilos => 1280px
+Tabletas horizontales */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
 }
-
+/*A partir de 1536px se aplicarán estos estilos => 1536px
+Tabletas horizontales */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
 /*Components*/
 /* =====================
 # ACCORDEON
@@ -7775,514 +7776,6 @@ Colour theme
 .user-panel > .info,
 .user-panel > .info > a {
   color: #ffffff;
-}
-
-/*Current-projectProyect*/
-/* =====================
-# Face-Item
-===================== */
-.face-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-.face-item i {
-  color: var(--color-border-strong);
-  font-size: 2rem;
-}
-.face-item p {
-  color: var(--color-border-strong);
-  font-weight: bold;
-  font-size: 90%;
-  margin: 0;
-}
-.face-item.danger i, .face-item.danger p {
-  color: var(--color-danger-text);
-}
-.face-item.warning i, .face-item.warning p {
-  color: var(--color-warning-text);
-}
-.face-item.highlight i, .face-item.highlight p {
-  color: var(--brand-primary);
-}
-.face-item.success i, .face-item.success p {
-  color: var(--color-success-text);
-}
-
-/* =====================
-# Moods
-===================== */
-.moods {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: center;
-  min-width: 30%;
-}
-.moods button {
-  all: unset;
-  cursor: pointer;
-}
-.moods .face-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.moods .face-item i {
-  transition: color 0.2s ease;
-  color: var(--color-border-strong);
-  font-size: 2rem;
-}
-.moods .face-item p {
-  color: var(--color-border-strong);
-  transition: color 0.2s ease;
-  font-weight: bold;
-  font-size: 90%;
-  margin: 0;
-}
-.moods .face-item.danger:hover i, .moods .face-item.danger:hover p, .moods .face-item.danger.active i, .moods .face-item.danger.active p {
-  color: var(--color-danger-text);
-}
-.moods .face-item.warning:hover i, .moods .face-item.warning:hover p, .moods .face-item.warning.active i, .moods .face-item.warning.active p {
-  color: var(--color-warning-text);
-}
-.moods .face-item.highlight:hover i, .moods .face-item.highlight:hover p, .moods .face-item.highlight.active i, .moods .face-item.highlight.active p {
-  color: var(--brand-primary);
-}
-.moods .face-item.success:hover i, .moods .face-item.success:hover p, .moods .face-item.success.active i, .moods .face-item.success.active p {
-  color: var(--color-success-text);
-}
-
-/* =====================
-# Contributor-ratings
-===================== */
-.contributor-ratings {
-  display: flex;
-}
-.contributor-ratings .contributor-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0 1rem;
-  border-right: 1px solid var(--color-border-strong);
-}
-.contributor-ratings .contributor-item:last-child {
-  border-right: none;
-  /*
-  background-color: var(--brand-primary);
-  h5{color:var(--color-surface);}
-  .contributor-text{
-    p{color:var(--color-surface);}
-  }
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  */
-}
-.contributor-ratings .contributor-item .contributor-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.contributor-ratings .contributor-item .contributor-text p {
-  font-size: 80%;
-  line-height: 0.85rem;
-  color: var(--color-text-primary);
-  font-weight: 400;
-}
-
-/* =====================
-# Charts
-===================== */
-/*
-#objectivesChart {
-  width: 200px !important;
-  height: 200px !important;
-}               
-#SkillsChart {
-  width: 200px !important;
-  height: 200px !important;
-}       
-Pau Peach                           
-*/
-canvas {
-  width: 100%;
-  max-width: 1500px;
-  display: block;
-  background: inherit;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-/* =====================
-# Evaluation_progress
-===================== */
-.evaluation_progress {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.evaluation_progress .evaluation-item {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-.evaluation_progress .evaluation-item .step-number {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: 900;
-  background: rgb(168.5, 168.5, 168.5);
-  color: var(--color-surface);
-  flex-shrink: 0;
-}
-.evaluation_progress .evaluation-item .step-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-.evaluation_progress .evaluation-item .step-content h6,
-.evaluation_progress .evaluation-item .step-content p {
-  color: rgb(168.5, 168.5, 168.5);
-}
-.evaluation_progress {
-  /* Completado */
-}
-.evaluation_progress .evaluation-item.completed .step-number {
-  background: #22C55E;
-  color: #fff;
-}
-.evaluation_progress .evaluation-item.completed h6 {
-  color: var(--color-success-text);
-}
-.evaluation_progress .evaluation-item.completed p {
-  color: var(--color-text-primary);
-}
-.evaluation_progress {
-  /* Activo */
-}
-.evaluation_progress .evaluation-item.active .step-number {
-  background: #22C55E;
-  color: #fff;
-  transform: scale(1.05);
-}
-.evaluation_progress .evaluation-item.active h6 {
-  color: var(--color-success-text);
-}
-.evaluation_progress .evaluation-item.active p {
-  color: var(--color-text-primary);
-}
-
-/* # Desktop
------------------------------------------------ */
-@media (min-width: 768px) {
-  .evaluation_progress {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 0;
-  }
-  .evaluation_progress .evaluation-item {
-    flex: 1;
-  }
-  .evaluation_progress .evaluation-item .step-content {
-    text-align: left;
-  }
-}
-/* =====================
-# Box
-===================== */
-.box {
-  padding: 1rem;
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
-  border-radius: 1rem;
-  /*border:1px solid lighten($gray-color, 50%);*/
-}
-
-/* =====================
-# Smart
-===================== */
-.smart {
-  display: flex;
-  gap: 0.5rem;
-}
-.smart .item {
-  width: 3.5rem;
-  height: 3.5rem;
-  background-color: var(--color-surface);
-  border: 1px solid var(--brand-primary);
-  border-radius: 0.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 2rem;
-  color: var(--brand-primary);
-  transition: transform 0.2s ease;
-  cursor: pointer;
-}
-.smart .item:hover {
-  transform: translateY(-2px);
-  background-color: var(--brand-primary);
-  color: var(--color-surface);
-}
-.smart .item.active {
-  background-color: var(--brand-primary);
-  color: var(--color-surface);
-}
-.smart {
-  /* # Mobile
-  ----------------------------------------------- */
-}
-@media (min-width: 1024px) {
-  .smart {
-    gap: 0.35rem;
-  }
-  .smart .item {
-    width: 6rem;
-    height: 6rem;
-    font-size: 4rem;
-    border-radius: 0.5rem;
-  }
-  .smart .item:hover {
-    transform: translateY(-5px);
-  }
-}
-
-/* =====================
-# Tutorial-link
-===================== */
-.tutorial_link {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--color-border-strong);
-}
-.tutorial_link i {
-  color: var(--color-border-strong);
-}
-.tutorial_link:hover {
-  color: var(--brand-primary);
-}
-.tutorial_link:hover i {
-  color: var(--brand-primary);
-}
-
-/* # Imprimir tabla
------------------------------------------------ */
-@media print {
-  body * {
-    visibility: hidden;
-  }
-  .table-responsive,
-  .table-responsive * {
-    visibility: visible;
-  }
-  .table-responsive {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
-}
-/* ==========================
-# Checkbox-label inside table
-========================== */
-td .checkbox-label {
-  margin: 0;
-}
-
-/* ==========================
-# Table inside modal
-========================== */
-.oy-scroll {
-  overflow-y: scroll;
-}
-
-.max-h-250 {
-  max-height: 250px;
-}
-
-.max-h-300 {
-  max-height: 300px;
-}
-
-/* ==========================
-# Badge
-========================== */
-.badges-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.remove-badge {
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-
-/* =====================
-# FILE-BOX
-===================== */
-.file-box {
-  display: flex;
-  gap: 0.5rem;
-  padding: 15px 25px;
-  background-color: var(--color-canvas);
-  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
-  border-radius: 0.5rem;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  color: var(--color-text-primary);
-  font-weight: bold;
-  cursor: pointer;
-}
-.file-box:hover {
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
-}
-
-/* =====================
-# MODAL
-===================== */
-.modal-objetive {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow-y: auto;
-  justify-content: center;
-  align-items: center;
-}
-.modal-objetive .modal-wrapper {
-  width: 100%;
-  max-width: 1000px;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-}
-.modal-objetive {
-  /* ===== Panel lateral ===== */
-}
-.modal-objetive .modal-info {
-  display: none;
-  width: 320px;
-  background-color: var(--color-canvas);
-  color: var(--color-text-primary);
-  padding: 2rem;
-}
-.modal-objetive .modal-info .modal-info-title {
-  margin-bottom: 1rem;
-}
-.modal-objetive .modal-info .modal-info-text {
-  transition: all 0.2s ease;
-  line-height: 1.4;
-}
-.modal-objetive {
-  /* ===== Contenido principal ===== */
-}
-.modal-objetive .modal-content {
-  background-color: var(--color-surface);
-  width: 100%;
-  max-width: 1000px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-}
-.modal-objetive .modal-content .modal-header,
-.modal-objetive .modal-content .modal-body,
-.modal-objetive .modal-content .modal-footer {
-  padding: 1rem;
-}
-.modal-objetive .modal-content .modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--color-canvas);
-}
-.modal-objetive .modal-content .modal-header h2 {
-  margin: 0;
-}
-.modal-objetive .modal-content .modal-header .btn-close {
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--color-text-muted);
-  cursor: pointer;
-  transition: color 0.3s;
-}
-.modal-objetive .modal-content .modal-header .btn-close:hover {
-  color: var(--color-text-primary);
-}
-.modal-objetive .modal-content .modal-body {
-  max-height: 70vh;
-  overflow-y: auto;
-}
-.modal-objetive .modal-content .modal-footer {
-  border-top: 1px solid var(--color-canvas);
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-}
-.modal-objetive {
-  /* ===== Modal con panel ===== */
-}
-.modal-objetive.has-panel .modal-info {
-  display: block;
-}
-.modal-objetive.has-panel .modal-content {
-  max-width: 700px;
-}
-
-/* =====================
-# TABLET+
-===================== */
-@media (min-width: 768px) {
-  .modal-objetive.has-panel .modal-wrapper {
-    flex-direction: row;
-  }
-  .modal-objetive.has-panel .modal-info {
-    display: block;
-  }
-  .modal-objetive.has-panel .modal-content {
-    max-width: 700px;
-  }
-  .modal-objetive:not(.has-panel) .modal-content {
-    max-width: 1000px;
-  }
-}
-/* =====================
-# MOBILE
-===================== */
-@media (max-width: 767px) {
-  .modal-objetive {
-    align-items: flex-start;
-    padding-top: 2rem;
-  }
-  .modal-objetive .modal-wrapper {
-    flex-direction: column;
-  }
-  .modal-objetive.has-panel .modal-info {
-    width: 100%;
-  }
-  .modal-objetive.has-panel .modal-content {
-    width: 100%;
-    max-width: 100%;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */

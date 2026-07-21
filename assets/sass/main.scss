@@ -7,11 +7,13 @@
 @import 'base/reset';
 @import 'base/tipography';
 @import 'base/utilities';
-@import 'base/grid';
-@import 'base/container';
-@import 'base/flexbox';
 @import 'base/others';
 @import 'base/bajar_footer';
+
+/*Layout*/
+@import 'layout/grid';
+@import 'layout/flexbox';
+@import 'layout/container';
 
 /*Components*/
 @import 'components/accordion';
@@ -55,8 +57,8 @@
 @import 'navigation/back_to_top';
 
 /*Website layout*/
-@import 'layouts/sections';
-@import 'layouts/login'; 
+@import 'pages/sections';
+@import 'pages/login'; 
 
 /*Dashboard layout*/
 @import 'dashboard/layout_sidebar';
@@ -64,8 +66,3 @@
 @import 'dashboard/sidebar_menu';
 @import 'dashboard/quicklinks_menu';
 @import 'dashboard/user_panel';
-
-/*Current-projectProyect*/
-@import 'evaluaciones/sistema-evaluaciones';
-@import 'evaluaciones/files';
-@import 'evaluaciones/modal-objetive';
