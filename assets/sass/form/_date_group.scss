@@ -3,7 +3,7 @@
 ===================== */  
 .date-group {
   display: flex;
-  border-radius: 0.25rem; 
+  border-radius: var(--radius-xs); 
   overflow: hidden; 
   width:100%;
 }
@@ -11,9 +11,9 @@
   flex: 1;
   position: relative;
   &:first-child .text-input,
-  &:first-child .date-input {border-radius: 0.25rem 0 0 0.25rem; }
+  &:first-child .date-input {border-radius: var(--radius-xs) 0 0 var(--radius-xs); }
   &:last-child .text-input,
-  &:last-child .date-input {border-radius: 0 0.25rem 0.25rem 0; }
+  &:last-child .date-input {border-radius: 0 var(--radius-xs) var(--radius-xs) 0; }
   .date-input {display: none;}      
 }
 .text-input, .date-input {

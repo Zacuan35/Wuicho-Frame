@@ -6,13 +6,13 @@
     background-color: var(--color-surface);
     padding: 1rem 0.5rem;
     border: 1px solid $border-subtle;
-    border-radius: 0.5rem 0.5rem 0 0;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
     height: auto;
 
     h4 { margin-bottom: 1rem; }
 
     #imagenDestacada {
-      border-radius: 0.5rem;
+      border-radius: var(--radius-sm);
       border: 3px solid var(--color-success-text);
       margin-bottom: 1rem;
     }
@@ -29,7 +29,7 @@
             top: 6px;
             right: 6px;
             background-color: var(--color-surface);
-            border-radius: 50%;
+            border-radius: var(--radius-full);
             padding: 3px;  
             display: flex;
             justify-content: center;
@@ -51,7 +51,7 @@
           }
 
           img {
-            border-radius: 0.5rem;
+            border-radius: var(--radius-sm);
             opacity: 0.7;
             cursor: pointer;
 
@@ -68,7 +68,7 @@
     background-color: var(--color-canvas);
     padding: 1rem 0.5rem;
     border: 1px solid $border-subtle;
-    border-radius: 0 0 0.5rem 0.5rem;
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
     margin-top: -1px;
 
     h5 { margin-bottom: 0.5rem; }

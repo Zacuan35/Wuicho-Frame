@@ -38,7 +38,7 @@
   float: left;
   width: 25px;
   height: 25px;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   margin-right: 10px;
   margin-top: -2px;
 }
@@ -133,7 +133,7 @@
 .dropdown-menu .message-links img{
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
 }
 .dropdown-menu .message-links h4{
   font-size: 14px;

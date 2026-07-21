@@ -26,7 +26,7 @@
   margin-left: 5px;
   padding: 6px 10px;
   border: 1px solid $border-subtle;
-  border-radius: 4px;
+  border-radius: var(--radius-xs);
   outline: none;
   transition: all 0.2s ease;
   font-size: 14px;
@@ -59,7 +59,7 @@
   display: inline-block;
   padding: 6px 12px;
   margin-left: 3px;
-  border-radius: 4px;
+  border-radius: var(--radius-xs);
   background-color: $fill-subtle;
   color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
   cursor: pointer;

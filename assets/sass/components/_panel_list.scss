@@ -17,7 +17,7 @@
     background-color:var(--color-surface);
     background-clip: border-box;  
     border:1px solid $border-subtle;  
-    border-radius: 0.5rem;
+    border-radius: var(--radius-sm);
 
     p{
       margin:0;

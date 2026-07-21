@@ -23,7 +23,7 @@
   background-color: var(--color-surface);
   color:var(--color-text-primary);
   border: 1px solid $border-subtle;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-xs);
   font-size:0.875rem;  
   line-height: 1.5;
   cursor: default;

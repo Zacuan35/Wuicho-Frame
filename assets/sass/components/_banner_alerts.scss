@@ -3,7 +3,7 @@
 ===================== */
 .banner_alert {
   padding: 0.5rem 1rem;
-  border-radius: .25rem;
+  border-radius: var(--radius-xs);
   display: flex;
   justify-content: space-between;
   align-items: center;

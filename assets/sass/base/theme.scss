@@ -15,8 +15,10 @@ $secondary-font: "Roboto", serif;
   --font-body: #{$secondary-font};
 
   /* --- Radios --- */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
   --radius-full: 999px;
 
   /* --- Sombras --- */

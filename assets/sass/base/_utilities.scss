@@ -94,15 +94,15 @@
 .overflow-hidden { overflow: hidden; }
 
 /* # Rounded
+Una sola escala de radios: estas clases son solo el atajo utilitario
+de los tokens --radius-* definidos en base/theme.scss, no un valor
+aparte.
 ----------------------------------------------- */
-.rounded       { border-radius: 0.25rem; }  /* 4px */
-.rounded-sm    { border-radius: 0.125rem; } /* 2px */
-.rounded-md    { border-radius: 0.375rem; } /* 6px */
-.rounded-lg    { border-radius: 0.5rem; }   /* 8px */
-.rounded-xl    { border-radius: 0.75rem; }  /* 12px */
-.rounded-2xl   { border-radius: 1rem; }     /* 16px */
-.rounded-3xl   { border-radius: 1.5rem; }   /* 24px */
-.rounded-full  { border-radius: 9999px; }   /* círculo */
+.rounded-xs   { border-radius: var(--radius-xs); }
+.rounded-sm   { border-radius: var(--radius-sm); }
+.rounded-md   { border-radius: var(--radius-md); }
+.rounded-lg   { border-radius: var(--radius-lg); }
+.rounded-full { border-radius: var(--radius-full); }
 
 /* # Spacing
 ----------------------------------------------- */

@@ -8,7 +8,7 @@
   gap: .375rem;
   padding: .5rem .75rem;
   border: 1px solid transparent;
-  border-radius: .25rem;
+  border-radius: var(--radius-xs);
   white-space: nowrap;
   text-align: center;
   cursor: pointer;
@@ -35,7 +35,7 @@
 .btn-sm {
   font-size: .75rem;
   padding: .375rem .625rem;
-  border-radius: .2rem;
+  border-radius: var(--radius-xs);
 
   i { font-size: .875rem; }
 }
@@ -157,7 +157,7 @@
 ===================== */
 .button-group {
   display: inline-flex;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-xs);
 
   button {
     margin: 0;
@@ -176,7 +176,7 @@
   background-color: var(--color-canvas);
   color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
   border: 1px solid color-mix(in srgb, var(--brand-primary) 90%, $white-color);
-  border-radius: 0.25rem 0 0 0.25rem;
+  border-radius: var(--radius-xs) 0 0 var(--radius-xs);
 
   &:hover {
     background-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
@@ -191,7 +191,7 @@
   background-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
   color: $white-color;
   border: 1px solid color-mix(in srgb, var(--brand-primary) 90%, $white-color);
-  border-radius: 0 0.25rem 0.25rem 0;
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
   i { color: $white-color; }
 
   &:hover {
@@ -214,4 +214,4 @@
 .btn-icon-only.btn-sm { width: 1.75rem; height: 1.75rem; }
 .btn-icon-only.btn-lg { width: 2.75rem; height: 2.75rem; }
 
-.btn-circle { border-radius: 50%; }
+.btn-circle { border-radius: var(--radius-full); }

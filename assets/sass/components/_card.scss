@@ -4,14 +4,14 @@
 .card {
   background-color:var(--color-surface);
   background-clip: border-box;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
   border:1px solid $border-subtle;
   transition: background-color 0.2s ease, border-color 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 
   .card-header {
     padding: 1rem 1rem;
-    border-radius:0.5rem 0.5rem 0 0;
+    border-radius:var(--radius-sm) var(--radius-sm) 0 0;
     border-bottom: 1px solid $border-subtle;
   }    
 
@@ -21,7 +21,7 @@
 
   .card-footer {
     padding:1rem;
-    border-radius:0 0 0.5rem 0.5rem ;      
+    border-radius:0 0 var(--radius-sm) var(--radius-sm) ;      
     text-align: left;
     border-top: 1px solid $border-subtle;
 

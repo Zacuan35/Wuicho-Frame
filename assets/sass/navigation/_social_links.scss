@@ -12,7 +12,7 @@ ul.social-links {
   justify-content: center;
   width: 2.25rem;
   height: 2.25rem;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   font-size:1rem; 
   text-align:center;
   color:red;

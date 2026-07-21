@@ -18,8 +18,10 @@ retematizar todo el kit sin tocar el resto del CSS.
   --font-display: Montserrat, serif;
   --font-body: Roboto, serif;
   /* --- Radios --- */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
   --radius-full: 999px;
   /* --- Sombras --- */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -877,31 +879,30 @@ Tabletas horizontales */
 }
 
 /* # Rounded
+Una sola escala de radios: estas clases son solo el atajo utilitario
+de los tokens --radius-* definidos en base/theme.scss, no un valor
+aparte.
 ----------------------------------------------- */
-.rounded {
-  border-radius: 0.25rem;
-} /* 4px */
+.rounded-xs {
+  border-radius: var(--radius-xs);
+}
+
 .rounded-sm {
-  border-radius: 0.125rem;
-} /* 2px */
+  border-radius: var(--radius-sm);
+}
+
 .rounded-md {
-  border-radius: 0.375rem;
-} /* 6px */
+  border-radius: var(--radius-md);
+}
+
 .rounded-lg {
-  border-radius: 0.5rem;
-} /* 8px */
-.rounded-xl {
-  border-radius: 0.75rem;
-} /* 12px */
-.rounded-2xl {
-  border-radius: 1rem;
-} /* 16px */
-.rounded-3xl {
-  border-radius: 1.5rem;
-} /* 24px */
+  border-radius: var(--radius-lg);
+}
+
 .rounded-full {
-  border-radius: 9999px;
-} /* círculo */
+  border-radius: var(--radius-full);
+}
+
 /* # Spacing
 ----------------------------------------------- */
 .m-0 {
@@ -1359,7 +1360,7 @@ en vez de meter los ejemplos dentro de .card.
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: 0.25em;
+  border-radius: var(--radius-xs);
 }
 
 /* # Background images
@@ -3374,7 +3375,7 @@ Tabletas horizontales */
   border: none;
   cursor: pointer;
   outline: none;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-xs);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -3399,7 +3400,7 @@ Tabletas horizontales */
   background-color: var(--color-surface);
   padding: 15px;
   display: none;
-  border-radius: 0 0 0.25rem 0.25rem;
+  border-radius: 0 0 var(--radius-xs) var(--radius-xs);
 }
 .acordeon .acordeon-item .acordeon-body p {
   color: var(--color-text-primary);
@@ -3410,7 +3411,7 @@ Tabletas horizontales */
 ===================== */
 .banner_alert {
   padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-xs);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -3533,7 +3534,7 @@ Tabletas horizontales */
   gap: 0.375rem;
   padding: 0.5rem 0.75rem;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-xs);
   white-space: nowrap;
   text-align: center;
   cursor: pointer;
@@ -3559,7 +3560,7 @@ Tabletas horizontales */
 .btn-sm {
   font-size: 0.75rem;
   padding: 0.375rem 0.625rem;
-  border-radius: 0.2rem;
+  border-radius: var(--radius-xs);
 }
 .btn-sm i {
   font-size: 0.875rem;
@@ -3679,7 +3680,7 @@ Tabletas horizontales */
 ===================== */
 .button-group {
   display: inline-flex;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-xs);
 }
 .button-group button {
   margin: 0;
@@ -3697,7 +3698,7 @@ Tabletas horizontales */
   background-color: var(--color-canvas);
   color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
   border: 1px solid color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  border-radius: 0.25rem 0 0 0.25rem;
+  border-radius: var(--radius-xs) 0 0 var(--radius-xs);
 }
 .button-left:hover {
   background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
@@ -3713,7 +3714,7 @@ Tabletas horizontales */
   background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
   color: #ffffff;
   border: 1px solid color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  border-radius: 0 0.25rem 0.25rem 0;
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
 }
 .button-right i {
   color: #ffffff;
@@ -3747,7 +3748,7 @@ Tabletas horizontales */
 }
 
 .btn-circle {
-  border-radius: 50%;
+  border-radius: var(--radius-full);
 }
 
 /* =====================
@@ -3756,14 +3757,14 @@ Tabletas horizontales */
 .card {
   background-color: var(--color-surface);
   background-clip: border-box;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
   transition: background-color 0.2s ease, border-color 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 .card .card-header {
   padding: 1rem 1rem;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
   border-bottom: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
 }
 .card .card-body {
@@ -3771,7 +3772,7 @@ Tabletas horizontales */
 }
 .card .card-footer {
   padding: 1rem;
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
   text-align: left;
   border-top: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
 }
@@ -3912,7 +3913,7 @@ a.card.card-info:hover {
   background-color: var(--color-surface);
   background-clip: border-box;
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
 }
 .panel-list .panel-item p {
   margin: 0;
@@ -4059,7 +4060,7 @@ Tabletas horizontales */
 .wa-avatar img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   object-fit: cover;
 }
 
@@ -4072,7 +4073,7 @@ Tabletas horizontales */
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   font-size: 1rem;
   flex-shrink: 0;
   background: #eee;
@@ -4156,7 +4157,7 @@ Tabletas horizontales */
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
 }
 
 /* =====================
@@ -4184,7 +4185,7 @@ Tabletas horizontales */
 
 .wa-list.cards .wa-item {
   border: 1px solid #eee;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
   background: white;
 }
 
@@ -4205,7 +4206,7 @@ canvas {
   display: block;
   background: #ffffff;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -4216,14 +4217,14 @@ canvas {
   background-color: var(--color-surface);
   padding: 1rem 0.5rem;
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
   height: auto;
 }
 .gallery-section .gallery-body h4 {
   margin-bottom: 1rem;
 }
 .gallery-section .gallery-body #imagenDestacada {
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
   border: 3px solid var(--color-success-text);
   margin-bottom: 1rem;
 }
@@ -4238,7 +4239,7 @@ canvas {
   top: 6px;
   right: 6px;
   background-color: var(--color-surface);
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   padding: 3px;
   display: flex;
   justify-content: center;
@@ -4259,7 +4260,7 @@ canvas {
   color: var(--color-success-text);
 }
 .gallery-section .gallery-body .wrapper-variants .wrapper-thumbnails .thumbnail img {
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
   opacity: 0.7;
   cursor: pointer;
 }
@@ -4270,7 +4271,7 @@ canvas {
   background-color: var(--color-canvas);
   padding: 1rem 0.5rem;
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
   margin-top: -1px;
 }
 .gallery-section .gallery-footer h5 {
@@ -4633,7 +4634,7 @@ table.align-right .switch-group {
   margin-left: 5px;
   padding: 6px 10px;
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
-  border-radius: 4px;
+  border-radius: var(--radius-xs);
   outline: none;
   transition: all 0.2s ease;
   font-size: 14px;
@@ -4666,7 +4667,7 @@ table.align-right .switch-group {
   display: inline-block;
   padding: 6px 12px;
   margin-left: 3px;
-  border-radius: 4px;
+  border-radius: var(--radius-xs);
   background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
   color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
   cursor: pointer;
@@ -5023,7 +5024,7 @@ html {
 }
 
 .swal2-styled.swal2-confirm {
-  border-radius: 0.25em;
+  border-radius: var(--radius-xs);
   background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff) !important;
   color: #fff;
   font-weight: 500;
@@ -5410,7 +5411,7 @@ i {
   align-items: center;
   padding: 1rem;
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
   background-color: var(--color-surface);
   transition: all 0.2s ease;
   min-width: 0; /* para evitar overflow */
@@ -5595,7 +5596,7 @@ i {
   min-width: 250px;
   max-width: 320px;
   padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
   color: var(--color-surface);
   display: flex;
   justify-content: space-between;
@@ -5649,7 +5650,7 @@ i {
   height: 18px;
   position: relative;
   background: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   overflow: hidden;
 }
 
@@ -5720,7 +5721,7 @@ i {
   position: relative;
   width: 100%;
   padding: 50px 20px 20px;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   background-color: var(--color-surface);
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
   text-align: center;
@@ -5749,7 +5750,7 @@ i {
   width: 50px;
   height: 50px;
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5793,7 +5794,7 @@ i {
   width: 50px;
   padding: 8px;
   aspect-ratio: 1;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   background: var(--brand-primary);
   --_m:
     conic-gradient(#0000 10%,#000),
@@ -5835,7 +5836,7 @@ i {
   gap: 0.5rem;
   max-width: 100%;
   padding: 0.45rem 0.85rem;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
   border: 1px solid var(--color-border-strong);
   color: var(--color-text-primary);
@@ -5966,7 +5967,7 @@ legend,
   background-color: var(--color-canvas);
   background-clip: padding-box;
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
-  border-radius: 0.25rem;
+  border-radius: var(--radius-xs);
   font-size: 0.875rem;
   line-height: 1.5;
   transition: border-color 0.15s ease-in-out;
@@ -6003,17 +6004,17 @@ input[type=radio] {
   margin-right: 10px;
   accent-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
   border: 2px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
-  border-radius: 4px;
+  border-radius: var(--radius-xs);
 }
 
 input[type=radio] {
-  border-radius: 50%;
+  border-radius: var(--radius-full);
 }
 
 fieldset {
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
   padding: 10px;
-  border-radius: 5px;
+  border-radius: var(--radius-xs);
   margin-bottom: 1rem;
 }
 
@@ -6041,7 +6042,7 @@ input[type=range] {
   width: 90%;
   height: 10px;
   background: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
-  border-radius: 5px;
+  border-radius: var(--radius-xs);
   outline: none;
   transition: background 0.3s ease;
 }
@@ -6058,7 +6059,7 @@ input[type=range]::-webkit-slider-thumb {
   width: 20px;
   height: 20px;
   background: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
@@ -6067,7 +6068,7 @@ input[type=range]::-moz-range-thumb {
   width: 20px;
   height: 20px;
   background: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   border: 2px solid #fff;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -6092,7 +6093,7 @@ output {
   height: 30px;
   text-align: center;
   color: var(--color-surface);
-  border-radius: 5px;
+  border-radius: var(--radius-xs);
   display: inline-block;
   font-size: 1rem;
   line-height: 2;
@@ -6194,7 +6195,7 @@ input::-ms-reveal {
   height: 38px; /* Misma altura que el botón */
 }
 .search.form-control {
-  border-radius: 0.25rem 0 0 0.25rem;
+  border-radius: var(--radius-xs) 0 0 var(--radius-xs);
 }
 
 /* # Search button
@@ -6204,7 +6205,7 @@ input::-ms-reveal {
   border: 1px solid color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
   color: #ffffff;
   padding: 10px;
-  border-radius: 0 0.25rem 0.25rem 0;
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -6268,14 +6269,14 @@ input::-ms-reveal {
   bottom: 0;
   background-color: var(--color-border-strong);
   transition: 0.4s;
-  border-radius: 20px;
+  border-radius: var(--radius-full);
 }
 .switch .slider:before {
   position: absolute;
   content: "";
   height: 16px;
   width: 16px;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   left: 2px;
   bottom: 2px;
   background-color: var(--color-surface);
@@ -6326,7 +6327,7 @@ input::-ms-reveal {
   padding: 10px;
   background-color: var(--color-canvas);
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
-  border-radius: 4px;
+  border-radius: var(--radius-xs);
   cursor: pointer;
   font-size: 1rem;
 }
@@ -6340,7 +6341,7 @@ input::-ms-reveal {
 ===================== */
 .date-group {
   display: flex;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-xs);
   overflow: hidden;
   width: 100%;
 }
@@ -6350,10 +6351,10 @@ input::-ms-reveal {
   position: relative;
 }
 .date-container:first-child .text-input, .date-container:first-child .date-input {
-  border-radius: 0.25rem 0 0 0.25rem;
+  border-radius: var(--radius-xs) 0 0 var(--radius-xs);
 }
 .date-container:last-child .text-input, .date-container:last-child .date-input {
-  border-radius: 0 0.25rem 0.25rem 0;
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
 }
 .date-container .date-input {
   display: none;
@@ -6416,7 +6417,7 @@ input::-ms-reveal {
   background-color: var(--color-surface);
   color: var(--color-text-primary);
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
-  border-radius: 0.25rem;
+  border-radius: var(--radius-xs);
   font-size: 0.875rem;
   line-height: 1.5;
   cursor: default;
@@ -6600,7 +6601,7 @@ input::-ms-reveal {
 /*Si se utiliza imagen de usuario*/
 .dropdown-toggle img.user {
   width: 20px;
-  border-radius: 1rem;
+  border-radius: var(--radius-lg);
   margin-bottom: -6px;
   margin-right: 0.25rem;
 }
@@ -6724,7 +6725,7 @@ ul.social-links {
   justify-content: center;
   width: 2.25rem;
   height: 2.25rem;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   font-size: 1rem;
   text-align: center;
   color: red;
@@ -6998,7 +6999,7 @@ Tabletas horizontales*/
   width: 90%;
   max-width: 900px;
   max-height: 550px;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: grid;
@@ -7367,7 +7368,7 @@ Colour theme
 
 @media (min-width: 768px) {
   .sidebar-navbar {
-    border-radius: 4px;
+    border-radius: var(--radius-xs);
   }
 }
 .navbar-static-top {
@@ -7610,7 +7611,7 @@ Colour theme
   float: left;
   width: 25px;
   height: 25px;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   margin-right: 10px;
   margin-top: -2px;
 }
@@ -7716,7 +7717,7 @@ Colour theme
 .dropdown-menu .message-links img {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
 }
 
 .dropdown-menu .message-links h4 {

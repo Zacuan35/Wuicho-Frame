@@ -38,7 +38,7 @@
 
   padding: 1rem;
   border: 1px solid $border-subtle;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
   background-color: var(--color-surface);
 
   transition: all 0.2s ease;
