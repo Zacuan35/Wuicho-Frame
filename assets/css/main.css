@@ -2,6 +2,7 @@
 /* =====================
 # MAIN
 ===================== */
+/*Base*/
 /* =====================
 # THEME
 Todo el sistema de diseño reutilizable vive aquí: tipografía, radios,
@@ -242,7 +243,6 @@ b {
   background-color: var(--color-info-text);
 }
 
-/*Base*/
 /* =====================
   RESET CSS
 ===================== */
