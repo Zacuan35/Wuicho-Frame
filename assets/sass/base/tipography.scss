@@ -70,23 +70,12 @@ h1,h2,h3,h4,h5,h6,
   line-height: normal;
   text-transform:initial;
 }
-/*Sólo si se requiere títulos H1 más grandes en el home */
-h1.home ,h2.home{font-size: 2.3rem;}
-
 h1, .h1 { font-size: var(--fs-3xl); }
 h2, .h2 { font-size: var(--fs-2xl); }
 h3, .h3 { font-size: var(--fs-xl); }
 h4, .h4 { font-size: var(--fs-lg); }
 h5, .h5 { font-size: var(--fs-md); }
 h6, .h6 { font-size: var(--fs-base); }
-h2.teaser {
-  font-family:var(--font-body);
-  font-size: 2rem;
-  font-weight: 700;
-  font-style: italic;
-  margin-top: 0px;
-  text-transform: capitalize;
-}
 
 /*Escala de texto
 Clases de tamaño puro, sin implicar ningún nivel de jerarquía: se usan
@@ -158,8 +147,6 @@ Tabletas horizontales*/
     margin: 0 0 1rem 0;
   }
   */
-
-  h1.home ,h2.home{font-size: 3.8rem;}
 
   /* Un solo lugar redefine la escala completa; h1-h6, .h1-.h6 y
   .text-* la heredan automáticamente por leerla de estas variables. */
