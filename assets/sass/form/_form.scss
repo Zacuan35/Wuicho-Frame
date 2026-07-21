@@ -12,11 +12,12 @@
 label {
   display: inline-block;
   margin-bottom: 0.25rem;
+  font-size: var(--fs-sm);
 }
 
 /* # Colour
 ----------------------------------------------- */
-label{color:var(--color-text-primary);}
+label{color:var(--color-text-secondary);}
 label span {color: var(--color-danger-text); }
 
 form, 
@@ -40,15 +41,15 @@ legend,
   background-clip: padding-box;
   border: 1px solid $border-subtle;
   border-radius: var(--radius-xs);
-  font-size:0.875rem;  
+  font-size: var(--fs-sm);
   line-height: 1.5;
   transition: border-color 0.15s ease-in-out;
   &:hover, &:focus {
-    border-color:color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
+    border-color:color-mix(in srgb, var(--brand-primary) 90%, $white-color);
     outline: 0;
   }
   &::placeholder {
-    color: var(--color-text-primary);
+    color: var(--color-text-muted);
   }
   &:disabled{
     background-color:var(--color-border-strong);
