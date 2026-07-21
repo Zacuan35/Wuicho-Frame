@@ -3512,6 +3512,16 @@ main {
   transition: color var(--transition-base);
 }
 
+/* # Variante con separador chevron
+----------------------------------------------- */
+.breadcrumb.breadcrumb-chevron ol li::after {
+  content: "\e90c";
+  font-family: "icomoon";
+  font-size: 0.65rem;
+  margin: 0 0.375rem;
+  vertical-align: middle;
+}
+
 /* =====================
 # Buttons
 ===================== */
@@ -4714,6 +4724,9 @@ table.dataTable thead th.sorting_desc:after {
 }
 /* =====================
 # TABS
+Un solo sistema (.tabs-container > .tabs > .tab-button + .tab-content
+> .tab-pane) para horizontal y vertical; la variante vertical solo
+agrega el modificador .tabs-vertical sobre el mismo contenedor.
 ===================== */
 .tabs-container {
   width: 100%;
@@ -4769,11 +4782,41 @@ table.dataTable thead th.sorting_desc:after {
 .tab-content {
   padding-top: 20px;
 }
-.tab-content .tab-pane {
+.tab-content .tab-pane[hidden] {
   display: none;
 }
-.tab-content .tab-pane.active {
-  display: block;
+
+/* # Variante vertical
+----------------------------------------------- */
+.tabs-container.tabs-vertical {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+.tabs-container.tabs-vertical .tabs {
+  flex-direction: column;
+  border-bottom: none;
+  border-right: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  gap: 2px;
+  min-width: 180px;
+  flex-shrink: 0;
+}
+.tabs-container.tabs-vertical .tab-button {
+  border-bottom: none;
+  border-right: 2px solid transparent;
+  margin-bottom: 0;
+  margin-right: -1px;
+  text-align: left;
+  width: 100%;
+}
+.tabs-container.tabs-vertical .tab-button.active {
+  border-color: var(--brand-primary);
+  background-color: color-mix(in srgb, var(--brand-primary) 10%, var(--color-surface));
+}
+.tabs-container.tabs-vertical .tab-content {
+  padding-top: 0;
+  flex: 1;
+  min-width: 0;
 }
 
 /* =====================
@@ -4965,55 +5008,6 @@ html {
 .tooltip-bottom:focus:before,
 .tooltip-bottom:focus:after {
   transform: translateY(12px);
-}
-
-/* =====================
-# VERTICAL-TABS
-===================== */
-.vertical-tabs-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 28px;
-}
-.vertical-tabs-container .vertical-tabs {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 180px;
-  flex-shrink: 0;
-  border-right: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
-}
-.vertical-tabs-container .vertical-tabs .vertical-tab {
-  padding: 10px 16px;
-  margin-right: -1px;
-  cursor: pointer;
-  background: transparent;
-  color: var(--color-text-muted);
-  border-right: 2px solid transparent;
-  text-align: left;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 600;
-  transition: color var(--transition-base), border-color var(--transition-base), background-color var(--transition-base);
-}
-.vertical-tabs-container .vertical-tabs .vertical-tab:hover {
-  color: var(--color-text-primary);
-}
-.vertical-tabs-container .vertical-tabs .vertical-tab.active {
-  color: var(--brand-primary);
-  border-color: var(--brand-primary);
-  background-color: color-mix(in srgb, var(--brand-primary) 10%, var(--color-surface));
-}
-
-.vertical-tab-content {
-  flex: 1;
-  min-width: 0;
-}
-.vertical-tab-content .vertical-tab-pane {
-  display: none;
-}
-.vertical-tab-content .vertical-tab-pane.active {
-  display: block;
 }
 
 /* =====================

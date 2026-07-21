@@ -1,5 +1,8 @@
 /* =====================
 # TABS
+Un solo sistema (.tabs-container > .tabs > .tab-button + .tab-content
+> .tab-pane) para horizontal y vertical; la variante vertical solo
+agrega el modificador .tabs-vertical sobre el mismo contenedor.
 ===================== */
 .tabs-container {
   width: 100%;
@@ -58,10 +61,44 @@
 .tab-content {
   padding-top: 20px;
 
-  .tab-pane {
+  .tab-pane[hidden] {
     display: none;
-    &.active { display: block; }
   }
 }
 
+/* # Variante vertical
+----------------------------------------------- */
+.tabs-container.tabs-vertical {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
 
+  .tabs {
+    flex-direction: column;
+    border-bottom: none;
+    border-right: 1px solid $border-subtle;
+    gap: 2px;
+    min-width: 180px;
+    flex-shrink: 0;
+  }
+
+  .tab-button {
+    border-bottom: none;
+    border-right: 2px solid transparent;
+    margin-bottom: 0;
+    margin-right: -1px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .tab-button.active {
+    border-color: var(--brand-primary);
+    background-color: color-mix(in srgb, var(--brand-primary) 10%, var(--color-surface));
+  }
+
+  .tab-content {
+    padding-top: 0;
+    flex: 1;
+    min-width: 0;
+  }
+}

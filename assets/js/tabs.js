@@ -1,51 +1,29 @@
 /* =====================
-# HORIZONTAL TABS
-===================== */  
+# TABS (horizontal y vertical)
+Un solo bloque para ambas variantes, ya que comparten las mismas
+clases (.tab-button / .tab-pane); cada grupo se resuelve por separado
+gracias al atributo [data-tabs], así que puede haber varios en la
+misma página sin que se interfieran entre sí.
+===================== */
 document.addEventListener('DOMContentLoaded', () => {
-  const tabContainers = document.querySelectorAll('.tabs-container');
+  document.querySelectorAll('[data-tabs]').forEach((tabGroup) => {
+    const buttons = tabGroup.querySelectorAll('.tab-button');
+    const panes = tabGroup.querySelectorAll('.tab-pane');
 
-  tabContainers.forEach(container => {
-      const tabButtons = container.querySelectorAll('.tab-button');
-      const tabPanes = container.querySelectorAll('.tab-pane');
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        buttons.forEach((btn) => {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-selected', 'false');
+        });
+        panes.forEach((pane) => pane.setAttribute('hidden', ''));
 
-      tabButtons.forEach(button => {
-          button.addEventListener('click', () => {
-              // Remove 'active' class from all buttons and panes within this container
-              tabButtons.forEach(btn => btn.classList.remove('active'));
-              tabPanes.forEach(pane => pane.classList.remove('active'));
+        button.classList.add('active');
+        button.setAttribute('aria-selected', 'true');
 
-              // Add 'active' class to the clicked button and corresponding pane
-              button.classList.add('active');
-              const targetId = button.dataset.target;
-              document.getElementById(targetId).classList.add('active');
-          });
+        const target = document.getElementById(button.dataset.target);
+        target?.removeAttribute('hidden');
       });
+    });
   });
 });
-
-/* =====================
-# VERTICAL TABS
-===================== */  
-document.addEventListener("DOMContentLoaded", () => {
-	const verticalTabs = document.querySelectorAll(".vertical-tab");
-	const verticalTabPanes = document.querySelectorAll(".vertical-tab-pane");
-  
-	verticalTabs.forEach(tab => {
-	  tab.addEventListener("click", () => {
-		// Desactivar las pestañas y los contenidos
-		verticalTabs.forEach(t => t.classList.remove("active"));
-		verticalTabPanes.forEach(pane => pane.classList.remove("active"));
-  
-		// Activar la pestaña seleccionada
-		tab.classList.add("active");
-		
-		// Mostrar el contenido correspondiente
-		const tabId = tab.getAttribute("data-tab");
-		document.getElementById(tabId).classList.add("active");
-	  });
-	});
-  
-	// Inicialmente mostrar el contenido de la primera pestaña
-	verticalTabs[0].classList.add("active");
-	verticalTabPanes[0].classList.add("active");
-  });
