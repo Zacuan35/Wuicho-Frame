@@ -6879,7 +6879,7 @@ ul.secondary_menu li.active a {
   z-index: 1000;
   transition: background-color 0.3s ease;
   opacity: 0.2;
-  color: var(--color-text-primary);
+  color: #ffffff;
   background-color: var(--brand-primary);
 }
 #back-to-top i {
