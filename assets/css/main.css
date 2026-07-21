@@ -18,8 +18,8 @@ Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   /* --- Tipografía --- */
-  --font-display: Montserrat, serif;
-  --font-body: Roboto, serif;
+  --font-display: Montserrat, sans-serif;
+  --font-body: Roboto, sans-serif;
   /* --- Escala tipográfica (mobile-first; --fs-md a --fs-3xl crecen
   en el breakpoint desktop de tipography.scss). Un solo lugar controla
   tanto los h1-h6 como las clases .text-*, para no duplicar valores. --- */

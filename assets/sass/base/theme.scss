@@ -9,8 +9,8 @@ Color (marca fija + superficies/texto que se adaptan a claro/oscuro + estados).
 Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
 ===================== */
 /* --- Fuentes (usadas por --font-display / --font-body) --- */
-$primary-font: "Montserrat", serif;
-$secondary-font: "Roboto", serif;
+$primary-font: "Montserrat", sans-serif;
+$secondary-font: "Roboto", sans-serif;
 
 :root {
   /* --- Tipografía --- */
