@@ -444,8 +444,7 @@ Las etiquetas h1-h6 se eligen por jerarquía semántica del documento
 (nunca por el tamaño visual que se quiera lograr). Todas leen su
 tamaño de las mismas variables --fs-* que usan las clases .text-*,
 para que exista un solo lugar donde retocar la escala completa. */
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   font-weight: 700;
   margin: 0;
@@ -454,27 +453,27 @@ h1, h2, h3, h4, h5, h6,
   text-transform: initial;
 }
 
-h1, .h1 {
+h1 {
   font-size: var(--fs-3xl);
 }
 
-h2, .h2 {
+h2 {
   font-size: var(--fs-2xl);
 }
 
-h3, .h3 {
+h3 {
   font-size: var(--fs-xl);
 }
 
-h4, .h4 {
+h4 {
   font-size: var(--fs-lg);
 }
 
-h5, .h5 {
+h5 {
   font-size: var(--fs-md);
 }
 
-h6, .h6 {
+h6 {
   font-size: var(--fs-base);
 }
 
@@ -621,15 +620,8 @@ Tabletas verticales o celulares horizontales*/
 /*A partir de 1024px se aplicarán estos estilos => 1024px
 Tabletas horizontales*/
 @media (min-width: 1024px) {
-  /* Márgenes y espaciados */
-  /*
-  h1,h2,h3,h4,h5,h6,
-  .h1,.h2,.h3,.h4,.h5,.h6 {
-    margin: 0 0 1rem 0;
-  }
-  */
-  /* Un solo lugar redefine la escala completa; h1-h6, .h1-.h6 y
-  .text-* la heredan automáticamente por leerla de estas variables. */
+  /* Un solo lugar redefine la escala completa; h1-h6 y .text-*
+  la heredan automáticamente por leerla de estas variables. */
   :root {
     --fs-md: 1.25rem;
     --fs-lg: 1.5rem;
