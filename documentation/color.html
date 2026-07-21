@@ -236,8 +236,10 @@
         ========================================== -->
         <section class="content-body">
           <div class="grid gap-5">
-            <h4>Color de marca</h4>
-            <p class="small" style="margin-bottom:1rem">Colores fijos, iguales en modo claro y oscuro.</p>
+            <div class="grid gap-1">
+              <h6>Color de marca</h6>
+              <p>Colores fijos, iguales en modo claro y oscuro.</p>
+            </div>
             <div class="doc-preview flex flex-wrap gap-4">
               <div class="swatch-item" style="width:110px">
                 <div style="height:64px;border-radius:var(--radius-md);background:var(--brand-primary);margin-bottom:8px"></div>
@@ -266,8 +268,10 @@
               </div>
             </div>
 
-            <h4>Color semántico (se adapta al tema)</h4>
-            <p class="small" style="margin-bottom:1rem">Superficies, texto y bordes: cambian de valor entre modo claro y oscuro pero conservan su función. Por eso se muestra el nombre de la variable en vez de un hex fijo.</p>
+            <div class="grid gap-1">
+              <h6>Color semántico (se adapta al tema)</h6>
+              <p>Superficies, texto y bordes: cambian de valor entre modo claro y oscuro pero conservan su función. Por eso se muestra el nombre de la variable en vez de un hex fijo.</p>
+            </div>
             <div class="doc-preview flex flex-wrap gap-4">
               <div class="swatch-item" style="width:110px">
                 <div style="height:64px;border-radius:var(--radius-md);border:1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);background:var(--color-canvas);margin-bottom:8px"></div>
@@ -296,8 +300,10 @@
               </div>
             </div>
 
-            <h4>Color de estado</h4>
-            <p class="small" style="margin-bottom:1rem">Para feedback: éxito, error, advertencia e información. Cada estado tiene su variable de fondo (bg) y su variable de texto (text).</p>
+            <div class="grid gap-1">
+              <h6>Color de estado</h6>
+              <p>Para feedback: éxito, error, advertencia e información. Cada estado tiene su variable de fondo (bg) y su variable de texto (text).</p>
+            </div>
             <div class="doc-preview">
               <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;color:var(--color-text-muted)">Fondo (bg)</p>
               <div class="flex flex-wrap gap-4" style="margin-bottom:1.5rem">
@@ -347,7 +353,10 @@
               </div>
             </div>
 
-            <h4>Los 4 estados en componentes reales</h4>
+            <div class="grid gap-1">
+              <h6>Los 4 estados en componentes reales</h6>
+              <p>Los mismos success/danger/warning/info aplicados en badges y botones.</p>
+            </div>
             <div class="doc-preview flex flex-wrap gap-2">
               <span class="badge badge-success">Success</span>
               <span class="badge badge-danger">Danger</span>
