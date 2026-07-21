@@ -64,6 +64,7 @@ $secondary-font: "Roboto", serif;
   --color-surface: #FFFFFF;
 
   --color-text-primary: #1A1D3A;
+  --color-text-secondary: color-mix(in srgb, var(--color-text-primary) 75%, transparent);
   --color-text-muted: #8A8FB3;
   --color-border-strong: #D3D6E8;
 
@@ -109,11 +110,11 @@ $warning-color:#F59E0B;
 $danger-color:#F43F5E;
 
 /* Tonos derivados (no son colores nuevos: se calculan variando la
-opacidad de --color-border-strong, --color-text-primary y --color-surface
-que ya existen, en vez de declarar más --color-* fijos) */
+opacidad de --color-border-strong y --color-surface que ya existen, en
+vez de declarar más --color-* fijos. --color-text-secondary vive junto
+a --color-text-primary arriba, ya que participa del sistema de tema) */
 $border-subtle: color-mix(in srgb, var(--color-border-strong) 55%, transparent);
 $fill-subtle: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
-$text-secondary: color-mix(in srgb, var(--color-text-primary) 75%, transparent);
 $surface-tint: color-mix(in srgb, var(--color-surface) 94%, var(--color-text-primary) 6%);
 
 /* =================
@@ -140,7 +141,11 @@ body {
 
 /* # General colors
 ----------------------------------------------- */
-p, ul, ol, small {
+p, ul, ol {
+  color: var(--color-text-secondary);
+}
+
+small {
   color: var(--color-text-primary);
   &.small{
     color: var(--color-text-muted);

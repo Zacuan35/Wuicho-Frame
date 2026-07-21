@@ -60,6 +60,7 @@ Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
   --color-canvas: #F4F5FA;
   --color-surface: #FFFFFF;
   --color-text-primary: #1A1D3A;
+  --color-text-secondary: color-mix(in srgb, var(--color-text-primary) 75%, transparent);
   --color-text-muted: #8A8FB3;
   --color-border-strong: #D3D6E8;
   --color-success-bg: #E9FBF0;
@@ -93,8 +94,9 @@ body.dark-mode {
 
 /*Fixed colors (iguales en ambos temas, para fondos sólidos: botones, banners, labels)*/
 /* Tonos derivados (no son colores nuevos: se calculan variando la
-opacidad de --color-border-strong, --color-text-primary y --color-surface
-que ya existen, en vez de declarar más --color-* fijos) */
+opacidad de --color-border-strong y --color-surface que ya existen, en
+vez de declarar más --color-* fijos. --color-text-secondary vive junto
+a --color-text-primary arriba, ya que participa del sistema de tema) */
 /* =================
 # COLOR DECLARATION
 ================= */
@@ -118,10 +120,14 @@ body {
 
 /* # General colors
 ----------------------------------------------- */
-p, ul, ol, small {
+p, ul, ol {
+  color: var(--color-text-secondary);
+}
+
+small {
   color: var(--color-text-primary);
 }
-p.small, ul.small, ol.small, small.small {
+small.small {
   color: var(--color-text-muted);
 }
 
@@ -4477,7 +4483,7 @@ Tabletas verticales o celulares horizontales*/
   border-radius: var(--radius-sm);
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
   background: var(--color-surface);
-  color: color-mix(in srgb, var(--color-text-primary) 75%, transparent);
+  color: var(--color-text-secondary);
   font-size: 0.85rem;
   font-weight: 600;
   transition: all var(--transition-base);
