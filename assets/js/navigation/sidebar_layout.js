@@ -1,12 +1,11 @@
 /* =====================
 # SIDEBAR LAYOUT
 ===================== */
+'use strict';
 
 if (typeof jQuery === "undefined") {
   throw new Error("AdminLTE requires jQuery");
 }
-
-'use strict';
 
 $.AdminLTE = {};
 
