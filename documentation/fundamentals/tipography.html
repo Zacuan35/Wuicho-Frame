@@ -306,29 +306,46 @@
           <div class="grid gap-5">
             <div class="grid gap-1">
               <h6>Titulares <small>/ Montserrat</small></h6>
-              <p>Jerarquía de encabezados h1-h6, todos con la misma familia tipográfica.</p>
+              <p>h1-h6 se eligen por jerarquía semántica del documento (un h1 por página, descendiendo sin saltos), nunca por el tamaño visual que se quiera lograr. Su tamaño en desktop (≥1024px) es el que se muestra abajo.</p>
             </div>
             <div class="doc-preview grid gap-2">
-              <h1>Heading H1 <small>2.5rem</small></h1>
-              <h2>Heading H2 <small>2rem</small></h2>
-              <h3>Heading H3 <small>1.75rem</small></h3>
-              <h4>Heading H4 <small>1.5rem</small></h4>
-              <h5>Heading H5 <small>1.25rem</small></h5>
-              <h6>Heading H6 <small>1rem</small></h6>
+              <h1>Heading H1 <small>--fs-3xl · 2.5rem</small></h1>
+              <h2>Heading H2 <small>--fs-2xl · 2rem</small></h2>
+              <h3>Heading H3 <small>--fs-xl · 1.75rem</small></h3>
+              <h4>Heading H4 <small>--fs-lg · 1.5rem</small></h4>
+              <h5>Heading H5 <small>--fs-md · 1.25rem</small></h5>
+              <h6>Heading H6 <small>--fs-base · 1rem</small></h6>
             </div>
-            <pre class="code-block">&lt;<span class="tok-tag">h1</span>&gt;Heading H1&lt;/<span class="tok-tag">h1</span>&gt;   <span class="tok-comment">/* 2.5rem */</span>
-&lt;<span class="tok-tag">h2</span>&gt;Heading H2&lt;/<span class="tok-tag">h2</span>&gt;   <span class="tok-comment">/* 2rem */</span>
-&lt;<span class="tok-tag">h6</span>&gt;Heading H6&lt;/<span class="tok-tag">h6</span>&gt;   <span class="tok-comment">/* 1rem */</span></pre>
+            <pre class="code-block">&lt;<span class="tok-tag">h1</span>&gt;Heading H1&lt;/<span class="tok-tag">h1</span>&gt;   <span class="tok-comment">/* var(--fs-3xl) */</span>
+&lt;<span class="tok-tag">h2</span>&gt;Heading H2&lt;/<span class="tok-tag">h2</span>&gt;   <span class="tok-comment">/* var(--fs-2xl) */</span>
+&lt;<span class="tok-tag">h6</span>&gt;Heading H6&lt;/<span class="tok-tag">h6</span>&gt;   <span class="tok-comment">/* var(--fs-base) */</span></pre>
 
             <div class="grid gap-1">
-              <h6>Display <small>/ Montserrat</small></h6>
-              <p>Tamaños extra grandes para títulos destacados, como en una portada o sección hero.</p>
+              <h6>Escala de texto <small>.text-xs … .text-3xl</small></h6>
+              <p>Mismas variables que usan h1-h6, pero como clases de tamaño puro: se aplican sobre cualquier etiqueta cuando el tamaño visual necesario no coincide con el nivel semántico del contenido. Por ejemplo, un <code>&lt;h3&gt;</code> que debe verse pequeño, o un <code>&lt;p&gt;</code> que debe destacar, sin cambiar de etiqueta.</p>
             </div>
             <div class="doc-preview grid gap-2">
-              <h1 class="display display-1">Display H1 <small>6rem</small></h1>
-              <h2 class="display display-2">Display H1 <small>5.5rem</small></h2>
-              <h3 class="display display-3">Display H1 <small>4.5rem</small></h3>
-              <h4 class="display display-4">Display H1 <small>3.5rem</small></h4>
+              <p class="text-3xl">.text-3xl <small>2.5rem</small></p>
+              <p class="text-2xl">.text-2xl <small>2rem</small></p>
+              <p class="text-xl">.text-xl <small>1.75rem</small></p>
+              <p class="text-lg">.text-lg <small>1.5rem</small></p>
+              <p class="text-md">.text-md <small>1.25rem</small></p>
+              <p class="text-base">.text-base <small>1rem</small></p>
+              <p class="text-sm">.text-sm <small>0.875rem</small></p>
+              <p class="text-xs">.text-xs <small>0.75rem</small></p>
+            </div>
+            <pre class="code-block">&lt;<span class="tok-tag">h3</span> <span class="tok-attr">class</span>=<span class="tok-string">"text-sm"</span>&gt;Un h3 que se ve pequeño&lt;/<span class="tok-tag">h3</span>&gt;
+&lt;<span class="tok-tag">p</span> <span class="tok-attr">class</span>=<span class="tok-string">"text-xl"</span>&gt;Un párrafo que destaca&lt;/<span class="tok-tag">p</span>&gt;   <span class="tok-comment">/* la etiqueta la decide la semántica, la clase el tamaño */</span></pre>
+
+            <div class="grid gap-1">
+              <h6>Display <small>/ Montserrat, peso 300</small></h6>
+              <p>Tamaños extra grandes para títulos destacados, como en una portada o sección hero. No son h1-h6 más grandes: son una voz tipográfica distinta (peso ligero) que reutiliza el tope de la escala.</p>
+            </div>
+            <div class="doc-preview grid gap-2">
+              <h1 class="display display-1">Display H1 <small>--fs-display-1 · 6rem</small></h1>
+              <h2 class="display display-2">Display H1 <small>--fs-display-2 · 5.5rem</small></h2>
+              <h3 class="display display-3">Display H1 <small>--fs-display-3 · 4.5rem</small></h3>
+              <h4 class="display display-4">Display H1 <small>--fs-display-4 · 3.5rem</small></h4>
             </div>
 
             <div class="grid gap-1">

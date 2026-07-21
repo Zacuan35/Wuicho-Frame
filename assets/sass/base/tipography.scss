@@ -55,7 +55,11 @@ small, .small {
 
 b,strong {font-weight: bold;}
 
-/*Títulos*/
+/*Títulos
+Las etiquetas h1-h6 se eligen por jerarquía semántica del documento
+(nunca por el tamaño visual que se quiera lograr). Todas leen su
+tamaño de las mismas variables --fs-* que usan las clases .text-*,
+para que exista un solo lugar donde retocar la escala completa. */
 h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6 {
   font-family:var(--font-display);
@@ -69,12 +73,12 @@ h1,h2,h3,h4,h5,h6,
 /*Sólo si se requiere títulos H1 más grandes en el home */
 h1.home ,h2.home{font-size: 2.3rem;}
 
-h1, .h1 { font-size: 1.8rem; }
-h2, .h2 { font-size: 1.4rem; }
-h3, .h3 { font-size: 1.2rem; }
-h4, .h4 { font-size: 1.1rem; }
-h5, .h5 { font-size: 1rem; }
-h6, .h6 { font-size: 0.9rem; }
+h1, .h1 { font-size: var(--fs-3xl); }
+h2, .h2 { font-size: var(--fs-2xl); }
+h3, .h3 { font-size: var(--fs-xl); }
+h4, .h4 { font-size: var(--fs-lg); }
+h5, .h5 { font-size: var(--fs-md); }
+h6, .h6 { font-size: var(--fs-base); }
 h2.teaser {
   font-family:var(--font-body);
   font-size: 2rem;
@@ -84,16 +88,31 @@ h2.teaser {
   text-transform: capitalize;
 }
 
+/*Escala de texto
+Clases de tamaño puro, sin implicar ningún nivel de jerarquía: se usan
+sobre cualquier etiqueta (p, span, li…) cuando el tamaño visual que se
+necesita no coincide con el nivel semántico del contenido. */
+.text-xs   { font-size: var(--fs-xs); }
+.text-sm   { font-size: var(--fs-sm); }
+.text-base { font-size: var(--fs-base); }
+.text-md   { font-size: var(--fs-md); }
+.text-lg   { font-size: var(--fs-lg); }
+.text-xl   { font-size: var(--fs-xl); }
+.text-2xl  { font-size: var(--fs-2xl); }
+.text-3xl  { font-size: var(--fs-3xl); }
+
+/*Display: tipos grandes de portada/hero, peso ligero (no son h1-h6
+más grandes, son una voz tipográfica distinta que reutiliza el tope
+de la escala) */
 .display{
   line-height: 1.2;
-  font-weight: 300;  
+  font-weight: 300;
 }
-.display-1{font-size: 3rem;}
-.display-2{font-size: 2.5rem;}
-.display-3{font-size: 2rem;}
-.display-4{font-size: 1.5rem;}
+.display-1{font-size: var(--fs-display-1);}
+.display-2{font-size: var(--fs-display-2);}
+.display-3{font-size: var(--fs-display-3);}
+.display-4{font-size: var(--fs-display-4);}
 
-.font-xs{font-size:.75rem;}
 .fa-sm {font-size: .875em;}
 .fa-1x {font-size: 1em;}
 .fa-2x {font-size: 2em;}
@@ -141,17 +160,21 @@ Tabletas horizontales*/
   */
 
   h1.home ,h2.home{font-size: 3.8rem;}
-  h1, .h1 {font-size: 2.5rem;}
-  h2, .h2 {font-size: 2rem;}
-  h3, .h3 {font-size: 1.75rem;}
-  h4, .h4 {font-size: 1.5rem;}
-  h5, .h5 {font-size: 1.25rem;}
-  h6, .h6 {font-size: 1rem;}  
 
-  .display-1{font-size: 6rem;}
-  .display-2{font-size: 5.5rem;}
-  .display-3{font-size: 4.5rem;}
-  .display-4{font-size: 3.5rem;}  
+  /* Un solo lugar redefine la escala completa; h1-h6, .h1-.h6 y
+  .text-* la heredan automáticamente por leerla de estas variables. */
+  :root {
+    --fs-md: 1.25rem;
+    --fs-lg: 1.5rem;
+    --fs-xl: 1.75rem;
+    --fs-2xl: 2rem;
+    --fs-3xl: 2.5rem;
+
+    --fs-display-4: 3.5rem;
+    --fs-display-3: 4.5rem;
+    --fs-display-2: 5.5rem;
+    --fs-display-1: 6rem;
+  }
 }
 
 /* # Desktop

@@ -17,6 +17,24 @@ $secondary-font: "Roboto", serif;
   --font-display: #{$primary-font};
   --font-body: #{$secondary-font};
 
+  /* --- Escala tipográfica (mobile-first; --fs-md a --fs-3xl crecen
+  en el breakpoint desktop de tipography.scss). Un solo lugar controla
+  tanto los h1-h6 como las clases .text-*, para no duplicar valores. --- */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 1.75rem;
+  --fs-3xl: 2rem;
+
+  /* --- Display (tipos grandes de portada/hero, peso ligero) --- */
+  --fs-display-4: 1.5rem;
+  --fs-display-3: 2rem;
+  --fs-display-2: 2.5rem;
+  --fs-display-1: 3rem;
+
   /* --- Radios --- */
   --radius-xs: 4px;
   --radius-sm: 8px;
