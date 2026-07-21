@@ -32,10 +32,10 @@ Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
   --fs-2xl: 1.75rem;
   --fs-3xl: 2rem;
   /* --- Display (tipos grandes de portada/hero, peso ligero) --- */
-  --fs-display-4: 1.5rem;
+  --fs-display-4: 1.75rem;
   --fs-display-3: 2rem;
-  --fs-display-2: 2.5rem;
-  --fs-display-1: 3rem;
+  --fs-display-2: 2.25rem;
+  --fs-display-1: 2.5rem;
   /* --- Radios --- */
   --radius-xs: 4px;
   --radius-sm: 8px;
@@ -629,9 +629,9 @@ Tabletas horizontales*/
     --fs-2xl: 2rem;
     --fs-3xl: 2.5rem;
     --fs-display-4: 3.5rem;
-    --fs-display-3: 4.5rem;
-    --fs-display-2: 5.5rem;
-    --fs-display-1: 6rem;
+    --fs-display-3: 4rem;
+    --fs-display-2: 4.5rem;
+    --fs-display-1: 5rem;
   }
 }
 /* # Desktop
