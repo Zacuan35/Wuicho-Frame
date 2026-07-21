@@ -4,8 +4,11 @@
 
 /* # Imported files and fonts
 ----------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* Montserrat/Roboto se cargan vía <link rel="preconnect"> + <link
+rel="stylesheet"> en el <head> de cada página, no con @import: un
+@import de CSS bloquea el render hasta que el navegador llega a esa
+línea, mientras que un <link> se descubre de inmediato al parsear el
+HTML y se descarga en paralelo. */
 
 /* # Variables
 ----------------------------------------------- */
@@ -17,43 +20,43 @@
 body, form, label, input, textarea, select, a, .btn{
   font-family:var(--font-body);
   font-size: var(--fs-base);
-  line-height: 1.1875rem;
-  font-weight: 300;
+  line-height: var(--lh-ui);
+  font-weight: var(--fw-light);
 }
 p,ul,ol {
   font-family:var(--font-body);
   font-size: var(--fs-base);
-  font-weight: 300;
+  font-weight: var(--fw-light);
   padding: 0;
 }
 p{
-  line-height: 1.4rem;
-  //margin: 0 0 20px;  
+  line-height: var(--lh-normal);
+  //margin: 0 0 20px;
   margin: 0;
 }
 p:last-child {margin-bottom: 0;}
 p.lead{
   font-size: var(--fs-md);
-  line-height: 1.4;
-  font-weight: 300;
+  line-height: var(--lh-snug);
+  font-weight: var(--fw-light);
 }
 th,td {
   font-family:var(--font-body);
-  font-weight: 300;
+  font-weight: var(--fw-light);
   font-size: var(--fs-base);
 }
 
 a{font-size: var(--fs-base);}
 
-small, .small {  
+small, .small {
   font-family:var(--font-body);
-  font-weight: normal;
-  line-height: 1;
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-none);
   //color: var(--color-border-strong);
-  font-size: 80%;  
+  font-size: 80%;
 }
 
-b,strong {font-weight: bold;}
+b,strong {font-weight: var(--fw-bold);}
 
 /*Títulos
 Las etiquetas h1-h6 se eligen por jerarquía semántica del documento
@@ -62,11 +65,11 @@ tamaño de las mismas variables --fs-* que usan las clases .text-*,
 para que exista un solo lugar donde retocar la escala completa. */
 h1,h2,h3,h4,h5,h6 {
   font-family:var(--font-display);
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   //margin: 0 0 0.25rem 0;
   margin: 0;
   padding: 0;
-  line-height: normal;
+  line-height: var(--lh-tight);
   text-transform:initial;
 }
 h1 { font-size: var(--fs-3xl); }
@@ -93,8 +96,8 @@ necesita no coincide con el nivel semántico del contenido. */
 más grandes, son una voz tipográfica distinta que reutiliza el tope
 de la escala) */
 .display{
-  line-height: 1.2;
-  font-weight: 700;
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
 }
 .display-1{font-size: var(--fs-display-1);}
 .display-2{font-size: var(--fs-display-2);}

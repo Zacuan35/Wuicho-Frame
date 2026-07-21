@@ -14,8 +14,6 @@ Color (marca fija + superficies/texto que se adaptan a claro/oscuro + estados).
 Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
 ===================== */
 /* --- Fuentes (usadas por --font-display / --font-body) --- */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   /* --- Tipografía --- */
   --font-display: Montserrat, sans-serif;
@@ -31,11 +29,22 @@ Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
   --fs-xl: 1.5rem;
   --fs-2xl: 1.75rem;
   --fs-3xl: 2rem;
-  /* --- Display (tipos grandes de portada/hero, peso ligero) --- */
+  /* --- Display (tipos grandes de portada/hero, peso bold) --- */
   --fs-display-4: 1.75rem;
   --fs-display-3: 2rem;
   --fs-display-2: 2.25rem;
   --fs-display-1: 2.5rem;
+  /* --- Interlineado: cada valor nace de un uso real ya presente en
+  tipography.scss, no de números nuevos --- */
+  --lh-tight: 1.2; /* headings, .display */
+  --lh-snug: 1.4; /* p.lead */
+  --lh-normal: 1.5; /* p, ul, ol (cuerpo de lectura, ratio recomendado por WCAG) */
+  --lh-ui: 1.1875rem; /* controles de formulario/botones a 1rem, valor heredado */
+  --lh-none: 1; /* small, .small */
+  /* --- Peso tipográfico --- */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
   /* --- Radios --- */
   --radius-xs: 4px;
   --radius-sm: 8px;
@@ -389,6 +398,11 @@ table {
 ===================== */
 /* # Imported files and fonts
 ----------------------------------------------- */
+/* Montserrat/Roboto se cargan vía <link rel="preconnect"> + <link
+rel="stylesheet"> en el <head> de cada página, no con @import: un
+@import de CSS bloquea el render hasta que el navegador llega a esa
+línea, mientras que un <link> se descubre de inmediato al parsear el
+HTML y se descarga en paralelo. */
 /* # Variables
 ----------------------------------------------- */
 /* var(--font-display) / var(--font-body) ahora viven en theme/theme.scss
@@ -398,19 +412,19 @@ table {
 body, form, label, input, textarea, select, a, .btn {
   font-family: var(--font-body);
   font-size: var(--fs-base);
-  line-height: 1.1875rem;
-  font-weight: 300;
+  line-height: var(--lh-ui);
+  font-weight: var(--fw-light);
 }
 
 p, ul, ol {
   font-family: var(--font-body);
   font-size: var(--fs-base);
-  font-weight: 300;
+  font-weight: var(--fw-light);
   padding: 0;
 }
 
 p {
-  line-height: 1.4rem;
+  line-height: var(--lh-normal);
   margin: 0;
 }
 
@@ -420,13 +434,13 @@ p:last-child {
 
 p.lead {
   font-size: var(--fs-md);
-  line-height: 1.4;
-  font-weight: 300;
+  line-height: var(--lh-snug);
+  font-weight: var(--fw-light);
 }
 
 th, td {
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: var(--fw-light);
   font-size: var(--fs-base);
 }
 
@@ -436,13 +450,13 @@ a {
 
 small, .small {
   font-family: var(--font-body);
-  font-weight: normal;
-  line-height: 1;
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-none);
   font-size: 80%;
 }
 
 b, strong {
-  font-weight: bold;
+  font-weight: var(--fw-bold);
 }
 
 /*Títulos
@@ -452,10 +466,10 @@ tamaño de las mismas variables --fs-* que usan las clases .text-*,
 para que exista un solo lugar donde retocar la escala completa. */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   margin: 0;
   padding: 0;
-  line-height: normal;
+  line-height: var(--lh-tight);
   text-transform: initial;
 }
 
@@ -523,8 +537,8 @@ necesita no coincide con el nivel semántico del contenido. */
 más grandes, son una voz tipográfica distinta que reutiliza el tope
 de la escala) */
 .display {
-  line-height: 1.2;
-  font-weight: 700;
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
 }
 
 .display-1 {

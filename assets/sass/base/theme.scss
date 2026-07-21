@@ -29,11 +29,24 @@ $secondary-font: "Roboto", sans-serif;
   --fs-2xl: 1.75rem;
   --fs-3xl: 2rem;
 
-  /* --- Display (tipos grandes de portada/hero, peso ligero) --- */
+  /* --- Display (tipos grandes de portada/hero, peso bold) --- */
   --fs-display-4: 1.75rem;
   --fs-display-3: 2rem;
   --fs-display-2: 2.25rem;
   --fs-display-1: 2.5rem;
+
+  /* --- Interlineado: cada valor nace de un uso real ya presente en
+  tipography.scss, no de números nuevos --- */
+  --lh-tight: 1.2;     /* headings, .display */
+  --lh-snug: 1.4;      /* p.lead */
+  --lh-normal: 1.5;    /* p, ul, ol (cuerpo de lectura, ratio recomendado por WCAG) */
+  --lh-ui: 1.1875rem;  /* controles de formulario/botones a 1rem, valor heredado */
+  --lh-none: 1;        /* small, .small */
+
+  /* --- Peso tipográfico --- */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
 
   /* --- Radios --- */
   --radius-xs: 4px;
