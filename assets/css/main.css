@@ -513,12 +513,12 @@ necesita no coincide con el nivel semántico del contenido. */
   font-size: var(--fs-3xl);
 }
 
-/*Display: tipos grandes de portada/hero, peso ligero (no son h1-h6
+/*Display: tipos grandes de portada/hero, peso bold (no son h1-h6
 más grandes, son una voz tipográfica distinta que reutiliza el tope
 de la escala) */
 .display {
   line-height: 1.2;
-  font-weight: 300;
+  font-weight: 700;
 }
 
 .display-1 {

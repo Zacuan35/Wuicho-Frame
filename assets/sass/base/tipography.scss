@@ -89,12 +89,12 @@ necesita no coincide con el nivel semántico del contenido. */
 .text-2xl  { font-size: var(--fs-2xl); }
 .text-3xl  { font-size: var(--fs-3xl); }
 
-/*Display: tipos grandes de portada/hero, peso ligero (no son h1-h6
+/*Display: tipos grandes de portada/hero, peso bold (no son h1-h6
 más grandes, son una voz tipográfica distinta que reutiliza el tope
 de la escala) */
 .display{
   line-height: 1.2;
-  font-weight: 300;
+  font-weight: 700;
 }
 .display-1{font-size: var(--fs-display-1);}
 .display-2{font-size: var(--fs-display-2);}
