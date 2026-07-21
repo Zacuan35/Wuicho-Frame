@@ -16,14 +16,14 @@
 ----------------------------------------------- */
 body, form, label, input, textarea, select, a, .btn{
   font-family:var(--font-body);
-  font-size: 1rem; /*font-size:16px;*/
+  font-size: var(--fs-base);
   line-height: 1.1875rem;
-  font-weight: 300;  
+  font-weight: 300;
 }
 p,ul,ol {
   font-family:var(--font-body);
-  font-size: 1rem;  
-  font-weight: 300;  
+  font-size: var(--fs-base);
+  font-weight: 300;
   padding: 0;
 }
 p{
@@ -39,11 +39,11 @@ p.lead{
 }
 th,td {
   font-family:var(--font-body);
-  font-weight: 300;  
-  font-size:1rem;  
+  font-weight: 300;
+  font-size: var(--fs-base);
 }
 
-a{font-size:1rem;}
+a{font-size: var(--fs-base);}
 
 small, .small {  
   font-family:var(--font-body);
