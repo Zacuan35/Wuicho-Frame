@@ -133,5 +133,9 @@
 .treeview-menu > li.active > a,
 .treeview-menu > li > a:hover {
   color: var(--brand-primary);
-  font-weight: bold;
+  /* Menos pesado que el enlace padre (que es siempre var(--fw-bold),
+  700), para que la jerarquía se note incluso cuando el sub-enlace
+  está activo o en hover. No hay token para esto (solo light/regular/
+  bold en theme.scss); 600 es apenas un escalón por debajo de 700. */
+  font-weight: 600;
 }
