@@ -4619,16 +4619,6 @@ td, th {
   text-align: left;
 }
 
-/* # Mensaje de celda agregada
------------------------------------------------ */
-tr.new {
-  background-color: var(--color-success-bg) !important;
-  color: var(--color-success-text);
-}
-tr.new p {
-  color: var(--color-success-text);
-}
-
 /* =====================
 # MEDIAQUERIES
 ===================== */
