@@ -310,20 +310,26 @@
             <!-- ====== Grid ====== -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <!-- ------ Card simple ------ -->
-              <div class="card card-body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint consequuntur, quisquam harum inventore magnam veritatis cupiditate dolorem molestias, libero repellat assumenda vel autem optio beatae eos maiores et aliquam eum!</p>
-              </div>
-              <!-- ------ Card con header y footer ------ -->
-              <div class="card">
-                <header class="card-header">
-                  <h3>Card title</h3>
-                </header>
-                <div class="card-body">
+              <div class="grid gap-2">
+                <p class="text-sm" style="color:var(--color-text-muted)">Card simple</p>
+                <div class="card card-body">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint consequuntur, quisquam harum inventore magnam veritatis cupiditate dolorem molestias, libero repellat assumenda vel autem optio beatae eos maiores et aliquam eum!</p>
                 </div>
-                <footer class="card-footer">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </footer>
+              </div>
+              <!-- ------ Card con header y footer ------ -->
+              <div class="grid gap-2">
+                <p class="text-sm" style="color:var(--color-text-muted)">Card compuesta</p>
+                <div class="card">
+                  <header class="card-header">
+                    <h3>Card title</h3>
+                  </header>
+                  <div class="card-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint consequuntur, quisquam harum inventore magnam veritatis cupiditate dolorem molestias, libero repellat assumenda vel autem optio beatae eos maiores et aliquam eum!</p>
+                  </div>
+                  <footer class="card-footer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </footer>
+                </div>
               </div>
             </div>
             <pre class="code-block">&lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"card card-body"</span>&gt;…&lt;/<span class="tok-tag">div</span>&gt;   <span class="tok-comment">/* card simple */</span>
