@@ -323,57 +323,30 @@
   &lt;<span class="tok-tag">header</span> <span class="tok-attr">class</span>=<span class="tok-string">"card-header"</span>&gt;&lt;<span class="tok-tag">h3</span>&gt;Card title&lt;/<span class="tok-tag">h3</span>&gt;&lt;/<span class="tok-tag">header</span>&gt;
   &lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"card-body"</span>&gt;…&lt;/<span class="tok-tag">div</span>&gt;
 &lt;/<span class="tok-tag">div</span>&gt;   <span class="tok-comment">/* .card-highlight · .card-success · .card-danger · .card-warning */</span></pre>
-            <!-- ====== Grid ====== -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 text-center">     
-              <!-- ------ Card ------ -->
-              <div class="card card-highlight">
-                <header class="card-header">
-                  <h3>Card Highlight</h3>
-                </header>
-                <div class="card-body grid gap-2">
-                  <i class="icon-chat-bubble-oval-left fa-3x"></i>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos illo consequatur!</p>
-                </div>    
-              </div> 
-              <!-- ------ Card ------ -->
-              <div class="card card-success">
-                <header class="card-header">
-                  <h3>Card Success</h3>
-                </header>                
-                <div class="card-body grid gap-2">
-                  <i class="icon-flag fa-3x"></i>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos illo consequatur!</p>
-                </div>    
-              </div> 
-              <!-- ------ Card ------ -->
-              <div class="card card-danger">
-                <header class="card-header">
-                  <h3>Card Danger</h3>
-                </header>                
-                <div class="card-body grid gap-2">
-                  <i class="icon-instagram fa-3x"></i>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos illo consequatur!</p>
-                </div>    
-              </div> 
-              <!-- ------ Card ------ -->
-              <div class="card card-warning">
-                <header class="card-header">
-                  <h3>Card Warning</h3>
-                </header>                
-                <div class="card-body grid gap-2">
-                  <i class="icon-map-pin fa-3x"></i>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos illo consequatur!</p>
-                </div>    
-              </div>
-            </div>
-
             <div class="grid gap-1">
-              <h2 class="text-lg">Uso suelto</h2>
-              <p>.card-header, .card-body y .card-footer no dependen de .card: se pueden combinar en el mismo elemento en vez de anidarlos. .card aporta el marco (radio, borde, sombra) sin ser un wrapper.</p>
+              <h2 class="text-lg">Cards de estado</h2>
+              <p>.card + .card-body + el modificador de color, combinados en un solo elemento — sin header, sin footer, sin wrapper adicional.</p>
             </div>
-            <div class="doc-preview flex flex-wrap gap-4">
-              <div class="card card-body card-success" style="max-width:280px">
-                <p>.card + .card-body + .card-success en un solo elemento: marco, padding y color, sin wrapper ni estilos en línea.</p>
+            <div class="doc-preview grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+              <!-- ------ Card ------ -->
+              <div class="card card-body card-success grid gap-2 text-center">
+                <i class="icon-check-circle fa-3x"></i>
+                <p>Success</p>
+              </div>
+              <!-- ------ Card ------ -->
+              <div class="card card-body card-danger grid gap-2 text-center">
+                <i class="icon-exclamation-triangle fa-3x"></i>
+                <p>Danger</p>
+              </div>
+              <!-- ------ Card ------ -->
+              <div class="card card-body card-warning grid gap-2 text-center">
+                <i class="icon-question-mark-circle fa-3x"></i>
+                <p>Warning</p>
+              </div>
+              <!-- ------ Card ------ -->
+              <div class="card card-body card-info grid gap-2 text-center">
+                <i class="icon-exclamation-circle fa-3x"></i>
+                <p>Info</p>
               </div>
             </div>
             <pre class="code-block">&lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"card card-body card-success"</span>&gt;…&lt;/<span class="tok-tag">div</span>&gt;</pre>
