@@ -5227,7 +5227,7 @@ tbody tr {
   background-color: var(--color-surface);
 }
 tbody tr:hover {
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  background-color: var(--color-border-strong);
 }
 tbody tr.clickable {
   cursor: pointer;
@@ -5253,6 +5253,10 @@ td, th {
 ----------------------------------------------- */
 table.zebra tbody tr:nth-child(even) {
   background-color: var(--color-canvas);
+}
+
+table.zebra tbody tr:hover {
+  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
 }
 
 /* =====================
