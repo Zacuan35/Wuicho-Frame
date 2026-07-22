@@ -16,30 +16,39 @@
 @import 'layout/container';
 
 /*Components*/
+/* -> General */
 @import 'components/accordion';
-@import 'components/banner_alerts';
-@import 'components/breadcrumb';
 @import 'components/buttons';
 @import 'components/card';
 @import 'components/panel_list';
+@import 'components/badge';
+@import 'components/box_link';
 @import 'components/wa_list';
-@import 'components/charts';
 @import 'components/gallery';
+@import 'components/loader';
+@import 'components/progress_bar';
+
+/* -> Feedback */
+@import 'components/banner_alerts';
+@import 'components/data-toast.scss';
 @import 'components/modal';
-@import 'components/pagination_area';
+@import 'components/sweet_alert';
+@import 'components/tooltips';
+
+/* -> Data display */
+@import 'components/charts';
+@import 'components/table_grid';
 @import 'components/table';
 @import 'components/data_table';
+
+/* -> Navigation */
+@import 'components/breadcrumb';
+@import 'components/pagination_area';
 @import 'components/tabs';
-@import 'components/tooltips';
-@import 'components/sweet_alert';
+
+/* -> Otros (no ligados a un ítem del sidebar) */
 @import 'components/icons';
 @import 'components/icomoon';
-@import 'components/table_grid';
-@import 'components/data-toast.scss';
-@import 'components/progress_bar';
-@import 'components/box_link';
-@import 'components/loader';
-@import 'components/badge';
 @import 'components/code_block';
 
 /*Forms*/

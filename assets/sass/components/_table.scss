@@ -11,17 +11,14 @@ table {
 }
 
 thead th {
-  background-color: $fill-subtle;
-  color: var(--brand-primary);
-  font-weight: bold;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 tbody tr{
   background-color:var(--color-surface);
-
-  &:nth-child(even) {
-    background-color: var(--color-canvas);
-  }
 
   &:hover {
     background-color: $fill-subtle;
@@ -39,6 +36,17 @@ td, th {
   font-size: var(--fs-xs);
   border-bottom: 1px solid $border-subtle;
   text-align: left;
+}
+
+.cell-strong {
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+/* # Zebra (opcional, activar con table.zebra)
+----------------------------------------------- */
+table.zebra tbody tr:nth-child(even) {
+  background-color: var(--color-canvas);
 }
 
 /* =====================
