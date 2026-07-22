@@ -80,6 +80,8 @@ legend,
 
 textarea.form-control{
   height: auto;
+  min-height: 100px;
+  resize: vertical;
 }
 
 /* Flecha propia para <select>: la nativa del sistema operativo no
