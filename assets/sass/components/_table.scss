@@ -34,7 +34,7 @@ tbody tr:last-child td { border-bottom: none; }
 
 td, th {
   padding: 8px;
-  font-size: var(--fs-xs);
+  font-size: var(--fs-sm);
   border-bottom: 1px solid $border-subtle;
   text-align: left;
 }
@@ -62,7 +62,6 @@ table.zebra tbody tr:nth-child(even) {
 @media (min-width: 640px) {
   th, td {
     padding: 12px;
-    font-size: var(--fs-sm);
   }
 }
 

@@ -19,7 +19,7 @@ HTML y se descarga en paralelo. */
 ----------------------------------------------- */
 body, form, label, input, textarea, select, a, .btn{
   font-family:var(--font-body);
-  font-size: var(--fs-base);
+  font-size: var(--fs-sm);
   line-height: var(--lh-ui);
   font-weight: var(--fw-light);
 }
@@ -43,10 +43,10 @@ p.lead{
 th,td {
   font-family:var(--font-body);
   font-weight: var(--fw-light);
-  font-size: var(--fs-base);
+  font-size: var(--fs-sm);
 }
 
-a{font-size: var(--fs-base);}
+a{font-size: var(--fs-sm);}
 
 small, .small {
   font-family:var(--font-body);

@@ -43,7 +43,7 @@
 ========================= */
 .dataTables_info {
   margin-top: 10px;
-  font-size: var(--fs-xs);
+  font-size: var(--fs-sm);
   color: var(--color-text-primary);;
 }
 
@@ -103,7 +103,7 @@ table.dataTable thead th.sorting_desc:after {
 ========================= */
 @media screen and (max-width: 768px) {
   table.dataTable {
-    font-size: var(--fs-xs);
+    font-size: var(--fs-sm);
   }
 
   .dataTables_wrapper {
