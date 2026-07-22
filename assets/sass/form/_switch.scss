@@ -13,11 +13,15 @@
 .switch-group {
   display: flex;
   align-items: center;
-  
+
   p{
     margin: 0 0.25rem 0 0;
   }
-}    
+
+  &.justify-end {
+    justify-content: flex-end;
+  }
+}
 
 /* # Switch
 ----------------------------------------------- */

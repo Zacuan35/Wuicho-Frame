@@ -4586,30 +4586,36 @@ Tabletas horizontales*/
 
 table {
   width: 100%;
-  min-width: 800px;
   border-collapse: collapse;
 }
 
-thead {
-  background-color: var(--brand-primary);
-  color: #ffffff;
+thead th {
+  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  color: var(--brand-primary);
+  font-weight: bold;
 }
 
 tbody tr {
   background-color: var(--color-surface);
-  cursor: pointer;
 }
 tbody tr:nth-child(even) {
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  background-color: var(--color-canvas);
 }
 tbody tr:hover {
-  background-color: var(--color-border-strong);
+  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+}
+tbody tr.clickable {
+  cursor: pointer;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
 }
 
 td, th {
   padding: 8px;
-  font-size: 0.75rem;
-  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  font-size: var(--fs-xs);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
   text-align: left;
 }
 
@@ -4622,30 +4628,6 @@ tr.new {
 tr.new p {
   color: var(--color-success-text);
 }
-tr.new {
-  /*
-  td small{
-    color:$success-color;
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.25rem;
-  }
-  */
-}
-
-/* # Tablas con contenido alineado hacia la derecha
------------------------------------------------ */
-table.align-right th,
-table.align-right td {
-  text-align: right;
-}
-table.align-right th:first-child,
-table.align-right td:first-child {
-  text-align: left;
-}
-table.align-right .switch-group {
-  justify-content: flex-end;
-}
 
 /* =====================
 # MEDIAQUERIES
@@ -4656,7 +4638,7 @@ table.align-right .switch-group {
 @media (min-width: 640px) {
   th, td {
     padding: 12px;
-    font-size: 1rem;
+    font-size: var(--fs-base);
   }
 }
 /* # Tablet
@@ -6391,6 +6373,9 @@ input::-ms-reveal {
 }
 .switch-group p {
   margin: 0 0.25rem 0 0;
+}
+.switch-group.justify-end {
+  justify-content: flex-end;
 }
 
 /* # Switch

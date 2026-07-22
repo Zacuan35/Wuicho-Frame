@@ -413,18 +413,19 @@
             <pre class="code-block">&lt;<span class="tok-tag">table</span>&gt;
   &lt;<span class="tok-tag">thead</span>&gt;&lt;<span class="tok-tag">tr</span>&gt;&lt;<span class="tok-tag">th</span>&gt;Nombre&lt;/<span class="tok-tag">th</span>&gt;&lt;/<span class="tok-tag">tr</span>&gt;&lt;/<span class="tok-tag">thead</span>&gt;
   &lt;<span class="tok-tag">tbody</span>&gt;&lt;<span class="tok-tag">tr</span>&gt;&lt;<span class="tok-tag">td</span>&gt;Shane Howell&lt;/<span class="tok-tag">td</span>&gt;&lt;/<span class="tok-tag">tr</span>&gt;&lt;/<span class="tok-tag">tbody</span>&gt;
-&lt;/<span class="tok-tag">table</span>&gt;   <span class="tok-comment">/* .align-right para alinear celdas a la derecha */</span></pre>
+&lt;/<span class="tok-tag">table</span>&gt;   <span class="tok-comment">/* .clickable en &lt;tr&gt; para cursor:pointer solo si la fila es clickeable */</span></pre>
             <!-- ====== Table ====== -->
             <h2>Align right</h2>
+            <p>Usa la utilidad <code>.text-right</code> (reusable en todo el framework) por columna, y <code>.justify-end</code> en <code>.switch-group</code> cuando el contenido de la celda es un control flex.</p>
             <div class="table-responsive">
-              <table class="align-right">
+              <table>
                 <!-- ------ Table head ------ -->
                 <thead>
                   <tr>
                     <th>Nombre</th>
                     <th>Descripción</th>
-                    <th>Estado</th>
-                    <th>Editar</th>
+                    <th class="text-right">Estado</th>
+                    <th class="text-right">Editar</th>
                   </tr>
                 </thead>
                 <!-- ------ Table body ------ -->
@@ -432,63 +433,63 @@
                   <tr class="new">
                     <td><small>Se agregó</small>Shane Howell</td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipiscing ...</td>
-                    <td>
-                      <div class="switch-group">              
+                    <td class="text-right">
+                      <div class="switch-group justify-end">
                         <p>Enviado:</p>
                         <span class="switch-label">No</span>
                         <label class="switch">
                           <input type="checkbox" class="switch-input">
                           <span class="slider"></span>
                         </label>
-                      </div>                                                                                                                            
+                      </div>
                     </td>
-                    <td>
+                    <td class="text-right">
                       <button class="btn btn-icon-only btn-circle btn-secondary">
                         <i class="icon-solid-pencil-square"></i>
-                      </button>                           
-                    </td>                  
+                      </button>
+                    </td>
                   </tr>
                   <tr>
                     <td>Aubrey Luna</td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipiscing ...</td>
-                    <td>
-                      <div class="switch-group">              
+                    <td class="text-right">
+                      <div class="switch-group justify-end">
                         <p>Enviado:</p>
                         <span class="switch-label">No</span>
                         <label class="switch">
                           <input type="checkbox" class="switch-input">
                           <span class="slider"></span>
                         </label>
-                      </div>                                                                                                        
+                      </div>
                     </td>
-                    <td>
+                    <td class="text-right">
                       <button class="btn btn-icon-only btn-circle btn-secondary">
                         <i class="icon-solid-pencil-square"></i>
-                      </button>                                             
-                    </td>                  
-                  </tr> 
-                  <tr>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="clickable">
                     <td>Cassidy Vargas</td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipiscing ...</td>
-                    <td>
-                      <div class="switch-group">              
+                    <td class="text-right">
+                      <div class="switch-group justify-end">
                         <p>Enviado:</p>
                         <span class="switch-label">No</span>
                         <label class="switch">
                           <input type="checkbox" class="switch-input">
                           <span class="slider"></span>
                         </label>
-                      </div>                                                                                                        
+                      </div>
                     </td>
-                    <td>
+                    <td class="text-right">
                       <button class="btn btn-icon-only btn-circle btn-secondary">
                         <i class="icon-solid-pencil-square"></i>
-                      </button>                                      
-                    </td>                  
-                  </tr>                                                                                     
+                      </button>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
-            </div> 
+            </div>
             <!-- ====== Table ====== -->     
             <h2>DataTables</h2>                     
             <div class="table-responsive">

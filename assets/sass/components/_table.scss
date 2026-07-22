@@ -7,33 +7,37 @@
 
 table {
   width: 100%;
-  min-width: 800px;
   border-collapse: collapse;
-  //margin-bottom: 1rem;
 }
 
-thead {
-  background-color: var(--brand-primary);
-  color: $white-color;
+thead th {
+  background-color: $fill-subtle;
+  color: var(--brand-primary);
+  font-weight: bold;
 }
 
 tbody tr{
-  background-color:var(--color-surface); 
-  cursor: pointer;
+  background-color:var(--color-surface);
 
   &:nth-child(even) {
-    background-color: $fill-subtle; 
+    background-color: var(--color-canvas);
   }
-  
+
   &:hover {
-    background-color: var(--color-border-strong); 
-  }  
+    background-color: $fill-subtle;
+  }
+
+  &.clickable {
+    cursor: pointer;
+  }
 }
+
+tbody tr:last-child td { border-bottom: none; }
 
 td, th {
   padding: 8px;
-  font-size: 0.750rem; 
-  border: 1px solid $border-subtle;
+  font-size: var(--fs-xs);
+  border-bottom: 1px solid $border-subtle;
   text-align: left;
 }
 
@@ -43,31 +47,6 @@ tr.new {
   background-color: var(--color-success-bg) !important;
   color: var(--color-success-text);
   p{color: var(--color-success-text);}
-  /*
-  td small{
-    color:$success-color;
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.25rem;
-  }
-  */
-}
-
-/* # Tablas con contenido alineado hacia la derecha
------------------------------------------------ */
-table.align-right{
-  th, 
-  td {text-align: right;}
-
-  th:first-child,
-  td:first-child {
-      text-align: left; 
-  }  
-
-  .switch-group {
-    justify-content: flex-end;
-  }  
-
 }
 
 /* =====================
@@ -75,16 +54,16 @@ table.align-right{
 ===================== */
 /* # Mobile
 ----------------------------------------------- */
-@media (min-width: 425px) {    
+@media (min-width: 425px) {
 }
 
 /*=> 640px Igual o mayor a 640px se aplicarán los siguientes estilos */
 @media (min-width: 640px) {
   th, td {
-    padding: 12px; 
-    font-size: 1rem; 
+    padding: 12px;
+    font-size: var(--fs-base);
   }
-}    
+}
 
 /* # Tablet
 ----------------------------------------------- */
