@@ -420,20 +420,20 @@
 
             <div class="grid gap-1">
               <h2 class="text-lg">Jerarquía de contenido <small>/ ejemplo combinado</small></h2>
-              <p>Cómo se ven juntos, en un mismo bloque de contenido, un encabezado de sección, su subtítulo, el lead, un párrafo estándar y un texto secundario. El encabezado usa Montserrat (<code>--font-display</code>); el subtítulo, el lead, el párrafo y el texto secundario usan Roboto (<code>--font-body</code>), al ser todos etiquetas <code>&lt;p&gt;</code>.</p>
+              <p>Cómo se ven juntos, en un mismo bloque de contenido, un encabezado de sección, su subtítulo, el lead, una descripción estándar y una descripción extensa. El encabezado usa Montserrat (<code>--font-display</code>); el subtítulo, el lead y las descripciones usan Roboto (<code>--font-body</code>), al ser todos etiquetas <code>&lt;p&gt;</code>.</p>
             </div>
             <div class="doc-preview grid gap-2">
               <h2>Encabezado de sección <small>32px</small></h2>
               <p class="text-xl">Subtítulo <small>28px</small></p>
               <p class="lead">Lead: un texto de introducción más grande que el párrafo estándar, usado para destacar la primera idea de una sección o dar contexto antes del contenido principal.</p>
-              <p>Texto de párrafo estándar <small>16px</small>. Este es el texto de cuerpo que se usa para contenido editorial largo: descripciones, ayudas y cualquier bloque de lectura extensa dentro de una página.</p>
-              <p class="text-sm">Texto secundario <small>14px</small></p>
+              <p>Texto de descripción estándar <small>14px</small>. Este es el texto de cuerpo por defecto: descripciones cortas, ayudas y textos de apoyo dentro de una página.</p>
+              <p class="text-reading">Texto de descripción extensa <small>16px</small>. Para bloques de lectura larga (contenido editorial, ayudas extensas, texto legal), usa <code>.text-reading</code>: sube el tamaño y el interlineado por encima de la descripción estándar para que un párrafo largo se siga leyendo cómodo.</p>
             </div>
             <pre class="code-block">&lt;<span class="tok-tag">h2</span>&gt;Encabezado de sección&lt;/<span class="tok-tag">h2</span>&gt;
 &lt;<span class="tok-tag">p</span> <span class="tok-attr">class</span>=<span class="tok-string">"text-xl"</span>&gt;Subtítulo&lt;/<span class="tok-tag">p</span>&gt;
 &lt;<span class="tok-tag">p</span> <span class="tok-attr">class</span>=<span class="tok-string">"lead"</span>&gt;Lead&lt;/<span class="tok-tag">p</span>&gt;
-&lt;<span class="tok-tag">p</span>&gt;Texto de párrafo estándar&lt;/<span class="tok-tag">p</span>&gt;
-&lt;<span class="tok-tag">p</span> <span class="tok-attr">class</span>=<span class="tok-string">"text-sm"</span>&gt;Texto secundario&lt;/<span class="tok-tag">p</span>&gt;</pre>
+&lt;<span class="tok-tag">p</span>&gt;Descripción estándar&lt;/<span class="tok-tag">p</span>&gt;
+&lt;<span class="tok-tag">p</span> <span class="tok-attr">class</span>=<span class="tok-string">"text-reading"</span>&gt;Descripción extensa&lt;/<span class="tok-tag">p</span>&gt;</pre>
 
             <div class="grid gap-1">
               <h2 class="text-lg">Text color</h2>

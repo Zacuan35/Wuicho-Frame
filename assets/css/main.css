@@ -438,6 +438,15 @@ p.lead {
   font-weight: var(--fw-light);
 }
 
+/* Para bloques de lectura extensa (contenido editorial, ayudas
+largas, texto legal): a diferencia de .text-base, que solo cambia el
+tamaño, esta también sube el interlineado para que un párrafo largo
+se siga leyendo cómodo por encima del fs-sm que usa el texto estándar. */
+.text-reading {
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+}
+
 th, td {
   font-family: var(--font-body);
   font-weight: var(--fw-light);
