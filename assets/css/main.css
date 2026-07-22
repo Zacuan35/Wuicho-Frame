@@ -5699,32 +5699,6 @@ i {
   font-size: 10rem;
 }
 
-/* # Background colors
------------------------------------------------ */
-.bg-default i {
-  color: var(--brand-primary);
-}
-
-.bg-light i {
-  color: var(--brand-primary);
-}
-
-.bg-dark i {
-  color: var(--brand-primary);
-}
-
-.bg-darker i {
-  color: var(--brand-primary);
-}
-
-.bg-success i {
-  color: var(--brand-primary);
-}
-
-.bg-danger i {
-  color: var(--brand-primary);
-}
-
 @font-face {
   font-family: "icomoon";
   src: url("../icons/icomoon.eot");
