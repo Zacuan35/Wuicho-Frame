@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>GF - Cards</title>
+    <title>GF - Panel-list</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link rel="icon" href="../../assets/img/favicon.png" type="image/png">
     <!-- Styles -->
@@ -124,7 +124,7 @@
             <li>
               <a href="../dashboard.html"><i class="icon-Home"></i> Dashboard</a>
             </li>
-                        <!-- Dropdown -->
+                                    <!-- Dropdown -->
             <li class="treeview">
               <a href="#">
                 <i class="icon-wrench-screwdriver"></i>
@@ -183,32 +183,32 @@
             <li class="treeview active">
               <a href="#">
                 <i class="icon-table-cells"></i>
-                <span>Components</span>
+                <span>General</span>
                 <i class="icon-chevron-right float-right"></i>
               </a>
               <ul class="treeview-menu">
                 <li>
-                  <a href="../componentes/accordion.html">
+                  <a href="../general/accordion.html">
                     <i class="icon-minus"></i> Accordion
                   </a>
                 </li>
                 <li>
-                  <a href="../componentes/buttons.html">
+                  <a href="../general/buttons.html">
                     <i class="icon-minus"></i> Buttons
                   </a>
                 </li>
                 <li>
-                  <a href="../componentes/cards.html">
+                  <a href="../general/cards.html">
                     <i class="icon-minus"></i> Cards
                   </a>
                 </li>
                 <li>
-                  <a href="../componentes/panel-list.html">
+                  <a href="../general/panel-list.html">
                     <i class="icon-minus"></i> Panel list
                   </a>
                 </li>
                 <li>
-                  <a href="../componentes/forms.html">
+                  <a href="../general/forms.html">
                     <i class="icon-minus"></i> Forms
                   </a>
                 </li>
@@ -321,95 +321,91 @@
         <!-- Title
         ========================================== -->               
         <div class="content-header">
-          <h1>Cards</h1>          
+          <h1>Panel list</h1>          
         </div>         
         <!-- Content-body
         ========================================== -->               
         <section class="content-body">       
-          <div class="grid gap-5">
-            <!-- ====== Grid ====== -->
-            <div class="flex flex-col md:flex-row items-start gap-5">
-              <!-- ------ Card simple ------ -->
-              <div class="grid gap-2">
-                <h2 class="text-lg">Card simple</h2>
-                <div class="card card-body">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint consequuntur, quisquam harum inventore magnam veritatis cupiditate dolorem molestias, libero repellat assumenda vel autem optio beatae eos maiores et aliquam eum!</p>
+          <div class="panel-list">
+            <!-- ------ panel-item ------ --> 
+            <a class="panel-item" href="#">
+              <div class="flex gap-4">
+                <img src="../../assets/img/user-image.jpg" alt="" class="rounded-full size-10">
+                <div class="flex flex-col gap-1">
+                  <h4>Here goes the title</h4>
+                  <p>Lorem ipsum dolor sit amet.</p>
                 </div>
-              </div>
-              <!-- ------ Card con header y footer ------ -->
-              <div class="grid gap-2">
-                <h2 class="text-lg">Card compuesta</h2>
-                <div class="card">
-                  <header class="card-header">
-                    <h3>Card title</h3>
-                  </header>
-                  <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint consequuntur, quisquam harum inventore magnam veritatis cupiditate dolorem molestias, libero repellat assumenda vel autem optio beatae eos maiores et aliquam eum!</p>
-                  </div>
-                  <footer class="card-footer">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </footer>
+              </div>                    
+              <span class="d-none">
+                5 de 5 autorizados.
+              </span>
+            </a>                                                                   
+            <!-- ------ panel-item ------ --> 
+            <a class="panel-item" href="#">
+              <div class="flex gap-4">
+                <img src="../../assets/img/user-image.jpg" alt="" class="rounded-full size-10">
+                <div class="flex flex-col gap-1">
+                  <h4>Here goes the title</h4>
+                  <p>Lorem ipsum dolor sit amet.</p>
                 </div>
-              </div>
-            </div>
-            <pre class="code-block">&lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"card card-body"</span>&gt;…&lt;/<span class="tok-tag">div</span>&gt;   <span class="tok-comment">/* card simple */</span>
-
-&lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"card"</span>&gt;
-  &lt;<span class="tok-tag">header</span> <span class="tok-attr">class</span>=<span class="tok-string">"card-header"</span>&gt;&lt;<span class="tok-tag">h3</span>&gt;Card title&lt;/<span class="tok-tag">h3</span>&gt;&lt;/<span class="tok-tag">header</span>&gt;
-  &lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"card-body"</span>&gt;…&lt;/<span class="tok-tag">div</span>&gt;
-  &lt;<span class="tok-tag">footer</span> <span class="tok-attr">class</span>=<span class="tok-string">"card-footer"</span>&gt;…&lt;/<span class="tok-tag">footer</span>&gt;
-&lt;/<span class="tok-tag">div</span>&gt;   <span class="tok-comment">/* card completa */</span></pre>
-            <div class="grid gap-1">
-              <h2 class="text-lg">Cards de estado</h2>
-              <p>El modificador de color va en .card; .card-header y .card-body son sus hijos y heredan el marco — sin footer, sin wrapper adicional.</p>
-            </div>
-            <div class="doc-preview grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-              <!-- ------ Card ------ -->
-              <div class="card card-success">
-                <header class="card-header">
-                  <h3>Success</h3>
-                </header>
-                <div class="card-body grid gap-2 text-center">
-                  <i class="icon-check-circle fa-3x"></i>
-                  <p>Tarjeta de ´xito</p>
+              </div>                    
+              <span class="d-none">
+                5 de 5 autorizados.
+              </span>
+            </a>                            
+            <!-- ------ panel-item ------ -->                                        
+            <a class="panel-item" href="#">
+              <div class="flex gap-4">
+                <img src="../../assets/img/user-image.jpg" alt="" class="rounded-full size-10">
+                <div class="flex flex-col gap-1">
+                  <h4>Here goes the title</h4>
+                  <p>Lorem ipsum dolor sit amet.</p>
                 </div>
-              </div>
-              <!-- ------ Card ------ -->
-              <div class="card card-danger">
-                <header class="card-header">
-                  <h3>Danger</h3>
-                </header>
-                <div class="card-body grid gap-2 text-center">
-                  <i class="icon-exclamation-triangle fa-3x"></i>
-                  <p>Tarjeta de peligro</p>
+              </div>                    
+              <span class="d-none">
+                5 de 5 autorizados.
+              </span>
+            </a>  
+            <!-- ------ panel-item ------ -->                                                                  
+            <a class="panel-item disabled" href="#">
+              <div class="flex gap-4">
+                <img src="../../assets/img/user-image.jpg" alt="" class="rounded-full size-10">
+                <div class="flex flex-col gap-1">
+                  <h4>Here goes the title</h4>
+                  <p>Lorem ipsum dolor sit amet.</p>
                 </div>
-              </div>
-              <!-- ------ Card ------ -->
-              <div class="card card-warning">
-                <header class="card-header">
-                  <h3>Warning</h3>
-                </header>
-                <div class="card-body grid gap-2 text-center">
-                  <i class="icon-question-mark-circle fa-3x"></i>
-                  <p>Tarjeta de advertencia</p>
+              </div>                    
+              <span class="d-none">
+                5 de 5 autorizados.
+              </span>
+            </a>  
+            <!-- ------ panel-item ------ -->   
+            <a class="panel-item warning" href="#">
+              <div class="flex gap-4">
+                <img src="../../assets/img/user-image.jpg" alt="" class="rounded-full size-10">
+                <div class="flex flex-col gap-1">
+                  <h4>Here goes the title</h4>
+                  <p>Lorem ipsum dolor sit amet.</p>
                 </div>
-              </div>
-              <!-- ------ Card ------ -->
-              <div class="card card-info">
-                <header class="card-header">
-                  <h3>Info</h3>
-                </header>
-                <div class="card-body grid gap-2 text-center">
-                  <i class="icon-exclamation-circle fa-3x"></i>
-                  <p>Tarjeta de información</p>
+              </div>                    
+              <p>Lorem ipsum</p>
+            </a>                                
+            <!-- ------ panel-item ------ -->   
+            <a class="panel-item success" href="#">
+              <div class="flex gap-4">
+                <img src="../../assets/img/user-image.jpg" alt="" class="rounded-full size-10">
+                <div class="flex flex-col gap-1">
+                  <h4>Here goes the title</h4>
+                  <p>Lorem ipsum dolor sit amet.</p>
                 </div>
-              </div>
-            </div>
-            <pre class="code-block">&lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"card card-success"</span>&gt;
-  &lt;<span class="tok-tag">header</span> <span class="tok-attr">class</span>=<span class="tok-string">"card-header"</span>&gt;&lt;<span class="tok-tag">h3</span>&gt;Success&lt;/<span class="tok-tag">h3</span>&gt;&lt;/<span class="tok-tag">header</span>&gt;
-  &lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"card-body"</span>&gt;…&lt;/<span class="tok-tag">div</span>&gt;
-&lt;/<span class="tok-tag">div</span>&gt;</pre>
+              </div>                    
+              <p>Lorem ipsum</p>
+            </a>
           </div>
+          <pre class="code-block">&lt;<span class="tok-tag">a</span> <span class="tok-attr">class</span>=<span class="tok-string">"panel-item"</span> <span class="tok-attr">href</span>=<span class="tok-string">"#"</span>&gt;
+  &lt;<span class="tok-tag">img</span> <span class="tok-attr">class</span>=<span class="tok-string">"rounded-full size-10"</span> <span class="tok-attr">src</span>=<span class="tok-string">"…"</span>&gt;
+  &lt;<span class="tok-tag">h6</span>&gt;Title&lt;/<span class="tok-tag">h6</span>&gt;
+&lt;/<span class="tok-tag">a</span>&gt;   <span class="tok-comment">/* .warning · .success · .disabled */</span></pre>
         </section>
       </main>
 

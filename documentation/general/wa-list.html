@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>GF - Buttons</title>
+    <title>GF - Wa-List</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link rel="icon" href="../../assets/img/favicon.png" type="image/png">
     <!-- Styles -->
@@ -124,7 +124,7 @@
             <li>
               <a href="../dashboard.html"><i class="icon-Home"></i> Dashboard</a>
             </li>
-                        <!-- Dropdown -->
+                                    <!-- Dropdown -->
             <li class="treeview">
               <a href="#">
                 <i class="icon-wrench-screwdriver"></i>
@@ -183,32 +183,32 @@
             <li class="treeview active">
               <a href="#">
                 <i class="icon-table-cells"></i>
-                <span>Components</span>
+                <span>General</span>
                 <i class="icon-chevron-right float-right"></i>
               </a>
               <ul class="treeview-menu">
                 <li>
-                  <a href="../componentes/accordion.html">
+                  <a href="../general/accordion.html">
                     <i class="icon-minus"></i> Accordion
                   </a>
                 </li>
                 <li>
-                  <a href="../componentes/buttons.html">
+                  <a href="../general/buttons.html">
                     <i class="icon-minus"></i> Buttons
                   </a>
                 </li>
                 <li>
-                  <a href="../componentes/cards.html">
+                  <a href="../general/cards.html">
                     <i class="icon-minus"></i> Cards
                   </a>
                 </li>
                 <li>
-                  <a href="../componentes/panel-list.html">
+                  <a href="../general/panel-list.html">
                     <i class="icon-minus"></i> Panel list
                   </a>
                 </li>
                 <li>
-                  <a href="../componentes/forms.html">
+                  <a href="../general/forms.html">
                     <i class="icon-minus"></i> Forms
                   </a>
                 </li>
@@ -308,7 +308,7 @@
                   </a>
                 </li>
               </ul>
-            </li>                                                                                                                          
+            </li>                                                                                                                           
 
           </ul>
         </section>
@@ -321,145 +321,124 @@
         <!-- Title
         ========================================== -->               
         <div class="content-header">
-          <h1>Buttons</h1>
-          <p>Botones para acciones primarias, secundarias y de estado, en distintos tamaños, variantes y formatos (con ícono, circulares, agrupados).</p>
+          <h1>Wa-list</h1>
         </div>         
         <!-- Content-body
         ========================================== -->               
-        <section class="content-body"> 
+        <section class="content-body">  
           <div class="grid gap-5">
-
-            <div class="grid gap-1"> 
-              <h2 class="text-lg">Botones predeterminados</h2>
-              <p>Variantes de énfasis para las acciones más comunes: primary para la acción principal, secondary y outline para acciones secundarias, ghost para bajo énfasis, y su estado deshabilitado.</p>
-            </div>
-
-            <div class="doc-preview flex flex-col sm:flex-row gap-2">
-              <button class="btn btn-primary">Primary</button>
-              <button class="btn btn-secondary">Secondary</button>
-              <button class="btn btn-outline">Outline</button>
-              <button class="btn btn-ghost">Ghost</button>
-              <button class="btn btn-primary" disabled>Deshabilitado</button>
-              <button class="btn btn-secondary" disabled>Deshabilitado</button>
-            </div>
-            <pre class="code-block">&lt;<span class="tok-tag">button</span> <span class="tok-attr">class</span>=<span class="tok-string">"btn btn-primary"</span>&gt;Primary&lt;/<span class="tok-tag">button</span>&gt;
-&lt;<span class="tok-tag">button</span> <span class="tok-attr">class</span>=<span class="tok-string">"btn btn-outline"</span>&gt;Outline&lt;/<span class="tok-tag">button</span>&gt;
-&lt;<span class="tok-tag">button</span> <span class="tok-attr">class</span>=<span class="tok-string">"btn btn-ghost"</span>&gt;Ghost&lt;/<span class="tok-tag">button</span>&gt;</pre>
-
-            <div class="grid gap-1">
-              <h2 class="text-lg">Botones de estado</h2>
-              <p>Success, warning y danger comunican el resultado de una acción: confirmación, advertencia o error.</p>
-            </div>
-            <div class="doc-preview flex flex-col sm:flex-row gap-2">
-              <button class="btn btn-success">Success</button>
-              <button class="btn btn-warning">Warning</button>
-              <button class="btn btn-danger">Danger</button>
-            </div>
-
-            <div class="grid gap-1"> 
-              <h2 class="text-lg">Tamaños de botones</h2>
-              <p>sm · base · lg — mismo componente, distinta densidad.</p>
-            </div>            
-            <div class="doc-preview flex flex-col sm:flex-row items-start gap-5">
-              <button class="btn btn-sm btn-primary">Small</button>
-              <button class="btn btn-primary">Base</button>
-              <button class="btn btn-lg btn-primary">Large</button>
-            </div>
             
-            <div class="grid gap-1"> 
-              <h2 class="text-lg">Botón de bloque</h2>
-              <p>btn-block hace que el botón ocupe todo el ancho disponible de su contenedor, útil en formularios o layouts angostos.</p>
-            </div>                        
-            <div class="doc-preview flex flex-col sm:flex-row items-start gap-5">
-              <button class="btn btn-block btn-primary">Btn-block</button>
+            <div class="wa-list">
+              <!-- ITEM -->
+              <div class="wa-item">
+                <div class="wa-avatar">
+                  <img src="https://i.pravatar.cc/100?img=1" alt="">
+                </div>
+  
+                <div class="wa-content">
+                  <div class="wa-top">
+                    <span class="wa-name">Juan Pérez</span>
+                    <span class="wa-time">10:30 AM</span>
+                  </div>
+  
+                  <div class="wa-bottom">
+                    <span class="wa-message">Hola 👋 ¿Cómo estás?</span>
+                    <span class="wa-badge">2</span>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- ITEM -->
+              <div class="wa-item">
+                <div class="wa-avatar">
+                  <img src="https://i.pravatar.cc/100?img=2" alt="">
+                </div>
+  
+                <div class="wa-content">
+                  <div class="wa-top">
+                    <span class="wa-name">Ana López</span>
+                    <span class="wa-time">Ayer</span>
+                  </div>
+  
+                  <div class="wa-bottom">
+                    <span class="wa-message">Te mandé el archivo 📄</span>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- ITEM (activo) -->
+              <div class="wa-item active">
+                <div class="wa-avatar">
+                  <img src="https://i.pravatar.cc/100?img=3" alt="">
+                </div>
+  
+                <div class="wa-content">
+                  <div class="wa-top">
+                    <span class="wa-name">Carlos Ruiz</span>
+                    <span class="wa-time">09:15 AM</span>
+                  </div>
+  
+                  <div class="wa-bottom">
+                    <span class="wa-message">Perfecto, gracias 👍</span>
+                    <span class="wa-badge">1</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <div class="grid gap-1"> 
-              <h2 class="text-lg">Con ícono</h2>
-              <p>Un ícono antes del texto ayuda a reconocer la acción más rápido; hereda el color del botón automáticamente.</p>
-            </div>                                    
-            <div class="doc-preview flex flex-col sm:flex-row gap-5">
-              <button class="btn btn-primary">
-                <i class="icon-plus"></i> Nuevo
-              </button>
-              <button class="btn btn-secondary">
-                <i class="icon-solid-pencil-square"></i> Editar
-              </button>
-              <button class="btn btn-danger">
-                <i class="icon-trash"></i> Eliminar
-              </button>
+  
+            <div class="wa-list">
+  
+              <!-- ITEM -->
+              <div class="wa-item">
+                <div class="wa-icon success">✔</div>
+  
+                <div class="wa-content">
+                  <div class="wa-top">
+                    <span class="wa-name">Pago recibido</span>
+                    <span class="wa-time">Hace 5 min</span>
+                  </div>
+  
+                  <div class="wa-bottom">
+                    <span class="wa-message">Recibiste $1,200 de Juan Pérez</span>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- ITEM -->
+              <div class="wa-item">
+                <div class="wa-icon warning">⚠</div>
+  
+                <div class="wa-content">
+                  <div class="wa-top">
+                    <span class="wa-name">Acción requerida</span>
+                    <span class="wa-time">Hace 20 min</span>
+                  </div>
+  
+                  <div class="wa-bottom">
+                    <span class="wa-message">Completa tu perfil para continuar</span>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- ITEM -->
+              <div class="wa-item">
+                <div class="wa-icon info">ℹ</div>
+  
+                <div class="wa-content">
+                  <div class="wa-top">
+                    <span class="wa-name">Actualización</span>
+                    <span class="wa-time">Ayer</span>
+                  </div>
+  
+                  <div class="wa-bottom">
+                    <span class="wa-message">Se actualizó el sistema correctamente</span>
+                  </div>
+                </div>
+              </div>
+  
             </div>
-            
-            <div class="grid gap-1"> 
-              <h2 class="text-lg">Botones circulares</h2>
-              <p>Solo ícono, sin texto: para acciones compactas y repetidas, como editar o eliminar en una fila de tabla.</p>
-            </div>                                    
-            <div class="doc-preview flex flex-col sm:flex-row gap-5">              
-              <button class="btn btn-icon-only btn-circle btn-primary">
-                <i class="icon-solid-pencil-square"></i>
-              </button>              
-              <button class="btn btn-icon-only btn-circle btn-secondary">
-                <i class="icon-solid-pencil-square"></i>
-              </button>
-              <button class="btn btn-icon-only btn-circle btn-outline">
-                <i class="icon-solid-pencil-square"></i>
-              </button>
-              <button class="btn btn-icon-only btn-circle btn-danger">
-                <i class="icon-solid-pencil-square"></i>
-              </button>
-              <button class="btn btn-icon-only btn-circle btn-secondary" disabled>
-                <i class="icon-solid-pencil-square"></i>
-              </button>
-            </div>
+          </div>
           
-            <!-- Btn-link -->
-            <!--              
-            <div class="item grid gap-2">
-              <h2 class="text-lg">Btn-link</h2>
-              <div class="flex gap-2">
-                <a href="#" class="btn btn-link">
-                  Btn link
-                </a>
-              </div>
-            </div>            
-            -->
-            
-            <div class="grid gap-1"> 
-              <h2 class="text-lg">Botón de grupo</h2>
-              <p>Dos botones unidos visualmente como una sola unidad, para acciones relacionadas o mutuamente excluyentes.</p>
-            </div>                 
-            <div class="doc-preview flex flex-col sm:flex-row gap-5">
-              <div class="button-group">
-                <button class="button-left">Botón izquierdo</button>
-                <button class="button-right">Botón derecho</button>
-              </div>
-            </div>
-                      
-            <div class="grid gap-1"> 
-              <h2 class="text-lg">Social links</h2>
-              <p>Enlaces circulares a redes sociales; al pasar el cursor toman el color de marca de cada plataforma.</p>
-            </div>      
-            <div class="doc-preview">
-              <!-- Social-links -->
-              <ul class="social-links">
-                <li>
-                  <a href="#" target="_blank" class="faicon-facebook">
-                    <i class="icon-facebook"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" target="_blank" class="faicon-linkedin">
-                    <i class="icon-linkedin"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" target="_blank" class="faicon-instagram">
-                    <i class="icon-instagram"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>        
         </section>
       </main>
 
@@ -486,7 +465,7 @@
     <!-- Navigation -->
     <script src="../../assets/js/navigation/sidebar_layout.js" type="text/javascript"></script>
     <!-- Components -->    
-    <script src="../../assets/js/theme_toggle.js"></script>	 
+    <script src="../../assets/js/theme_toggle.js"></script>
 
   </body>
 </html>
