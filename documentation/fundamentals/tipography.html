@@ -360,119 +360,117 @@
         </div>         
         <!-- Content-body
         ========================================== -->               
-        <section class="content-body">  
-          <div class="grid gap-5">
-            <div class="grid gap-1">
-              <h2 class="text-lg">Titulares <small>/ Montserrat</small></h2>
-              <p>h1-h6 se eligen por jerarquía semántica del documento (un h1 por página, descendiendo sin saltos), nunca por el tamaño visual que se quiera lograr. Su tamaño en desktop (≥1024px) es el que se muestra abajo. Excepción documentada: en páginas de referencia densa con muchas subsecciones hermanas (ej. Buttons, Charts), el h2 usa <code>class="text-lg"</code> en vez de su tamaño natural — mismo nivel semántico, menor peso visual porque se repite muchas veces en una sola página.</p>
-            </div>
-            <div class="doc-preview grid gap-2">
-              <h1>Heading H1 <small>--fs-3xl · 2.5rem</small></h1>
-              <h2>Heading H2 <small>--fs-2xl · 2rem</small></h2>
-              <h3>Heading H3 <small>--fs-xl · 1.75rem</small></h3>
-              <h4>Heading H4 <small>--fs-lg · 1.5rem</small></h4>
-              <h5>Heading H5 <small>--fs-md · 1.25rem</small></h5>
-              <h6>Heading H6 <small>--fs-base · 1rem</small></h6>
-            </div>
-            <pre class="code-block">&lt;<span class="tok-tag">h1</span>&gt;Heading H1&lt;/<span class="tok-tag">h1</span>&gt;   <span class="tok-comment">/* var(--fs-3xl) */</span>
+        <section class="content-body grid gap-5">  
+          <div class="grid gap-1">
+            <h2 class="text-lg">Titulares <small>/ Montserrat</small></h2>
+            <p>h1-h6 se eligen por jerarquía semántica del documento (un h1 por página, descendiendo sin saltos), nunca por el tamaño visual que se quiera lograr. Su tamaño en desktop (≥1024px) es el que se muestra abajo. Excepción documentada: en páginas de referencia densa con muchas subsecciones hermanas (ej. Buttons, Charts), el h2 usa <code>class="text-lg"</code> en vez de su tamaño natural — mismo nivel semántico, menor peso visual porque se repite muchas veces en una sola página.</p>
+          </div>
+          <div class="doc-preview grid gap-2">
+            <h1>Heading H1 <small>--fs-3xl · 2.5rem</small></h1>
+            <h2>Heading H2 <small>--fs-2xl · 2rem</small></h2>
+            <h3>Heading H3 <small>--fs-xl · 1.75rem</small></h3>
+            <h4>Heading H4 <small>--fs-lg · 1.5rem</small></h4>
+            <h5>Heading H5 <small>--fs-md · 1.25rem</small></h5>
+            <h6>Heading H6 <small>--fs-base · 1rem</small></h6>
+          </div>
+          <pre class="code-block">&lt;<span class="tok-tag">h1</span>&gt;Heading H1&lt;/<span class="tok-tag">h1</span>&gt;   <span class="tok-comment">/* var(--fs-3xl) */</span>
 &lt;<span class="tok-tag">h2</span>&gt;Heading H2&lt;/<span class="tok-tag">h2</span>&gt;   <span class="tok-comment">/* var(--fs-2xl) */</span>
 &lt;<span class="tok-tag">h6</span>&gt;Heading H6&lt;/<span class="tok-tag">h6</span>&gt;   <span class="tok-comment">/* var(--fs-base) */</span></pre>
 
-            <div class="grid gap-1">
-              <h2 class="text-lg">Escala de texto <small>.text-xs … .text-3xl</small></h2>
-              <p>Mismas variables que usan h1-h6, pero como clases de tamaño puro: se aplican sobre cualquier etiqueta cuando el tamaño visual necesario no coincide con el nivel semántico del contenido. Por ejemplo, un <code>&lt;h3&gt;</code> que debe verse pequeño, o un <code>&lt;p&gt;</code> que debe destacar, sin cambiar de etiqueta.</p>
-            </div>
-            <div class="doc-preview grid gap-2">
-              <p class="text-3xl">.text-3xl <small>2.5rem</small></p>
-              <p class="text-2xl">.text-2xl <small>2rem</small></p>
-              <p class="text-xl">.text-xl <small>1.75rem</small></p>
-              <p class="text-lg">.text-lg <small>1.5rem</small></p>
-              <p class="text-md">.text-md <small>1.25rem</small></p>
-              <p class="text-base">.text-base <small>1rem</small></p>
-              <p class="text-sm">.text-sm <small>0.875rem</small></p>
-              <p class="text-xs">.text-xs <small>0.75rem</small></p>
-            </div>
-            <pre class="code-block">&lt;<span class="tok-tag">h3</span> <span class="tok-attr">class</span>=<span class="tok-string">"text-sm"</span>&gt;Un h3 que se ve pequeño&lt;/<span class="tok-tag">h3</span>&gt;
+          <div class="grid gap-1">
+            <h2 class="text-lg">Escala de texto <small>.text-xs … .text-3xl</small></h2>
+            <p>Mismas variables que usan h1-h6, pero como clases de tamaño puro: se aplican sobre cualquier etiqueta cuando el tamaño visual necesario no coincide con el nivel semántico del contenido. Por ejemplo, un <code>&lt;h3&gt;</code> que debe verse pequeño, o un <code>&lt;p&gt;</code> que debe destacar, sin cambiar de etiqueta.</p>
+          </div>
+          <div class="doc-preview grid gap-2">
+            <p class="text-3xl">.text-3xl <small>2.5rem</small></p>
+            <p class="text-2xl">.text-2xl <small>2rem</small></p>
+            <p class="text-xl">.text-xl <small>1.75rem</small></p>
+            <p class="text-lg">.text-lg <small>1.5rem</small></p>
+            <p class="text-md">.text-md <small>1.25rem</small></p>
+            <p class="text-base">.text-base <small>1rem</small></p>
+            <p class="text-sm">.text-sm <small>0.875rem</small></p>
+            <p class="text-xs">.text-xs <small>0.75rem</small></p>
+          </div>
+          <pre class="code-block">&lt;<span class="tok-tag">h3</span> <span class="tok-attr">class</span>=<span class="tok-string">"text-sm"</span>&gt;Un h3 que se ve pequeño&lt;/<span class="tok-tag">h3</span>&gt;
 &lt;<span class="tok-tag">p</span> <span class="tok-attr">class</span>=<span class="tok-string">"text-xl"</span>&gt;Un párrafo que destaca&lt;/<span class="tok-tag">p</span>&gt;   <span class="tok-comment">/* la etiqueta la decide la semántica, la clase el tamaño */</span></pre>
 
+          <div class="grid gap-1">
+            <h2 class="text-lg">Display <small>/ Montserrat, bold</small></h2>
+            <p>Tamaños extra grandes para títulos destacados, como en una portada o sección hero. No son h1-h6 más grandes: son una voz tipográfica distinta que reutiliza el tope de la escala.</p>
+          </div>
+          <div class="doc-preview grid gap-4">
             <div class="grid gap-1">
-              <h2 class="text-lg">Display <small>/ Montserrat, bold</small></h2>
-              <p>Tamaños extra grandes para títulos destacados, como en una portada o sección hero. No son h1-h6 más grandes: son una voz tipográfica distinta que reutiliza el tope de la escala.</p>
+              <h1 class="display display-1">Display H1</h1>
+              <p class="text-sm" style="color:var(--color-text-muted)">--fs-display-1 · 5rem</p>
             </div>
-            <div class="doc-preview grid gap-4">
-              <div class="grid gap-1">
-                <h1 class="display display-1">Display H1</h1>
-                <p class="text-sm" style="color:var(--color-text-muted)">--fs-display-1 · 5rem</p>
-              </div>
-              <div class="grid gap-1">
-                <h2 class="display display-2">Display H1</h2>
-                <p class="text-sm" style="color:var(--color-text-muted)">--fs-display-2 · 4.5rem</p>
-              </div>
-              <div class="grid gap-1">
-                <h3 class="display display-3">Display H1</h3>
-                <p class="text-sm" style="color:var(--color-text-muted)">--fs-display-3 · 4rem</p>
-              </div>
-              <div class="grid gap-1">
-                <h4 class="display display-4">Display H1</h4>
-                <p class="text-sm" style="color:var(--color-text-muted)">--fs-display-4 · 3.5rem</p>
-              </div>
+            <div class="grid gap-1">
+              <h2 class="display display-2">Display H1</h2>
+              <p class="text-sm" style="color:var(--color-text-muted)">--fs-display-2 · 4.5rem</p>
             </div>
+            <div class="grid gap-1">
+              <h3 class="display display-3">Display H1</h3>
+              <p class="text-sm" style="color:var(--color-text-muted)">--fs-display-3 · 4rem</p>
+            </div>
+            <div class="grid gap-1">
+              <h4 class="display display-4">Display H1</h4>
+              <p class="text-sm" style="color:var(--color-text-muted)">--fs-display-4 · 3.5rem</p>
+            </div>
+          </div>
 
-            <div class="grid gap-1">
-              <h2 class="text-lg">Jerarquía de contenido <small>/ ejemplo combinado</small></h2>
-              <p>Cómo se ven juntos, en un mismo bloque de contenido, un encabezado de sección, su subtítulo, el lead, una descripción estándar y una descripción extensa. El encabezado usa Montserrat (<code>--font-display</code>); el subtítulo, el lead y las descripciones usan Roboto (<code>--font-body</code>), al ser todos etiquetas <code>&lt;p&gt;</code>.</p>
-            </div>
-            <div class="doc-preview grid gap-2">
-              <h2>Encabezado de sección <small>32px</small></h2>
-              <p class="text-xl">Subtítulo <small>28px</small></p>
-              <p class="lead">Lead: un texto de introducción más grande que el párrafo estándar, usado para destacar la primera idea de una sección o dar contexto antes del contenido principal.</p>
-              <p>Texto de descripción estándar <small>14px</small>. Este es el texto de cuerpo por defecto: descripciones cortas, ayudas y textos de apoyo dentro de una página.</p>
-              <p class="text-reading">Texto de descripción extensa <small>16px</small>. Para bloques de lectura larga (contenido editorial, ayudas extensas, texto legal), usa <code>.text-reading</code>: sube el tamaño y el interlineado por encima de la descripción estándar para que un párrafo largo se siga leyendo cómodo.</p>
-            </div>
-            <pre class="code-block">&lt;<span class="tok-tag">h2</span>&gt;Encabezado de sección&lt;/<span class="tok-tag">h2</span>&gt;
+          <div class="grid gap-1">
+            <h2 class="text-lg">Jerarquía de contenido <small>/ ejemplo combinado</small></h2>
+            <p>Cómo se ven juntos, en un mismo bloque de contenido, un encabezado de sección, su subtítulo, el lead, una descripción estándar y una descripción extensa. El encabezado usa Montserrat (<code>--font-display</code>); el subtítulo, el lead y las descripciones usan Roboto (<code>--font-body</code>), al ser todos etiquetas <code>&lt;p&gt;</code>.</p>
+          </div>
+          <div class="doc-preview grid gap-2">
+            <h2>Encabezado de sección <small>32px</small></h2>
+            <p class="text-xl">Subtítulo <small>28px</small></p>
+            <p class="lead">Lead: un texto de introducción más grande que el párrafo estándar, usado para destacar la primera idea de una sección o dar contexto antes del contenido principal.</p>
+            <p>Texto de descripción estándar <small>14px</small>. Este es el texto de cuerpo por defecto: descripciones cortas, ayudas y textos de apoyo dentro de una página.</p>
+            <p class="text-reading">Texto de descripción extensa <small>16px</small>. Para bloques de lectura larga (contenido editorial, ayudas extensas, texto legal), usa <code>.text-reading</code>: sube el tamaño y el interlineado por encima de la descripción estándar para que un párrafo largo se siga leyendo cómodo.</p>
+          </div>
+          <pre class="code-block">&lt;<span class="tok-tag">h2</span>&gt;Encabezado de sección&lt;/<span class="tok-tag">h2</span>&gt;
 &lt;<span class="tok-tag">p</span> <span class="tok-attr">class</span>=<span class="tok-string">"text-xl"</span>&gt;Subtítulo&lt;/<span class="tok-tag">p</span>&gt;
 &lt;<span class="tok-tag">p</span> <span class="tok-attr">class</span>=<span class="tok-string">"lead"</span>&gt;Lead&lt;/<span class="tok-tag">p</span>&gt;
 &lt;<span class="tok-tag">p</span>&gt;Descripción estándar&lt;/<span class="tok-tag">p</span>&gt;
 &lt;<span class="tok-tag">p</span> <span class="tok-attr">class</span>=<span class="tok-string">"text-reading"</span>&gt;Descripción extensa&lt;/<span class="tok-tag">p</span>&gt;</pre>
 
-            <div class="grid gap-1">
-              <h2 class="text-lg">Text color</h2>
-              <p>Los mismos success/danger/warning aplicados como color de texto.</p>
+          <div class="grid gap-1">
+            <h2 class="text-lg">Text color</h2>
+            <p>Los mismos success/danger/warning aplicados como color de texto.</p>
+          </div>
+          <div class="doc-preview grid grid-cols-1 md:grid-cols-3 gap-2">
+            <div>
+              <h2 class="text-success">Text success</h2>
+              <p class="text-success">Text success</p>
             </div>
-            <div class="doc-preview grid grid-cols-1 md:grid-cols-3 gap-2">
-              <div>
-                <h2 class="text-success">Text success</h2>
-                <p class="text-success">Text success</p>
-              </div>
-              <div>
-                <h2 class="text-danger">Text danger</h2>
-                <p class="text-danger">Text danger</p>
-              </div>
-              <div>
-                <h2 class="text-warning">Text warning</h2>
-                <p class="text-warning">Text warning</p>
-              </div>
+            <div>
+              <h2 class="text-danger">Text danger</h2>
+              <p class="text-danger">Text danger</p>
             </div>
+            <div>
+              <h2 class="text-warning">Text warning</h2>
+              <p class="text-warning">Text warning</p>
+            </div>
+          </div>
 
-            <div class="grid gap-1">
-              <h2 class="text-lg">Status Title</h2>
-              <p>Un ícono junto a un título, coloreados según el estado que representan.</p>
+          <div class="grid gap-1">
+            <h2 class="text-lg">Status Title</h2>
+            <p>Un ícono junto a un título, coloreados según el estado que representan.</p>
+          </div>
+          <div class="doc-preview grid grid-cols-1 md:grid-cols-3 gap-2">
+            <div class="StatusTitle-Success flex flex-row gap-2">
+              <i class="icon-check-circle icon-lg"></i>
+              <h5>Status Title Success</h5>
             </div>
-            <div class="doc-preview grid grid-cols-1 md:grid-cols-3 gap-2">
-              <div class="StatusTitle-Success flex flex-row gap-2">
-                <i class="icon-check-circle icon-lg"></i>
-                <h5>Status Title Success</h5>
-              </div>
-              <div class="StatusTitle-Danger flex flex-row gap-2">
-                <i class="icon-exclamation-triangle icon-lg"></i>
-                <h5>Status Title Danger</h5>
-              </div>
-              <div class="StatusTitle-Warning flex flex-row gap-2">
-                <i class="icon-question-mark-circle icon-lg"></i>
-                <h5>Status Title Warning</h5>
-              </div>
+            <div class="StatusTitle-Danger flex flex-row gap-2">
+              <i class="icon-exclamation-triangle icon-lg"></i>
+              <h5>Status Title Danger</h5>
             </div>
-          </div>       
+            <div class="StatusTitle-Warning flex flex-row gap-2">
+              <i class="icon-question-mark-circle icon-lg"></i>
+              <h5>Status Title Warning</h5>
+            </div>
+          </div>
         </section>
       </main>
 
