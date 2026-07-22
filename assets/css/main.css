@@ -6896,7 +6896,7 @@ ul.secondary_menu li.active a {
   opacity: 0.2;
   color: #ffffff;
   background-color: var(--brand-primary);
-  border: 2px solid var(--color-border-strong);
+  border-radius: var(--radius-full);
 }
 #back-to-top i {
   line-height: 45px;
