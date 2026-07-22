@@ -13,7 +13,8 @@
     padding: 1rem 1rem;
     border-radius:var(--radius-sm) var(--radius-sm) 0 0;
     border-bottom: 1px solid $border-subtle;
-  }    
+    h3 { font-size: var(--fs-md); }
+  }
 
   .card-body {
     padding:1rem;

@@ -3810,6 +3810,9 @@ Tabletas horizontales */
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
   border-bottom: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
 }
+.card .card-header h3 {
+  font-size: var(--fs-md);
+}
 .card .card-body {
   padding: 1rem;
 }
