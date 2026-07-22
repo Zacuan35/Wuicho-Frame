@@ -369,14 +369,14 @@
 
             <div class="grid gap-1">
               <h2 class="text-lg">Uso suelto</h2>
-              <p>.card-header, .card-body y .card-footer no dependen de .card: se pueden usar solos. Los estados de color (.card-success, .card-danger, etc.) también son autosuficientes.</p>
+              <p>.card-header, .card-body y .card-footer no dependen de .card: se pueden combinar en el mismo elemento en vez de anidarlos. .card aporta el marco (radio, borde, sombra) sin ser un wrapper.</p>
             </div>
             <div class="doc-preview flex flex-wrap gap-4">
-              <div class="card-body card-success" style="border-radius:var(--radius-sm);max-width:280px">
-                <p>Solo el body, con estado success, sin el contenedor .card.</p>
+              <div class="card card-body card-success" style="max-width:280px">
+                <p>.card + .card-body + .card-success en un solo elemento: marco, padding y color, sin wrapper ni estilos en línea.</p>
               </div>
             </div>
-            <pre class="code-block">&lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"card-body card-success"</span>&gt;…&lt;/<span class="tok-tag">div</span>&gt;   <span class="tok-comment">/* sin .card */</span></pre>
+            <pre class="code-block">&lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"card card-body card-success"</span>&gt;…&lt;/<span class="tok-tag">div</span>&gt;</pre>
           </div>
         </section>
       </main>
