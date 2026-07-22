@@ -31,38 +31,38 @@
     &.success{
     background-color: var(--color-success-bg);
     border-color: var(--color-success-text);
-    h6,p{color:var(--color-success-text);}
+    h4,p{color:var(--color-success-text);}
     p{font-weight:400;}
     }
 
     &.warning{
     background-color: var(--color-warning-bg);
     border-color: var(--color-warning-text);
-    h6,p{color:var(--color-warning-text);}
+    h4,p{color:var(--color-warning-text);}
     p{font-weight:400;}
     }
 
     &.danger{
     background-color: var(--color-danger-bg);
     border-color: var(--color-danger-text);
-    h6,p{color:var(--color-danger-text);}
+    h4,p{color:var(--color-danger-text);}
     p{font-weight:400;}
     }
 
     &.info{
     background-color: var(--color-info-bg);
     border-color: var(--color-info-text);
-    h6,p{color:var(--color-info-text);}
+    h4,p{color:var(--color-info-text);}
     p{font-weight:400;}
     }
 
     &.disabled{
     background-color: lighten($gray-color, 50%);
     border-color: lighten($gray-color, 40%);
-    h6,p{color:$gray-color;}          
+    h4,p{color:$gray-color;}
     p{font-weight:400;}              
-    cursor:not-allowed;        
-    img{filter: grayscale(100%);}
+    cursor:not-allowed;
+    img,i{filter: grayscale(100%);}
     }        
 
   }     

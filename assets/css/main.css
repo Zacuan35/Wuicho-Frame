@@ -3886,7 +3886,7 @@ a.card.card-info:hover {
   background-color: var(--color-success-bg);
   border-color: var(--color-success-text);
 }
-.panel-list .panel-item.success h6, .panel-list .panel-item.success p {
+.panel-list .panel-item.success h4, .panel-list .panel-item.success p {
   color: var(--color-success-text);
 }
 .panel-list .panel-item.success p {
@@ -3896,7 +3896,7 @@ a.card.card-info:hover {
   background-color: var(--color-warning-bg);
   border-color: var(--color-warning-text);
 }
-.panel-list .panel-item.warning h6, .panel-list .panel-item.warning p {
+.panel-list .panel-item.warning h4, .panel-list .panel-item.warning p {
   color: var(--color-warning-text);
 }
 .panel-list .panel-item.warning p {
@@ -3906,7 +3906,7 @@ a.card.card-info:hover {
   background-color: var(--color-danger-bg);
   border-color: var(--color-danger-text);
 }
-.panel-list .panel-item.danger h6, .panel-list .panel-item.danger p {
+.panel-list .panel-item.danger h4, .panel-list .panel-item.danger p {
   color: var(--color-danger-text);
 }
 .panel-list .panel-item.danger p {
@@ -3916,7 +3916,7 @@ a.card.card-info:hover {
   background-color: var(--color-info-bg);
   border-color: var(--color-info-text);
 }
-.panel-list .panel-item.info h6, .panel-list .panel-item.info p {
+.panel-list .panel-item.info h4, .panel-list .panel-item.info p {
   color: var(--color-info-text);
 }
 .panel-list .panel-item.info p {
@@ -3926,7 +3926,7 @@ a.card.card-info:hover {
   background-color: rgb(219.5, 219.5, 219.5);
   border-color: #c2c2c2;
 }
-.panel-list .panel-item.disabled h6, .panel-list .panel-item.disabled p {
+.panel-list .panel-item.disabled h4, .panel-list .panel-item.disabled p {
   color: #5c5c5c;
 }
 .panel-list .panel-item.disabled p {
@@ -3935,7 +3935,7 @@ a.card.card-info:hover {
 .panel-list .panel-item.disabled {
   cursor: not-allowed;
 }
-.panel-list .panel-item.disabled img {
+.panel-list .panel-item.disabled img, .panel-list .panel-item.disabled i {
   filter: grayscale(100%);
 }
 
