@@ -17,34 +17,34 @@
 
 /*Components*/
 /* -> General */
-@import 'components/accordion';
-@import 'components/buttons';
-@import 'components/card';
-@import 'components/panel_list';
-@import 'components/badge';
-@import 'components/box_link';
-@import 'components/wa_list';
-@import 'components/gallery';
-@import 'components/loader';
-@import 'components/progress_bar';
+@import 'components/general/accordion';
+@import 'components/general/buttons';
+@import 'components/general/card';
+@import 'components/general/panel_list';
+@import 'components/general/badge';
+@import 'components/general/box_link';
+@import 'components/general/wa_list';
+@import 'components/general/gallery';
+@import 'components/general/loader';
+@import 'components/general/progress_bar';
 
 /* -> Feedback */
-@import 'components/banner_alerts';
-@import 'components/data-toast.scss';
-@import 'components/modal';
-@import 'components/sweet_alert';
-@import 'components/tooltips';
+@import 'components/feedback/banner_alerts';
+@import 'components/feedback/data-toast.scss';
+@import 'components/feedback/modal';
+@import 'components/feedback/sweet_alert';
+@import 'components/feedback/tooltips';
 
 /* -> Data display */
-@import 'components/charts';
-@import 'components/table_grid';
-@import 'components/table';
-@import 'components/data_table';
+@import 'components/data-display/charts';
+@import 'components/data-display/table_grid';
+@import 'components/data-display/table';
+@import 'components/data-display/data_table';
 
 /* -> Navigation */
-@import 'components/breadcrumb';
-@import 'components/pagination_area';
-@import 'components/tabs';
+@import 'components/navigation/breadcrumb';
+@import 'components/navigation/pagination_area';
+@import 'components/navigation/tabs';
 
 /* -> Otros (no ligados a un ítem del sidebar) */
 @import 'components/icons';
