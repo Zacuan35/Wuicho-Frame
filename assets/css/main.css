@@ -7408,6 +7408,8 @@ Colour theme
 }
 .sidebar-navbar {
   position: relative;
+  display: flex;
+  align-items: center;
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
@@ -7480,9 +7482,58 @@ Colour theme
   background-color: var(--color-canvas);
 }
 
+/* # Search-field
+----------------------------------------------- */
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  max-width: 420px;
+  margin: 0 20px;
+  padding: 8px 14px;
+  background-color: var(--color-canvas);
+  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border-radius: var(--radius-sm);
+}
+.search-field i {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+.search-field input {
+  border: 0;
+  background: transparent;
+  outline: none;
+  font-family: inherit;
+  font-size: var(--fs-sm);
+  color: var(--color-text-primary);
+  width: 100%;
+}
+.search-field input::placeholder {
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 767px) {
+  .search-field {
+    display: none;
+  }
+}
 /* =====================
 # SIDEBAR MENU
 ===================== */
+/* # Nav-section-label
+----------------------------------------------- */
+.nav-section-label {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  padding: 20px 15px 8px;
+  white-space: nowrap;
+  display: block;
+}
+
 .sidebar-menu {
   list-style: none;
   margin: 0;
@@ -7500,6 +7551,10 @@ Colour theme
   display: block;
   border-left: 3px solid transparent;
   margin-right: 1px;
+  /* Los enlaces padre (categorías) deben pesar al menos tanto como el
+  bold que un sub-enlace toma al hacer hover, para que la jerarquía
+  visual nunca se invierta. */
+  font-weight: var(--fw-bold);
 }
 
 .sidebar-menu > li > a > i {
@@ -7565,6 +7620,18 @@ Colour theme
   font-size: var(--fs-sm);
 }
 
+/* Bullet en vez del guion (icon-minus) que traían los sub-enlaces */
+.sidebar-menu .treeview-menu > li > a > i.icon-minus {
+  display: none;
+}
+
+.sidebar-menu .treeview-menu > li > a::before {
+  content: "•";
+  display: inline-block;
+  width: 15px;
+  color: var(--color-text-muted);
+}
+
 .sidebar-menu .treeview-menu > li > a > i {
   width: 15px;
   font-size: 10px;
@@ -7620,6 +7687,7 @@ Colour theme
   list-style: none;
   padding: 0;
   margin: 0 15px 0 0;
+  margin-left: auto;
   float: right;
 }
 
