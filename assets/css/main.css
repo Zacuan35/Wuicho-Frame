@@ -418,7 +418,7 @@ body, form, label, input, textarea, select, a, .btn {
 
 p, ul, ol {
   font-family: var(--font-body);
-  font-size: var(--fs-base);
+  font-size: var(--fs-sm);
   font-weight: var(--fw-light);
   padding: 0;
 }
