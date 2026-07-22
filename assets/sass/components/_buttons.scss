@@ -146,9 +146,11 @@
 # Btn-Link
 ===================== */
 .btn-link {
+  color: var(--brand-primary);
+  font-weight: var(--fw-bold);
+  text-decoration: none;
   &:hover, &:active, &:focus {
     text-decoration: underline;
-    color: var(--brand-primary);
   }
 }
 

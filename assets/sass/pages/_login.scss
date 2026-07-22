@@ -2,8 +2,7 @@
 # LOGIN
 ===================== */
 /* Contenedor centrado para páginas standalone (login, registro,
-error 404): el "marco" lo aporta .card, aquí solo se centra en el
-viewport sobre el fondo canvas. */
+error 404): centra su contenido en el viewport sobre el fondo canvas. */
 .login-container {
   display:flex;
   flex-direction: column;
@@ -12,6 +11,19 @@ viewport sobre el fondo canvas. */
   min-height: 100vh;
   padding: 2rem;
   background-color:var(--color-canvas);
+}
+
+/* Card exclusiva de estas vistas standalone (no reutiliza .card):
+un login/registro no necesita header/footer/estados de color, solo
+un marco simple propio. */
+.login-card {
+  width: 100%;
+  max-width: 24rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 2rem;
 }
 
 /* ==============================================
