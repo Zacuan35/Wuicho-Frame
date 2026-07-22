@@ -82,9 +82,9 @@
     gap: 0.5rem;
 
     .switch-group {
-      p{font-size: 0.850rem;}
-      span{font-size: 0.850rem;}
-    }    
+      p{font-size: var(--fs-sm);}
+      span{font-size: var(--fs-sm);}
+    }
   }
 
   /* # Switch

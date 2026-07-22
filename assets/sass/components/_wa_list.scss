@@ -65,7 +65,7 @@
   justify-content: center;
 
   border-radius: var(--radius-full);
-  font-size: 1rem;
+  font-size: var(--fs-base);
   flex-shrink: 0;
 
   background: #eee;
@@ -108,11 +108,11 @@
 
 .wa-name {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: var(--fs-sm);
 }
 
 .wa-time {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: #888;
   white-space: nowrap;
 }
@@ -128,7 +128,7 @@
 }
 
 .wa-message {
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   color: #555;
 
   /* truncado */
@@ -143,7 +143,7 @@
 .wa-badge {
   background-color: #25d366;
   color: white;
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
 
   min-width: 18px;
   height: 18px;

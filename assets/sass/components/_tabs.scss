@@ -37,7 +37,7 @@ agrega el modificador .tabs-vertical sobre el mismo contenedor.
   cursor: pointer;
   text-align: center;
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   font-weight: 600;
   transition: color var(--transition-base), border-color var(--transition-base);
 

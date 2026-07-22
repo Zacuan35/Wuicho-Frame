@@ -211,7 +211,7 @@ output {
   color: var(--color-surface);
   border-radius: var(--radius-xs);
   display: inline-block;
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   line-height: 2;
   bottom: 100%;
   left: 0;

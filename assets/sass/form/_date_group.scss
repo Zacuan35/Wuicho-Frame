@@ -24,7 +24,7 @@
   transition: border-color 0.15s ease-in-out;
   border-radius: 0; 
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   line-height: 1.5;
   color:var(--color-text-primary);
 }

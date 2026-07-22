@@ -63,7 +63,7 @@ html {box-sizing: border-box;}
   background-color: $dark-color;
   color: $white-color;
   content: attr(data-tooltip);
-  font-size: 14px;
+  font-size: var(--fs-sm);
   line-height: 1.2;
 }
 

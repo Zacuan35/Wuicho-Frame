@@ -26,7 +26,7 @@
 }
 .sidebar-menu li.header {
 	padding: 10px 25px 10px 15px;
-	font-size: 12px;
+	font-size: var(--fs-xs);
 }
 .sidebar-menu li > a > .icon-chevron-right {
 	width: auto;
@@ -66,7 +66,7 @@
 .sidebar-menu .treeview-menu > li > a {
 	padding: 5px 5px 5px 15px;
 	display: block;
-	font-size: 14px;
+	font-size: var(--fs-sm);
 }
 .sidebar-menu .treeview-menu > li > a > i {
 	width: 15px;

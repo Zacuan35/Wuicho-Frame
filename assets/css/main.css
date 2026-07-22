@@ -1930,7 +1930,7 @@ Tabletas verticales o celulares horizontales*/
     grid-column: span 12/span 12;
   }
   th, td {
-    font-size: 0.875rem;
+    font-size: var(--fs-sm);
   }
   .float-md-left {
     float: left;
@@ -3414,7 +3414,7 @@ Tabletas horizontales */
   color: var(--color-text-primary);
   padding: 15px;
   text-align: left;
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   width: 100%;
   border: none;
   cursor: pointer;
@@ -3465,12 +3465,12 @@ Tabletas horizontales */
   text-align: center;
   cursor: pointer;
   font-family: var(--font-display);
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
   transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, filter 0.15s ease;
 }
 .btn i {
-  font-size: 1rem;
+  font-size: var(--fs-base);
   line-height: 1;
 }
 
@@ -3484,20 +3484,20 @@ Tabletas horizontales */
 }
 
 .btn-sm {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   padding: 0.375rem 0.625rem;
   border-radius: var(--radius-xs);
 }
 .btn-sm i {
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
 }
 
 .btn-lg {
-  font-size: 1rem;
+  font-size: var(--fs-base);
   padding: 0.75rem 1.25rem;
 }
 .btn-lg i {
-  font-size: 1.125rem;
+  font-size: var(--fs-md);
 }
 
 /* =====================
@@ -3615,7 +3615,7 @@ Tabletas horizontales */
 .button-group button {
   margin: 0;
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   line-height: 1.5;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -3968,7 +3968,7 @@ Tabletas horizontales */
   background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
   border: 1px solid var(--color-border-strong);
   color: var(--color-text-primary);
-  font-size: 0.8rem;
+  font-size: var(--fs-xs);
   line-height: 1;
   transition: opacity 0.3s ease, transform 0.3s ease, margin 0.3s ease, padding 0.3s ease;
 }
@@ -3985,7 +3985,7 @@ Tabletas horizontales */
   border: 0;
   background: transparent;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
   opacity: 0.7;
   transition: opacity 0.2s ease;
 }
@@ -4036,12 +4036,12 @@ Tabletas horizontales */
 ===================== */
 .badge-sm {
   padding: 0.3rem 0.6rem;
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
 }
 
 .badge-lg {
   padding: 0.6rem 1.1rem;
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
 }
 
 /* =====================
@@ -4073,7 +4073,7 @@ Tabletas horizontales */
 }
 .box-link .box-icon p {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   color: var(--color-text-primary);
   font-weight: bold;
   margin-bottom: 0;
@@ -4096,7 +4096,7 @@ Tabletas horizontales */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: var(--fs-md);
   background-color: var(--color-surface);
   transition: background-color 0.3s;
   color: var(--brand-primary);
@@ -4182,7 +4182,7 @@ Tabletas horizontales */
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-full);
-  font-size: 1rem;
+  font-size: var(--fs-base);
   flex-shrink: 0;
   background: #eee;
 }
@@ -4224,11 +4224,11 @@ Tabletas horizontales */
 
 .wa-name {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: var(--fs-sm);
 }
 
 .wa-time {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: #888;
   white-space: nowrap;
 }
@@ -4244,7 +4244,7 @@ Tabletas horizontales */
 }
 
 .wa-message {
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   color: #555;
   /* truncado */
   white-space: nowrap;
@@ -4258,7 +4258,7 @@ Tabletas horizontales */
 .wa-badge {
   background-color: #25d366;
   color: white;
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   min-width: 18px;
   height: 18px;
   padding: 0 6px;
@@ -4348,7 +4348,7 @@ Tabletas horizontales */
 }
 .gallery-section .gallery-body .wrapper-variants .wrapper-thumbnails .thumbnail .thumbnail-icon i {
   color: var(--color-canvas);
-  font-size: 14px;
+  font-size: var(--fs-sm);
 }
 .gallery-section .gallery-body .wrapper-variants .wrapper-thumbnails .thumbnail {
   /* Cambio cuando la miniatura está seleccionada */
@@ -4605,7 +4605,7 @@ Tabletas verticales o celulares horizontales*/
   padding: 0.5rem;
   border: 0;
   opacity: 0.5;
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   line-height: 1rem;
   cursor: pointer;
 }
@@ -4716,7 +4716,7 @@ Tabletas verticales o celulares horizontales*/
   margin: 0;
 }
 .modal .modal-content .modal-header .btn-close {
-  font-size: 24px;
+  font-size: var(--fs-xl);
   font-weight: bold;
   color: var(--color-text-muted);
   cursor: pointer;
@@ -4849,7 +4849,7 @@ html {
   background-color: #000000;
   color: #ffffff;
   content: attr(data-tooltip);
-  font-size: 14px;
+  font-size: var(--fs-sm);
   line-height: 1.2;
 }
 
@@ -5252,7 +5252,7 @@ table.zebra tbody tr:nth-child(even) {
 @media (min-width: 640px) {
   th, td {
     padding: 12px;
-    font-size: var(--fs-base);
+    font-size: var(--fs-sm);
   }
 }
 /* # Tablet
@@ -5282,7 +5282,7 @@ table.zebra tbody tr:nth-child(even) {
 .dataTables_length label,
 .dataTables_filter label {
   font-weight: normal;
-  font-size: 14px;
+  font-size: var(--fs-sm);
   color: var(--color-text-primary);
 }
 
@@ -5294,7 +5294,7 @@ table.zebra tbody tr:nth-child(even) {
   border-radius: var(--radius-xs);
   outline: none;
   transition: all 0.2s ease;
-  font-size: 14px;
+  font-size: var(--fs-sm);
   background-color: var(--color-surface);
 }
 
@@ -5308,7 +5308,7 @@ table.zebra tbody tr:nth-child(even) {
 ========================= */
 .dataTables_info {
   margin-top: 10px;
-  font-size: 13px;
+  font-size: var(--fs-xs);
   color: var(--color-text-primary);
 }
 
@@ -5368,7 +5368,7 @@ table.dataTable thead th.sorting_desc:after {
 ========================= */
 @media screen and (max-width: 768px) {
   table.dataTable {
-    font-size: 12px;
+    font-size: var(--fs-xs);
   }
   .dataTables_wrapper {
     flex-direction: column;
@@ -5394,7 +5394,7 @@ table.dataTable thead th.sorting_desc:after {
 }
 .breadcrumb ol li {
   color: var(--color-text-primary);
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   font-weight: 600;
 }
 .breadcrumb ol li::after {
@@ -5407,7 +5407,7 @@ table.dataTable thead th.sorting_desc:after {
 }
 .breadcrumb ol li a {
   color: var(--color-text-muted);
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   font-weight: 400;
   transition: color var(--transition-base);
 }
@@ -5470,13 +5470,13 @@ table.dataTable thead th.sorting_desc:after {
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
   background: var(--color-surface);
   color: var(--color-text-secondary);
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
   font-weight: 600;
   transition: all var(--transition-base);
 }
 
 .page-btn i {
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
 }
 
 .page-btn:hover {
@@ -5513,7 +5513,7 @@ Tabletas verticales o celulares horizontales*/
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-size: 0.875rem;
+    font-size: var(--fs-sm);
   }
   .pagination-area .news .orden-item i {
     margin-left: 5px;
@@ -5563,7 +5563,7 @@ agrega el modificador .tabs-vertical sobre el mismo contenedor.
   cursor: pointer;
   text-align: center;
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   font-weight: 600;
   transition: color var(--transition-base), border-color var(--transition-base);
 }
@@ -6229,7 +6229,7 @@ output {
   color: var(--color-surface);
   border-radius: var(--radius-xs);
   display: inline-block;
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   line-height: 2;
   bottom: 100%;
   left: 0;
@@ -6290,7 +6290,7 @@ output:after {
   position: absolute;
   right: 10px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: var(--fs-base);
   color: var(--color-text-primary);
   user-select: none;
   display: none; /* oculto por defecto */
@@ -6443,10 +6443,10 @@ input::-ms-reveal {
     gap: 0.5rem;
   }
   .switch-wrapper .switch-group p {
-    font-size: 0.85rem;
+    font-size: var(--fs-sm);
   }
   .switch-wrapper .switch-group span {
-    font-size: 0.85rem;
+    font-size: var(--fs-sm);
   }
   /* # Switch
   ----------------------------------------------- */
@@ -6472,7 +6472,7 @@ input::-ms-reveal {
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
   border-radius: var(--radius-xs);
   cursor: pointer;
-  font-size: 1rem;
+  font-size: var(--fs-sm);
 }
 
 .file_upload input[type=file]:hover {
@@ -6511,7 +6511,7 @@ input::-ms-reveal {
   transition: border-color 0.15s ease-in-out;
   border-radius: 0;
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   line-height: 1.5;
   color: var(--color-text-primary);
 }
@@ -6572,7 +6572,7 @@ input::-ms-reveal {
   background: none;
   border: none;
   color: var(--color-text-primary);
-  font-size: 24px;
+  font-size: var(--fs-xl);
   cursor: pointer;
 }
 
@@ -6640,7 +6640,7 @@ input::-ms-reveal {
   text-decoration: none;
   padding: 20px 15px;
   display: block;
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
 }
 
 .dropdown:hover .dropdown-toggle {
@@ -6673,7 +6673,7 @@ input::-ms-reveal {
   display: block;
   text-decoration: none;
   color: #eee;
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
 }
 .dropdown-menu a:hover {
   background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
@@ -6775,7 +6775,7 @@ ul.social-links {
   width: 2.25rem;
   height: 2.25rem;
   border-radius: var(--radius-full);
-  font-size: 1rem;
+  font-size: var(--fs-base);
   text-align: center;
   color: red;
   background-color: var(--color-surface);
@@ -6894,7 +6894,7 @@ ul.secondary_menu li.active a {
 }
 #back-to-top i {
   line-height: 45px;
-  font-size: 24px;
+  font-size: var(--fs-xl);
 }
 
 #back-to-top:hover {
@@ -6917,7 +6917,7 @@ ul.secondary_menu li.active a {
   gap: 0.25rem;
 }
 .topbar .contact a, .topbar .contact p {
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   color: var(--color-text-primary);
 }
 
@@ -7254,7 +7254,7 @@ es un enlace secundario/de cierre, no una acción. */
   z-index: 100;
 }
 .dashboard-footer p, .dashboard-footer a {
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
 }
 
 @media (max-width: 767px) {
@@ -7521,7 +7521,7 @@ Colour theme
 
 .sidebar-menu li.header {
   padding: 10px 25px 10px 15px;
-  font-size: 12px;
+  font-size: var(--fs-xs);
 }
 
 .sidebar-menu li > a > .icon-chevron-right {
@@ -7570,7 +7570,7 @@ Colour theme
 .sidebar-menu .treeview-menu > li > a {
   padding: 5px 5px 5px 15px;
   display: block;
-  font-size: 14px;
+  font-size: var(--fs-sm);
 }
 
 .sidebar-menu .treeview-menu > li > a > i {
@@ -7703,13 +7703,13 @@ Colour theme
   padding: 10px;
   text-decoration: none;
   border-bottom: 1px solid var(--color-canvas);
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
 }
 
 /*Dropdown header and footer*/
 .quicklinks-menu .dropdown-menu li.dm-footer a {
   text-align: center;
-  font-size: 12px;
+  font-size: var(--fs-xs);
 }
 
 @media (max-width: 767px) {
@@ -7776,12 +7776,12 @@ Colour theme
 }
 
 .dropdown-menu .message-links h4 {
-  font-size: 14px;
+  font-size: var(--fs-sm);
   margin: 0 0 0.25rem 0;
 }
 
 .dropdown-menu .message-links p {
-  font-size: 12px;
+  font-size: var(--fs-xs);
   margin: 0;
 }
 

@@ -161,7 +161,7 @@ Tabletas verticales o celulares horizontales*/
   .md\:col-span-11 { grid-column: span 11 / span 11; }
   .md\:col-span-12 { grid-column: span 12 / span 12; }  
 
-  th,td {font-size:0.875rem;}
+  th,td {font-size:var(--fs-sm);}
   .float-md-left {float: left;}
   .float-md-right {float: right;}
   .float-md-none {float: none;}

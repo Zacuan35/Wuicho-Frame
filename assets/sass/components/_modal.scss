@@ -41,7 +41,7 @@
       }
     
       .btn-close {
-        font-size: 24px;
+        font-size: var(--fs-xl);
         font-weight: bold;
         color: var(--color-text-muted);
         cursor: pointer;

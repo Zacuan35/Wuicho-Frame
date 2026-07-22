@@ -26,7 +26,7 @@
 
     p{
       font-family:var(--font-body);
-      font-size: 1rem; 
+      font-size: var(--fs-sm);
       color:var(--color-text-primary);
       font-weight: bold;  
       margin-bottom: 0;
@@ -49,7 +49,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
+      font-size: var(--fs-md);
       background-color: var(--color-surface);
       transition: background-color 0.3s;
       color:var(--brand-primary);

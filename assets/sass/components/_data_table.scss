@@ -17,7 +17,7 @@
 .dataTables_length label,
 .dataTables_filter label {
   font-weight: normal;
-  font-size: 14px;
+  font-size: var(--fs-sm);
   color: var(--color-text-primary);
 }
 
@@ -29,7 +29,7 @@
   border-radius: var(--radius-xs);
   outline: none;
   transition: all 0.2s ease;
-  font-size: 14px;
+  font-size: var(--fs-sm);
   background-color: var(--color-surface);
 }
 
@@ -43,7 +43,7 @@
 ========================= */
 .dataTables_info {
   margin-top: 10px;
-  font-size: 13px;
+  font-size: var(--fs-xs);
   color: var(--color-text-primary);;
 }
 
@@ -103,7 +103,7 @@ table.dataTable thead th.sorting_desc:after {
 ========================= */
 @media screen and (max-width: 768px) {
   table.dataTable {
-    font-size: 12px;
+    font-size: var(--fs-xs);
   }
 
   .dataTables_wrapper {

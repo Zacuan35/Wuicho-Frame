@@ -38,7 +38,7 @@
   background: none;
   border: none;
   color:var(--color-text-primary);
-  font-size: 24px;
+  font-size: var(--fs-xl);
   cursor: pointer;
 }
 
@@ -97,7 +97,7 @@
   text-decoration: none;
   padding: 20px 15px;
   display: block;
-  font-size:0.875rem;
+  font-size:var(--fs-sm);
 }
 .dropdown:hover .dropdown-toggle {background-color: var(--color-border-strong);}
 /*Si se utiliza imagen de usuario*/
@@ -123,7 +123,7 @@
     display: block;
     text-decoration: none;
     color: #eee;
-    font-size:0.875rem;
+    font-size:var(--fs-sm);
     &:hover {background-color: $fill-subtle;}
   }
 }

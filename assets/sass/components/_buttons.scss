@@ -13,12 +13,12 @@
   text-align: center;
   cursor: pointer;
   font-family: var(--font-display);
-  font-size: 0.850rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
   transition: background-color .15s ease, border-color .15s ease, color .15s ease, filter .15s ease;
 
   i {
-    font-size: 1rem;
+    font-size: var(--fs-base);
     line-height: 1;
   }
 }
@@ -33,18 +33,18 @@
 }
 
 .btn-sm {
-  font-size: .75rem;
+  font-size: var(--fs-xs);
   padding: .375rem .625rem;
   border-radius: var(--radius-xs);
 
-  i { font-size: .875rem; }
+  i { font-size: var(--fs-sm); }
 }
 
 .btn-lg {
-  font-size: 1rem;
+  font-size: var(--fs-base);
   padding: .75rem 1.25rem;
 
-  i { font-size: 1.125rem; }
+  i { font-size: var(--fs-md); }
 }
 
 /* =====================
@@ -164,7 +164,7 @@
   button {
     margin: 0;
     padding: .375rem .75rem;
-    font-size: 1rem;
+    font-size: var(--fs-sm);
     line-height: 1.5;
     cursor: pointer;
     transition: background-color 0.3s ease;
