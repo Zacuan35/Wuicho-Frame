@@ -309,7 +309,7 @@
           <div class="grid gap-5">
             <div class="grid gap-1">
               <h2 class="text-lg">Inputs</h2>
-              <p>Ejemplos de los distintos tipos de campo: texto, correo, teléfono, contraseña, select, fecha, número y carga de archivos.</p>
+              <p>Ejemplos de los distintos tipos de campo: texto, correo, teléfono, contraseña, select, fecha, número, carga de archivos y estado inválido (.is-invalid). Al enfocar un campo aparece un anillo de sombra alrededor del borde.</p>
             </div>
             <div class="doc-preview">
                 <!-- Search-container -->      
@@ -360,19 +360,14 @@
                     </div>  
                     <div class="item">
                       <label for="number-example">Number</label>
-                      <input class="form-control" type="number" id="number-example" name="number-example" min="1" max="100" step="5" value="20">              
-                    </div>                
-                    <div class="form-group-inline">
-                      <label for="select-inline">Elementos </label>
-                      <select class="form-control" id="select-inline">
-                        <option selected>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>                                                        
-                      </select>
-                    </div>  
-                  </div>                
+                      <input class="form-control" type="number" id="number-example" name="number-example" min="1" max="100" step="5" value="20">
+                    </div>
+                    <div class="item">
+                      <label for="invalid-example">Campo inválido</label>
+                      <input class="form-control is-invalid" type="email" id="invalid-example" name="invalid-example" value="correo-mal-escrito">
+                      <p class="text-danger text-xs">Ingresa un correo válido.</p>
+                    </div>
+                  </div>
                   <div class="grid grid-cols-1">
                     <div class="item">
                       <label for="example-textarea">Example textarea<span>*</span></label>
