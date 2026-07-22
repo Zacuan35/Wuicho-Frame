@@ -90,27 +90,60 @@
 
     <!-- ======
     * MAIN *
-    ======= -->               
-    <main class="bg-light py-8">
-      <div class="container">  
-        <!-- Title
-        ========================================== -->             
-        <div class="text-center">
-          <h1 class="text-2xl">Lorem</h1>
+    ======= -->
+    <main>
+      <!-- ====== Hero ====== -->
+      <section class="bg-light" style="padding:80px 0">
+        <div class="container text-center">
+          <h1 class="display display-3 mb-3">Construye más rápido con GF-Frame</h1>
+          <p class="lead mb-5" style="max-width:640px;margin-left:auto;margin-right:auto">Un kit de UI completo con fundamentos, componentes y páginas listas para usar en tu próximo proyecto.</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="#servicios" class="btn btn-primary">Conoce más</a>
+            <a href="../documentation/dashboard.html" class="btn btn-outline">Ver documentación</a>
+            <!-- ====== Button theme ====== -->
+            <a class="btn btn-icon-only btn-circle btn-outline" id="theme-btn">
+              <i class="fa-solid fa-moon"></i>
+            </a>
+          </div>
         </div>
-        <!-- Grid
-        ========================================== -->                      
-        <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-8">                    
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint sunt autem dolorem provident aliquid animi rerum? Ullam dolores consequatur, eos harum itaque eius aperiam, exercitationem, ratione corrupti corporis voluptatibus laboriosam?</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint sunt autem dolorem provident aliquid animi rerum? Ullam dolores consequatur, eos harum itaque eius aperiam, exercitationem, ratione corrupti corporis voluptatibus laboriosam?</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint sunt autem dolorem provident aliquid animi rerum? Ullam dolores consequatur, eos harum itaque eius aperiam, exercitationem, ratione corrupti corporis voluptatibus laboriosam?</p>
-          <!-- ====== Button theme ====== --> 
-          <a class="btn btn-icon-only btn-circle btn-outline" id="theme-btn">
-            <i class="fa-solid fa-moon"></i>
-          </a>
-        </div>   
-      </div>     
-    </main>     
+      </section>
+
+      <!-- ====== Servicios ====== -->
+      <section class="bg-default py-8" id="servicios">
+        <div class="container">
+          <div class="text-center mb-6">
+            <h2 class="text-lg">¿Por qué elegirnos?</h2>
+            <p>Todo lo que necesitas para lanzar tu sitio, en un solo lugar.</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-5">
+            <div class="card card-body text-center">
+              <i class="icon-rectangle-group fa-3x mb-3"></i>
+              <h3 class="text-lg mb-1">Fundamentos sólidos</h3>
+              <p>Color, tipografía, espaciado y elevación, ya resueltos y documentados.</p>
+            </div>
+            <div class="card card-body text-center">
+              <i class="icon-table-cells fa-3x mb-3"></i>
+              <h3 class="text-lg mb-1">Componentes listos</h3>
+              <p>Cards, formularios, tablas, modales y más, listos para copiar y usar.</p>
+            </div>
+            <div class="card card-body text-center">
+              <i class="icon-wrench-screwdriver fa-3x mb-3"></i>
+              <h3 class="text-lg mb-1">Fácil de personalizar</h3>
+              <p>Variables CSS y SCSS bien organizadas para adaptarlo a tu marca.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== CTA ====== -->
+      <section class="bg-light py-8">
+        <div class="container text-center">
+          <h2 class="text-lg mb-2">¿Listo para empezar?</h2>
+          <p class="mb-4">Explora la documentación completa y comienza a construir hoy mismo.</p>
+          <a href="../documentation/dashboard.html" class="btn btn-primary">Ir al dashboard</a>
+        </div>
+      </section>
+    </main>
           
     <!-- ======
     * FOOTER *

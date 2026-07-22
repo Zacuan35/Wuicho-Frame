@@ -1,41 +1,17 @@
 /* =====================
 # LOGIN
 ===================== */
+/* Contenedor centrado para páginas standalone (login, registro,
+error 404): el "marco" lo aporta .card, aquí solo se centra en el
+viewport sobre el fondo canvas. */
 .login-container {
   display:flex;
+  flex-direction: column;
   justify-content:center;
   align-items:center;
-  height: 100vh; 
+  min-height: 100vh;
+  padding: 2rem;
   background-color:var(--color-canvas);
-}
-
-.login-box {
-  width: 90%;
-  max-width: 900px;
-  max-height: 550px;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display:grid;
-  .cover{
-    display:none;
-    img {
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }    
-  }
-  .login-body {
-    padding: 25px;
-    width:100%;
-    background-color: var(--color-surface);
-    footer {
-      margin-top: 1.5rem;
-      text-align: center;
-      .btn{margin-bottom: 1rem;}
-      p,a{font-size: 0.875rem;}      
-    }
-  }  
 }
 
 /* ==============================================
@@ -49,11 +25,7 @@
 /* # Tablet
 ----------------------------------------------- */
 /*=> 768px Igual o mayor a 768px se aplicarán los siguientes estilos */
-@media (min-width: 768px) {   
-  /*Login form*/
-  .login-box {grid-template-columns:1fr 1fr;}
-  .login-box .cover{display:block;}       
-}
+@media (min-width: 768px) {}
 
 /*=> 1024px Igual o mayor a 1024px se aplicarán los siguientes estilos */
 @media (min-width: 1024px) {}
