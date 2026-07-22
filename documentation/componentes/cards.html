@@ -325,31 +325,54 @@
 &lt;/<span class="tok-tag">div</span>&gt;   <span class="tok-comment">/* .card-highlight · .card-success · .card-danger · .card-warning */</span></pre>
             <div class="grid gap-1">
               <h2 class="text-lg">Cards de estado</h2>
-              <p>.card + .card-body + el modificador de color, combinados en un solo elemento — sin header, sin footer, sin wrapper adicional.</p>
+              <p>El modificador de color va en .card; .card-header y .card-body son sus hijos y heredan el marco — sin footer, sin wrapper adicional.</p>
             </div>
             <div class="doc-preview grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               <!-- ------ Card ------ -->
-              <div class="card card-body card-success grid gap-2 text-center">
-                <i class="icon-check-circle fa-3x"></i>
-                <p>Success</p>
+              <div class="card card-success">
+                <header class="card-header">
+                  <h3>Success</h3>
+                </header>
+                <div class="card-body grid gap-2 text-center">
+                  <i class="icon-check-circle fa-3x"></i>
+                  <p>Success</p>
+                </div>
               </div>
               <!-- ------ Card ------ -->
-              <div class="card card-body card-danger grid gap-2 text-center">
-                <i class="icon-exclamation-triangle fa-3x"></i>
-                <p>Danger</p>
+              <div class="card card-danger">
+                <header class="card-header">
+                  <h3>Danger</h3>
+                </header>
+                <div class="card-body grid gap-2 text-center">
+                  <i class="icon-exclamation-triangle fa-3x"></i>
+                  <p>Danger</p>
+                </div>
               </div>
               <!-- ------ Card ------ -->
-              <div class="card card-body card-warning grid gap-2 text-center">
-                <i class="icon-question-mark-circle fa-3x"></i>
-                <p>Warning</p>
+              <div class="card card-warning">
+                <header class="card-header">
+                  <h3>Warning</h3>
+                </header>
+                <div class="card-body grid gap-2 text-center">
+                  <i class="icon-question-mark-circle fa-3x"></i>
+                  <p>Warning</p>
+                </div>
               </div>
               <!-- ------ Card ------ -->
-              <div class="card card-body card-info grid gap-2 text-center">
-                <i class="icon-exclamation-circle fa-3x"></i>
-                <p>Info</p>
+              <div class="card card-info">
+                <header class="card-header">
+                  <h3>Info</h3>
+                </header>
+                <div class="card-body grid gap-2 text-center">
+                  <i class="icon-exclamation-circle fa-3x"></i>
+                  <p>Info</p>
+                </div>
               </div>
             </div>
-            <pre class="code-block">&lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"card card-body card-success"</span>&gt;…&lt;/<span class="tok-tag">div</span>&gt;</pre>
+            <pre class="code-block">&lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"card card-success"</span>&gt;
+  &lt;<span class="tok-tag">header</span> <span class="tok-attr">class</span>=<span class="tok-string">"card-header"</span>&gt;&lt;<span class="tok-tag">h3</span>&gt;Success&lt;/<span class="tok-tag">h3</span>&gt;&lt;/<span class="tok-tag">header</span>&gt;
+  &lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"card-body"</span>&gt;…&lt;/<span class="tok-tag">div</span>&gt;
+&lt;/<span class="tok-tag">div</span>&gt;</pre>
           </div>
         </section>
       </main>
