@@ -15,7 +15,7 @@
   flex: 1;
   outline: none;
   height: 38px; /* Misma altura que el botón */    
-  &.form-control{border-radius: var(--radius-xs) 0 0 var(--radius-xs);}
+  &.input{border-radius: var(--radius-xs) 0 0 var(--radius-xs);}
 }
 
 /* # Search button

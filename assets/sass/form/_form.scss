@@ -17,7 +17,7 @@ y permite alinear más de dos elementos sin reglas sueltas). */
   align-items: center;
   gap: 0.5rem;
   label {margin: 0;}
-  select.form-control {flex: 1;}
+  .select {flex: 1;}
 }
 
 label {
@@ -36,14 +36,21 @@ input,
 textarea,
 select,
 legend,
-.form-control,
+.input,
+.select,
+.textarea,
 .custom-select {
   color:var(--color-text-primary);
 }
 
 /* # Select & input styles
 ----------------------------------------------- */
-.form-control {
+/* Clases separadas por etiqueta en vez de una sola compartida
+(.form-control): así una regla no queda atada a que el elemento sea
+literalmente ese tag nativo -- un widget armado con <div> (como un
+combobox propio) puede tomar .select y verse igual sin depender de
+que exista un <select> real detrás. */
+.input, .select, .textarea {
   display: inline-block;
   width: 100%;
   height: calc(1.5em + 1.125rem + 2px);
@@ -78,7 +85,7 @@ legend,
   }
 }
 
-textarea.form-control{
+.textarea {
   height: auto;
   min-height: 100px;
   resize: vertical;
@@ -86,7 +93,7 @@ textarea.form-control{
 
 /* Flecha propia para <select>: la nativa del sistema operativo no
 combina con el resto del kit y varía entre navegadores. */
-select.form-control {
+.select {
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238A8FB3' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
