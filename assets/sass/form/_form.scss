@@ -10,7 +10,14 @@ su propio gap -- agregarlo aquí duplicaría el espacio entre filas. */
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  label { margin-bottom: 0; }
+  /* bold + color primario en vez del secundario/muted del label
+  base: en un formulario el label necesita más contraste que el resto
+  del texto de apoyo, para que se lea de un vistazo qué pide cada campo. */
+  label {
+    margin-bottom: 0;
+    font-weight: var(--fw-bold);
+    color: var(--color-text-primary);
+  }
 }
 
 .form-group-inline {
