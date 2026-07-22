@@ -497,6 +497,13 @@ h6 {
   font-size: var(--fs-base);
 }
 
+/* Convención para h2 en páginas de documentación: su tamaño natural
+(--fs-2xl) es para páginas con pocas secciones reales (ej. tables.html,
+website/sections.html). En páginas de referencia densa, con muchas
+subsecciones hermanas al mismo nivel (ej. buttons.html, charts.html,
+9 variantes cada una), usa <h2 class="text-lg"> — mismo nivel
+semántico, menor peso visual porque se repite muchas veces en una
+sola página. No es inconsistencia: son dos contextos distintos. */
 /*Escala de texto
 Clases de tamaño puro, sin implicar ningún nivel de jerarquía: se usan
 sobre cualquier etiqueta (p, span, li…) cuando el tamaño visual que se
