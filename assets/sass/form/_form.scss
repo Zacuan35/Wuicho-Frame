@@ -1,14 +1,15 @@
 /* =====================
 # FORM GROUP
 ===================== */
-/* .item agrupa label + control con flex + gap: la separación entre
+/* .field agrupa label + control con flex + gap: la separación entre
 ambos ya no depende del margin-bottom del label (evita doble espacio
-y permite alinear más de dos elementos sin reglas sueltas). */
-.item {
+y permite alinear más de dos elementos sin reglas sueltas). Sin
+margin-bottom propio: siempre vive dentro de un .grid, que ya trae
+su propio gap -- agregarlo aquí duplicaría el espacio entre filas. */
+.field {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  margin-bottom: 1rem;
   label { margin-bottom: 0; }
 }
 
