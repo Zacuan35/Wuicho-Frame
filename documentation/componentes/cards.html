@@ -45,7 +45,7 @@
                     <div class="message-links">
                       <img class="" src="../../assets/img/user-image.jpg">
                       <div>
-                        <h3>Lorem ipsum dolor</h3>
+                        <h4>Lorem ipsum dolor</h4>
                         <p>Lorem ipsum, dolor sit amet...</p>
                       </div>
                     </div>
@@ -56,7 +56,7 @@
                     <div class="message-links">
                       <img class="" src="../../assets/img/user-image.jpg">
                       <div>
-                        <h3>Lorem ipsum dolor</h3>
+                        <h4>Lorem ipsum dolor</h4>
                         <p>Lorem ipsum, dolor sit amet...</p>
                       </div>
                     </div>
@@ -67,7 +67,7 @@
                     <div class="message-links">
                       <img class="" src="../../assets/img/user-image.jpg">
                       <div>
-                        <h3>Lorem ipsum dolor</h3>
+                        <h4>Lorem ipsum dolor</h4>
                         <p>Lorem ipsum, dolor sit amet...</p>
                       </div>
                     </div>
@@ -320,7 +320,7 @@
               </footer>
             </div>
             <pre class="code-block">&lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"card"</span>&gt;
-  &lt;<span class="tok-tag">header</span> <span class="tok-attr">class</span>=<span class="tok-string">"card-header"</span>&gt;&lt;<span class="tok-tag">h4</span>&gt;Card title&lt;/<span class="tok-tag">h4</span>&gt;&lt;/<span class="tok-tag">header</span>&gt;
+  &lt;<span class="tok-tag">header</span> <span class="tok-attr">class</span>=<span class="tok-string">"card-header"</span>&gt;&lt;<span class="tok-tag">h3</span>&gt;Card title&lt;/<span class="tok-tag">h3</span>&gt;&lt;/<span class="tok-tag">header</span>&gt;
   &lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"card-body"</span>&gt;…&lt;/<span class="tok-tag">div</span>&gt;
 &lt;/<span class="tok-tag">div</span>&gt;   <span class="tok-comment">/* .card-highlight · .card-success · .card-danger · .card-warning */</span></pre>
             <!-- ====== Grid ====== -->
@@ -364,9 +364,20 @@
                   <i class="icon-map-pin fa-3x"></i>
                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos illo consequatur!</p>
                 </div>    
-              </div>                                                       
-            </div> 
-          </div>  
+              </div>
+            </div>
+
+            <div class="grid gap-1">
+              <h2 class="text-lg">Uso suelto</h2>
+              <p>.card-header, .card-body y .card-footer no dependen de .card: se pueden usar solos. Los estados de color (.card-success, .card-danger, etc.) también son autosuficientes.</p>
+            </div>
+            <div class="doc-preview flex flex-wrap gap-4">
+              <div class="card-body card-success" style="border-radius:var(--radius-sm);max-width:280px">
+                <p>Solo el body, con estado success, sin el contenedor .card.</p>
+              </div>
+            </div>
+            <pre class="code-block">&lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"card-body card-success"</span>&gt;…&lt;/<span class="tok-tag">div</span>&gt;   <span class="tok-comment">/* sin .card */</span></pre>
+          </div>
         </section>
       </main>
 

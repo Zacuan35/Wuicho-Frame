@@ -8,91 +8,84 @@
   border:1px solid $border-subtle;
   transition: background-color 0.2s ease, border-color 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
 
-  .card-header {
-    padding: 1rem 1rem;
-    border-radius:var(--radius-sm) var(--radius-sm) 0 0;
-    border-bottom: 1px solid $border-subtle;
-    h3 { font-size: var(--fs-md); }
-  }
+/* .card-header/.card-body/.card-footer son autosuficientes: no
+dependen de estar dentro de .card para tener su padding/tipografía,
+se pueden usar sueltos. Al anidarse dentro de .card simplemente
+heredan visualmente el marco del contenedor (fondo, borde, sombra). */
+.card-header {
+  padding: 1rem 1rem;
+  border-radius:var(--radius-sm) var(--radius-sm) 0 0;
+  border-bottom: 1px solid $border-subtle;
+  h3 { font-size: var(--fs-md); }
+}
 
-  .card-body {
-    padding:1rem;
-  }     
+.card-body {
+  padding:1rem;
+}
 
-  .card-footer {
-    padding:1rem;
-    border-radius:0 0 var(--radius-sm) var(--radius-sm) ;      
-    text-align: left;
-    border-top: 1px solid $border-subtle;
+.card-footer {
+  padding:1rem;
+  border-radius:0 0 var(--radius-sm) var(--radius-sm) ;
+  text-align: left;
+  border-top: 1px solid $border-subtle;
 
-    p{word-break: break-all;}      
-  }     
+  p{word-break: break-all;}
+}
 
-  &.card-highlight {
-    background-color:color-mix(in srgb, var(--brand-primary) 90%, $white-color);
-    h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
-    p{color:var(--color-surface);}
-    i {color: var(--color-surface);}
-    border-color:var(--brand-primary);
-    .card-header,
-    .card-footer {
-      border-color: var(--brand-primary);
-    } 
-  }  
-  &.card-success {
-    background-color:lighten($success-color, 10%);
-    h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
-    p{color:var(--color-surface);}
-    i {color: var(--color-surface);}
-    border-color:$success-color;    
-    .card-header,
-    .card-footer {
-      border-color: $success-color;
-    }
-  }
-  &.card-danger {
-    background-color:lighten($danger-color, 10%);
-    h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
-    p{color:var(--color-surface);}
-    i {color: var(--color-surface);}
-    border-color:$danger-color;    
-    .card-header,
-    .card-footer {
-      border-color: $danger-color;
-    }     
-  }    
-&.card-warning {
-    background-color:lighten($warning-color, 10%);
-    h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
-    p{color:var(--color-surface);}
-    i {color: var(--color-surface);}
-    border-color:$warning-color;
-    .card-header,
-    .card-footer {
-      border-color: $warning-color;
-    }
-  }
-  &.card-info {
-    background-color:color-mix(in srgb, var(--brand-primary) 90%, $white-color);
-    h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
-    p{color:var(--color-surface);}
-    i {color: var(--color-surface);}
-    border-color:var(--brand-primary);
-    .card-header,
-    .card-footer {
-      border-color: var(--brand-primary);
-    }
-  }
+/* Estados de color: también autosuficientes. Se pueden usar solos
+sobre un .card-header/.card-body/.card-footer suelto, o sobre un
+.card completo. Cuando envuelven un header/footer reales, además
+ajustan el borde de esos hijos para que combinen con el marco. */
+.card-highlight {
+  background-color:color-mix(in srgb, var(--brand-primary) 90%, $white-color);
+  h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
+  p{color:var(--color-surface);}
+  i {color: var(--color-surface);}
+  border-color:var(--brand-primary);
+  .card-header, .card-footer { border-color: var(--brand-primary); }
+}
+.card-success {
+  background-color:lighten($success-color, 10%);
+  h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
+  p{color:var(--color-surface);}
+  i {color: var(--color-surface);}
+  border-color:$success-color;
+  .card-header, .card-footer { border-color: $success-color; }
+}
+.card-danger {
+  background-color:lighten($danger-color, 10%);
+  h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
+  p{color:var(--color-surface);}
+  i {color: var(--color-surface);}
+  border-color:$danger-color;
+  .card-header, .card-footer { border-color: $danger-color; }
+}
+.card-warning {
+  background-color:lighten($warning-color, 10%);
+  h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
+  p{color:var(--color-surface);}
+  i {color: var(--color-surface);}
+  border-color:$warning-color;
+  .card-header, .card-footer { border-color: $warning-color; }
+}
+.card-info {
+  background-color:color-mix(in srgb, var(--brand-primary) 90%, $white-color);
+  h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
+  p{color:var(--color-surface);}
+  i {color: var(--color-surface);}
+  border-color:var(--brand-primary);
+  .card-header, .card-footer { border-color: var(--brand-primary); }
 }
 
 //Si la tarjeta tiene enlace
 a.card {
-  &:hover{background-color: $fill-subtle;}     
+  &:hover{background-color: $fill-subtle;}
 
   &.card-highlight {
     &:hover{background-color: var(--brand-primary);}
-  }  
+  }
   &.card-success {
     &:hover{background-color: lighten($success-color, 10%);}
   }

@@ -3805,119 +3805,130 @@ Tabletas horizontales */
   transition: background-color 0.2s ease, border-color 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
-.card .card-header {
+
+/* .card-header/.card-body/.card-footer son autosuficientes: no
+dependen de estar dentro de .card para tener su padding/tipografía,
+se pueden usar sueltos. Al anidarse dentro de .card simplemente
+heredan visualmente el marco del contenedor (fondo, borde, sombra). */
+.card-header {
   padding: 1rem 1rem;
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
   border-bottom: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
 }
-.card .card-header h3 {
+.card-header h3 {
   font-size: var(--fs-md);
 }
-.card .card-body {
+
+.card-body {
   padding: 1rem;
 }
-.card .card-footer {
+
+.card-footer {
   padding: 1rem;
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
   text-align: left;
   border-top: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
 }
-.card .card-footer p {
+.card-footer p {
   word-break: break-all;
 }
-.card.card-highlight {
+
+/* Estados de color: también autosuficientes. Se pueden usar solos
+sobre un .card-header/.card-body/.card-footer suelto, o sobre un
+.card completo. Cuando envuelven un header/footer reales, además
+ajustan el borde de esos hijos para que combinen con el marco. */
+.card-highlight {
   background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
 }
-.card.card-highlight h1, .card.card-highlight h2, .card.card-highlight h3, .card.card-highlight h4, .card.card-highlight h5, .card.card-highlight h6 {
+.card-highlight h1, .card-highlight h2, .card-highlight h3, .card-highlight h4, .card-highlight h5, .card-highlight h6 {
   color: var(--color-surface);
 }
-.card.card-highlight p {
+.card-highlight p {
   color: var(--color-surface);
 }
-.card.card-highlight i {
+.card-highlight i {
   color: var(--color-surface);
 }
-.card.card-highlight {
+.card-highlight {
   border-color: var(--brand-primary);
 }
-.card.card-highlight .card-header,
-.card.card-highlight .card-footer {
+.card-highlight .card-header, .card-highlight .card-footer {
   border-color: var(--brand-primary);
 }
-.card.card-success {
+
+.card-success {
   background-color: rgb(60.5584415584, 221.4415584416, 119.7792207792);
 }
-.card.card-success h1, .card.card-success h2, .card.card-success h3, .card.card-success h4, .card.card-success h5, .card.card-success h6 {
+.card-success h1, .card-success h2, .card-success h3, .card-success h4, .card-success h5, .card-success h6 {
   color: var(--color-surface);
 }
-.card.card-success p {
+.card-success p {
   color: var(--color-surface);
 }
-.card.card-success i {
+.card-success i {
   color: var(--color-surface);
 }
-.card.card-success {
+.card-success {
   border-color: #22C55E;
 }
-.card.card-success .card-header,
-.card.card-success .card-footer {
+.card-success .card-header, .card-success .card-footer {
   border-color: #22C55E;
 }
-.card.card-danger {
+
+.card-danger {
   background-color: rgb(246.763546798, 111.236453202, 134.4482758621);
 }
-.card.card-danger h1, .card.card-danger h2, .card.card-danger h3, .card.card-danger h4, .card.card-danger h5, .card.card-danger h6 {
+.card-danger h1, .card-danger h2, .card-danger h3, .card-danger h4, .card-danger h5, .card-danger h6 {
   color: var(--color-surface);
 }
-.card.card-danger p {
+.card-danger p {
   color: var(--color-surface);
 }
-.card.card-danger i {
+.card-danger i {
   color: var(--color-surface);
 }
-.card.card-danger {
+.card-danger {
   border-color: #F43F5E;
 }
-.card.card-danger .card-header,
-.card.card-danger .card-footer {
+.card-danger .card-header, .card-danger .card-footer {
   border-color: #F43F5E;
 }
-.card.card-warning {
+
+.card-warning {
   background-color: rgb(247.0078740157, 177.4763779528, 59.9921259843);
 }
-.card.card-warning h1, .card.card-warning h2, .card.card-warning h3, .card.card-warning h4, .card.card-warning h5, .card.card-warning h6 {
+.card-warning h1, .card-warning h2, .card-warning h3, .card-warning h4, .card-warning h5, .card-warning h6 {
   color: var(--color-surface);
 }
-.card.card-warning p {
+.card-warning p {
   color: var(--color-surface);
 }
-.card.card-warning i {
+.card-warning i {
   color: var(--color-surface);
 }
-.card.card-warning {
+.card-warning {
   border-color: #F59E0B;
 }
-.card.card-warning .card-header,
-.card.card-warning .card-footer {
+.card-warning .card-header, .card-warning .card-footer {
   border-color: #F59E0B;
 }
-.card.card-info {
+
+.card-info {
   background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
 }
-.card.card-info h1, .card.card-info h2, .card.card-info h3, .card.card-info h4, .card.card-info h5, .card.card-info h6 {
+.card-info h1, .card-info h2, .card-info h3, .card-info h4, .card-info h5, .card-info h6 {
   color: var(--color-surface);
 }
-.card.card-info p {
+.card-info p {
   color: var(--color-surface);
 }
-.card.card-info i {
+.card-info i {
   color: var(--color-surface);
 }
-.card.card-info {
+.card-info {
   border-color: var(--brand-primary);
 }
-.card.card-info .card-header,
-.card.card-info .card-footer {
+.card-info .card-header, .card-info .card-footer {
   border-color: var(--brand-primary);
 }
 
