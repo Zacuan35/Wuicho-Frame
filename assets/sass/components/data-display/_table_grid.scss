@@ -130,22 +130,25 @@
 # STATES
 ===================== */
 
-.tg-row.success {
+/* Con el mismo nivel de especificidad que .tg-body .tg-row:nth-child(even)
+(arriba), para que el color de estado siempre gane sobre el rayado de
+filas pares en vez de perderlo por casualidad según la posición de la fila. */
+.tg-body .tg-row.success {
   background-color: var(--color-success-bg);
   border-color: var(--color-success-text);
 }
 
-.tg-row.warning {
+.tg-body .tg-row.warning {
   background-color: var(--color-warning-bg);
   border-color: var(--color-warning-text);
 }
 
-.tg-row.danger {
+.tg-body .tg-row.danger {
   background-color: var(--color-danger-bg);
   border-color: var(--color-danger-text);
 }
 
-.tg-row.info {
+.tg-body .tg-row.info {
   background-color: var(--color-info-bg);
   border-color: var(--color-info-text);
 }
