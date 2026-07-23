@@ -7536,7 +7536,7 @@ Colour theme
 
 .sidebar-menu {
   list-style: none;
-  margin: 0;
+  margin: 12px 0 0;
   padding: 0;
 }
 
@@ -7551,10 +7551,11 @@ Colour theme
   display: block;
   border-left: 3px solid transparent;
   margin-right: 1px;
-  /* Los enlaces padre (categorías) deben pesar al menos tanto como el
-  bold que un sub-enlace toma al hacer hover, para que la jerarquía
-  visual nunca se invierta. */
-  font-weight: var(--fw-bold);
+  /* Medium, no bold: en wuicho-frame el enlace padre pesa 500 siempre
+  y el color/fondo es lo que marca el estado, no el peso. Ningún token
+  de theme.scss cae en 500 (solo light/regular/bold), por eso el
+  número literal. */
+  font-weight: 500;
 }
 
 .sidebar-menu > li > a > i {
@@ -7677,10 +7678,12 @@ Colour theme
 .treeview-menu > li.active > a,
 .treeview-menu > li > a:hover {
   color: var(--brand-primary);
-  /* Menos pesado que el enlace padre (que es siempre var(--fw-bold),
-  700), para que la jerarquía se note incluso cuando el sub-enlace
-  está activo o en hover. No hay token para esto (solo light/regular/
-  bold en theme.scss); 600 es apenas un escalón por debajo de 700. */
+}
+
+/* Solo el activo sube de peso (no el hover, que en wuicho-frame solo
+cambia de color) - 600 queda apenas por encima del 500 del padre, sin
+llegar a pesar más que él. */
+.treeview-menu > li.active > a {
   font-weight: 600;
 }
 
@@ -7746,9 +7749,14 @@ Colour theme
   position: absolute;
   right: 5%;
   top: 100%;
+  margin-top: 12px;
+  width: 320px;
   padding: 0;
-  min-width: 230px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-surface);
+  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
   z-index: 1;
 }
 
@@ -7763,17 +7771,101 @@ Colour theme
 }
 
 .quicklinks-menu .dropdown-menu li a {
-  display: block;
-  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 16px;
   text-decoration: none;
-  border-bottom: 1px solid var(--color-canvas);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
   font-size: var(--fs-sm);
 }
 
-/*Dropdown header and footer*/
-.quicklinks-menu .dropdown-menu li.dm-footer a {
-  text-align: center;
+.quicklinks-menu .dropdown-menu li:last-child a {
+  border-bottom: none;
+}
+
+/* Header: título + badge de conteo, como .popover-panel__header en wuicho-frame */
+.quicklinks-menu .dropdown-menu li.dm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 14px 16px;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+}
+.quicklinks-menu .dropdown-menu li.dm-header strong {
   font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-primary);
+}
+
+/* Footer */
+.quicklinks-menu .dropdown-menu li.dm-footer a {
+  justify-content: center;
+  border-bottom: none;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-xs);
+  color: var(--brand-primary);
+}
+
+/* Separador antes de una acción destructiva (Cerrar sesión) */
+.quicklinks-menu .dropdown-menu li.dm-divider {
+  height: 1px;
+  background-color: color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  margin: 6px 0;
+}
+
+.quicklinks-menu .dropdown-menu li a.is-danger,
+.quicklinks-menu .dropdown-menu li a.is-danger i {
+  color: var(--color-danger-text);
+}
+
+.quicklinks-menu .dropdown-menu li a.is-danger:hover {
+  background-color: var(--color-danger-bg);
+}
+
+/* # Dm-item (notificaciones): ícono circular con tono + título + descripción,
+como .popover-item en wuicho-frame
+----------------------------------------------- */
+.dm-item__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+.dm-item__icon.tone-success {
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+}
+.dm-item__icon.tone-warning {
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning-text);
+}
+.dm-item__icon.tone-info {
+  background-color: var(--color-info-bg);
+  color: var(--color-info-text);
+}
+.dm-item__icon.tone-danger {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger-text);
+}
+
+.dm-item__body {
+  min-width: 0;
+}
+.dm-item__body strong {
+  display: block;
+  font-size: var(--fs-sm);
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+.dm-item__body p {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  margin: 0;
 }
 
 @media (max-width: 767px) {
@@ -7820,9 +7912,8 @@ Colour theme
   background-color: var(--color-canvas);
 }
 
-.quicklinks-menu .dropdown-menu li.dm-header a:hover,
 .quicklinks-menu .dropdown-menu li.dm-footer a:hover {
-  background-color: var(--color-surface);
+  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
 }
 
 /* # Message-links

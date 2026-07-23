@@ -15,7 +15,7 @@
 }
 .sidebar-menu {
 	list-style: none;
-	margin: 0;
+	margin: 12px 0 0;
 	padding: 0;
 }
 .sidebar-menu > li {
@@ -28,10 +28,11 @@
 	display: block;
 	border-left: 3px solid transparent;
 	margin-right: 1px;
-	/* Los enlaces padre (categorías) deben pesar al menos tanto como el
-	bold que un sub-enlace toma al hacer hover, para que la jerarquía
-	visual nunca se invierta. */
-	font-weight: var(--fw-bold);
+	/* Medium, no bold: en wuicho-frame el enlace padre pesa 500 siempre
+	y el color/fondo es lo que marca el estado, no el peso. Ningún token
+	de theme.scss cae en 500 (solo light/regular/bold), por eso el
+	número literal. */
+	font-weight: 500;
 }
 .sidebar-menu > li > a > i {
 	width: 20px;
@@ -133,9 +134,10 @@
 .treeview-menu > li.active > a,
 .treeview-menu > li > a:hover {
   color: var(--brand-primary);
-  /* Menos pesado que el enlace padre (que es siempre var(--fw-bold),
-  700), para que la jerarquía se note incluso cuando el sub-enlace
-  está activo o en hover. No hay token para esto (solo light/regular/
-  bold en theme.scss); 600 es apenas un escalón por debajo de 700. */
+}
+/* Solo el activo sube de peso (no el hover, que en wuicho-frame solo
+cambia de color) - 600 queda apenas por encima del 500 del padre, sin
+llegar a pesar más que él. */
+.treeview-menu > li.active > a {
   font-weight: 600;
 }
