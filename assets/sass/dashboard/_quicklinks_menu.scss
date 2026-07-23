@@ -77,6 +77,8 @@
 .quicklinks-menu .dropdown-menu li.dm-footer a {
   text-align: center;
   font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  color: var(--brand-primary);
 }
 
 @media (max-width: 767px) {
