@@ -7388,8 +7388,11 @@ Colour theme
   text-decoration: none;
 }
 
+/* Ícono discreto por defecto; solo se vuelve brand-primary con el
+enlace activo o en hover (regla de abajo) - antes era brand-primary
+siempre, lo que hacía ver todo el sidebar más cargado. */
 .sidebar-menu > li > a > i {
-  color: var(--brand-primary);
+  color: var(--color-text-muted);
 }
 
 .sidebar-menu > li > a:hover,
