@@ -7570,8 +7570,8 @@ llegar a pesar más que él. */
 ----------------------------------------------- */
 .dropdown-menu .message-links {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 
 .dropdown-menu .message-links img {
