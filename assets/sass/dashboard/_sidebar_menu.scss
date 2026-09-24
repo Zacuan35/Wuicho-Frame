@@ -113,8 +113,8 @@
   }
 }
 
-/* Ícono discreto por defecto; solo se vuelve brand-primary con el
-enlace activo o en hover (regla de abajo) - antes era brand-primary
+/* Ícono discreto por defecto; solo se vuelve --blue-color con el
+enlace activo o en hover (regla de abajo) - antes era --blue-color
 siempre, lo que hacía ver todo el sidebar más cargado. */
 .sidebar-menu > li > a > i {
 	color: var(--color-text-muted);
