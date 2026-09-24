@@ -20,7 +20,7 @@ ul.social-links {
   border: 1px solid $border-subtle;
 
   i{
-    color: var(--brand-primary);
+    color: var(--blue-color);
   }
 
   &:hover{    
@@ -28,7 +28,7 @@ ul.social-links {
     background-color:red;
     
     i{
-      color: $white-color;
+      color: var(--white-color);
     }
   }
 

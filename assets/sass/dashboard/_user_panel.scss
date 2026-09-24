@@ -32,11 +32,11 @@
 /* # Colours
 ----------------------------------------------- */
 .user-panel .info p {
-  color: $white-color;
+  color: var(--white-color);
   font-weight: bold;
   margin: 0px;
 } 
 .user-panel > .info,
 .user-panel > .info > a {
-  color: $white-color;
+  color: var(--white-color);
 }

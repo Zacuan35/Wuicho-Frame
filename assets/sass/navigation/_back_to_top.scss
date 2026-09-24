@@ -13,8 +13,8 @@
   z-index: 1000;
   transition: background-color 0.3s ease;
   opacity:.2;
-  color: $white-color;
-  background-color:var(--brand-primary);
+  color: var(--white-color);
+  background-color:var(--blue-color);
   border-radius: var(--radius-sm);
 
   i{

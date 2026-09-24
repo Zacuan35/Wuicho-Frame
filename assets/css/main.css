@@ -14,7 +14,7 @@ Color (marca fija + superficies/texto que se adaptan a claro/oscuro + estados).
 Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
 ===================== */
 /* --- Fuentes (usadas por --font-display / --font-body) --- */
-/* --- Colores fijos (iguales en ambos temas) --- */
+/* --- Paleta para gráficas (fijos en ambos temas) --- */
 :root {
   /* --- Tipografía --- */
   --font-display: Montserrat, sans-serif;
@@ -60,15 +60,14 @@ Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
   --sidebar-width: 230px;
   --topbar-height: 100px;
   --transition-base: 180ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* --- Colores de marcas (fijos en ambos temas) --- */
-  --brand-primary: #5B5FEF;
-  /* --- Paleta para gráficas y HTML en línea (fijos en ambos temas).
-  Son CSS y no Sass porque se usan desde style="" y SVG (fill/stroke)
-  en el HTML, donde las variables Sass no existen --- */
-  --brand-teal: #14B8A6;
-  --brand-amber: #F59E0B;
-  --brand-rose: #F43F5E;
-  --brand-green: #22C55E;
+  /* --- Colores fijos (iguales en ambos temas) --- */
+  --blue-color: #5B5FEF;
+  --white-color: #ffffff;
+  --gray-color: #5c5c5c;
+  --dark-color: #000000;
+  --green-color: #22C55E;
+  --orange-color: #F59E0B;
+  --red-color: #F43F5E;
   /* --- Modo claro (default) --- */
   --color-canvas: #F4F5FA;
   --color-surface: #FFFFFF;
@@ -151,14 +150,14 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 a {
-  color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
 }
 a:hover, a:active, a:focus {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 
 b {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 
 /* # Text-color
@@ -210,7 +209,7 @@ b {
   color: var(--color-text-primary);
 }
 .bg-default b {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 
 .bg-light {
@@ -220,7 +219,7 @@ b {
   color: var(--color-text-primary);
 }
 .bg-light b {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 
 .bg-dark {
@@ -230,7 +229,7 @@ b {
   color: var(--color-surface);
 }
 .bg-dark b {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 
 .bg-darker {
@@ -243,39 +242,39 @@ b {
   color: var(--color-surface);
 }
 .bg-darker b {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 
 .bg-success {
-  background-color: #22C55E;
+  background-color: var(--green-color);
 }
 .bg-success p {
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 .bg-danger {
-  background-color: #F43F5E;
+  background-color: var(--red-color);
 }
 .bg-danger p {
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 /* # Labes
 ----------------------------------------------- */
 .label {
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 .label-primary {
-  background-color: var(--brand-primary);
+  background-color: var(--blue-color);
 }
 
 .label-danger {
-  background-color: #F43F5E;
+  background-color: var(--red-color);
 }
 
 .label-success {
-  background-color: #22C55E;
+  background-color: var(--green-color);
 }
 
 .label-info {
@@ -3518,13 +3517,13 @@ Tabletas horizontales */
 /* # Btn-primary
 ----------------------------------------------- */
 .btn-primary {
-  background-color: var(--brand-primary);
-  border-color: var(--brand-primary);
-  color: #ffffff;
+  background-color: var(--blue-color);
+  border-color: var(--blue-color);
+  color: var(--white-color);
 }
 .btn-primary:hover {
-  background-color: color-mix(in srgb, var(--brand-primary) 88%, black);
-  border-color: color-mix(in srgb, var(--brand-primary) 88%, black);
+  background-color: color-mix(in srgb, var(--blue-color) 88%, black);
+  border-color: color-mix(in srgb, var(--blue-color) 88%, black);
 }
 
 /* # Btn-secondary
@@ -3542,11 +3541,11 @@ Tabletas horizontales */
 ----------------------------------------------- */
 .btn-outline {
   background-color: transparent;
-  border-color: var(--brand-primary);
-  color: var(--brand-primary);
+  border-color: var(--blue-color);
+  color: var(--blue-color);
 }
 .btn-outline:hover {
-  background-color: color-mix(in srgb, var(--brand-primary) 12%, var(--color-surface));
+  background-color: color-mix(in srgb, var(--blue-color) 12%, var(--color-surface));
 }
 
 /* # Btn-ghost
@@ -3562,37 +3561,37 @@ Tabletas horizontales */
 /* # Btn-success
 ----------------------------------------------- */
 .btn-success {
-  background-color: #22C55E;
-  border-color: #22C55E;
-  color: #ffffff;
+  background-color: var(--green-color);
+  border-color: var(--green-color);
+  color: var(--white-color);
 }
 .btn-success:hover {
-  background-color: color-mix(in srgb, #22C55E 88%, black);
-  border-color: color-mix(in srgb, #22C55E 88%, black);
+  background-color: color-mix(in srgb, var(--green-color) 88%, black);
+  border-color: color-mix(in srgb, var(--green-color) 88%, black);
 }
 
 /* # Btn-warning
 ----------------------------------------------- */
 .btn-warning {
-  background-color: #F59E0B;
-  border-color: #F59E0B;
-  color: #ffffff;
+  background-color: var(--orange-color);
+  border-color: var(--orange-color);
+  color: var(--white-color);
 }
 .btn-warning:hover {
-  background-color: color-mix(in srgb, #F59E0B 88%, black);
-  border-color: color-mix(in srgb, #F59E0B 88%, black);
+  background-color: color-mix(in srgb, var(--orange-color) 88%, black);
+  border-color: color-mix(in srgb, var(--orange-color) 88%, black);
 }
 
 /* # Btn-danger
 ----------------------------------------------- */
 .btn-danger {
-  background-color: #F43F5E;
-  border-color: #F43F5E;
-  color: #ffffff;
+  background-color: var(--red-color);
+  border-color: var(--red-color);
+  color: var(--white-color);
 }
 .btn-danger:hover {
-  background-color: color-mix(in srgb, #F43F5E 88%, black);
-  border-color: color-mix(in srgb, #F43F5E 88%, black);
+  background-color: color-mix(in srgb, var(--red-color) 88%, black);
+  border-color: color-mix(in srgb, var(--red-color) 88%, black);
 }
 
 /* =====================
@@ -3609,7 +3608,7 @@ Tabletas horizontales */
 # Btn-Link
 ===================== */
 .btn-link {
-  color: var(--brand-primary);
+  color: var(--blue-color);
   font-weight: var(--fw-bold);
   text-decoration: none;
 }
@@ -3638,32 +3637,32 @@ Tabletas horizontales */
 ----------------------------------------------- */
 .button-left {
   background-color: var(--color-canvas);
-  color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  border: 1px solid color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  border: 1px solid color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
   border-radius: var(--radius-xs) 0 0 var(--radius-xs);
 }
 .button-left:hover {
-  background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  color: #ffffff;
+  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  color: var(--white-color);
 }
 .button-left:hover i {
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 /* # Botón derecho
 ----------------------------------------------- */
 .button-right {
-  background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  color: #ffffff;
-  border: 1px solid color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  color: var(--white-color);
+  border: 1px solid color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
   border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
 }
 .button-right i {
-  color: #ffffff;
+  color: var(--white-color);
 }
 .button-right:hover {
-  background-color: var(--brand-primary);
-  border: 1px solid var(--brand-primary);
+  background-color: var(--blue-color);
+  border: 1px solid var(--blue-color);
 }
 
 /* =====================
@@ -3737,7 +3736,7 @@ sobre un .card-header/.card-body/.card-footer suelto, o sobre un
 .card completo. Cuando envuelven un header/footer reales, además
 ajustan el borde de esos hijos para que combinen con el marco. */
 .card-highlight {
-  background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
 }
 .card-highlight h1, .card-highlight h2, .card-highlight h3, .card-highlight h4, .card-highlight h5, .card-highlight h6 {
   color: var(--color-surface);
@@ -3749,14 +3748,14 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   color: var(--color-surface);
 }
 .card-highlight {
-  border-color: var(--brand-primary);
+  border-color: var(--blue-color);
 }
 .card-highlight .card-header, .card-highlight .card-footer {
-  border-color: var(--brand-primary);
+  border-color: var(--blue-color);
 }
 
 .card-success {
-  background-color: rgb(60.5584415584, 221.4415584416, 119.7792207792);
+  background-color: color-mix(in srgb, var(--green-color) 85%, white);
 }
 .card-success h1, .card-success h2, .card-success h3, .card-success h4, .card-success h5, .card-success h6 {
   color: var(--color-surface);
@@ -3768,14 +3767,14 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   color: var(--color-surface);
 }
 .card-success {
-  border-color: #22C55E;
+  border-color: var(--green-color);
 }
 .card-success .card-header, .card-success .card-footer {
-  border-color: #22C55E;
+  border-color: var(--green-color);
 }
 
 .card-danger {
-  background-color: rgb(246.763546798, 111.236453202, 134.4482758621);
+  background-color: color-mix(in srgb, var(--red-color) 75%, white);
 }
 .card-danger h1, .card-danger h2, .card-danger h3, .card-danger h4, .card-danger h5, .card-danger h6 {
   color: var(--color-surface);
@@ -3787,14 +3786,14 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   color: var(--color-surface);
 }
 .card-danger {
-  border-color: #F43F5E;
+  border-color: var(--red-color);
 }
 .card-danger .card-header, .card-danger .card-footer {
-  border-color: #F43F5E;
+  border-color: var(--red-color);
 }
 
 .card-warning {
-  background-color: rgb(247.0078740157, 177.4763779528, 59.9921259843);
+  background-color: color-mix(in srgb, var(--orange-color) 80%, white);
 }
 .card-warning h1, .card-warning h2, .card-warning h3, .card-warning h4, .card-warning h5, .card-warning h6 {
   color: var(--color-surface);
@@ -3806,14 +3805,14 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   color: var(--color-surface);
 }
 .card-warning {
-  border-color: #F59E0B;
+  border-color: var(--orange-color);
 }
 .card-warning .card-header, .card-warning .card-footer {
-  border-color: #F59E0B;
+  border-color: var(--orange-color);
 }
 
 .card-info {
-  background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
 }
 .card-info h1, .card-info h2, .card-info h3, .card-info h4, .card-info h5, .card-info h6 {
   color: var(--color-surface);
@@ -3825,29 +3824,29 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   color: var(--color-surface);
 }
 .card-info {
-  border-color: var(--brand-primary);
+  border-color: var(--blue-color);
 }
 .card-info .card-header, .card-info .card-footer {
-  border-color: var(--brand-primary);
+  border-color: var(--blue-color);
 }
 
 a.card:hover {
   background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
 }
 a.card.card-highlight:hover {
-  background-color: var(--brand-primary);
+  background-color: var(--blue-color);
 }
 a.card.card-success:hover {
-  background-color: rgb(60.5584415584, 221.4415584416, 119.7792207792);
+  background-color: color-mix(in srgb, var(--green-color) 85%, white);
 }
 a.card.card-danger:hover {
-  background-color: rgb(246.763546798, 111.236453202, 134.4482758621);
+  background-color: color-mix(in srgb, var(--red-color) 75%, white);
 }
 a.card.card-warning:hover {
-  background-color: rgb(247.0078740157, 177.4763779528, 59.9921259843);
+  background-color: color-mix(in srgb, var(--orange-color) 80%, white);
 }
 a.card.card-info:hover {
-  background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
 }
 
 /* =====================
@@ -3926,11 +3925,11 @@ a.card.card-info:hover {
   font-weight: 400;
 }
 .panel-list .panel-item.disabled {
-  background-color: rgb(219.5, 219.5, 219.5);
-  border-color: #c2c2c2;
+  background-color: color-mix(in srgb, var(--gray-color) 22%, white);
+  border-color: color-mix(in srgb, var(--gray-color) 37%, white);
 }
 .panel-list .panel-item.disabled h4, .panel-list .panel-item.disabled p {
-  color: #5c5c5c;
+  color: var(--gray-color);
 }
 .panel-list .panel-item.disabled p {
   font-weight: 400;
@@ -4206,7 +4205,7 @@ Tabletas verticales o celulares horizontales*/
   padding: 8px;
   aspect-ratio: 1;
   border-radius: var(--radius-full);
-  background: var(--brand-primary);
+  background: var(--blue-color);
   --_m:
     conic-gradient(#0000 10%,#000),
     linear-gradient(#000 0 0) content-box;
@@ -4272,19 +4271,19 @@ Tabletas verticales o celulares horizontales*/
 
 /* Estados */
 .bg-success .dac-progress__bar {
-  background: #22C55E;
+  background: var(--green-color);
 }
 
 .bg-info .dac-progress__bar {
-  background: var(--brand-primary);
+  background: var(--blue-color);
 }
 
 .bg-warning .dac-progress__bar {
-  background: #F59E0B;
+  background: var(--orange-color);
 }
 
 .bg-danger .dac-progress__bar {
-  background: #F43F5E;
+  background: var(--red-color);
 }
 
 /* Tamaños opcionales */
@@ -4397,15 +4396,15 @@ Tabletas verticales o celulares horizontales*/
 }
 
 .toast.success {
-  background-color: #22C55E;
+  background-color: var(--green-color);
 }
 
 .toast.error {
-  background-color: #F43F5E;
+  background-color: var(--red-color);
 }
 
 .toast.info {
-  background-color: var(--brand-primary);
+  background-color: var(--blue-color);
 }
 
 .toast button {
@@ -4461,7 +4460,7 @@ Tabletas verticales o celulares horizontales*/
   border-bottom: 1px solid var(--color-canvas);
 }
 .modal .modal-content .modal-header i {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 .modal .modal-content .modal-header h2 {
   margin: 0;
@@ -4525,7 +4524,7 @@ Tabletas verticales o celulares horizontales*/
 
 .swal2-styled.swal2-confirm {
   border-radius: var(--radius-xs);
-  background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff) !important;
+  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color)) !important;
   color: #fff;
   font-weight: 500;
   font-size: 1em;
@@ -4597,8 +4596,8 @@ html {
   z-index: 1000;
   padding: 8px;
   width: 160px;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--dark-color);
+  color: var(--white-color);
   content: attr(data-tooltip);
   font-size: var(--fs-sm);
   line-height: 1.2;
@@ -4622,7 +4621,7 @@ html {
 .tooltip-top:before {
   margin-left: -6px;
   margin-bottom: -12px;
-  border-top-color: #000000;
+  border-top-color: var(--dark-color);
 }
 
 /* Horizontally align top/bottom tooltips */
@@ -4674,7 +4673,7 @@ html {
   margin-right: -12px;
   margin-bottom: 0;
   border-top-color: transparent;
-  border-left-color: #000000;
+  border-left-color: var(--dark-color);
 }
 
 .tooltip-left:hover:before,
@@ -4695,7 +4694,7 @@ html {
   margin-bottom: 0;
   margin-left: -12px;
   border-top-color: transparent;
-  border-right-color: #000000;
+  border-right-color: var(--dark-color);
 }
 
 .tooltip-right:hover:before,
@@ -4717,7 +4716,7 @@ html {
   margin-top: -12px;
   margin-bottom: 0;
   border-top-color: transparent;
-  border-bottom-color: #000000;
+  border-bottom-color: var(--dark-color);
 }
 
 .tooltip-bottom:hover:before,
@@ -4732,7 +4731,7 @@ canvas {
   width: 100%;
   max-width: 1500px;
   display: block;
-  background: #ffffff;
+  background: var(--white-color);
   padding: 10px;
   border-radius: var(--radius-sm);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -4783,7 +4782,7 @@ canvas {
 ===================== */
 .tg-head .tg-row {
   background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
-  color: var(--brand-primary);
+  color: var(--blue-color);
   font-weight: bold;
 }
 
@@ -5057,7 +5056,7 @@ table.zebra tbody tr:hover {
 
 .dataTables_length select:focus,
 .dataTables_filter input:focus {
-  border-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  border-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
 }
 
 /* =========================
@@ -5083,19 +5082,19 @@ table.zebra tbody tr:hover {
   margin-left: 3px;
   border-radius: var(--radius-xs);
   background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
-  color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .dataTables_paginate .paginate_button:hover {
-  background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
   color: var(--color-canvas);
 }
 
 .dataTables_paginate .paginate_button.current {
-  background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
   color: var(--color-canvas);
 }
 
@@ -5169,10 +5168,10 @@ table.dataTable thead th.sorting_desc:after {
   transition: color var(--transition-base);
 }
 .breadcrumb ol li a:hover {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 .breadcrumb ol li a:hover .icon {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 .breadcrumb ol li a .icon {
   color: var(--color-text-muted);
@@ -5242,9 +5241,9 @@ table.dataTable thead th.sorting_desc:after {
 }
 
 .page-btn.is-active {
-  background: var(--brand-primary);
-  border-color: var(--brand-primary);
-  color: #ffffff;
+  background: var(--blue-color);
+  border-color: var(--blue-color);
+  color: var(--white-color);
 }
 
 .page-btn:disabled {
@@ -5328,11 +5327,11 @@ agrega el modificador .tabs-vertical sobre el mismo contenedor.
   color: var(--color-text-primary);
 }
 .tab-button.active {
-  color: var(--brand-primary);
-  border-color: var(--brand-primary);
+  color: var(--blue-color);
+  border-color: var(--blue-color);
 }
 .tab-button:focus-visible {
-  outline: 2px solid var(--brand-primary);
+  outline: 2px solid var(--blue-color);
   outline-offset: 2px;
 }
 
@@ -5369,8 +5368,8 @@ agrega el modificador .tabs-vertical sobre el mismo contenedor.
   width: 100%;
 }
 .tabs-container.tabs-vertical .tab-button.active {
-  border-color: var(--brand-primary);
-  background-color: color-mix(in srgb, var(--brand-primary) 10%, var(--color-surface));
+  border-color: var(--blue-color);
+  background-color: color-mix(in srgb, var(--blue-color) 10%, var(--color-surface));
 }
 .tabs-container.tabs-vertical .tab-content {
   padding-top: 0;
@@ -5819,11 +5818,11 @@ que exista un <select> real detrás. */
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .input:hover, .select:hover, .textarea:hover {
-  border-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  border-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
 }
 .input:focus, .select:focus, .textarea:focus {
-  border-color: var(--brand-primary);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand-primary) 20%, transparent);
+  border-color: var(--blue-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue-color) 20%, transparent);
   outline: 0;
 }
 .input::placeholder, .select::placeholder, .textarea::placeholder {
@@ -5833,10 +5832,10 @@ que exista un <select> real detrás. */
   background-color: var(--color-border-strong);
 }
 .input.is-invalid, .select.is-invalid, .textarea.is-invalid {
-  border-color: #F43F5E;
+  border-color: var(--red-color);
 }
 .input.is-invalid:focus, .select.is-invalid:focus, .textarea.is-invalid:focus {
-  box-shadow: 0 0 0 3px color-mix(in srgb, #F43F5E 20%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--red-color) 20%, transparent);
 }
 
 .textarea {
@@ -5873,7 +5872,7 @@ input[type=checkbox],
 input[type=radio] {
   width: 18px;
   height: 18px;
-  accent-color: var(--brand-primary);
+  accent-color: var(--blue-color);
 }
 
 fieldset {
@@ -5923,7 +5922,7 @@ input[type=range]::-webkit-slider-thumb {
   appearance: none;
   width: 20px;
   height: 20px;
-  background: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  background: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
   border-radius: var(--radius-full);
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -5932,7 +5931,7 @@ input[type=range]::-webkit-slider-thumb {
 input[type=range]::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  background: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
   border-radius: var(--radius-full);
   border: 2px solid #fff;
   cursor: pointer;
@@ -5941,19 +5940,19 @@ input[type=range]::-moz-range-thumb {
 
 /* Efecto de "agrandamiento" al hacer hover sobre el pulgar */
 input[type=range]:hover::-webkit-slider-thumb {
-  background: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  background: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
   transform: scale(1.1);
 }
 
 input[type=range]:hover::-moz-range-thumb {
-  background: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  background: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
   transform: scale(1.1);
 }
 
 /* Tooltip (output) */
 output {
   position: absolute;
-  background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
   width: 50px;
   height: 30px;
   text-align: center;
@@ -5972,7 +5971,7 @@ output:after {
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 10px solid color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  border-top: 10px solid color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   top: 100%;
@@ -6066,9 +6065,9 @@ input::-ms-reveal {
 /* # Search button
 ----------------------------------------------- */
 .search-button {
-  background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  border: 1px solid color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  color: #ffffff;
+  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  border: 1px solid color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  color: var(--white-color);
   padding: 10px;
   border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
   cursor: pointer;
@@ -6079,11 +6078,11 @@ input::-ms-reveal {
   width: 40px;
 }
 .search-button i {
-  color: #ffffff;
+  color: var(--white-color);
 }
 .search-button:hover {
-  background-color: var(--brand-primary);
-  border: 1px solid var(--brand-primary);
+  background-color: var(--blue-color);
+  border: 1px solid var(--blue-color);
 }
 
 @media (min-width: 768px) {
@@ -6157,7 +6156,7 @@ input::-ms-reveal {
   semántico aparte. */
 }
 .switch input:checked + .slider {
-  background-color: var(--brand-primary);
+  background-color: var(--blue-color);
 }
 .switch input:checked + .slider:before {
   transform: translateX(18px);
@@ -6207,7 +6206,7 @@ input::-ms-reveal {
 }
 
 .file_upload input[type=file]:hover {
-  border-color: var(--brand-primary);
+  border-color: var(--blue-color);
 }
 
 /* =====================
@@ -6248,14 +6247,14 @@ input::-ms-reveal {
 }
 
 .text-input:hover {
-  border-color: var(--brand-primary);
+  border-color: var(--blue-color);
 }
 .text-input:focus {
   outline: none;
 }
 
 .date-input:focus {
-  border: 1px solid var(--brand-primary);
+  border: 1px solid var(--blue-color);
   outline: none;
 }
 
@@ -6344,7 +6343,7 @@ input::-ms-reveal {
   background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
 }
 .navbar-link.active {
-  color: var(--brand-primary);
+  color: var(--blue-color);
   font-weight: bold;
 }
 
@@ -6465,7 +6464,7 @@ input::-ms-reveal {
   /* # Dropdown toggle
   ----------------------------------------------- */
   .dropdown:hover .dropdown-toggle {
-    color: var(--brand-primary);
+    color: var(--blue-color);
     background-color: inherit;
   }
   /* # Dropdown menu
@@ -6513,14 +6512,14 @@ ul.social-links {
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
 }
 .social-links a i {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 .social-links a:hover {
   color: red;
   background-color: red;
 }
 .social-links a:hover i {
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 .social-links a.faicon-facebook:hover {
@@ -6576,10 +6575,10 @@ ul.secondary_menu li a small {
   font-size: 70%;
 }
 ul.secondary_menu li:hover {
-  border-color: var(--brand-primary);
+  border-color: var(--blue-color);
 }
 ul.secondary_menu li:hover a {
-  color: var(--brand-primary);
+  color: var(--blue-color);
   font-weight: 500;
 }
 ul.secondary_menu li.complete {
@@ -6590,10 +6589,10 @@ ul.secondary_menu li.complete a {
   font-weight: 500;
 }
 ul.secondary_menu li.active {
-  border-color: var(--brand-primary);
+  border-color: var(--blue-color);
 }
 ul.secondary_menu li.active a {
-  color: var(--brand-primary);
+  color: var(--blue-color);
   font-weight: 500;
 }
 
@@ -6619,8 +6618,8 @@ ul.secondary_menu li.active a {
   z-index: 1000;
   transition: background-color 0.3s ease;
   opacity: 0.2;
-  color: #ffffff;
-  background-color: var(--brand-primary);
+  color: var(--white-color);
+  background-color: var(--blue-color);
   border-radius: var(--radius-sm);
 }
 #back-to-top i {
@@ -6664,29 +6663,29 @@ ul.secondary_menu li.active a {
 }
 .banner #pagetitle h1 {
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: var(--white-color);
   text-transform: uppercase;
 }
 .banner {
   /*Breadcrumb*/
 }
 .banner .breadcrumb ol li {
-  color: #ffffff;
+  color: var(--white-color);
 }
 .banner .breadcrumb ol li::after {
-  color: #ffffff;
+  color: var(--white-color);
 }
 .banner .breadcrumb ol li a {
-  color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
 }
 .banner .breadcrumb ol li a:hover {
-  color: #ffffff;
+  color: var(--white-color);
 }
 .banner .breadcrumb ol li a:hover .icon {
-  color: #ffffff;
+  color: var(--white-color);
 }
 .banner .breadcrumb ol li a .icon {
-  color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
 }
 
 /* # Hero
@@ -6707,10 +6706,10 @@ header.hero .hero_content {
 }
 header.hero .hero_content h1 {
   font-size: 2.3rem;
-  color: #ffffff;
+  color: var(--white-color);
 }
 header.hero .hero_content p {
-  color: #ffffff;
+  color: var(--white-color);
   margin-bottom: 0;
 }
 header.hero .hero_content img {
@@ -6803,7 +6802,7 @@ es un enlace secundario/de cierre, no una acción. */
   margin-top: 1rem;
 }
 .login-footer a {
-  color: var(--brand-primary);
+  color: var(--blue-color);
   font-weight: var(--fw-bold);
 }
 
@@ -7010,7 +7009,7 @@ es un enlace secundario/de cierre, no una acción. */
 Colour theme
 ========================== */
 .wrapper {
-  background: var(--brand-primary);
+  background: var(--blue-color);
 }
 
 /* ===========
@@ -7041,7 +7040,7 @@ Colour theme
 /*
 .dashboard-footer {
    background: var(--color-surface);
-   color: var(--brand-primary);
+   color: var(--blue-color);
    padding: 15px;
    border-top: 1px solid #eee;    
  }
@@ -7214,7 +7213,7 @@ Colour theme
 /* # Sidebar-toggle
 ----------------------------------------------- */
 .main-header .sidebar-navbar .sidebar-toggle {
-  color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
 }
 
 .main-header .sidebar-navbar .sidebar-toggle:hover {
@@ -7401,12 +7400,12 @@ siempre, lo que hacía ver todo el sidebar más cargado. */
 .sidebar-menu > li > a:hover,
 .sidebar-menu > li.active > a {
   background: var(--color-canvas);
-  color: var(--brand-primary);
-  border-left-color: var(--brand-primary);
+  color: var(--blue-color);
+  border-left-color: var(--blue-color);
 }
 .sidebar-menu > li > a:hover i,
 .sidebar-menu > li.active > a i {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 
 .sidebar-menu > li > .treeview-menu {
@@ -7419,7 +7418,7 @@ siempre, lo que hacía ver todo el sidebar más cargado. */
 
 .treeview-menu > li.active > a,
 .treeview-menu > li > a:hover {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 
 /* Solo el activo sube de peso (no el hover, que en wuicho-frame solo
@@ -7520,7 +7519,7 @@ llegar a pesar más que él. */
   text-align: center;
   font-size: var(--fs-xs);
   font-weight: var(--fw-bold);
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 
 @media (max-width: 767px) {
@@ -7546,11 +7545,11 @@ llegar a pesar más que él. */
 }
 
 .quicklinks-menu > li > a > i {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 
 .quicklinks-menu .dropdown-menu li a > i {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 
 .quicklinks-menu > li > a:hover,
@@ -7635,14 +7634,14 @@ llegar a pesar más que él. */
 /* # Colours
 ----------------------------------------------- */
 .user-panel .info p {
-  color: #ffffff;
+  color: var(--white-color);
   font-weight: bold;
   margin: 0px;
 }
 
 .user-panel > .info,
 .user-panel > .info > a {
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 /*# sourceMappingURL=main.css.map */

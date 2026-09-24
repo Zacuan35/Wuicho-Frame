@@ -78,7 +78,7 @@
   text-align: center;
   font-size: var(--fs-xs);
   font-weight: var(--fw-bold);
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 
 @media (max-width: 767px) {
@@ -105,10 +105,10 @@
   color: var(--color-text-primary);
 }
 .quicklinks-menu > li > a > i{
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 .quicklinks-menu .dropdown-menu li a > i {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 .quicklinks-menu > li > a:hover,
 .quicklinks-menu > li > a:focus {

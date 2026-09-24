@@ -31,10 +31,10 @@
 }
 
 /* Estados */
-.bg-success .dac-progress__bar {background: $green-color;}
-.bg-info .dac-progress__bar {background: var(--brand-primary);}
-.bg-warning .dac-progress__bar {background: $orange-color;}
-.bg-danger .dac-progress__bar {background: $red-color;}
+.bg-success .dac-progress__bar {background: var(--green-color);}
+.bg-info .dac-progress__bar {background: var(--blue-color);}
+.bg-warning .dac-progress__bar {background: var(--orange-color);}
+.bg-danger .dac-progress__bar {background: var(--red-color);}
 
 /* Tamaños opcionales */
 .progress-sm {height: 10px;}

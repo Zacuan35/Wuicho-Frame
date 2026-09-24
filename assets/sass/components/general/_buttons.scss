@@ -54,13 +54,13 @@
 /* # Btn-primary
 ----------------------------------------------- */
 .btn-primary {
-  background-color: var(--brand-primary);
-  border-color: var(--brand-primary);
-  color: $white-color;
+  background-color: var(--blue-color);
+  border-color: var(--blue-color);
+  color: var(--white-color);
 
   &:hover {
-    background-color: color-mix(in srgb, var(--brand-primary) 88%, black);
-    border-color: color-mix(in srgb, var(--brand-primary) 88%, black);
+    background-color: color-mix(in srgb, var(--blue-color) 88%, black);
+    border-color: color-mix(in srgb, var(--blue-color) 88%, black);
   }
 }
 
@@ -78,10 +78,10 @@
 ----------------------------------------------- */
 .btn-outline {
   background-color: transparent;
-  border-color: var(--brand-primary);
-  color: var(--brand-primary);
+  border-color: var(--blue-color);
+  color: var(--blue-color);
 
-  &:hover { background-color: color-mix(in srgb, var(--brand-primary) 12%, var(--color-surface)); }
+  &:hover { background-color: color-mix(in srgb, var(--blue-color) 12%, var(--color-surface)); }
 }
 
 /* # Btn-ghost
@@ -96,39 +96,39 @@
 /* # Btn-success
 ----------------------------------------------- */
 .btn-success {
-  background-color: $green-color;
-  border-color: $green-color;
-  color: $white-color;
+  background-color: var(--green-color);
+  border-color: var(--green-color);
+  color: var(--white-color);
 
   &:hover {
-    background-color: color-mix(in srgb, $green-color 88%, black);
-    border-color: color-mix(in srgb, $green-color 88%, black);
+    background-color: color-mix(in srgb, var(--green-color) 88%, black);
+    border-color: color-mix(in srgb, var(--green-color) 88%, black);
   }
 }
 
 /* # Btn-warning
 ----------------------------------------------- */
 .btn-warning {
-  background-color: $orange-color;
-  border-color: $orange-color;
-  color: $white-color;
+  background-color: var(--orange-color);
+  border-color: var(--orange-color);
+  color: var(--white-color);
 
   &:hover {
-    background-color: color-mix(in srgb, $orange-color 88%, black);
-    border-color: color-mix(in srgb, $orange-color 88%, black);
+    background-color: color-mix(in srgb, var(--orange-color) 88%, black);
+    border-color: color-mix(in srgb, var(--orange-color) 88%, black);
   }
 }
 
 /* # Btn-danger
 ----------------------------------------------- */
 .btn-danger {
-  background-color: $red-color;
-  border-color: $red-color;
-  color: $white-color;
+  background-color: var(--red-color);
+  border-color: var(--red-color);
+  color: var(--white-color);
 
   &:hover {
-    background-color: color-mix(in srgb, $red-color 88%, black);
-    border-color: color-mix(in srgb, $red-color 88%, black);
+    background-color: color-mix(in srgb, var(--red-color) 88%, black);
+    border-color: color-mix(in srgb, var(--red-color) 88%, black);
   }
 }
 
@@ -146,7 +146,7 @@
 # Btn-Link
 ===================== */
 .btn-link {
-  color: var(--brand-primary);
+  color: var(--blue-color);
   font-weight: var(--fw-bold);
   text-decoration: none;
   &:hover, &:active, &:focus {
@@ -176,29 +176,29 @@
 ----------------------------------------------- */
 .button-left {
   background-color: var(--color-canvas);
-  color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
-  border: 1px solid color-mix(in srgb, var(--brand-primary) 90%, $white-color);
+  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  border: 1px solid color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
   border-radius: var(--radius-xs) 0 0 var(--radius-xs);
 
   &:hover {
-    background-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
-    color: $white-color;
-    i { color: $white-color; }
+    background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+    color: var(--white-color);
+    i { color: var(--white-color); }
   }
 }
 
 /* # Botón derecho
 ----------------------------------------------- */
 .button-right {
-  background-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
-  color: $white-color;
-  border: 1px solid color-mix(in srgb, var(--brand-primary) 90%, $white-color);
+  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  color: var(--white-color);
+  border: 1px solid color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
   border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
-  i { color: $white-color; }
+  i { color: var(--white-color); }
 
   &:hover {
-    background-color: var(--brand-primary);
-    border: 1px solid var(--brand-primary);
+    background-color: var(--blue-color);
+    border: 1px solid var(--blue-color);
   }
 }
 

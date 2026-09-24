@@ -57,9 +57,9 @@
     }
 
     &.disabled{
-    background-color: lighten($gray-color, 50%);
-    border-color: lighten($gray-color, 40%);
-    h4,p{color:$gray-color;}
+    background-color: color-mix(in srgb, var(--gray-color) 22%, white);
+    border-color: color-mix(in srgb, var(--gray-color) 37%, white);
+    h4,p{color:var(--gray-color);}
     p{font-weight:400;}              
     cursor:not-allowed;
     img,i{filter: grayscale(100%);}

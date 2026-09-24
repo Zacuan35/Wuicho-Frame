@@ -39,44 +39,44 @@ sobre un .card-header/.card-body/.card-footer suelto, o sobre un
 .card completo. Cuando envuelven un header/footer reales, además
 ajustan el borde de esos hijos para que combinen con el marco. */
 .card-highlight {
-  background-color:color-mix(in srgb, var(--brand-primary) 90%, $white-color);
+  background-color:color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
-  border-color:var(--brand-primary);
-  .card-header, .card-footer { border-color: var(--brand-primary); }
+  border-color:var(--blue-color);
+  .card-header, .card-footer { border-color: var(--blue-color); }
 }
 .card-success {
-  background-color:lighten($green-color, 10%);
+  background-color:color-mix(in srgb, var(--green-color) 85%, white);
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
-  border-color:$green-color;
-  .card-header, .card-footer { border-color: $green-color; }
+  border-color:var(--green-color);
+  .card-header, .card-footer { border-color: var(--green-color); }
 }
 .card-danger {
-  background-color:lighten($red-color, 10%);
+  background-color:color-mix(in srgb, var(--red-color) 75%, white);
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
-  border-color:$red-color;
-  .card-header, .card-footer { border-color: $red-color; }
+  border-color:var(--red-color);
+  .card-header, .card-footer { border-color: var(--red-color); }
 }
 .card-warning {
-  background-color:lighten($orange-color, 10%);
+  background-color:color-mix(in srgb, var(--orange-color) 80%, white);
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
-  border-color:$orange-color;
-  .card-header, .card-footer { border-color: $orange-color; }
+  border-color:var(--orange-color);
+  .card-header, .card-footer { border-color: var(--orange-color); }
 }
 .card-info {
-  background-color:color-mix(in srgb, var(--brand-primary) 90%, $white-color);
+  background-color:color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
-  border-color:var(--brand-primary);
-  .card-header, .card-footer { border-color: var(--brand-primary); }
+  border-color:var(--blue-color);
+  .card-header, .card-footer { border-color: var(--blue-color); }
 }
 
 //Si la tarjeta tiene enlace
@@ -84,18 +84,18 @@ a.card {
   &:hover{background-color: $fill-subtle;}
 
   &.card-highlight {
-    &:hover{background-color: var(--brand-primary);}
+    &:hover{background-color: var(--blue-color);}
   }
   &.card-success {
-    &:hover{background-color: lighten($green-color, 10%);}
+    &:hover{background-color: color-mix(in srgb, var(--green-color) 85%, white);}
   }
   &.card-danger {
-    &:hover{background-color: lighten($red-color, 10%);}
+    &:hover{background-color: color-mix(in srgb, var(--red-color) 75%, white);}
   }
   &.card-warning {
-    &:hover{background-color: lighten($orange-color, 10%);}
+    &:hover{background-color: color-mix(in srgb, var(--orange-color) 80%, white);}
   }
   &.card-info {
-    &:hover{background-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);}
+    &:hover{background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));}
   }
 }

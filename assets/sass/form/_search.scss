@@ -21,9 +21,9 @@
 /* # Search button
 ----------------------------------------------- */
 .search-button {
-  background-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
-  border: 1px solid color-mix(in srgb, var(--brand-primary) 90%, $white-color);
-  color: $white-color;
+  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  border: 1px solid color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  color: var(--white-color);
   padding: 10px;
   border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
   cursor: pointer;
@@ -32,10 +32,10 @@
   justify-content: center;
   height: 38px; /* Misma altura que el input */
   width: 40px;
-  i{color: $white-color;}
+  i{color: var(--white-color);}
   &:hover {
-    background-color: var(--brand-primary);
-    border: 1px solid var(--brand-primary);
+    background-color: var(--blue-color);
+    border: 1px solid var(--blue-color);
   }
 } 
 

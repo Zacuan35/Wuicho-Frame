@@ -21,19 +21,19 @@ ul.secondary_menu {
     }    
 
     &:hover {
-      border-bottom: 2px solid var(--brand-primary);
+      border-bottom: 2px solid var(--blue-color);
 
       a {
-        color: var(--brand-primary);
+        color: var(--blue-color);
         font-weight: bold;
       }
     }
 
     &.active {
-      border-bottom: 2px solid var(--brand-primary);
+      border-bottom: 2px solid var(--blue-color);
 
       a {
-        color: var(--brand-primary);
+        color: var(--blue-color);
         font-weight: bold;
       }
     }

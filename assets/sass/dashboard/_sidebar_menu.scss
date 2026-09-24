@@ -122,10 +122,10 @@ siempre, lo que hacía ver todo el sidebar más cargado. */
 .sidebar-menu > li > a:hover,
 .sidebar-menu > li.active > a {
   background: var(--color-canvas);
-  color: var(--brand-primary);
-  border-left-color: var(--brand-primary);
+  color: var(--blue-color);
+  border-left-color: var(--blue-color);
 
-  i{color: var(--brand-primary);}
+  i{color: var(--blue-color);}
 }
 .sidebar-menu > li > .treeview-menu {
   background: var(--color-canvas);
@@ -136,7 +136,7 @@ siempre, lo que hacía ver todo el sidebar más cargado. */
 }
 .treeview-menu > li.active > a,
 .treeview-menu > li > a:hover {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 /* Solo el activo sube de peso (no el hover, que en wuicho-frame solo
 cambia de color) - 600 queda apenas por encima del 500 del padre, sin

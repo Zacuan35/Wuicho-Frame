@@ -12,13 +12,11 @@ Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
 $primary-font: "Montserrat", sans-serif;
 $secondary-font: "Roboto", sans-serif;
 
-/* --- Colores fijos (iguales en ambos temas) --- */
-$white-color:#ffffff;
-$gray-color:#5c5c5c;
-$dark-color:#000000;
-$green-color:#22C55E;
-$orange-color:#F59E0B;
-$red-color:#F43F5E;
+/* --- Paleta para gráficas (fijos en ambos temas) --- */
+$brand-teal: #14B8A6;
+$brand-amber: #F59E0B;
+$brand-rose: #F43F5E;
+$brand-green: #22C55E;
 
 :root {
   /* --- Tipografía --- */
@@ -73,16 +71,14 @@ $red-color:#F43F5E;
   --topbar-height: 100px;
   --transition-base: 180ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* --- Colores de marcas (fijos en ambos temas) --- */
-  --brand-primary: #5B5FEF;
-
-  /* --- Paleta para gráficas y HTML en línea (fijos en ambos temas).
-  Son CSS y no Sass porque se usan desde style="" y SVG (fill/stroke)
-  en el HTML, donde las variables Sass no existen --- */
-  --brand-teal: #14B8A6;
-  --brand-amber: #F59E0B;
-  --brand-rose: #F43F5E;
-  --brand-green: #22C55E;
+  /* --- Colores fijos (iguales en ambos temas) --- */
+  --white-color: #ffffff;
+  --gray-color: #5c5c5c;
+  --dark-color: #000000;
+  --blue-color: #5B5FEF;
+  --green-color: #22C55E;
+  --orange-color: #F59E0B;
+  --red-color: #F43F5E;
 
   /* --- Modo claro (default) --- */
   --color-canvas: #F4F5FA;
@@ -176,16 +172,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
+  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
 
   //Estados de botón
   &:hover, &:active, &:focus {
-    color: var(--brand-primary);
+    color: var(--blue-color);
   }
 }
 
 b {
-  color: var(--brand-primary);
+  color: var(--blue-color);
 }
 
 /* # Text-color
@@ -216,42 +212,42 @@ b {
 .bg-default {
   background-color: var(--color-surface);
   p, ul { color: var(--color-text-primary); }
-  b { color:var(--brand-primary);}
+  b { color:var(--blue-color);}
 }
 
 .bg-light {
   background-color: var(--color-canvas);
   a, p, ul { color: var(--color-text-primary); }
-  b { color: var(--brand-primary); }
+  b { color: var(--blue-color); }
 }
 
 .bg-dark {
   background-color: $fill-subtle;
   a, p, ul { color: var(--color-surface); }
-  b { color: var(--brand-primary); }
+  b { color: var(--blue-color); }
 }
 
 .bg-darker {
   background-color: var(--color-text-primary);
   h1, h2, h3 { color: var(--color-surface); }
   a, p, ul { color: var(--color-surface); }
-  b { color: var(--brand-primary); }
+  b { color: var(--blue-color); }
 }
 
 .bg-success {
-  background-color: $green-color;
-  p { color: $white-color; }
+  background-color: var(--green-color);
+  p { color: var(--white-color); }
 }
 
 .bg-danger {
-  background-color: $red-color;
-  p { color: $white-color; }
+  background-color: var(--red-color);
+  p { color: var(--white-color); }
 }
 
 /* # Labes
 ----------------------------------------------- */
-.label { color: $white-color; }
-.label-primary { background-color: var(--brand-primary); }
-.label-danger { background-color: $red-color; }
-.label-success { background-color: $green-color; }
+.label { color: var(--white-color); }
+.label-primary { background-color: var(--blue-color); }
+.label-danger { background-color: var(--red-color); }
+.label-success { background-color: var(--green-color); }
 .label-info { background-color: var(--color-info-text); }

@@ -46,12 +46,12 @@ agrega el modificador .tabs-vertical sobre el mismo contenedor.
   }
 
   &.active {
-    color: var(--brand-primary);
-    border-color: var(--brand-primary);
+    color: var(--blue-color);
+    border-color: var(--blue-color);
   }
 
   &:focus-visible {
-    outline: 2px solid var(--brand-primary);
+    outline: 2px solid var(--blue-color);
     outline-offset: 2px;
   }
 }
@@ -92,8 +92,8 @@ agrega el modificador .tabs-vertical sobre el mismo contenedor.
   }
 
   .tab-button.active {
-    border-color: var(--brand-primary);
-    background-color: color-mix(in srgb, var(--brand-primary) 10%, var(--color-surface));
+    border-color: var(--blue-color);
+    background-color: color-mix(in srgb, var(--blue-color) 10%, var(--color-surface));
   }
 
   .tab-content {
