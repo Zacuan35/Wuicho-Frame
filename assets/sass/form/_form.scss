@@ -65,7 +65,7 @@ que exista un <select> real detrás. */
   padding: 0.625rem 0.875rem;
   background-color: var(--color-surface);
   background-clip: padding-box;
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   font-size: var(--fs-sm);
   line-height: 1.5;
@@ -82,7 +82,7 @@ que exista un <select> real detrás. */
     color: var(--color-text-muted);
   }
   &:disabled{
-    background-color:var(--color-border-strong);
+    background-color:var(--color-border);
     //opacity: 1;
   }
   &.is-invalid {
@@ -129,7 +129,7 @@ input[type="radio"] {
   accent-color: var(--blue-color);
 }
 fieldset {
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid var(--color-border);
   padding: 10px;
   border-radius: var(--radius-sm);
   margin-bottom: 1rem;
@@ -165,7 +165,7 @@ input[type="range"] {
 
 /* Cambio de color al pasar el mouse */
 input[type="range"]:hover {
-  background: var(--color-border-strong);
+  background: var(--color-border);
 }
 
 /* Pulgar (thumb) del slider */

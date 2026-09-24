@@ -361,7 +361,7 @@
           </div>
           <div class="doc-preview flex flex-wrap gap-4">
             <div class="swatch-item" style="width:110px">
-              <div style="height:64px;border-radius:var(--radius-md);border:1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);background:var(--white-color);margin-bottom:8px"></div>
+              <div style="height:64px;border-radius:var(--radius-md);border:1px solid var(--color-border-subtle);background:var(--white-color);margin-bottom:8px"></div>
               <p style="font-size:11px;font-weight:700;margin:0">White</p>
               <p style="font-size:11px;color:var(--color-text-muted);margin:0">--white-color</p>
             </div>
@@ -405,12 +405,12 @@
           </div>
           <div class="doc-preview flex flex-wrap gap-4">
             <div class="swatch-item" style="width:110px">
-              <div style="height:64px;border-radius:var(--radius-md);border:1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);background:var(--color-canvas);margin-bottom:8px"></div>
+              <div style="height:64px;border-radius:var(--radius-md);border:1px solid var(--color-border-subtle);background:var(--color-canvas);margin-bottom:8px"></div>
               <p style="font-size:11px;font-weight:700;margin:0">Canvas</p>
               <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-canvas</p>
             </div>
             <div class="swatch-item" style="width:110px">
-              <div style="height:64px;border-radius:var(--radius-md);border:1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);background:var(--color-surface);margin-bottom:8px"></div>
+              <div style="height:64px;border-radius:var(--radius-md);border:1px solid var(--color-border-subtle);background:var(--color-surface);margin-bottom:8px"></div>
               <p style="font-size:11px;font-weight:700;margin:0">Surface</p>
               <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-surface</p>
             </div>
@@ -430,15 +430,20 @@
               <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-text-muted</p>
             </div>
             <div class="swatch-item" style="width:110px">
-              <div style="height:64px;border-radius:var(--radius-md);background:var(--color-border-strong);margin-bottom:8px"></div>
-              <p style="font-size:11px;font-weight:700;margin:0">Borde fuerte</p>
-              <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-border-strong</p>
+              <div style="height:64px;border-radius:var(--radius-md);background:var(--color-border);margin-bottom:8px"></div>
+              <p style="font-size:11px;font-weight:700;margin:0">Borde</p>
+              <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-border</p>
+            </div>
+            <div class="swatch-item" style="width:110px">
+              <div style="height:64px;border-radius:var(--radius-md);background:var(--color-border-subtle);margin-bottom:8px"></div>
+              <p style="font-size:11px;font-weight:700;margin:0">Borde suave</p>
+              <p style="font-size:11px;color:var(--color-text-muted);margin:0">--color-border-subtle</p>
             </div>
           </div>
           <pre class="code-block"><span class="tok-punct">.card {</span>
   <span class="tok-attr">background</span>: <span class="tok-string">var(--color-surface)</span>;
   <span class="tok-attr">color</span>: <span class="tok-string">var(--color-text-primary)</span>;
-  <span class="tok-attr">border-color</span>: <span class="tok-string">var(--color-border-strong)</span>;
+  <span class="tok-attr">border-color</span>: <span class="tok-string">var(--color-border-subtle)</span>;
 <span class="tok-punct">}</span></pre>
 
           <div class="grid gap-1">

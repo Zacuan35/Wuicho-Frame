@@ -20,7 +20,7 @@ un marco simple propio. */
   width: 100%;
   max-width: 24rem;
   background-color: var(--color-surface);
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   padding: 2rem;
@@ -52,7 +52,7 @@ es un enlace secundario/de cierre, no una acción. */
     content: '';
     flex: 1;
     height: 1px;
-    background: var(--color-border-strong);
+    background: var(--color-border);
   }
 }
 

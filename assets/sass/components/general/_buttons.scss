@@ -68,7 +68,7 @@
 ----------------------------------------------- */
 .btn-secondary {
   background-color: var(--color-canvas);
-  border-color: $border-subtle;
+  border-color: var(--color-border-subtle);
   color: var(--color-text-primary);
 
   &:hover { background-color: $fill-subtle; }

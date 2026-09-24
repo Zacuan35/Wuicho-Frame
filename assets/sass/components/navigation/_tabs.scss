@@ -13,7 +13,7 @@ agrega el modificador .tabs-vertical sobre el mismo contenedor.
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-  border-bottom: 1px solid $border-subtle;
+  border-bottom: 1px solid var(--color-border-subtle);
 
   &.tabs-center {
     justify-content: center;
@@ -76,7 +76,7 @@ agrega el modificador .tabs-vertical sobre el mismo contenedor.
   .tabs {
     flex-direction: column;
     border-bottom: none;
-    border-right: 1px solid $border-subtle;
+    border-right: 1px solid var(--color-border-subtle);
     gap: 2px;
     min-width: 180px;
     flex-shrink: 0;

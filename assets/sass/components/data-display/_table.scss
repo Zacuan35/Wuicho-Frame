@@ -35,7 +35,7 @@ tbody tr:last-child td { border-bottom: none; }
 td, th {
   padding: 8px;
   font-size: var(--fs-sm);
-  border-bottom: 1px solid $border-subtle;
+  border-bottom: 1px solid var(--color-border-subtle);
   text-align: left;
 }
 

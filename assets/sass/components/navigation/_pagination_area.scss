@@ -25,14 +25,14 @@
 	min-width: 36px; height: 36px; padding: 0 10px;
 	display: inline-flex; align-items: center; justify-content: center;
 	border-radius: var(--radius-sm);
-	border: 1px solid $border-subtle;
+	border: 1px solid var(--color-border-subtle);
 	background: var(--color-surface);
 	color: var(--color-text-secondary);
 	font-size: var(--fs-sm); font-weight: 600;
 	transition: all var(--transition-base);
 }
 .page-btn i { font-size: var(--fs-sm); }
-.page-btn:hover { border-color: var(--color-border-strong); background: $surface-tint; }
+.page-btn:hover { border-color: var(--color-border); background: $surface-tint; }
 .page-btn.is-active { background: var(--blue-color); border-color: var(--blue-color); color: var(--white-color); }
 .page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 

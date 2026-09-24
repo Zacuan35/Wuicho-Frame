@@ -17,7 +17,7 @@ ul.social-links {
   text-align:center;
   color:red;
   background-color: var(--color-surface);
-  border: 1px solid $border-subtle;
+  border: 1px solid var(--color-border-subtle);
 
   i{
     color: var(--blue-color);
@@ -43,7 +43,7 @@ ul.social-links {
 .bg-darker {
   .social-links a{
     i{
-      color: var(--color-border-strong);
+      color: var(--color-border);
     }
   }  
 }

@@ -61,17 +61,18 @@ Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
   --topbar-height: 100px;
   --transition-base: 180ms cubic-bezier(0.4, 0, 0.2, 1);
   /* --- Colores fijos (iguales en ambos temas) --- */
-  --blue-color: #5B5FEF;
   --white-color: #ffffff;
   --gray-color: #5c5c5c;
   --dark-color: #000000;
+  --blue-color: #5B5FEF;
   --green-color: #22C55E;
   --orange-color: #F59E0B;
   --red-color: #F43F5E;
   /* --- Modo claro (default) --- */
   --color-canvas: #F4F5FA;
   --color-surface: #FFFFFF;
-  --color-border-strong: #D3D6E8;
+  --color-border: #D3D6E8;
+  --color-border-subtle: rgba(211, 214, 232, 0.55);
   --color-text-primary: #1A1D3A;
   --color-text-secondary: #484C70;
   --color-text-muted: #636997;
@@ -93,7 +94,8 @@ body.dark-mode {
   --color-text-primary: #EEF0FB;
   --color-text-secondary: #B3B7D0;
   --color-text-muted: #878BB0;
-  --color-border-strong: #2E3260;
+  --color-border: #2E3260;
+  --color-border-subtle: rgba(46, 50, 96, 0.55);
   --color-success-bg: rgba(34, 197, 94, 0.12);
   --color-success-text: #4ADE80;
   --color-danger-bg: rgba(244, 63, 94, 0.12);
@@ -106,7 +108,7 @@ body.dark-mode {
 }
 
 /* Tonos derivados (no son colores nuevos: se calculan variando la
-opacidad de --color-border-strong y --color-surface que ya existen, en
+opacidad de --color-border y --color-surface que ya existen, en
 vez de declarar más --color-* fijos) */
 /* =================
 # COLOR DECLARATION
@@ -121,7 +123,7 @@ body::-webkit-scrollbar {
 
 /*Bar color*/
 body::-webkit-scrollbar-thumb {
-  background: var(--color-border-strong);
+  background: var(--color-border);
 }
 
 body {
@@ -223,7 +225,7 @@ b {
 }
 
 .bg-dark {
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
 }
 .bg-dark a, .bg-dark p, .bg-dark ul {
   color: var(--color-surface);
@@ -1397,7 +1399,7 @@ en vez de meter los ejemplos dentro de .card.
 ===================== */
 .doc-preview {
   padding: 24px;
-  border: 1px dashed var(--color-border-strong);
+  border: 1px dashed var(--color-border);
   border-radius: var(--radius-md);
   background: color-mix(in srgb, var(--color-surface) 94%, var(--color-text-primary) 6%);
 }
@@ -1535,8 +1537,8 @@ main {
 
 .grid-item {
   padding: 10px;
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
-  border: 1px solid var(--color-border-strong);
+  background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
+  border: 1px solid var(--color-border);
 }
 
 /* # Gap
@@ -3437,7 +3439,7 @@ Tabletas horizontales */
   transition: background-color 0.3s;
 }
 .acordeon .acordeon-item .acordeon-header:hover {
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
 }
 .acordeon .acordeon-item .acordeon-header {
   /* Estilos para el ícono */
@@ -3530,11 +3532,11 @@ Tabletas horizontales */
 ----------------------------------------------- */
 .btn-secondary {
   background-color: var(--color-canvas);
-  border-color: color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border-color: var(--color-border-subtle);
   color: var(--color-text-primary);
 }
 .btn-secondary:hover {
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
 }
 
 /* # Btn-outline
@@ -3699,7 +3701,7 @@ Tabletas horizontales */
   background-color: var(--color-surface);
   background-clip: border-box;
   border-radius: var(--radius-sm);
-  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border: 1px solid var(--color-border-subtle);
   transition: background-color 0.2s ease, border-color 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -3711,7 +3713,7 @@ heredan visualmente el marco del contenedor (fondo, borde, sombra). */
 .card-header {
   padding: 1rem 1rem;
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-  border-bottom: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 .card-header h3 {
   font-size: var(--fs-md);
@@ -3725,7 +3727,7 @@ heredan visualmente el marco del contenedor (fondo, borde, sombra). */
   padding: 1rem;
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
   text-align: left;
-  border-top: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border-top: 1px solid var(--color-border-subtle);
 }
 .card-footer p {
   word-break: break-all;
@@ -3831,7 +3833,7 @@ ajustan el borde de esos hijos para que combinen con el marco. */
 }
 
 a.card:hover {
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
 }
 a.card.card-highlight:hover {
   background-color: var(--blue-color);
@@ -3867,7 +3869,7 @@ a.card.card-info:hover {
   padding: 0.75rem 1rem;
   background-color: var(--color-surface);
   background-clip: border-box;
-  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-sm);
 }
 .panel-list .panel-item p {
@@ -3877,7 +3879,7 @@ a.card.card-info:hover {
   background-color: var(--color-canvas);
 }
 .panel-list .panel-item:hover {
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
 }
 .panel-list .panel-item {
   /* =========
@@ -3976,8 +3978,8 @@ Tabletas horizontales */
   max-width: 100%;
   padding: 3px 10px;
   border-radius: var(--radius-full);
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
-  border: 1px solid var(--color-border-strong);
+  background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
+  border: 1px solid var(--color-border);
   color: var(--color-text-primary);
   font-size: 11px;
   font-weight: 700;
@@ -4064,7 +4066,7 @@ Tabletas horizontales */
 .gallery-section .gallery-body {
   background-color: var(--color-surface);
   padding: 1rem 0.5rem;
-  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
   height: auto;
 }
@@ -4118,7 +4120,7 @@ Tabletas horizontales */
 .gallery-section .gallery-footer {
   background-color: var(--color-canvas);
   padding: 1rem 0.5rem;
-  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border: 1px solid var(--color-border-subtle);
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
   margin-top: -1px;
 }
@@ -4242,7 +4244,7 @@ Tabletas verticales o celulares horizontales*/
   width: 100%;
   height: 18px;
   position: relative;
-  background: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  background: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
   border-radius: var(--radius-full);
   overflow: hidden;
 }
@@ -4769,7 +4771,7 @@ canvas {
   grid-template-columns: var(--cols, 1fr);
   align-items: center;
   padding: 1rem;
-  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-sm);
   background-color: var(--color-surface);
   transition: all 0.2s ease;
@@ -4781,7 +4783,7 @@ canvas {
 # HEADER
 ===================== */
 .tg-head .tg-row {
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
   color: var(--blue-color);
   font-weight: bold;
 }
@@ -4794,7 +4796,7 @@ canvas {
 }
 
 .tg-body .tg-row:hover {
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
 }
 
 /* =====================
@@ -4981,7 +4983,7 @@ tbody tr:last-child td {
 td, th {
   padding: 8px;
   font-size: var(--fs-sm);
-  border-bottom: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border-bottom: 1px solid var(--color-border-subtle);
   text-align: left;
 }
 
@@ -4997,7 +4999,7 @@ table.zebra tbody tr:nth-child(even) {
 }
 
 table.zebra tbody tr:hover {
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
 }
 
 /* =====================
@@ -5046,7 +5048,7 @@ table.zebra tbody tr:hover {
 .dataTables_filter input {
   margin-left: 5px;
   padding: 6px 10px;
-  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-xs);
   outline: none;
   transition: all 0.2s ease;
@@ -5081,7 +5083,7 @@ table.zebra tbody tr:hover {
   padding: 6px 12px;
   margin-left: 3px;
   border-radius: var(--radius-xs);
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
   color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
   cursor: pointer;
   text-decoration: none;
@@ -5223,7 +5225,7 @@ table.dataTable thead th.sorting_desc:after {
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-sm);
-  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border: 1px solid var(--color-border-subtle);
   background: var(--color-surface);
   color: var(--color-text-secondary);
   font-size: var(--fs-sm);
@@ -5236,7 +5238,7 @@ table.dataTable thead th.sorting_desc:after {
 }
 
 .page-btn:hover {
-  border-color: var(--color-border-strong);
+  border-color: var(--color-border);
   background: color-mix(in srgb, var(--color-surface) 94%, var(--color-text-primary) 6%);
 }
 
@@ -5295,7 +5297,7 @@ agrega el modificador .tabs-vertical sobre el mismo contenedor.
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-  border-bottom: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 .tabs.tabs-center {
   justify-content: center;
@@ -5354,7 +5356,7 @@ agrega el modificador .tabs-vertical sobre el mismo contenedor.
 .tabs-container.tabs-vertical .tabs {
   flex-direction: column;
   border-bottom: none;
-  border-right: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border-right: 1px solid var(--color-border-subtle);
   gap: 2px;
   min-width: 180px;
   flex-shrink: 0;
@@ -5811,7 +5813,7 @@ que exista un <select> real detrás. */
   padding: 0.625rem 0.875rem;
   background-color: var(--color-surface);
   background-clip: padding-box;
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   font-size: var(--fs-sm);
   line-height: 1.5;
@@ -5829,7 +5831,7 @@ que exista un <select> real detrás. */
   color: var(--color-text-muted);
 }
 .input:disabled, .select:disabled, .textarea:disabled {
-  background-color: var(--color-border-strong);
+  background-color: var(--color-border);
 }
 .input.is-invalid, .select.is-invalid, .textarea.is-invalid {
   border-color: var(--red-color);
@@ -5876,7 +5878,7 @@ input[type=radio] {
 }
 
 fieldset {
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid var(--color-border);
   padding: 10px;
   border-radius: var(--radius-sm);
   margin-bottom: 1rem;
@@ -5905,7 +5907,7 @@ input[type=range] {
   appearance: none;
   width: 90%;
   height: 10px;
-  background: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  background: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
   border-radius: var(--radius-xs);
   outline: none;
   transition: background 0.3s ease;
@@ -5913,7 +5915,7 @@ input[type=range] {
 
 /* Cambio de color al pasar el mouse */
 input[type=range]:hover {
-  background: var(--color-border-strong);
+  background: var(--color-border);
 }
 
 /* Pulgar (thumb) del slider */
@@ -6134,7 +6136,7 @@ input::-ms-reveal {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-border-strong);
+  background-color: var(--color-border);
   transition: 0.4s;
   border-radius: var(--radius-full);
 }
@@ -6199,7 +6201,7 @@ input::-ms-reveal {
   width: 100%;
   padding: 10px;
   background-color: var(--color-canvas);
-  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-xs);
   cursor: pointer;
   font-size: var(--fs-sm);
@@ -6237,7 +6239,7 @@ input::-ms-reveal {
   width: 100%;
   height: 38px;
   padding: 0.375rem 0.75rem;
-  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border: 1px solid var(--color-border-subtle);
   transition: border-color 0.15s ease-in-out;
   border-radius: 0;
   box-sizing: border-box;
@@ -6340,7 +6342,7 @@ input::-ms-reveal {
   display: block;
 }
 .navbar-link .navbar-link:hover {
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
 }
 .navbar-link.active {
   color: var(--blue-color);
@@ -6358,7 +6360,7 @@ input::-ms-reveal {
 
 /* Only for mobile */
 .dropdown.active .dropdown-toggle {
-  background-color: var(--color-border-strong);
+  background-color: var(--color-border);
 }
 .dropdown.active .dropdown-menu {
   display: block;
@@ -6374,7 +6376,7 @@ input::-ms-reveal {
 }
 
 .dropdown:hover .dropdown-toggle {
-  background-color: var(--color-border-strong);
+  background-color: var(--color-border);
 }
 
 /*Si se utiliza imagen de usuario*/
@@ -6390,7 +6392,7 @@ input::-ms-reveal {
   display: none;
   position: static;
   width: 100%;
-  background-color: var(--color-border-strong);
+  background-color: var(--color-border);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -6406,7 +6408,7 @@ input::-ms-reveal {
   font-size: var(--fs-sm);
 }
 .dropdown-menu a:hover {
-  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
 }
 
 /* =====================
@@ -6477,13 +6479,13 @@ input::-ms-reveal {
     top: 100%;
     left: 0;
     min-width: 200px;
-    background-color: var(--color-border-strong);
+    background-color: var(--color-border);
   }
   .dropdown-menu a {
     color: var(--color-surface);
   }
   .dropdown-menu a:hover {
-    background-color: var(--color-border-strong);
+    background-color: var(--color-border);
   }
 }
 /* # Desktop
@@ -6509,7 +6511,7 @@ ul.social-links {
   text-align: center;
   color: red;
   background-color: var(--color-surface);
-  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border: 1px solid var(--color-border-subtle);
 }
 .social-links a i {
   color: var(--blue-color);
@@ -6535,7 +6537,7 @@ ul.social-links {
 }
 
 .bg-darker .social-links a i {
-  color: var(--color-border-strong);
+  color: var(--color-border);
 }
 
 /* =====================
@@ -6554,7 +6556,7 @@ ul.secondary_menu::-webkit-scrollbar {
 }
 ul.secondary_menu { /*Background color*/ }
 ul.secondary_menu::-webkit-scrollbar-thumb {
-  background: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  background: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
 }
 ul.secondary_menu { /*Bar color*/ }
 ul.secondary_menu li {
@@ -6786,7 +6788,7 @@ un marco simple propio. */
   width: 100%;
   max-width: 24rem;
   background-color: var(--color-surface);
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   padding: 2rem;
@@ -6819,7 +6821,7 @@ es un enlace secundario/de cierre, no una acción. */
   content: "";
   flex: 1;
   height: 1px;
-  background: var(--color-border-strong);
+  background: var(--color-border);
 }
 
 /* ==============================================
@@ -7231,7 +7233,7 @@ Colour theme
   margin: 0 20px;
   padding: 8px 14px;
   background-color: var(--color-canvas);
-  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-sm);
 }
 .search-field i {
