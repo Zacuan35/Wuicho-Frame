@@ -47,28 +47,28 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   .card-header, .card-footer { border-color: var(--brand-primary); }
 }
 .card-success {
-  background-color:lighten($success-color, 10%);
+  background-color:lighten($green-color, 10%);
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
-  border-color:$success-color;
-  .card-header, .card-footer { border-color: $success-color; }
+  border-color:$green-color;
+  .card-header, .card-footer { border-color: $green-color; }
 }
 .card-danger {
-  background-color:lighten($danger-color, 10%);
+  background-color:lighten($red-color, 10%);
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
-  border-color:$danger-color;
-  .card-header, .card-footer { border-color: $danger-color; }
+  border-color:$red-color;
+  .card-header, .card-footer { border-color: $red-color; }
 }
 .card-warning {
-  background-color:lighten($warning-color, 10%);
+  background-color:lighten($orange-color, 10%);
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
-  border-color:$warning-color;
-  .card-header, .card-footer { border-color: $warning-color; }
+  border-color:$orange-color;
+  .card-header, .card-footer { border-color: $orange-color; }
 }
 .card-info {
   background-color:color-mix(in srgb, var(--brand-primary) 90%, $white-color);
@@ -87,13 +87,13 @@ a.card {
     &:hover{background-color: var(--brand-primary);}
   }
   &.card-success {
-    &:hover{background-color: lighten($success-color, 10%);}
+    &:hover{background-color: lighten($green-color, 10%);}
   }
   &.card-danger {
-    &:hover{background-color: lighten($danger-color, 10%);}
+    &:hover{background-color: lighten($red-color, 10%);}
   }
   &.card-warning {
-    &:hover{background-color: lighten($warning-color, 10%);}
+    &:hover{background-color: lighten($orange-color, 10%);}
   }
   &.card-info {
     &:hover{background-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);}

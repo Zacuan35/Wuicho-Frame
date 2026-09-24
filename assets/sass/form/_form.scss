@@ -86,9 +86,9 @@ que exista un <select> real detrás. */
     //opacity: 1;
   }
   &.is-invalid {
-    border-color: $danger-color;
+    border-color: $red-color;
     &:focus {
-      box-shadow: 0 0 0 3px color-mix(in srgb, $danger-color 20%, transparent);
+      box-shadow: 0 0 0 3px color-mix(in srgb, $red-color 20%, transparent);
     }
   }
 }

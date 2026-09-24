@@ -96,39 +96,39 @@
 /* # Btn-success
 ----------------------------------------------- */
 .btn-success {
-  background-color: $success-color;
-  border-color: $success-color;
+  background-color: $green-color;
+  border-color: $green-color;
   color: $white-color;
 
   &:hover {
-    background-color: color-mix(in srgb, $success-color 88%, black);
-    border-color: color-mix(in srgb, $success-color 88%, black);
+    background-color: color-mix(in srgb, $green-color 88%, black);
+    border-color: color-mix(in srgb, $green-color 88%, black);
   }
 }
 
 /* # Btn-warning
 ----------------------------------------------- */
 .btn-warning {
-  background-color: $warning-color;
-  border-color: $warning-color;
+  background-color: $orange-color;
+  border-color: $orange-color;
   color: $white-color;
 
   &:hover {
-    background-color: color-mix(in srgb, $warning-color 88%, black);
-    border-color: color-mix(in srgb, $warning-color 88%, black);
+    background-color: color-mix(in srgb, $orange-color 88%, black);
+    border-color: color-mix(in srgb, $orange-color 88%, black);
   }
 }
 
 /* # Btn-danger
 ----------------------------------------------- */
 .btn-danger {
-  background-color: $danger-color;
-  border-color: $danger-color;
+  background-color: $red-color;
+  border-color: $red-color;
   color: $white-color;
 
   &:hover {
-    background-color: color-mix(in srgb, $danger-color 88%, black);
-    border-color: color-mix(in srgb, $danger-color 88%, black);
+    background-color: color-mix(in srgb, $red-color 88%, black);
+    border-color: color-mix(in srgb, $red-color 88%, black);
   }
 }
 
