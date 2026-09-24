@@ -75,6 +75,10 @@ $red-color:#F43F5E;
 
   /* --- Colores de marcas (fijos en ambos temas) --- */
   --brand-primary: #5B5FEF;
+
+  /* --- Paleta para gráficas y HTML en línea (fijos en ambos temas).
+  Son CSS y no Sass porque se usan desde style="" y SVG (fill/stroke)
+  en el HTML, donde las variables Sass no existen --- */
   --brand-teal: #14B8A6;
   --brand-amber: #F59E0B;
   --brand-rose: #F43F5E;
@@ -83,11 +87,11 @@ $red-color:#F43F5E;
   /* --- Modo claro (default) --- */
   --color-canvas: #F4F5FA;
   --color-surface: #FFFFFF;
+  --color-border-strong: #D3D6E8;
 
   --color-text-primary: #1A1D3A;
   --color-text-secondary: #484C70; 
   --color-text-muted: #636997; 
-  --color-border-strong: #D3D6E8;
 
   --color-success-bg: #E9FBF0;
   --color-success-text: #12875A;
