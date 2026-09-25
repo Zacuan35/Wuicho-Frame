@@ -63,26 +63,26 @@
 # BADGE VARIANTS
 ===================== */
 .badge-success {
-    background-color: var(--color-success-bg);
-    color: var(--color-success-text);
+    background-color: var(--color-success-subtle);
+    color: var(--color-success-strong);
     border: none;
 }
 
 .badge-warning {
-    background-color: var(--color-warning-bg);
-    color: var(--color-warning-text);
+    background-color: var(--color-warning-subtle);
+    color: var(--color-warning-strong);
     border: none;
 }
 
 .badge-danger {
-    background-color: var(--color-danger-bg);
-    color: var(--color-danger-text);
+    background-color: var(--color-danger-subtle);
+    color: var(--color-danger-strong);
     border: none;
 }
 
 .badge-info {
-    background-color: var(--color-info-bg);
-    color: var(--color-info-text);
+    background-color: var(--color-info-subtle);
+    color: var(--color-info-strong);
     border: none;
 }
 

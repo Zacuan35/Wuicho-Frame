@@ -13,7 +13,7 @@
 
     #imagenDestacada {
       border-radius: var(--radius-sm);
-      border: 3px solid var(--color-success-text);
+      border: 3px solid var(--color-success-strong);
       margin-bottom: 1rem;
     }
 
@@ -47,7 +47,7 @@
           /* Cambio cuando la miniatura está seleccionada */
           &.selected .thumbnail-icon i {
             content: '\f00c'; /* Ícono de check */
-            color: var(--color-success-text); 
+            color: var(--color-success-strong); 
           }
 
           img {
@@ -79,7 +79,7 @@
 /* # Thumbnail seleccionado
 ----------------------------------------------- */
 .thumbnail.selected img {
-  border: 3px solid var(--color-success-text); 
+  border: 3px solid var(--color-success-strong); 
   opacity: 1 !important; 
 }
 

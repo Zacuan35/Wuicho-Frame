@@ -134,37 +134,37 @@
 (arriba), para que el color de estado siempre gane sobre el rayado de
 filas pares en vez de perderlo por casualidad según la posición de la fila. */
 .tg-body .tg-row.success {
-  background-color: var(--color-success-bg);
-  border-color: var(--color-success-text);
+  background-color: var(--color-success-subtle);
+  border-color: var(--color-success-strong);
 }
 
 .tg-body .tg-row.warning {
-  background-color: var(--color-warning-bg);
-  border-color: var(--color-warning-text);
+  background-color: var(--color-warning-subtle);
+  border-color: var(--color-warning-strong);
 }
 
 .tg-body .tg-row.danger {
-  background-color: var(--color-danger-bg);
-  border-color: var(--color-danger-text);
+  background-color: var(--color-danger-subtle);
+  border-color: var(--color-danger-strong);
 }
 
 .tg-body .tg-row.info {
-  background-color: var(--color-info-bg);
-  border-color: var(--color-info-text);
+  background-color: var(--color-info-subtle);
+  border-color: var(--color-info-strong);
 }
 
 .tg-row.success .tg-cell {
-  color: var(--color-success-text);
+  color: var(--color-success-strong);
 }
 
 .tg-row.warning .tg-cell {
-  color: var(--color-warning-text);
+  color: var(--color-warning-strong);
 }
 
 .tg-row.danger .tg-cell {
-  color: var(--color-danger-text);
+  color: var(--color-danger-strong);
 }
 
 .tg-row.info .tg-cell {
-  color: var(--color-info-text);
+  color: var(--color-info-strong);
 }

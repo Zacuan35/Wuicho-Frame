@@ -80,8 +80,7 @@ $chart-lime: #84CC16;
   --color-orange: #F59E0B;
   --color-red: #F43F5E;
 
-  /* --- Tonos derivados de la marca (se calculan de los colores fijos:
-  al cambiar un --color-<nombre> se actualizan solos) ---
+  /* --- Tonos derivados de los colores fijos.
   -light: versión aclarada, fondo de cards de estado, sliders, tooltips.
   -hover: estado hover de botones sólidos (oscurece en claro, aclara en oscuro). */
   --color-blue-light: color-mix(in srgb, var(--color-blue) 90%, var(--color-white));
@@ -104,20 +103,28 @@ $chart-lime: #84CC16;
   --color-text-secondary: #484C70; 
   --color-text-muted: #636997; 
 
-  --color-success-bg: #E9FBF0;
-  --color-success-text: #12875A;
-  --color-danger-bg: #FEEDEF;
-  --color-danger-text: #C4293B;
-  --color-warning-bg: #FEF6E7;
-  --color-warning-text: #9A6208;
-  --color-info-bg: #ECEFFF;
-  --color-info-text: #4548C9;
+  /* Estados: se nombran por intensidad, no por propiedad CSS.
+  -subtle: tono suave (fondos). -strong: tono intenso (texto, bordes, íconos). */
+  --color-success-subtle: #E9FBF0;
+  --color-success-strong: #12875A;
+  --color-danger-subtle: #FEEDEF;
+  --color-danger-strong: #C4293B;
+  --color-warning-subtle: #FEF6E7;
+  --color-warning-strong: #9A6208;
+  --color-info-subtle: #ECEFFF;
+  --color-info-strong: #4548C9;
 
   color-scheme: light;
 }
 
 /* Dark theme */
 body.dark-mode {
+  /* Sobre fondos oscuros el hover aclara en lugar de oscurecer */
+  --color-blue-hover: color-mix(in srgb, var(--color-blue) 85%, var(--color-white));
+  --color-green-hover: color-mix(in srgb, var(--color-green) 85%, var(--color-white));
+  --color-orange-hover: color-mix(in srgb, var(--color-orange) 85%, var(--color-white));
+  --color-red-hover: color-mix(in srgb, var(--color-red) 85%, var(--color-white));
+
   --color-canvas: #0C0E1D;
   --color-surface: #12142A;
 
@@ -127,20 +134,14 @@ body.dark-mode {
   --color-border: #2E3260;
   --color-border-subtle: rgba(46, 50, 96, 0.55);
 
-  --color-success-bg: rgba(34, 197, 94, 0.12);
-  --color-success-text: #4ADE80;
-  --color-danger-bg: rgba(244, 63, 94, 0.12);
-  --color-danger-text: #FB7185;
-  --color-warning-bg: rgba(245, 158, 11, 0.12);
-  --color-warning-text: #FBBF24;
-  --color-info-bg: rgba(91, 95, 239, 0.16);
-  --color-info-text: #A5A8F7;
-
-  /* Sobre fondos oscuros el hover aclara en lugar de oscurecer */
-  --color-blue-hover: color-mix(in srgb, var(--color-blue) 85%, var(--color-white));
-  --color-green-hover: color-mix(in srgb, var(--color-green) 85%, var(--color-white));
-  --color-orange-hover: color-mix(in srgb, var(--color-orange) 85%, var(--color-white));
-  --color-red-hover: color-mix(in srgb, var(--color-red) 85%, var(--color-white));
+  --color-success-subtle: rgba(34, 197, 94, 0.12);
+  --color-success-strong: #4ADE80;
+  --color-danger-subtle: rgba(244, 63, 94, 0.12);
+  --color-danger-strong: #FB7185;
+  --color-warning-subtle: rgba(245, 158, 11, 0.12);
+  --color-warning-strong: #FBBF24;
+  --color-info-subtle: rgba(91, 95, 239, 0.16);
+  --color-info-strong: #A5A8F7;
 
   color-scheme: dark;
 }
@@ -208,24 +209,24 @@ b {
 /* # Text-color
 ----------------------------------------------- */
 .text-inverted { color: var(--color-surface); }
-.text-success { color: var(--color-success-text); }
-.text-danger { color: var(--color-danger-text); }
-.text-warning { color: var(--color-warning-text); }
-.text-info { color: var(--color-info-text); }
+.text-success { color: var(--color-success-strong); }
+.text-danger { color: var(--color-danger-strong); }
+.text-warning { color: var(--color-warning-strong); }
+.text-info { color: var(--color-info-strong); }
 
 /* # StatusTitle
 ----------------------------------------------- */
 .StatusTitle-Success{
-  i,h1,h2,h3,h4,h5{color:var(--color-success-text);}
+  i,h1,h2,h3,h4,h5{color:var(--color-success-strong);}
 }
 .StatusTitle-Danger{
-  i,h1,h2,h3,h4,h5{color:var(--color-danger-text);}
+  i,h1,h2,h3,h4,h5{color:var(--color-danger-strong);}
 }
 .StatusTitle-Warning{
-  i,h1,h2,h3,h4,h5{color:var(--color-warning-text);}
+  i,h1,h2,h3,h4,h5{color:var(--color-warning-strong);}
 }
 .StatusTitle-Info{
-  i,h1,h2,h3,h4,h5{color:var(--color-info-text);}
+  i,h1,h2,h3,h4,h5{color:var(--color-info-strong);}
 }
 
 /* # Background colors
@@ -271,4 +272,4 @@ b {
 .label-primary { background-color: var(--color-blue); }
 .label-danger { background-color: var(--color-red); }
 .label-success { background-color: var(--color-green); }
-.label-info { background-color: var(--color-info-text); }
+.label-info { background-color: var(--color-info-strong); }

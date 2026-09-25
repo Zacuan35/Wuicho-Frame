@@ -29,30 +29,30 @@
     # STATES 
     ========= */
     &.success{
-    background-color: var(--color-success-bg);
-    border-color: var(--color-success-text);
-    h4,p{color:var(--color-success-text);}
+    background-color: var(--color-success-subtle);
+    border-color: var(--color-success-strong);
+    h4,p{color:var(--color-success-strong);}
     p{font-weight:400;}
     }
 
     &.warning{
-    background-color: var(--color-warning-bg);
-    border-color: var(--color-warning-text);
-    h4,p{color:var(--color-warning-text);}
+    background-color: var(--color-warning-subtle);
+    border-color: var(--color-warning-strong);
+    h4,p{color:var(--color-warning-strong);}
     p{font-weight:400;}
     }
 
     &.danger{
-    background-color: var(--color-danger-bg);
-    border-color: var(--color-danger-text);
-    h4,p{color:var(--color-danger-text);}
+    background-color: var(--color-danger-subtle);
+    border-color: var(--color-danger-strong);
+    h4,p{color:var(--color-danger-strong);}
     p{font-weight:400;}
     }
 
     &.info{
-    background-color: var(--color-info-bg);
-    border-color: var(--color-info-text);
-    h4,p{color:var(--color-info-text);}
+    background-color: var(--color-info-subtle);
+    border-color: var(--color-info-strong);
+    h4,p{color:var(--color-info-strong);}
     p{font-weight:400;}
     }
 
