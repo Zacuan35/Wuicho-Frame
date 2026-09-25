@@ -2,7 +2,7 @@
 # STANDAR NAVBAR
 ===================== */
 .navbar {
-  background-color:var(--bg-surface);
+  background-color:var(--color-bg-surface);
   padding: 10px;
   position: relative;
 }
@@ -45,7 +45,7 @@
 /* # Navbar menu
 ----------------------------------------------- */
 .navbar-menu {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   display: none;
   flex-direction: column;
   position: absolute;
@@ -71,7 +71,7 @@
   text-decoration: none;
   padding: 20px 15px;
   display: block;
-  .navbar-link:hover {background-color: $fill-subtle;}
+  .navbar-link:hover {background-color: var(--color-bg-muted);}
 
   &.active {
     color: var(--color-blue); 
@@ -93,7 +93,7 @@
 
 /*Enlace principal del dropdown*/
 .dropdown-toggle {
-  color: var(--bg-canvas);
+  color: var(--color-bg-canvas);
   text-decoration: none;
   padding: 20px 15px;
   display: block;
@@ -124,7 +124,7 @@
     text-decoration: none;
     color: #eee;
     font-size:var(--fs-sm);
-    &:hover {background-color: $fill-subtle;}
+    &:hover {background-color: var(--color-bg-muted);}
   }
 }
 
@@ -196,7 +196,7 @@
     min-width: 200px;
     background-color: var(--color-border);
     a {
-      color: var(--bg-surface);
+      color: var(--color-text-inverted);
       &:hover {background-color: var(--color-border);}
     }
   }

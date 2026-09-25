@@ -81,14 +81,18 @@ Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
   --color-red-hover: color-mix(in srgb, var(--color-red) 88%, var(--color-dark));
   /* --- Modo claro (default) --- */
   color-scheme: light;
-  --bg-canvas: #F4F5FA;
-  --bg-surface: #FFFFFF;
-  --bg-tint: #F1F1F3;
+  /* Fondos: canvas (página) · surface (tarjetas, paneles, modales)
+  · subtle (hover suave, previews) · muted (hover marcado, rellenos) */
+  --color-bg-canvas: #F4F5FA;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-subtle: #F1F1F3;
+  --color-bg-muted: #EBEDF5;
   --color-border: #D3D6E8;
   --color-border-subtle: rgba(211, 214, 232, 0.55);
   --color-text-primary: #1A1D3A;
   --color-text-secondary: #484C70;
   --color-text-muted: #636997;
+  --color-text-inverted: #FFFFFF;
   /* Estados: se nombran por intensidad, no por propiedad CSS.
   -subtle: tono suave (fondos). -strong: tono intenso (texto, bordes, íconos). */
   --color-success-subtle: #E9FBF0;
@@ -109,14 +113,16 @@ body.dark-mode {
   --color-green-hover: color-mix(in srgb, var(--color-green) 85%, var(--color-white));
   --color-orange-hover: color-mix(in srgb, var(--color-orange) 85%, var(--color-white));
   --color-red-hover: color-mix(in srgb, var(--color-red) 85%, var(--color-white));
-  --bg-canvas: #0C0E1D;
-  --bg-surface: #12142A;
-  --bg-tint: #1F2137;
+  --color-bg-canvas: #0C0E1D;
+  --color-bg-surface: #12142A;
+  --color-bg-subtle: #1F2137;
+  --color-bg-muted: #1F2242;
   --color-border: #2E3260;
   --color-border-subtle: rgba(46, 50, 96, 0.55);
   --color-text-primary: #EEF0FB;
   --color-text-secondary: #B3B7D0;
   --color-text-muted: #878BB0;
+  --color-text-inverted: #12142A;
   --color-success-subtle: rgba(34, 197, 94, 0.12);
   --color-success-strong: #4ADE80;
   --color-danger-subtle: rgba(244, 63, 94, 0.12);
@@ -127,9 +133,6 @@ body.dark-mode {
   --color-info-strong: #A5A8F7;
 }
 
-/* Tono derivado (no es un color nuevo: se calcula mezclando
---color-border con --bg-surface, que ya existen, en
-vez de declarar más --color-* fijos) */
 /* =================
 # COLOR DECLARATION
 ================= */
@@ -138,7 +141,7 @@ vez de declarar más --color-* fijos) */
 /*Background color*/
 body::-webkit-scrollbar {
   width: 10px;
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
 }
 
 /*Bar color*/
@@ -147,7 +150,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
   color: var(--color-text-primary);
 }
 
@@ -185,7 +188,7 @@ b {
 /* # Text-color
 ----------------------------------------------- */
 .text-inverted {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 
 .text-success {
@@ -225,7 +228,7 @@ b {
 /* # Background colors
 ----------------------------------------------- */
 .bg-default {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
 }
 .bg-default p, .bg-default ul {
   color: var(--color-text-primary);
@@ -235,7 +238,7 @@ b {
 }
 
 .bg-light {
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
 }
 .bg-light a, .bg-light p, .bg-light ul {
   color: var(--color-text-primary);
@@ -245,10 +248,10 @@ b {
 }
 
 .bg-dark {
-  background-color: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
+  background-color: var(--color-bg-muted);
 }
 .bg-dark a, .bg-dark p, .bg-dark ul {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .bg-dark b {
   color: var(--color-blue);
@@ -258,10 +261,10 @@ b {
   background-color: var(--color-text-primary);
 }
 .bg-darker h1, .bg-darker h2, .bg-darker h3 {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .bg-darker a, .bg-darker p, .bg-darker ul {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .bg-darker b {
   color: var(--color-blue);
@@ -1421,7 +1424,7 @@ en vez de meter los ejemplos dentro de .card.
   padding: 24px;
   border: 1px dashed var(--color-border);
   border-radius: var(--radius-md);
-  background: var(--bg-tint);
+  background: var(--color-bg-subtle);
 }
 
 /* =====================
@@ -1456,7 +1459,7 @@ en vez de meter los ejemplos dentro de .card.
 .overlay {
   position: relative;
   z-index: 1;
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
   background-color: inherit;
 }
 .overlay::after {
@@ -1557,7 +1560,7 @@ main {
 
 .grid-item {
   padding: 10px;
-  background-color: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
+  background-color: var(--color-bg-muted);
   border: 1px solid var(--color-border);
 }
 
@@ -3443,7 +3446,7 @@ Tabletas horizontales */
   margin-bottom: 10px;
 }
 .acordeon .acordeon-item .acordeon-header {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   color: var(--color-text-primary);
   padding: 15px;
   text-align: left;
@@ -3459,7 +3462,7 @@ Tabletas horizontales */
   transition: background-color 0.3s;
 }
 .acordeon .acordeon-item .acordeon-header:hover {
-  background-color: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
+  background-color: var(--color-bg-muted);
 }
 .acordeon .acordeon-item .acordeon-header {
   /* Estilos para el ícono */
@@ -3474,7 +3477,7 @@ Tabletas horizontales */
   transform: rotate(180deg);
 }
 .acordeon .acordeon-item .acordeon-body {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   padding: 15px;
   display: none;
   border-radius: 0 0 var(--radius-xs) var(--radius-xs);
@@ -3551,12 +3554,12 @@ Tabletas horizontales */
 /* # Btn-secondary
 ----------------------------------------------- */
 .btn-secondary {
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
   border-color: var(--color-border-subtle);
   color: var(--color-text-primary);
 }
 .btn-secondary:hover {
-  background-color: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
+  background-color: var(--color-bg-muted);
 }
 
 /* # Btn-outline
@@ -3567,7 +3570,7 @@ Tabletas horizontales */
   color: var(--color-blue);
 }
 .btn-outline:hover {
-  background-color: color-mix(in srgb, var(--color-blue) 12%, var(--bg-surface));
+  background-color: color-mix(in srgb, var(--color-blue) 12%, var(--color-bg-surface));
 }
 
 /* # Btn-ghost
@@ -3577,7 +3580,7 @@ Tabletas horizontales */
   color: var(--color-text-primary);
 }
 .btn-ghost:hover {
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
 }
 
 /* # Btn-success
@@ -3658,7 +3661,7 @@ Tabletas horizontales */
 /* # Botón izquierdo
 ----------------------------------------------- */
 .button-left {
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
   color: var(--color-blue-light);
   border: 1px solid var(--color-blue-light);
   border-radius: var(--radius-xs) 0 0 var(--radius-xs);
@@ -3718,7 +3721,7 @@ Tabletas horizontales */
 # CARD
 ===================== */
 .card {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   background-clip: border-box;
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border-subtle);
@@ -3761,13 +3764,13 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   background-color: var(--color-blue-light);
 }
 .card-highlight h1, .card-highlight h2, .card-highlight h3, .card-highlight h4, .card-highlight h5, .card-highlight h6 {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .card-highlight p {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .card-highlight i {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .card-highlight {
   border-color: var(--color-blue);
@@ -3780,13 +3783,13 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   background-color: var(--color-green-light);
 }
 .card-success h1, .card-success h2, .card-success h3, .card-success h4, .card-success h5, .card-success h6 {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .card-success p {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .card-success i {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .card-success {
   border-color: var(--color-green);
@@ -3799,13 +3802,13 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   background-color: var(--color-red-light);
 }
 .card-danger h1, .card-danger h2, .card-danger h3, .card-danger h4, .card-danger h5, .card-danger h6 {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .card-danger p {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .card-danger i {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .card-danger {
   border-color: var(--color-red);
@@ -3818,13 +3821,13 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   background-color: var(--color-orange-light);
 }
 .card-warning h1, .card-warning h2, .card-warning h3, .card-warning h4, .card-warning h5, .card-warning h6 {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .card-warning p {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .card-warning i {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .card-warning {
   border-color: var(--color-orange);
@@ -3837,13 +3840,13 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   background-color: var(--color-blue-light);
 }
 .card-info h1, .card-info h2, .card-info h3, .card-info h4, .card-info h5, .card-info h6 {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .card-info p {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .card-info i {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .card-info {
   border-color: var(--color-blue);
@@ -3853,7 +3856,7 @@ ajustan el borde de esos hijos para que combinen con el marco. */
 }
 
 a.card:hover {
-  background-color: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
+  background-color: var(--color-bg-muted);
 }
 a.card.card-highlight:hover {
   background-color: var(--color-blue);
@@ -3887,7 +3890,7 @@ a.card.card-info:hover {
   align-items: center;
   gap: 1rem;
   padding: 0.75rem 1rem;
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   background-clip: border-box;
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-sm);
@@ -3896,10 +3899,10 @@ a.card.card-info:hover {
   margin: 0;
 }
 .panel-list .panel-item:nth-child(even) {
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
 }
 .panel-list .panel-item:hover {
-  background-color: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
+  background-color: var(--color-bg-muted);
 }
 .panel-list .panel-item {
   /* =========
@@ -3998,7 +4001,7 @@ Tabletas horizontales */
   max-width: 100%;
   padding: 3px 10px;
   border-radius: var(--radius-full);
-  background-color: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
+  background-color: var(--color-bg-muted);
   border: 1px solid var(--color-border);
   color: var(--color-text-primary);
   font-size: 11px;
@@ -4084,7 +4087,7 @@ Tabletas horizontales */
 # GALLERY
 ===================== */
 .gallery-section .gallery-body {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   padding: 1rem 0.5rem;
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
@@ -4108,7 +4111,7 @@ Tabletas horizontales */
   position: absolute;
   top: 6px;
   right: 6px;
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   border-radius: var(--radius-full);
   padding: 3px;
   display: flex;
@@ -4119,7 +4122,7 @@ Tabletas horizontales */
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 .gallery-section .gallery-body .wrapper-variants .wrapper-thumbnails .thumbnail .thumbnail-icon i {
-  color: var(--bg-canvas);
+  color: var(--color-bg-canvas);
   font-size: var(--fs-sm);
 }
 .gallery-section .gallery-body .wrapper-variants .wrapper-thumbnails .thumbnail {
@@ -4138,7 +4141,7 @@ Tabletas horizontales */
   opacity: 1;
 }
 .gallery-section .gallery-footer {
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
   padding: 1rem 0.5rem;
   border: 1px solid var(--color-border-subtle);
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
@@ -4264,7 +4267,7 @@ Tabletas verticales o celulares horizontales*/
   width: 100%;
   height: 18px;
   position: relative;
-  background: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
+  background: var(--color-bg-muted);
   border-radius: var(--radius-full);
   overflow: hidden;
 }
@@ -4285,7 +4288,7 @@ Tabletas verticales o celulares horizontales*/
 .dac-progress__label {
   font-size: 12px;
   font-weight: 600;
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
   white-space: nowrap;
   pointer-events: none;
   padding: 0 8px;
@@ -4368,12 +4371,12 @@ Tabletas verticales o celulares horizontales*/
 }
 .banner_alert p {
   margin: 0;
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .banner_alert .btn-close {
   box-sizing: content-box;
   background-color: inherit;
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
   padding: 0.5rem;
   border: 0;
   opacity: 0.5;
@@ -4400,7 +4403,7 @@ Tabletas verticales o celulares horizontales*/
   max-width: 320px;
   padding: 0.75rem 1rem;
   border-radius: var(--radius-sm);
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -4432,7 +4435,7 @@ Tabletas verticales o celulares horizontales*/
 .toast button {
   background: none;
   border: none;
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
   font-size: 1rem;
   cursor: pointer;
 }
@@ -4464,7 +4467,7 @@ Tabletas verticales o celulares horizontales*/
   align-items: center;
 }
 .modal .modal-content {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   padding: 0;
   width: 90%;
   max-width: 600px;
@@ -4479,7 +4482,7 @@ Tabletas verticales o celulares horizontales*/
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--bg-canvas);
+  border-bottom: 1px solid var(--color-bg-canvas);
 }
 .modal .modal-content .modal-header i {
   color: var(--color-blue);
@@ -4502,7 +4505,7 @@ Tabletas verticales o celulares horizontales*/
   overflow-y: auto;
 }
 .modal .modal-content .modal-footer {
-  border-top: 1px solid var(--bg-canvas);
+  border-top: 1px solid var(--color-bg-canvas);
   display: flex;
   justify-content: space-between;
 }
@@ -4830,7 +4833,7 @@ se usa fill/stroke="currentColor", así no hay colores en línea. */
   padding: 1rem;
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-sm);
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   transition: all 0.2s ease;
   min-width: 0; /* para evitar overflow */
   width: 100%;
@@ -4840,7 +4843,7 @@ se usa fill/stroke="currentColor", así no hay colores en línea. */
 # HEADER
 ===================== */
 .tg-head .tg-row {
-  background-color: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
+  background-color: var(--color-bg-muted);
   color: var(--color-blue);
   font-weight: bold;
 }
@@ -4849,11 +4852,11 @@ se usa fill/stroke="currentColor", así no hay colores en línea. */
 # BODY STATES
 ===================== */
 .tg-body .tg-row:nth-child(even) {
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
 }
 
 .tg-body .tg-row:hover {
-  background-color: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
+  background-color: var(--color-bg-muted);
 }
 
 /* =====================
@@ -5016,7 +5019,7 @@ table {
 }
 
 thead th {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   color: var(--color-text-muted);
   font-weight: 700;
   text-transform: uppercase;
@@ -5024,10 +5027,10 @@ thead th {
 }
 
 tbody tr {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
 }
 tbody tr:hover {
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
 }
 tbody tr.clickable {
   cursor: pointer;
@@ -5052,11 +5055,11 @@ td, th {
 /* # Zebra (opcional, activar con table.zebra)
 ----------------------------------------------- */
 table.zebra tbody tr:nth-child(even) {
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
 }
 
 table.zebra tbody tr:hover {
-  background-color: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
+  background-color: var(--color-bg-muted);
 }
 
 /* =====================
@@ -5110,7 +5113,7 @@ table.zebra tbody tr:hover {
   outline: none;
   transition: all 0.2s ease;
   font-size: var(--fs-sm);
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
 }
 
 .dataTables_length select:focus,
@@ -5140,7 +5143,7 @@ table.zebra tbody tr:hover {
   padding: 6px 12px;
   margin-left: 3px;
   border-radius: var(--radius-xs);
-  background-color: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
+  background-color: var(--color-bg-muted);
   color: var(--color-blue-light);
   cursor: pointer;
   text-decoration: none;
@@ -5149,12 +5152,12 @@ table.zebra tbody tr:hover {
 
 .dataTables_paginate .paginate_button:hover {
   background-color: var(--color-blue-light);
-  color: var(--bg-canvas);
+  color: var(--color-bg-canvas);
 }
 
 .dataTables_paginate .paginate_button.current {
   background-color: var(--color-blue-light);
-  color: var(--bg-canvas);
+  color: var(--color-bg-canvas);
 }
 
 /* =========================
@@ -5171,11 +5174,11 @@ table.dataTable thead th.sorting_desc:after {
 }
 
 table.dataTable thead th.sorting_asc:after {
-  border-bottom-color: var(--bg-surface);
+  border-bottom-color: var(--color-bg-surface);
 }
 
 table.dataTable thead th.sorting_desc:after {
-  border-top-color: var(--bg-surface);
+  border-top-color: var(--color-bg-surface);
 }
 
 /* =========================
@@ -5283,7 +5286,7 @@ table.dataTable thead th.sorting_desc:after {
   justify-content: center;
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border-subtle);
-  background: var(--bg-surface);
+  background: var(--color-bg-surface);
   color: var(--color-text-secondary);
   font-size: var(--fs-sm);
   font-weight: 600;
@@ -5296,7 +5299,7 @@ table.dataTable thead th.sorting_desc:after {
 
 .page-btn:hover {
   border-color: var(--color-border);
-  background: var(--bg-tint);
+  background: var(--color-bg-subtle);
 }
 
 .page-btn.is-active {
@@ -5428,7 +5431,7 @@ agrega el modificador .tabs-vertical sobre el mismo contenedor.
 }
 .tabs-container.tabs-vertical .tab-button.active {
   border-color: var(--color-blue);
-  background-color: color-mix(in srgb, var(--color-blue) 10%, var(--bg-surface));
+  background-color: color-mix(in srgb, var(--color-blue) 10%, var(--color-bg-surface));
 }
 .tabs-container.tabs-vertical .tab-content {
   padding-top: 0;
@@ -5868,7 +5871,7 @@ que exista un <select> real detrás. */
   width: 100%;
   height: calc(1.5em + 1.125rem + 2px);
   padding: 0.625rem 0.875rem;
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   background-clip: padding-box;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
@@ -5964,7 +5967,7 @@ input[type=range] {
   appearance: none;
   width: 90%;
   height: 10px;
-  background: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
+  background: var(--color-bg-muted);
   border-radius: var(--radius-xs);
   outline: none;
   transition: background 0.3s ease;
@@ -6015,7 +6018,7 @@ output {
   width: 50px;
   height: 30px;
   text-align: center;
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
   border-radius: var(--radius-xs);
   display: inline-block;
   font-size: var(--fs-sm);
@@ -6205,7 +6208,7 @@ input::-ms-reveal {
   border-radius: var(--radius-full);
   left: 2px;
   bottom: 2px;
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   box-shadow: var(--shadow-sm);
   transition: 0.4s;
 }
@@ -6257,7 +6260,7 @@ input::-ms-reveal {
 .file_upload input[type=file] {
   width: 100%;
   padding: 10px;
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-xs);
   cursor: pointer;
@@ -6327,7 +6330,7 @@ input::-ms-reveal {
 # STANDAR NAVBAR
 ===================== */
 .navbar {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   padding: 10px;
   position: relative;
 }
@@ -6368,7 +6371,7 @@ input::-ms-reveal {
 /* # Navbar menu
 ----------------------------------------------- */
 .navbar-menu {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   display: none;
   flex-direction: column;
   position: absolute;
@@ -6399,7 +6402,7 @@ input::-ms-reveal {
   display: block;
 }
 .navbar-link .navbar-link:hover {
-  background-color: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
+  background-color: var(--color-bg-muted);
 }
 .navbar-link.active {
   color: var(--color-blue);
@@ -6425,7 +6428,7 @@ input::-ms-reveal {
 
 /*Enlace principal del dropdown*/
 .dropdown-toggle {
-  color: var(--bg-canvas);
+  color: var(--color-bg-canvas);
   text-decoration: none;
   padding: 20px 15px;
   display: block;
@@ -6465,7 +6468,7 @@ input::-ms-reveal {
   font-size: var(--fs-sm);
 }
 .dropdown-menu a:hover {
-  background-color: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
+  background-color: var(--color-bg-muted);
 }
 
 /* =====================
@@ -6539,7 +6542,7 @@ input::-ms-reveal {
     background-color: var(--color-border);
   }
   .dropdown-menu a {
-    color: var(--bg-surface);
+    color: var(--color-text-inverted);
   }
   .dropdown-menu a:hover {
     background-color: var(--color-border);
@@ -6567,7 +6570,7 @@ ul.social-links {
   font-size: var(--fs-base);
   text-align: center;
   color: red;
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   border: 1px solid var(--color-border-subtle);
 }
 .social-links a i {
@@ -6609,11 +6612,11 @@ ul.secondary_menu {
 }
 ul.secondary_menu::-webkit-scrollbar {
   width: 10px;
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
 }
 ul.secondary_menu { /*Background color*/ }
 ul.secondary_menu::-webkit-scrollbar-thumb {
-  background: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
+  background: var(--color-bg-muted);
 }
 ul.secondary_menu { /*Bar color*/ }
 ul.secondary_menu li {
@@ -6700,7 +6703,7 @@ ul.secondary_menu li.active a {
   padding: 0.75rem 0;
 }
 .topbar p {
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 .topbar .contact {
   gap: 0.25rem;
@@ -6835,7 +6838,7 @@ error 404): centra su contenido en el viewport sobre el fondo canvas. */
   align-items: center;
   min-height: 100vh;
   padding: 2rem;
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
 }
 
 /* Card exclusiva de estas vistas standalone (no reutiliza .card):
@@ -6844,7 +6847,7 @@ un marco simple propio. */
 .login-card {
   width: 100%;
   max-width: 24rem;
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
@@ -7075,14 +7078,14 @@ Colour theme
  Sidebar
  ========== */
 .main-sidebar {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
 }
 
 /* # Sidebar-footer
 ----------------------------------------------- */
 .sidebar-footer {
   background-color: var(--color-text-primary);
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
 }
 
 /* ===========
@@ -7090,7 +7093,7 @@ Colour theme
  ========== */
 .content-wrapper {
   /*background-color: #ecf0f5;*/
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
 }
 
 /* ===========
@@ -7098,7 +7101,7 @@ Colour theme
  ========== */
 /*
 .dashboard-footer {
-   background: var(--bg-surface);
+   background: var(--color-bg-surface);
    color: var(--color-blue);
    padding: 15px;
    border-top: 1px solid #eee;    
@@ -7255,18 +7258,18 @@ Colour theme
 /* # Logo
 ----------------------------------------------- */
 .main-header .logo {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   border-bottom: 0px solid transparent;
 }
 
 .main-header .logo:hover {
-  background: var(--bg-canvas);
+  background: var(--color-bg-canvas);
 }
 
 /* # Sidebar-navbar
 ----------------------------------------------- */
 .main-header .sidebar-navbar {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
 }
 
 /* # Sidebar-toggle
@@ -7276,7 +7279,7 @@ Colour theme
 }
 
 .main-header .sidebar-navbar .sidebar-toggle:hover {
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
 }
 
 /* # Search-field
@@ -7289,7 +7292,7 @@ Colour theme
   max-width: 420px;
   margin: 0 20px;
   padding: 8px 14px;
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-sm);
 }
@@ -7458,7 +7461,7 @@ siempre, lo que hacía ver todo el sidebar más cargado. */
 
 .sidebar-menu > li > a:hover,
 .sidebar-menu > li.active > a {
-  background: var(--bg-canvas);
+  background: var(--color-bg-canvas);
   color: var(--color-blue);
   border-left-color: var(--color-blue);
 }
@@ -7468,7 +7471,7 @@ siempre, lo que hacía ver todo el sidebar más cargado. */
 }
 
 .sidebar-menu > li > .treeview-menu {
-  background: var(--bg-canvas);
+  background: var(--color-bg-canvas);
 }
 
 .treeview-menu > li > a {
@@ -7569,7 +7572,7 @@ llegar a pesar más que él. */
   display: block;
   padding: 10px;
   text-decoration: none;
-  border-bottom: 1px solid var(--bg-canvas);
+  border-bottom: 1px solid var(--color-bg-canvas);
   font-size: var(--fs-xs);
 }
 
@@ -7613,21 +7616,21 @@ llegar a pesar más que él. */
 
 .quicklinks-menu > li > a:hover,
 .quicklinks-menu > li > a:focus {
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
 }
 
 .quicklinks-menu .dropdown-menu li a {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   color: var(--color-text-primary);
 }
 
 .quicklinks-menu .dropdown-menu li a:hover {
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
 }
 
 .quicklinks-menu .dropdown-menu li.dm-header a:hover,
 .quicklinks-menu .dropdown-menu li.dm-footer a:hover {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
 }
 
 /* # Message-links

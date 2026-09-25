@@ -121,14 +121,14 @@ siempre, lo que hacía ver todo el sidebar más cargado. */
 }
 .sidebar-menu > li > a:hover,
 .sidebar-menu > li.active > a {
-  background: var(--bg-canvas);
+  background: var(--color-bg-canvas);
   color: var(--color-blue);
   border-left-color: var(--color-blue);
 
   i{color: var(--color-blue);}
 }
 .sidebar-menu > li > .treeview-menu {
-  background: var(--bg-canvas);
+  background: var(--color-bg-canvas);
 }
 
 .treeview-menu > li > a {

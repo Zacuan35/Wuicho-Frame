@@ -8,7 +8,7 @@
     margin-bottom: 10px;
 
     .acordeon-header {
-      background-color: var(--bg-surface);
+      background-color: var(--color-bg-surface);
       color: var(--color-text-primary);
       padding: 15px;
       text-align: left;
@@ -24,7 +24,7 @@
       transition: background-color 0.3s;
     
       &:hover {
-        background-color: $fill-subtle;
+        background-color: var(--color-bg-muted);
       }
       
       /* Estilos para el ícono */
@@ -40,7 +40,7 @@
     }
 
     .acordeon-body {
-      background-color: var(--bg-surface);
+      background-color: var(--color-bg-surface);
       padding: 15px;
       display: none;
       border-radius: 0 0 var(--radius-xs) var(--radius-xs);

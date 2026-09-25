@@ -8,8 +8,8 @@ ul.secondary_menu {
   white-space: nowrap;
   margin-bottom: 2rem;
 
-  &::-webkit-scrollbar{width: 10px; background-color:var(--bg-surface);}/*Background color*/
-  &::-webkit-scrollbar-thumb{background:$fill-subtle;}/*Bar color*/
+  &::-webkit-scrollbar{width: 10px; background-color:var(--color-bg-surface);}/*Background color*/
+  &::-webkit-scrollbar-thumb{background:var(--color-bg-muted);}/*Bar color*/
 
   li {    
     cursor: pointer;

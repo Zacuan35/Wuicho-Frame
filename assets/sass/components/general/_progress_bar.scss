@@ -3,7 +3,7 @@
   width: 100%;
   height: 18px;
   position: relative;
-  background: $fill-subtle;
+  background: var(--color-bg-muted);
   border-radius: var(--radius-full);
   overflow: hidden;
 }
@@ -24,7 +24,7 @@
 .dac-progress__label {
   font-size: 12px;
   font-weight: 600;
-  color: var(--bg-surface);
+  color: var(--color-text-inverted);
   white-space: nowrap;
   pointer-events: none;
   padding: 0 8px;

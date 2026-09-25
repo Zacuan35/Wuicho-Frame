@@ -96,9 +96,12 @@ $chart-lime: #84CC16;
   /* --- Modo claro (default) --- */
   color-scheme: light;
 
-  --bg-canvas: #F4F5FA;
-  --bg-surface: #FFFFFF;
-  --bg-tint: #F1F1F3;
+  /* Fondos: canvas (página) · surface (tarjetas, paneles, modales)
+  · subtle (hover suave, previews) · muted (hover marcado, rellenos) */
+  --color-bg-canvas: #F4F5FA;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-subtle: #F1F1F3;
+  --color-bg-muted: #EBEDF5;
 
   --color-border: #D3D6E8;
   --color-border-subtle: rgba(211, 214, 232, 0.55);
@@ -106,6 +109,7 @@ $chart-lime: #84CC16;
   --color-text-primary: #1A1D3A;
   --color-text-secondary: #484C70; 
   --color-text-muted: #636997; 
+  --color-text-inverted: #FFFFFF;
 
   /* Estados: se nombran por intensidad, no por propiedad CSS.
   -subtle: tono suave (fondos). -strong: tono intenso (texto, bordes, íconos). */
@@ -130,9 +134,10 @@ body.dark-mode {
   --color-orange-hover: color-mix(in srgb, var(--color-orange) 85%, var(--color-white));
   --color-red-hover: color-mix(in srgb, var(--color-red) 85%, var(--color-white));
 
-  --bg-canvas: #0C0E1D;
-  --bg-surface: #12142A;
-  --bg-tint: #1F2137;
+  --color-bg-canvas: #0C0E1D;
+  --color-bg-surface: #12142A;
+  --color-bg-subtle: #1F2137;
+  --color-bg-muted: #1F2242;
 
   --color-border: #2E3260;
   --color-border-subtle: rgba(46, 50, 96, 0.55);
@@ -140,6 +145,7 @@ body.dark-mode {
   --color-text-primary: #EEF0FB;
   --color-text-secondary: #B3B7D0; 
   --color-text-muted: #878BB0; 
+  --color-text-inverted: #12142A;
 
   --color-success-subtle: rgba(34, 197, 94, 0.12);
   --color-success-strong: #4ADE80;
@@ -151,11 +157,6 @@ body.dark-mode {
   --color-info-strong: #A5A8F7;
 }
 
-/* Tono derivado (no es un color nuevo: se calcula mezclando
---color-border con --bg-surface, que ya existen, en
-vez de declarar más --color-* fijos) */
-$fill-subtle: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
-
 /* =================
 # COLOR DECLARATION
 ================= */
@@ -164,7 +165,7 @@ $fill-subtle: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
 /*Background color*/
 body::-webkit-scrollbar {
   width: 10px;
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
 }
 
 /*Bar color*/
@@ -173,7 +174,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
   color: var(--color-text-primary);
 }
 
@@ -212,7 +213,7 @@ b {
 
 /* # Text-color
 ----------------------------------------------- */
-.text-inverted { color: var(--bg-surface); }
+.text-inverted { color: var(--color-text-inverted); }
 .text-success { color: var(--color-success-strong); }
 .text-danger { color: var(--color-danger-strong); }
 .text-warning { color: var(--color-warning-strong); }
@@ -236,27 +237,27 @@ b {
 /* # Background colors
 ----------------------------------------------- */
 .bg-default {
-  background-color: var(--bg-surface);
+  background-color: var(--color-bg-surface);
   p, ul { color: var(--color-text-primary); }
   b { color:var(--color-blue);}
 }
 
 .bg-light {
-  background-color: var(--bg-canvas);
+  background-color: var(--color-bg-canvas);
   a, p, ul { color: var(--color-text-primary); }
   b { color: var(--color-blue); }
 }
 
 .bg-dark {
-  background-color: $fill-subtle;
-  a, p, ul { color: var(--bg-surface); }
+  background-color: var(--color-bg-muted);
+  a, p, ul { color: var(--color-text-inverted); }
   b { color: var(--color-blue); }
 }
 
 .bg-darker {
   background-color: var(--color-text-primary);
-  h1, h2, h3 { color: var(--bg-surface); }
-  a, p, ul { color: var(--bg-surface); }
+  h1, h2, h3 { color: var(--color-text-inverted); }
+  a, p, ul { color: var(--color-text-inverted); }
   b { color: var(--color-blue); }
 }
 

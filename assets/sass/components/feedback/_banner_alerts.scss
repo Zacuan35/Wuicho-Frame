@@ -50,13 +50,13 @@
 
   p{
     margin: 0;
-    color:var(--bg-surface);
+    color: var(--color-text-inverted);
   }
 
   .btn-close {
     box-sizing: content-box;
     background-color: inherit;
-    color: var(--bg-surface);
+    color: var(--color-text-inverted);
     padding: 0.5rem;
     border: 0;
     opacity: .5;
