@@ -10,7 +10,7 @@ error 404): centra su contenido en el viewport sobre el fondo canvas. */
   align-items:center;
   min-height: 100vh;
   padding: 2rem;
-  background-color:var(--color-canvas);
+  background-color:var(--bg-canvas);
 }
 
 /* Card exclusiva de estas vistas standalone (no reutiliza .card):
@@ -19,7 +19,7 @@ un marco simple propio. */
 .login-card {
   width: 100%;
   max-width: 24rem;
-  background-color: var(--color-surface);
+  background-color: var(--bg-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);

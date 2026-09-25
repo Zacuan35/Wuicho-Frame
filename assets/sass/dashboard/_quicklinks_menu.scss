@@ -70,7 +70,7 @@
   display: block;
   padding: 10px;
   text-decoration: none;
-  border-bottom: 1px solid var(--color-canvas);
+  border-bottom: 1px solid var(--bg-canvas);
   font-size: var(--fs-xs);
 }
 /*Dropdown header and footer*/
@@ -112,18 +112,18 @@
 }
 .quicklinks-menu > li > a:hover,
 .quicklinks-menu > li > a:focus {
-  background-color: var(--color-canvas);
+  background-color: var(--bg-canvas);
 }
 .quicklinks-menu .dropdown-menu li a {
-  background-color: var(--color-surface);
+  background-color: var(--bg-surface);
   color:var(--color-text-primary);
 }
 .quicklinks-menu .dropdown-menu li a:hover{
-  background-color:var(--color-canvas);
+  background-color:var(--bg-canvas);
 }
 .quicklinks-menu .dropdown-menu li.dm-header a:hover,
 .quicklinks-menu .dropdown-menu li.dm-footer a:hover {
-  background-color: var(--color-surface);
+  background-color: var(--bg-surface);
 }
 
 /* # Message-links

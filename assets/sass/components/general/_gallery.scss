@@ -3,7 +3,7 @@
 ===================== */
 .gallery-section {
   .gallery-body {
-    background-color: var(--color-surface);
+    background-color: var(--bg-surface);
     padding: 1rem 0.5rem;
     border: 1px solid var(--color-border-subtle);
     border-radius: var(--radius-sm) var(--radius-sm) 0 0;
@@ -28,7 +28,7 @@
             position: absolute;
             top: 6px;
             right: 6px;
-            background-color: var(--color-surface);
+            background-color: var(--bg-surface);
             border-radius: var(--radius-full);
             padding: 3px;  
             display: flex;
@@ -40,7 +40,7 @@
           }
 
           .thumbnail-icon i {
-            color: var(--color-canvas);
+            color: var(--bg-canvas);
             font-size: var(--fs-sm);
           }
 
@@ -65,7 +65,7 @@
   }
 
   .gallery-footer {
-    background-color: var(--color-canvas);
+    background-color: var(--bg-canvas);
     padding: 1rem 0.5rem;
     border: 1px solid var(--color-border-subtle);
     border-radius: 0 0 var(--radius-sm) var(--radius-sm);

@@ -181,14 +181,14 @@ Colour theme
  Sidebar
  ========== */
 .main-sidebar {
-  background-color: var(--color-surface);
+  background-color: var(--bg-surface);
 }
 
 /* # Sidebar-footer
 ----------------------------------------------- */
 .sidebar-footer{
   background-color: var(--color-text-primary);
-  color:var(--color-surface);
+  color:var(--bg-surface);
 }
 
 /* ===========
@@ -196,7 +196,7 @@ Colour theme
  ========== */
  .content-wrapper {
   /*background-color: #ecf0f5;*/
-  background-color: var(--color-canvas);
+  background-color: var(--bg-canvas);
 }
 
 /* ===========
@@ -204,7 +204,7 @@ Colour theme
  ========== */
  /*
  .dashboard-footer {
-    background: var(--color-surface);
+    background: var(--bg-surface);
     color: var(--color-blue);
     padding: 15px;
     border-top: 1px solid #eee;    

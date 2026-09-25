@@ -8,7 +8,7 @@ ul.secondary_menu {
   white-space: nowrap;
   margin-bottom: 2rem;
 
-  &::-webkit-scrollbar{width: 10px; background-color:var(--color-surface);}/*Background color*/
+  &::-webkit-scrollbar{width: 10px; background-color:var(--bg-surface);}/*Background color*/
   &::-webkit-scrollbar-thumb{background:$fill-subtle;}/*Bar color*/
 
   li {    

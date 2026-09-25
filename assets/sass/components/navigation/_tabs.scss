@@ -93,7 +93,7 @@ agrega el modificador .tabs-vertical sobre el mismo contenedor.
 
   .tab-button.active {
     border-color: var(--color-blue);
-    background-color: color-mix(in srgb, var(--color-blue) 10%, var(--color-surface));
+    background-color: color-mix(in srgb, var(--color-blue) 10%, var(--bg-surface));
   }
 
   .tab-content {

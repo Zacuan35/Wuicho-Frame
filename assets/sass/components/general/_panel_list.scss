@@ -14,7 +14,7 @@
     align-items: center;
     gap: 1rem;
     padding: 0.75rem 1rem;
-    background-color:var(--color-surface);
+    background-color:var(--bg-surface);
     background-clip: border-box;  
     border:1px solid var(--color-border-subtle);  
     border-radius: var(--radius-sm);
@@ -22,7 +22,7 @@
     p{
       margin:0;
     }    
-    &:nth-child(even) {background-color: var(--color-canvas); }
+    &:nth-child(even) {background-color: var(--bg-canvas); }
     &:hover {background-color: $fill-subtle; } 
 
     /* =========

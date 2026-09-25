@@ -11,7 +11,7 @@ table {
 }
 
 thead th {
-  background-color: var(--color-surface);
+  background-color: var(--bg-surface);
   color: var(--color-text-muted);
   font-weight: 700;
   text-transform: uppercase;
@@ -19,10 +19,10 @@ thead th {
 }
 
 tbody tr{
-  background-color:var(--color-surface);
+  background-color:var(--bg-surface);
 
   &:hover {
-    background-color: var(--color-canvas);
+    background-color: var(--bg-canvas);
   }
 
   &.clickable {
@@ -47,7 +47,7 @@ td, th {
 /* # Zebra (opcional, activar con table.zebra)
 ----------------------------------------------- */
 table.zebra tbody tr:nth-child(even) {
-  background-color: var(--color-canvas);
+  background-color: var(--bg-canvas);
 }
 
 table.zebra tbody tr:hover {

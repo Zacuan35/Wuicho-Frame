@@ -2,7 +2,7 @@
 # CARD
 ===================== */
 .card {
-  background-color:var(--color-surface);
+  background-color:var(--bg-surface);
   background-clip: border-box;
   border-radius: var(--radius-sm);
   border:1px solid var(--color-border-subtle);
@@ -40,41 +40,41 @@ sobre un .card-header/.card-body/.card-footer suelto, o sobre un
 ajustan el borde de esos hijos para que combinen con el marco. */
 .card-highlight {
   background-color:var(--color-blue-light);
-  h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
-  p{color:var(--color-surface);}
-  i {color: var(--color-surface);}
+  h1,h2,h3,h4,h5,h6{color:var(--bg-surface);}
+  p{color:var(--bg-surface);}
+  i {color: var(--bg-surface);}
   border-color:var(--color-blue);
   .card-header, .card-footer { border-color: var(--color-blue); }
 }
 .card-success {
   background-color:var(--color-green-light);
-  h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
-  p{color:var(--color-surface);}
-  i {color: var(--color-surface);}
+  h1,h2,h3,h4,h5,h6{color:var(--bg-surface);}
+  p{color:var(--bg-surface);}
+  i {color: var(--bg-surface);}
   border-color:var(--color-green);
   .card-header, .card-footer { border-color: var(--color-green); }
 }
 .card-danger {
   background-color:var(--color-red-light);
-  h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
-  p{color:var(--color-surface);}
-  i {color: var(--color-surface);}
+  h1,h2,h3,h4,h5,h6{color:var(--bg-surface);}
+  p{color:var(--bg-surface);}
+  i {color: var(--bg-surface);}
   border-color:var(--color-red);
   .card-header, .card-footer { border-color: var(--color-red); }
 }
 .card-warning {
   background-color:var(--color-orange-light);
-  h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
-  p{color:var(--color-surface);}
-  i {color: var(--color-surface);}
+  h1,h2,h3,h4,h5,h6{color:var(--bg-surface);}
+  p{color:var(--bg-surface);}
+  i {color: var(--bg-surface);}
   border-color:var(--color-orange);
   .card-header, .card-footer { border-color: var(--color-orange); }
 }
 .card-info {
   background-color:var(--color-blue-light);
-  h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
-  p{color:var(--color-surface);}
-  i {color: var(--color-surface);}
+  h1,h2,h3,h4,h5,h6{color:var(--bg-surface);}
+  p{color:var(--bg-surface);}
+  i {color: var(--bg-surface);}
   border-color:var(--color-blue);
   .card-header, .card-footer { border-color: var(--color-blue); }
 }

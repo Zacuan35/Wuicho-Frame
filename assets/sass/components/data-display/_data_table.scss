@@ -30,7 +30,7 @@
   outline: none;
   transition: all 0.2s ease;
   font-size: var(--fs-sm);
-  background-color: var(--color-surface);
+  background-color: var(--bg-surface);
 }
 
 .dataTables_length select:focus,
@@ -69,12 +69,12 @@
 
 .dataTables_paginate .paginate_button:hover {
   background-color: var(--color-blue-light);
-  color: var(--color-canvas);
+  color: var(--bg-canvas);
 }
 
 .dataTables_paginate .paginate_button.current {
   background-color: var(--color-blue-light);
-  color:var(--color-canvas);
+  color:var(--bg-canvas);
 }
 
 /* =========================
@@ -91,11 +91,11 @@ table.dataTable thead th.sorting_desc:after {
 }
 
 table.dataTable thead th.sorting_asc:after {
-  border-bottom-color: var(--color-surface);
+  border-bottom-color: var(--bg-surface);
 }
 
 table.dataTable thead th.sorting_desc:after {
-  border-top-color: var(--color-surface);
+  border-top-color: var(--bg-surface);
 }
 
 /* =========================

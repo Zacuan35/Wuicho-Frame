@@ -39,7 +39,7 @@
   padding: 1rem;
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-sm);
-  background-color: var(--color-surface);
+  background-color: var(--bg-surface);
 
   transition: all 0.2s ease;
 
@@ -62,7 +62,7 @@
 ===================== */
 
 .tg-body .tg-row:nth-child(even) {
-  background-color: var(--color-canvas);
+  background-color: var(--bg-canvas);
 }
 
 .tg-body .tg-row:hover {

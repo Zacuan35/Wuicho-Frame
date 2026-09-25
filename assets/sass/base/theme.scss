@@ -96,8 +96,9 @@ $chart-lime: #84CC16;
   /* --- Modo claro (default) --- */
   color-scheme: light;
 
-  --color-canvas: #F4F5FA;
-  --color-surface: #FFFFFF;
+  --bg-canvas: #F4F5FA;
+  --bg-surface: #FFFFFF;
+  --bg-tint: #F1F1F3;
 
   --color-border: #D3D6E8;
   --color-border-subtle: rgba(211, 214, 232, 0.55);
@@ -129,8 +130,9 @@ body.dark-mode {
   --color-orange-hover: color-mix(in srgb, var(--color-orange) 85%, var(--color-white));
   --color-red-hover: color-mix(in srgb, var(--color-red) 85%, var(--color-white));
 
-  --color-canvas: #0C0E1D;
-  --color-surface: #12142A;
+  --bg-canvas: #0C0E1D;
+  --bg-surface: #12142A;
+  --bg-tint: #1F2137;
 
   --color-border: #2E3260;
   --color-border-subtle: rgba(46, 50, 96, 0.55);
@@ -149,11 +151,10 @@ body.dark-mode {
   --color-info-strong: #A5A8F7;
 }
 
-/* Tonos derivados (no son colores nuevos: se calculan variando la
-opacidad de --color-border y --color-surface que ya existen, en
+/* Tono derivado (no es un color nuevo: se calcula mezclando
+--color-border con --bg-surface, que ya existen, en
 vez de declarar más --color-* fijos) */
-$fill-subtle: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
-$surface-tint: color-mix(in srgb, var(--color-surface) 94%, var(--color-text-primary) 6%);
+$fill-subtle: color-mix(in srgb, var(--color-border) 45%, var(--bg-surface));
 
 /* =================
 # COLOR DECLARATION
@@ -163,7 +164,7 @@ $surface-tint: color-mix(in srgb, var(--color-surface) 94%, var(--color-text-pri
 /*Background color*/
 body::-webkit-scrollbar {
   width: 10px;
-  background-color: var(--color-surface);
+  background-color: var(--bg-surface);
 }
 
 /*Bar color*/
@@ -172,7 +173,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: var(--color-canvas);
+  background-color: var(--bg-canvas);
   color: var(--color-text-primary);
 }
 
@@ -211,7 +212,7 @@ b {
 
 /* # Text-color
 ----------------------------------------------- */
-.text-inverted { color: var(--color-surface); }
+.text-inverted { color: var(--bg-surface); }
 .text-success { color: var(--color-success-strong); }
 .text-danger { color: var(--color-danger-strong); }
 .text-warning { color: var(--color-warning-strong); }
@@ -235,27 +236,27 @@ b {
 /* # Background colors
 ----------------------------------------------- */
 .bg-default {
-  background-color: var(--color-surface);
+  background-color: var(--bg-surface);
   p, ul { color: var(--color-text-primary); }
   b { color:var(--color-blue);}
 }
 
 .bg-light {
-  background-color: var(--color-canvas);
+  background-color: var(--bg-canvas);
   a, p, ul { color: var(--color-text-primary); }
   b { color: var(--color-blue); }
 }
 
 .bg-dark {
   background-color: $fill-subtle;
-  a, p, ul { color: var(--color-surface); }
+  a, p, ul { color: var(--bg-surface); }
   b { color: var(--color-blue); }
 }
 
 .bg-darker {
   background-color: var(--color-text-primary);
-  h1, h2, h3 { color: var(--color-surface); }
-  a, p, ul { color: var(--color-surface); }
+  h1, h2, h3 { color: var(--bg-surface); }
+  a, p, ul { color: var(--bg-surface); }
   b { color: var(--color-blue); }
 }
 

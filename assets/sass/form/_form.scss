@@ -63,7 +63,7 @@ que exista un <select> real detrás. */
   width: 100%;
   height: calc(1.5em + 1.125rem + 2px);
   padding: 0.625rem 0.875rem;
-  background-color: var(--color-surface);
+  background-color: var(--bg-surface);
   background-clip: padding-box;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
@@ -208,7 +208,7 @@ output {
   width: 50px;
   height: 30px;
   text-align: center;
-  color: var(--color-surface);
+  color: var(--bg-surface);
   border-radius: var(--radius-xs);
   display: inline-block;
   font-size: var(--fs-sm);
