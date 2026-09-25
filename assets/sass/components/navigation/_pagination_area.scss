@@ -33,7 +33,7 @@
 }
 .page-btn i { font-size: var(--fs-sm); }
 .page-btn:hover { border-color: var(--color-border); background: $surface-tint; }
-.page-btn.is-active { background: var(--blue-color); border-color: var(--blue-color); color: var(--white-color); }
+.page-btn.is-active { background: var(--color-blue); border-color: var(--color-blue); color: var(--color-white); }
 .page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 
 

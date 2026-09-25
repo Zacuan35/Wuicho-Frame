@@ -35,7 +35,7 @@
 
 .dataTables_length select:focus,
 .dataTables_filter input:focus {
-  border-color:var(--blue-color-light); ;
+  border-color:var(--color-blue-light); ;
 }
 
 /* =========================
@@ -61,19 +61,19 @@
   margin-left: 3px;
   border-radius: var(--radius-xs);
   background-color: $fill-subtle;
-  color: var(--blue-color-light);
+  color: var(--color-blue-light);
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .dataTables_paginate .paginate_button:hover {
-  background-color: var(--blue-color-light);
+  background-color: var(--color-blue-light);
   color: var(--color-canvas);
 }
 
 .dataTables_paginate .paginate_button.current {
-  background-color: var(--blue-color-light);
+  background-color: var(--color-blue-light);
   color:var(--color-canvas);
 }
 

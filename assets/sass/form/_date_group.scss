@@ -29,11 +29,11 @@
   color:var(--color-text-primary);
 }
 .text-input{
-  &:hover{border-color: var(--blue-color);}
+  &:hover{border-color: var(--color-blue);}
   &:focus{outline: none;}
 }
 .date-input:focus {
-  border: 1px solid var(--blue-color); 
+  border: 1px solid var(--color-blue); 
   outline: none; 
 }
 @media (min-width: 768px) {   

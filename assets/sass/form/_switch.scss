@@ -63,7 +63,7 @@
   significa "éxito", .card-success/.badge-success ya cubren ese caso
   semántico aparte. */
   input:checked + .slider {
-    background-color: var(--blue-color);
+    background-color: var(--color-blue);
     &:before {
       transform: translateX(18px);
     }

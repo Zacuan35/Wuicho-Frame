@@ -30,9 +30,9 @@
   transform: translateY(20px);
 }
 
-.toast.success {background-color: var(--green-color);}
-.toast.error {background-color: var(--red-color);}
-.toast.info {background-color: var(--blue-color);}
+.toast.success {background-color: var(--color-green);}
+.toast.error {background-color: var(--color-red);}
+.toast.info {background-color: var(--color-blue);}
 
 .toast button {
   background: none;

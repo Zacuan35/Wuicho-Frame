@@ -21,9 +21,9 @@
 /* # Search button
 ----------------------------------------------- */
 .search-button {
-  background-color: var(--blue-color-light);
-  border: 1px solid var(--blue-color-light);
-  color: var(--white-color);
+  background-color: var(--color-blue-light);
+  border: 1px solid var(--color-blue-light);
+  color: var(--color-white);
   padding: 10px;
   border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
   cursor: pointer;
@@ -32,10 +32,10 @@
   justify-content: center;
   height: 38px; /* Misma altura que el input */
   width: 40px;
-  i{color: var(--white-color);}
+  i{color: var(--color-white);}
   &:hover {
-    background-color: var(--blue-color);
-    border: 1px solid var(--blue-color);
+    background-color: var(--color-blue);
+    border: 1px solid var(--color-blue);
   }
 } 
 

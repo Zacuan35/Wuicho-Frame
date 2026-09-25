@@ -2,7 +2,7 @@ canvas {
     width:100%;
     max-width: 1500px;
     display: block;
-    background: var(--white-color);
+    background: var(--color-white);
     padding: 10px;
     border-radius: var(--radius-sm);
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -13,7 +13,7 @@ canvas {
 Cada serie toma su color de una clase .chart-* (vía `color`); en el SVG
 se usa fill/stroke="currentColor", así no hay colores en línea. */
 .chart-axis { color: var(--color-border); }
-.chart-blue { color: var(--blue-color); }
+.chart-blue { color: var(--color-blue); }
 .chart-teal { color: $chart-teal; }
 .chart-sky { color: $chart-sky; }
 .chart-purple { color: $chart-purple; }

@@ -72,27 +72,27 @@ $chart-lime: #84CC16;
   --transition-base: 180ms cubic-bezier(0.4, 0, 0.2, 1);
 
   /* --- Colores fijos (iguales en ambos temas) --- */
-  --white-color: #ffffff;
-  --gray-color: #5c5c5c;
-  --dark-color: #000000;
-  --blue-color: #5B5FEF;
-  --green-color: #22C55E;
-  --orange-color: #F59E0B;
-  --red-color: #F43F5E;
+  --color-white: #ffffff;
+  --color-gray: #5c5c5c;
+  --color-dark: #000000;
+  --color-blue: #5B5FEF;
+  --color-green: #22C55E;
+  --color-orange: #F59E0B;
+  --color-red: #F43F5E;
 
   /* --- Tonos derivados de la marca (se calculan de los colores fijos:
-  al cambiar un --*-color se actualizan solos) ---
+  al cambiar un --color-<nombre> se actualizan solos) ---
   -light: versión aclarada, fondo de cards de estado, sliders, tooltips.
   -hover: estado hover de botones sólidos (oscurece en claro, aclara en oscuro). */
-  --blue-color-light: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
-  --green-color-light: color-mix(in srgb, var(--green-color) 90%, var(--white-color));
-  --orange-color-light: color-mix(in srgb, var(--orange-color) 90%, var(--white-color));
-  --red-color-light: color-mix(in srgb, var(--red-color) 90%, var(--white-color));
+  --color-blue-light: color-mix(in srgb, var(--color-blue) 90%, var(--color-white));
+  --color-green-light: color-mix(in srgb, var(--color-green) 90%, var(--color-white));
+  --color-orange-light: color-mix(in srgb, var(--color-orange) 90%, var(--color-white));
+  --color-red-light: color-mix(in srgb, var(--color-red) 90%, var(--color-white));
 
-  --blue-color-hover: color-mix(in srgb, var(--blue-color) 88%, var(--dark-color));
-  --green-color-hover: color-mix(in srgb, var(--green-color) 88%, var(--dark-color));
-  --orange-color-hover: color-mix(in srgb, var(--orange-color) 88%, var(--dark-color));
-  --red-color-hover: color-mix(in srgb, var(--red-color) 88%, var(--dark-color));
+  --color-blue-hover: color-mix(in srgb, var(--color-blue) 88%, var(--color-dark));
+  --color-green-hover: color-mix(in srgb, var(--color-green) 88%, var(--color-dark));
+  --color-orange-hover: color-mix(in srgb, var(--color-orange) 88%, var(--color-dark));
+  --color-red-hover: color-mix(in srgb, var(--color-red) 88%, var(--color-dark));
 
   /* --- Modo claro (default) --- */
   --color-canvas: #F4F5FA;
@@ -137,10 +137,10 @@ body.dark-mode {
   --color-info-text: #A5A8F7;
 
   /* Sobre fondos oscuros el hover aclara en lugar de oscurecer */
-  --blue-color-hover: color-mix(in srgb, var(--blue-color) 85%, var(--white-color));
-  --green-color-hover: color-mix(in srgb, var(--green-color) 85%, var(--white-color));
-  --orange-color-hover: color-mix(in srgb, var(--orange-color) 85%, var(--white-color));
-  --red-color-hover: color-mix(in srgb, var(--red-color) 85%, var(--white-color));
+  --color-blue-hover: color-mix(in srgb, var(--color-blue) 85%, var(--color-white));
+  --color-green-hover: color-mix(in srgb, var(--color-green) 85%, var(--color-white));
+  --color-orange-hover: color-mix(in srgb, var(--color-orange) 85%, var(--color-white));
+  --color-red-hover: color-mix(in srgb, var(--color-red) 85%, var(--color-white));
 
   color-scheme: dark;
 }
@@ -193,16 +193,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: var(--blue-color-light);
+  color: var(--color-blue-light);
 
   //Estados de botón
   &:hover, &:active, &:focus {
-    color: var(--blue-color);
+    color: var(--color-blue);
   }
 }
 
 b {
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 
 /* # Text-color
@@ -233,42 +233,42 @@ b {
 .bg-default {
   background-color: var(--color-surface);
   p, ul { color: var(--color-text-primary); }
-  b { color:var(--blue-color);}
+  b { color:var(--color-blue);}
 }
 
 .bg-light {
   background-color: var(--color-canvas);
   a, p, ul { color: var(--color-text-primary); }
-  b { color: var(--blue-color); }
+  b { color: var(--color-blue); }
 }
 
 .bg-dark {
   background-color: $fill-subtle;
   a, p, ul { color: var(--color-surface); }
-  b { color: var(--blue-color); }
+  b { color: var(--color-blue); }
 }
 
 .bg-darker {
   background-color: var(--color-text-primary);
   h1, h2, h3 { color: var(--color-surface); }
   a, p, ul { color: var(--color-surface); }
-  b { color: var(--blue-color); }
+  b { color: var(--color-blue); }
 }
 
 .bg-success {
-  background-color: var(--green-color);
-  p { color: var(--white-color); }
+  background-color: var(--color-green);
+  p { color: var(--color-white); }
 }
 
 .bg-danger {
-  background-color: var(--red-color);
-  p { color: var(--white-color); }
+  background-color: var(--color-red);
+  p { color: var(--color-white); }
 }
 
 /* # Labes
 ----------------------------------------------- */
-.label { color: var(--white-color); }
-.label-primary { background-color: var(--blue-color); }
-.label-danger { background-color: var(--red-color); }
-.label-success { background-color: var(--green-color); }
+.label { color: var(--color-white); }
+.label-primary { background-color: var(--color-blue); }
+.label-danger { background-color: var(--color-red); }
+.label-success { background-color: var(--color-green); }
 .label-info { background-color: var(--color-info-text); }

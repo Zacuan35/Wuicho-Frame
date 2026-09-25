@@ -39,44 +39,44 @@ sobre un .card-header/.card-body/.card-footer suelto, o sobre un
 .card completo. Cuando envuelven un header/footer reales, además
 ajustan el borde de esos hijos para que combinen con el marco. */
 .card-highlight {
-  background-color:var(--blue-color-light);
+  background-color:var(--color-blue-light);
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
-  border-color:var(--blue-color);
-  .card-header, .card-footer { border-color: var(--blue-color); }
+  border-color:var(--color-blue);
+  .card-header, .card-footer { border-color: var(--color-blue); }
 }
 .card-success {
-  background-color:var(--green-color-light);
+  background-color:var(--color-green-light);
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
-  border-color:var(--green-color);
-  .card-header, .card-footer { border-color: var(--green-color); }
+  border-color:var(--color-green);
+  .card-header, .card-footer { border-color: var(--color-green); }
 }
 .card-danger {
-  background-color:var(--red-color-light);
+  background-color:var(--color-red-light);
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
-  border-color:var(--red-color);
-  .card-header, .card-footer { border-color: var(--red-color); }
+  border-color:var(--color-red);
+  .card-header, .card-footer { border-color: var(--color-red); }
 }
 .card-warning {
-  background-color:var(--orange-color-light);
+  background-color:var(--color-orange-light);
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
-  border-color:var(--orange-color);
-  .card-header, .card-footer { border-color: var(--orange-color); }
+  border-color:var(--color-orange);
+  .card-header, .card-footer { border-color: var(--color-orange); }
 }
 .card-info {
-  background-color:var(--blue-color-light);
+  background-color:var(--color-blue-light);
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
-  border-color:var(--blue-color);
-  .card-header, .card-footer { border-color: var(--blue-color); }
+  border-color:var(--color-blue);
+  .card-header, .card-footer { border-color: var(--color-blue); }
 }
 
 //Si la tarjeta tiene enlace
@@ -84,18 +84,18 @@ a.card {
   &:hover{background-color: $fill-subtle;}
 
   &.card-highlight {
-    &:hover{background-color: var(--blue-color);}
+    &:hover{background-color: var(--color-blue);}
   }
   &.card-success {
-    &:hover{background-color: var(--green-color);}
+    &:hover{background-color: var(--color-green);}
   }
   &.card-danger {
-    &:hover{background-color: var(--red-color);}
+    &:hover{background-color: var(--color-red);}
   }
   &.card-warning {
-    &:hover{background-color: var(--orange-color);}
+    &:hover{background-color: var(--color-orange);}
   }
   &.card-info {
-    &:hover{background-color: var(--blue-color);}
+    &:hover{background-color: var(--color-blue);}
   }
 }

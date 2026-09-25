@@ -57,9 +57,9 @@
     }
 
     &.disabled{
-    background-color: color-mix(in srgb, var(--gray-color) 22%, white);
-    border-color: color-mix(in srgb, var(--gray-color) 37%, white);
-    h4,p{color:var(--gray-color);}
+    background-color: color-mix(in srgb, var(--color-gray) 22%, white);
+    border-color: color-mix(in srgb, var(--color-gray) 37%, white);
+    h4,p{color:var(--color-gray);}
     p{font-weight:400;}              
     cursor:not-allowed;
     img,i{filter: grayscale(100%);}

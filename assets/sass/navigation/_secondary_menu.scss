@@ -29,10 +29,10 @@ ul.secondary_menu {
     }    
 
     &:hover {
-      border-color: var(--blue-color);
+      border-color: var(--color-blue);
 
       a {
-        color: var(--blue-color);
+        color: var(--color-blue);
         font-weight: 500;
       }
     }
@@ -49,10 +49,10 @@ ul.secondary_menu {
     }
     //Este bloque aplica sólo para este proyecto - Borrar después    
     &.active {
-      border-color: var(--blue-color);
+      border-color: var(--color-blue);
 
       a {
-        color: var(--blue-color);
+        color: var(--color-blue);
         font-weight: 500;
       }
     }    

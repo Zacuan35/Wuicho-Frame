@@ -71,11 +71,11 @@ que exista un <select> real detrás. */
   line-height: 1.5;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   &:hover {
-    border-color:var(--blue-color-light);
+    border-color:var(--color-blue-light);
   }
   &:focus {
-    border-color: var(--blue-color);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue-color) 20%, transparent);
+    border-color: var(--color-blue);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-blue) 20%, transparent);
     outline: 0;
   }
   &::placeholder {
@@ -86,9 +86,9 @@ que exista un <select> real detrás. */
     //opacity: 1;
   }
   &.is-invalid {
-    border-color: var(--red-color);
+    border-color: var(--color-red);
     &:focus {
-      box-shadow: 0 0 0 3px color-mix(in srgb, var(--red-color) 20%, transparent);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-red) 20%, transparent);
     }
   }
 }
@@ -126,7 +126,7 @@ input[type="checkbox"],
 input[type="radio"] {
   width: 18px;
   height: 18px;
-  accent-color: var(--blue-color);
+  accent-color: var(--color-blue);
 }
 fieldset {
   border: 1px solid var(--color-border);
@@ -174,7 +174,7 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 20px;
   height: 20px;
-  background: var(--blue-color-light); 
+  background: var(--color-blue-light); 
   border-radius: var(--radius-full); 
   cursor: pointer; 
   transition: background 0.3s ease, transform 0.2s ease; 
@@ -183,7 +183,7 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: var(--blue-color-light); 
+  background: var(--color-blue-light); 
   border-radius: var(--radius-full);
   border: 2px solid #fff;
   cursor: pointer;
@@ -192,19 +192,19 @@ input[type="range"]::-moz-range-thumb {
 
 /* Efecto de "agrandamiento" al hacer hover sobre el pulgar */
 input[type="range"]:hover::-webkit-slider-thumb {
-  background: var(--blue-color-light);
+  background: var(--color-blue-light);
   transform: scale(1.1); 
 }
 
 input[type="range"]:hover::-moz-range-thumb {
-  background: var(--blue-color-light); 
+  background: var(--color-blue-light); 
   transform: scale(1.1);
 }
 
 /* Tooltip (output) */
 output {
   position: absolute;
-  background-color: var(--blue-color-light); 
+  background-color: var(--color-blue-light); 
   width: 50px;
   height: 30px;
   text-align: center;
@@ -223,7 +223,7 @@ output:after {
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 10px solid var(--blue-color-light); 
+  border-top: 10px solid var(--color-blue-light); 
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   top: 100%;

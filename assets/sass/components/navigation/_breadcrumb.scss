@@ -30,8 +30,8 @@
 			transition: color var(--transition-base);
 
 			&:hover {
-				color: var(--blue-color);
-				.icon { color: var(--blue-color); }
+				color: var(--color-blue);
+				.icon { color: var(--color-blue); }
 			}
 
 			.icon {

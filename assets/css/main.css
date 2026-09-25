@@ -61,25 +61,25 @@ Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
   --topbar-height: 100px;
   --transition-base: 180ms cubic-bezier(0.4, 0, 0.2, 1);
   /* --- Colores fijos (iguales en ambos temas) --- */
-  --white-color: #ffffff;
-  --gray-color: #5c5c5c;
-  --dark-color: #000000;
-  --blue-color: #5B5FEF;
-  --green-color: #22C55E;
-  --orange-color: #F59E0B;
-  --red-color: #F43F5E;
+  --color-white: #ffffff;
+  --color-gray: #5c5c5c;
+  --color-dark: #000000;
+  --color-blue: #5B5FEF;
+  --color-green: #22C55E;
+  --color-orange: #F59E0B;
+  --color-red: #F43F5E;
   /* --- Tonos derivados de la marca (se calculan de los colores fijos:
-  al cambiar un --*-color se actualizan solos) ---
+  al cambiar un --color-<nombre> se actualizan solos) ---
   -light: versión aclarada, fondo de cards de estado, sliders, tooltips.
   -hover: estado hover de botones sólidos (oscurece en claro, aclara en oscuro). */
-  --blue-color-light: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
-  --green-color-light: color-mix(in srgb, var(--green-color) 90%, var(--white-color));
-  --orange-color-light: color-mix(in srgb, var(--orange-color) 90%, var(--white-color));
-  --red-color-light: color-mix(in srgb, var(--red-color) 90%, var(--white-color));
-  --blue-color-hover: color-mix(in srgb, var(--blue-color) 88%, var(--dark-color));
-  --green-color-hover: color-mix(in srgb, var(--green-color) 88%, var(--dark-color));
-  --orange-color-hover: color-mix(in srgb, var(--orange-color) 88%, var(--dark-color));
-  --red-color-hover: color-mix(in srgb, var(--red-color) 88%, var(--dark-color));
+  --color-blue-light: color-mix(in srgb, var(--color-blue) 90%, var(--color-white));
+  --color-green-light: color-mix(in srgb, var(--color-green) 90%, var(--color-white));
+  --color-orange-light: color-mix(in srgb, var(--color-orange) 90%, var(--color-white));
+  --color-red-light: color-mix(in srgb, var(--color-red) 90%, var(--color-white));
+  --color-blue-hover: color-mix(in srgb, var(--color-blue) 88%, var(--color-dark));
+  --color-green-hover: color-mix(in srgb, var(--color-green) 88%, var(--color-dark));
+  --color-orange-hover: color-mix(in srgb, var(--color-orange) 88%, var(--color-dark));
+  --color-red-hover: color-mix(in srgb, var(--color-red) 88%, var(--color-dark));
   /* --- Modo claro (default) --- */
   --color-canvas: #F4F5FA;
   --color-surface: #FFFFFF;
@@ -117,10 +117,10 @@ body.dark-mode {
   --color-info-bg: rgba(91, 95, 239, 0.16);
   --color-info-text: #A5A8F7;
   /* Sobre fondos oscuros el hover aclara en lugar de oscurecer */
-  --blue-color-hover: color-mix(in srgb, var(--blue-color) 85%, var(--white-color));
-  --green-color-hover: color-mix(in srgb, var(--green-color) 85%, var(--white-color));
-  --orange-color-hover: color-mix(in srgb, var(--orange-color) 85%, var(--white-color));
-  --red-color-hover: color-mix(in srgb, var(--red-color) 85%, var(--white-color));
+  --color-blue-hover: color-mix(in srgb, var(--color-blue) 85%, var(--color-white));
+  --color-green-hover: color-mix(in srgb, var(--color-green) 85%, var(--color-white));
+  --color-orange-hover: color-mix(in srgb, var(--color-orange) 85%, var(--color-white));
+  --color-red-hover: color-mix(in srgb, var(--color-red) 85%, var(--color-white));
   color-scheme: dark;
 }
 
@@ -169,14 +169,14 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 a {
-  color: var(--blue-color-light);
+  color: var(--color-blue-light);
 }
 a:hover, a:active, a:focus {
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 
 b {
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 
 /* # Text-color
@@ -228,7 +228,7 @@ b {
   color: var(--color-text-primary);
 }
 .bg-default b {
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 
 .bg-light {
@@ -238,7 +238,7 @@ b {
   color: var(--color-text-primary);
 }
 .bg-light b {
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 
 .bg-dark {
@@ -248,7 +248,7 @@ b {
   color: var(--color-surface);
 }
 .bg-dark b {
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 
 .bg-darker {
@@ -261,39 +261,39 @@ b {
   color: var(--color-surface);
 }
 .bg-darker b {
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 
 .bg-success {
-  background-color: var(--green-color);
+  background-color: var(--color-green);
 }
 .bg-success p {
-  color: var(--white-color);
+  color: var(--color-white);
 }
 
 .bg-danger {
-  background-color: var(--red-color);
+  background-color: var(--color-red);
 }
 .bg-danger p {
-  color: var(--white-color);
+  color: var(--color-white);
 }
 
 /* # Labes
 ----------------------------------------------- */
 .label {
-  color: var(--white-color);
+  color: var(--color-white);
 }
 
 .label-primary {
-  background-color: var(--blue-color);
+  background-color: var(--color-blue);
 }
 
 .label-danger {
-  background-color: var(--red-color);
+  background-color: var(--color-red);
 }
 
 .label-success {
-  background-color: var(--green-color);
+  background-color: var(--color-green);
 }
 
 .label-info {
@@ -3536,13 +3536,13 @@ Tabletas horizontales */
 /* # Btn-primary
 ----------------------------------------------- */
 .btn-primary {
-  background-color: var(--blue-color);
-  border-color: var(--blue-color);
-  color: var(--white-color);
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
+  color: var(--color-white);
 }
 .btn-primary:hover {
-  background-color: var(--blue-color-hover);
-  border-color: var(--blue-color-hover);
+  background-color: var(--color-blue-hover);
+  border-color: var(--color-blue-hover);
 }
 
 /* # Btn-secondary
@@ -3560,11 +3560,11 @@ Tabletas horizontales */
 ----------------------------------------------- */
 .btn-outline {
   background-color: transparent;
-  border-color: var(--blue-color);
-  color: var(--blue-color);
+  border-color: var(--color-blue);
+  color: var(--color-blue);
 }
 .btn-outline:hover {
-  background-color: color-mix(in srgb, var(--blue-color) 12%, var(--color-surface));
+  background-color: color-mix(in srgb, var(--color-blue) 12%, var(--color-surface));
 }
 
 /* # Btn-ghost
@@ -3580,37 +3580,37 @@ Tabletas horizontales */
 /* # Btn-success
 ----------------------------------------------- */
 .btn-success {
-  background-color: var(--green-color);
-  border-color: var(--green-color);
-  color: var(--white-color);
+  background-color: var(--color-green);
+  border-color: var(--color-green);
+  color: var(--color-white);
 }
 .btn-success:hover {
-  background-color: var(--green-color-hover);
-  border-color: var(--green-color-hover);
+  background-color: var(--color-green-hover);
+  border-color: var(--color-green-hover);
 }
 
 /* # Btn-warning
 ----------------------------------------------- */
 .btn-warning {
-  background-color: var(--orange-color);
-  border-color: var(--orange-color);
-  color: var(--white-color);
+  background-color: var(--color-orange);
+  border-color: var(--color-orange);
+  color: var(--color-white);
 }
 .btn-warning:hover {
-  background-color: var(--orange-color-hover);
-  border-color: var(--orange-color-hover);
+  background-color: var(--color-orange-hover);
+  border-color: var(--color-orange-hover);
 }
 
 /* # Btn-danger
 ----------------------------------------------- */
 .btn-danger {
-  background-color: var(--red-color);
-  border-color: var(--red-color);
-  color: var(--white-color);
+  background-color: var(--color-red);
+  border-color: var(--color-red);
+  color: var(--color-white);
 }
 .btn-danger:hover {
-  background-color: var(--red-color-hover);
-  border-color: var(--red-color-hover);
+  background-color: var(--color-red-hover);
+  border-color: var(--color-red-hover);
 }
 
 /* =====================
@@ -3627,7 +3627,7 @@ Tabletas horizontales */
 # Btn-Link
 ===================== */
 .btn-link {
-  color: var(--blue-color);
+  color: var(--color-blue);
   font-weight: var(--fw-bold);
   text-decoration: none;
 }
@@ -3656,32 +3656,32 @@ Tabletas horizontales */
 ----------------------------------------------- */
 .button-left {
   background-color: var(--color-canvas);
-  color: var(--blue-color-light);
-  border: 1px solid var(--blue-color-light);
+  color: var(--color-blue-light);
+  border: 1px solid var(--color-blue-light);
   border-radius: var(--radius-xs) 0 0 var(--radius-xs);
 }
 .button-left:hover {
-  background-color: var(--blue-color-light);
-  color: var(--white-color);
+  background-color: var(--color-blue-light);
+  color: var(--color-white);
 }
 .button-left:hover i {
-  color: var(--white-color);
+  color: var(--color-white);
 }
 
 /* # Botón derecho
 ----------------------------------------------- */
 .button-right {
-  background-color: var(--blue-color-light);
-  color: var(--white-color);
-  border: 1px solid var(--blue-color-light);
+  background-color: var(--color-blue-light);
+  color: var(--color-white);
+  border: 1px solid var(--color-blue-light);
   border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
 }
 .button-right i {
-  color: var(--white-color);
+  color: var(--color-white);
 }
 .button-right:hover {
-  background-color: var(--blue-color);
-  border: 1px solid var(--blue-color);
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-blue);
 }
 
 /* =====================
@@ -3755,7 +3755,7 @@ sobre un .card-header/.card-body/.card-footer suelto, o sobre un
 .card completo. Cuando envuelven un header/footer reales, además
 ajustan el borde de esos hijos para que combinen con el marco. */
 .card-highlight {
-  background-color: var(--blue-color-light);
+  background-color: var(--color-blue-light);
 }
 .card-highlight h1, .card-highlight h2, .card-highlight h3, .card-highlight h4, .card-highlight h5, .card-highlight h6 {
   color: var(--color-surface);
@@ -3767,14 +3767,14 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   color: var(--color-surface);
 }
 .card-highlight {
-  border-color: var(--blue-color);
+  border-color: var(--color-blue);
 }
 .card-highlight .card-header, .card-highlight .card-footer {
-  border-color: var(--blue-color);
+  border-color: var(--color-blue);
 }
 
 .card-success {
-  background-color: var(--green-color-light);
+  background-color: var(--color-green-light);
 }
 .card-success h1, .card-success h2, .card-success h3, .card-success h4, .card-success h5, .card-success h6 {
   color: var(--color-surface);
@@ -3786,14 +3786,14 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   color: var(--color-surface);
 }
 .card-success {
-  border-color: var(--green-color);
+  border-color: var(--color-green);
 }
 .card-success .card-header, .card-success .card-footer {
-  border-color: var(--green-color);
+  border-color: var(--color-green);
 }
 
 .card-danger {
-  background-color: var(--red-color-light);
+  background-color: var(--color-red-light);
 }
 .card-danger h1, .card-danger h2, .card-danger h3, .card-danger h4, .card-danger h5, .card-danger h6 {
   color: var(--color-surface);
@@ -3805,14 +3805,14 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   color: var(--color-surface);
 }
 .card-danger {
-  border-color: var(--red-color);
+  border-color: var(--color-red);
 }
 .card-danger .card-header, .card-danger .card-footer {
-  border-color: var(--red-color);
+  border-color: var(--color-red);
 }
 
 .card-warning {
-  background-color: var(--orange-color-light);
+  background-color: var(--color-orange-light);
 }
 .card-warning h1, .card-warning h2, .card-warning h3, .card-warning h4, .card-warning h5, .card-warning h6 {
   color: var(--color-surface);
@@ -3824,14 +3824,14 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   color: var(--color-surface);
 }
 .card-warning {
-  border-color: var(--orange-color);
+  border-color: var(--color-orange);
 }
 .card-warning .card-header, .card-warning .card-footer {
-  border-color: var(--orange-color);
+  border-color: var(--color-orange);
 }
 
 .card-info {
-  background-color: var(--blue-color-light);
+  background-color: var(--color-blue-light);
 }
 .card-info h1, .card-info h2, .card-info h3, .card-info h4, .card-info h5, .card-info h6 {
   color: var(--color-surface);
@@ -3843,29 +3843,29 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   color: var(--color-surface);
 }
 .card-info {
-  border-color: var(--blue-color);
+  border-color: var(--color-blue);
 }
 .card-info .card-header, .card-info .card-footer {
-  border-color: var(--blue-color);
+  border-color: var(--color-blue);
 }
 
 a.card:hover {
   background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
 }
 a.card.card-highlight:hover {
-  background-color: var(--blue-color);
+  background-color: var(--color-blue);
 }
 a.card.card-success:hover {
-  background-color: var(--green-color);
+  background-color: var(--color-green);
 }
 a.card.card-danger:hover {
-  background-color: var(--red-color);
+  background-color: var(--color-red);
 }
 a.card.card-warning:hover {
-  background-color: var(--orange-color);
+  background-color: var(--color-orange);
 }
 a.card.card-info:hover {
-  background-color: var(--blue-color);
+  background-color: var(--color-blue);
 }
 
 /* =====================
@@ -3944,11 +3944,11 @@ a.card.card-info:hover {
   font-weight: 400;
 }
 .panel-list .panel-item.disabled {
-  background-color: color-mix(in srgb, var(--gray-color) 22%, white);
-  border-color: color-mix(in srgb, var(--gray-color) 37%, white);
+  background-color: color-mix(in srgb, var(--color-gray) 22%, white);
+  border-color: color-mix(in srgb, var(--color-gray) 37%, white);
 }
 .panel-list .panel-item.disabled h4, .panel-list .panel-item.disabled p {
-  color: var(--gray-color);
+  color: var(--color-gray);
 }
 .panel-list .panel-item.disabled p {
   font-weight: 400;
@@ -4224,7 +4224,7 @@ Tabletas verticales o celulares horizontales*/
   padding: 8px;
   aspect-ratio: 1;
   border-radius: var(--radius-full);
-  background: var(--blue-color);
+  background: var(--color-blue);
   --_m:
     conic-gradient(#0000 10%,#000),
     linear-gradient(#000 0 0) content-box;
@@ -4290,19 +4290,19 @@ Tabletas verticales o celulares horizontales*/
 
 /* Estados */
 .bg-success .dac-progress__bar {
-  background: var(--green-color);
+  background: var(--color-green);
 }
 
 .bg-info .dac-progress__bar {
-  background: var(--blue-color);
+  background: var(--color-blue);
 }
 
 .bg-warning .dac-progress__bar {
-  background: var(--orange-color);
+  background: var(--color-orange);
 }
 
 .bg-danger .dac-progress__bar {
-  background: var(--red-color);
+  background: var(--color-red);
 }
 
 /* Tamaños opcionales */
@@ -4415,15 +4415,15 @@ Tabletas verticales o celulares horizontales*/
 }
 
 .toast.success {
-  background-color: var(--green-color);
+  background-color: var(--color-green);
 }
 
 .toast.error {
-  background-color: var(--red-color);
+  background-color: var(--color-red);
 }
 
 .toast.info {
-  background-color: var(--blue-color);
+  background-color: var(--color-blue);
 }
 
 .toast button {
@@ -4479,7 +4479,7 @@ Tabletas verticales o celulares horizontales*/
   border-bottom: 1px solid var(--color-canvas);
 }
 .modal .modal-content .modal-header i {
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 .modal .modal-content .modal-header h2 {
   margin: 0;
@@ -4543,7 +4543,7 @@ Tabletas verticales o celulares horizontales*/
 
 .swal2-styled.swal2-confirm {
   border-radius: var(--radius-xs);
-  background-color: var(--blue-color-light) !important;
+  background-color: var(--color-blue-light) !important;
   color: #fff;
   font-weight: 500;
   font-size: 1em;
@@ -4615,8 +4615,8 @@ html {
   z-index: 1000;
   padding: 8px;
   width: 160px;
-  background-color: var(--dark-color);
-  color: var(--white-color);
+  background-color: var(--color-dark);
+  color: var(--color-white);
   content: attr(data-tooltip);
   font-size: var(--fs-sm);
   line-height: 1.2;
@@ -4640,7 +4640,7 @@ html {
 .tooltip-top:before {
   margin-left: -6px;
   margin-bottom: -12px;
-  border-top-color: var(--dark-color);
+  border-top-color: var(--color-dark);
 }
 
 /* Horizontally align top/bottom tooltips */
@@ -4692,7 +4692,7 @@ html {
   margin-right: -12px;
   margin-bottom: 0;
   border-top-color: transparent;
-  border-left-color: var(--dark-color);
+  border-left-color: var(--color-dark);
 }
 
 .tooltip-left:hover:before,
@@ -4713,7 +4713,7 @@ html {
   margin-bottom: 0;
   margin-left: -12px;
   border-top-color: transparent;
-  border-right-color: var(--dark-color);
+  border-right-color: var(--color-dark);
 }
 
 .tooltip-right:hover:before,
@@ -4735,7 +4735,7 @@ html {
   margin-top: -12px;
   margin-bottom: 0;
   border-top-color: transparent;
-  border-bottom-color: var(--dark-color);
+  border-bottom-color: var(--color-dark);
 }
 
 .tooltip-bottom:hover:before,
@@ -4750,7 +4750,7 @@ canvas {
   width: 100%;
   max-width: 1500px;
   display: block;
-  background: var(--white-color);
+  background: var(--color-white);
   padding: 10px;
   border-radius: var(--radius-sm);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -4765,7 +4765,7 @@ se usa fill/stroke="currentColor", así no hay colores en línea. */
 }
 
 .chart-blue {
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 
 .chart-teal {
@@ -4838,7 +4838,7 @@ se usa fill/stroke="currentColor", así no hay colores en línea. */
 ===================== */
 .tg-head .tg-row {
   background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
-  color: var(--blue-color);
+  color: var(--color-blue);
   font-weight: bold;
 }
 
@@ -5112,7 +5112,7 @@ table.zebra tbody tr:hover {
 
 .dataTables_length select:focus,
 .dataTables_filter input:focus {
-  border-color: var(--blue-color-light);
+  border-color: var(--color-blue-light);
 }
 
 /* =========================
@@ -5138,19 +5138,19 @@ table.zebra tbody tr:hover {
   margin-left: 3px;
   border-radius: var(--radius-xs);
   background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
-  color: var(--blue-color-light);
+  color: var(--color-blue-light);
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .dataTables_paginate .paginate_button:hover {
-  background-color: var(--blue-color-light);
+  background-color: var(--color-blue-light);
   color: var(--color-canvas);
 }
 
 .dataTables_paginate .paginate_button.current {
-  background-color: var(--blue-color-light);
+  background-color: var(--color-blue-light);
   color: var(--color-canvas);
 }
 
@@ -5224,10 +5224,10 @@ table.dataTable thead th.sorting_desc:after {
   transition: color var(--transition-base);
 }
 .breadcrumb ol li a:hover {
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 .breadcrumb ol li a:hover .icon {
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 .breadcrumb ol li a .icon {
   color: var(--color-text-muted);
@@ -5297,9 +5297,9 @@ table.dataTable thead th.sorting_desc:after {
 }
 
 .page-btn.is-active {
-  background: var(--blue-color);
-  border-color: var(--blue-color);
-  color: var(--white-color);
+  background: var(--color-blue);
+  border-color: var(--color-blue);
+  color: var(--color-white);
 }
 
 .page-btn:disabled {
@@ -5383,11 +5383,11 @@ agrega el modificador .tabs-vertical sobre el mismo contenedor.
   color: var(--color-text-primary);
 }
 .tab-button.active {
-  color: var(--blue-color);
-  border-color: var(--blue-color);
+  color: var(--color-blue);
+  border-color: var(--color-blue);
 }
 .tab-button:focus-visible {
-  outline: 2px solid var(--blue-color);
+  outline: 2px solid var(--color-blue);
   outline-offset: 2px;
 }
 
@@ -5424,8 +5424,8 @@ agrega el modificador .tabs-vertical sobre el mismo contenedor.
   width: 100%;
 }
 .tabs-container.tabs-vertical .tab-button.active {
-  border-color: var(--blue-color);
-  background-color: color-mix(in srgb, var(--blue-color) 10%, var(--color-surface));
+  border-color: var(--color-blue);
+  background-color: color-mix(in srgb, var(--color-blue) 10%, var(--color-surface));
 }
 .tabs-container.tabs-vertical .tab-content {
   padding-top: 0;
@@ -5874,11 +5874,11 @@ que exista un <select> real detrás. */
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .input:hover, .select:hover, .textarea:hover {
-  border-color: var(--blue-color-light);
+  border-color: var(--color-blue-light);
 }
 .input:focus, .select:focus, .textarea:focus {
-  border-color: var(--blue-color);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue-color) 20%, transparent);
+  border-color: var(--color-blue);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-blue) 20%, transparent);
   outline: 0;
 }
 .input::placeholder, .select::placeholder, .textarea::placeholder {
@@ -5888,10 +5888,10 @@ que exista un <select> real detrás. */
   background-color: var(--color-border);
 }
 .input.is-invalid, .select.is-invalid, .textarea.is-invalid {
-  border-color: var(--red-color);
+  border-color: var(--color-red);
 }
 .input.is-invalid:focus, .select.is-invalid:focus, .textarea.is-invalid:focus {
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--red-color) 20%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-red) 20%, transparent);
 }
 
 .textarea {
@@ -5928,7 +5928,7 @@ input[type=checkbox],
 input[type=radio] {
   width: 18px;
   height: 18px;
-  accent-color: var(--blue-color);
+  accent-color: var(--color-blue);
 }
 
 fieldset {
@@ -5978,7 +5978,7 @@ input[type=range]::-webkit-slider-thumb {
   appearance: none;
   width: 20px;
   height: 20px;
-  background: var(--blue-color-light);
+  background: var(--color-blue-light);
   border-radius: var(--radius-full);
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -5987,7 +5987,7 @@ input[type=range]::-webkit-slider-thumb {
 input[type=range]::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: var(--blue-color-light);
+  background: var(--color-blue-light);
   border-radius: var(--radius-full);
   border: 2px solid #fff;
   cursor: pointer;
@@ -5996,19 +5996,19 @@ input[type=range]::-moz-range-thumb {
 
 /* Efecto de "agrandamiento" al hacer hover sobre el pulgar */
 input[type=range]:hover::-webkit-slider-thumb {
-  background: var(--blue-color-light);
+  background: var(--color-blue-light);
   transform: scale(1.1);
 }
 
 input[type=range]:hover::-moz-range-thumb {
-  background: var(--blue-color-light);
+  background: var(--color-blue-light);
   transform: scale(1.1);
 }
 
 /* Tooltip (output) */
 output {
   position: absolute;
-  background-color: var(--blue-color-light);
+  background-color: var(--color-blue-light);
   width: 50px;
   height: 30px;
   text-align: center;
@@ -6027,7 +6027,7 @@ output:after {
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 10px solid var(--blue-color-light);
+  border-top: 10px solid var(--color-blue-light);
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   top: 100%;
@@ -6121,9 +6121,9 @@ input::-ms-reveal {
 /* # Search button
 ----------------------------------------------- */
 .search-button {
-  background-color: var(--blue-color-light);
-  border: 1px solid var(--blue-color-light);
-  color: var(--white-color);
+  background-color: var(--color-blue-light);
+  border: 1px solid var(--color-blue-light);
+  color: var(--color-white);
   padding: 10px;
   border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
   cursor: pointer;
@@ -6134,11 +6134,11 @@ input::-ms-reveal {
   width: 40px;
 }
 .search-button i {
-  color: var(--white-color);
+  color: var(--color-white);
 }
 .search-button:hover {
-  background-color: var(--blue-color);
-  border: 1px solid var(--blue-color);
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-blue);
 }
 
 @media (min-width: 768px) {
@@ -6212,7 +6212,7 @@ input::-ms-reveal {
   semántico aparte. */
 }
 .switch input:checked + .slider {
-  background-color: var(--blue-color);
+  background-color: var(--color-blue);
 }
 .switch input:checked + .slider:before {
   transform: translateX(18px);
@@ -6262,7 +6262,7 @@ input::-ms-reveal {
 }
 
 .file_upload input[type=file]:hover {
-  border-color: var(--blue-color);
+  border-color: var(--color-blue);
 }
 
 /* =====================
@@ -6303,14 +6303,14 @@ input::-ms-reveal {
 }
 
 .text-input:hover {
-  border-color: var(--blue-color);
+  border-color: var(--color-blue);
 }
 .text-input:focus {
   outline: none;
 }
 
 .date-input:focus {
-  border: 1px solid var(--blue-color);
+  border: 1px solid var(--color-blue);
   outline: none;
 }
 
@@ -6399,7 +6399,7 @@ input::-ms-reveal {
   background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
 }
 .navbar-link.active {
-  color: var(--blue-color);
+  color: var(--color-blue);
   font-weight: bold;
 }
 
@@ -6520,7 +6520,7 @@ input::-ms-reveal {
   /* # Dropdown toggle
   ----------------------------------------------- */
   .dropdown:hover .dropdown-toggle {
-    color: var(--blue-color);
+    color: var(--color-blue);
     background-color: inherit;
   }
   /* # Dropdown menu
@@ -6568,14 +6568,14 @@ ul.social-links {
   border: 1px solid var(--color-border-subtle);
 }
 .social-links a i {
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 .social-links a:hover {
   color: red;
   background-color: red;
 }
 .social-links a:hover i {
-  color: var(--white-color);
+  color: var(--color-white);
 }
 
 .social-links a.faicon-facebook:hover {
@@ -6631,10 +6631,10 @@ ul.secondary_menu li a small {
   font-size: 70%;
 }
 ul.secondary_menu li:hover {
-  border-color: var(--blue-color);
+  border-color: var(--color-blue);
 }
 ul.secondary_menu li:hover a {
-  color: var(--blue-color);
+  color: var(--color-blue);
   font-weight: 500;
 }
 ul.secondary_menu li.complete {
@@ -6645,10 +6645,10 @@ ul.secondary_menu li.complete a {
   font-weight: 500;
 }
 ul.secondary_menu li.active {
-  border-color: var(--blue-color);
+  border-color: var(--color-blue);
 }
 ul.secondary_menu li.active a {
-  color: var(--blue-color);
+  color: var(--color-blue);
   font-weight: 500;
 }
 
@@ -6674,8 +6674,8 @@ ul.secondary_menu li.active a {
   z-index: 1000;
   transition: background-color 0.3s ease;
   opacity: 0.2;
-  color: var(--white-color);
-  background-color: var(--blue-color);
+  color: var(--color-white);
+  background-color: var(--color-blue);
   border-radius: var(--radius-sm);
 }
 #back-to-top i {
@@ -6719,29 +6719,29 @@ ul.secondary_menu li.active a {
 }
 .banner #pagetitle h1 {
   margin-bottom: 1rem;
-  color: var(--white-color);
+  color: var(--color-white);
   text-transform: uppercase;
 }
 .banner {
   /*Breadcrumb*/
 }
 .banner .breadcrumb ol li {
-  color: var(--white-color);
+  color: var(--color-white);
 }
 .banner .breadcrumb ol li::after {
-  color: var(--white-color);
+  color: var(--color-white);
 }
 .banner .breadcrumb ol li a {
-  color: var(--blue-color-light);
+  color: var(--color-blue-light);
 }
 .banner .breadcrumb ol li a:hover {
-  color: var(--white-color);
+  color: var(--color-white);
 }
 .banner .breadcrumb ol li a:hover .icon {
-  color: var(--white-color);
+  color: var(--color-white);
 }
 .banner .breadcrumb ol li a .icon {
-  color: var(--blue-color-light);
+  color: var(--color-blue-light);
 }
 
 /* # Hero
@@ -6762,10 +6762,10 @@ header.hero .hero_content {
 }
 header.hero .hero_content h1 {
   font-size: 2.3rem;
-  color: var(--white-color);
+  color: var(--color-white);
 }
 header.hero .hero_content p {
-  color: var(--white-color);
+  color: var(--color-white);
   margin-bottom: 0;
 }
 header.hero .hero_content img {
@@ -6858,7 +6858,7 @@ es un enlace secundario/de cierre, no una acción. */
   margin-top: 1rem;
 }
 .login-footer a {
-  color: var(--blue-color);
+  color: var(--color-blue);
   font-weight: var(--fw-bold);
 }
 
@@ -7065,7 +7065,7 @@ es un enlace secundario/de cierre, no una acción. */
 Colour theme
 ========================== */
 .wrapper {
-  background: var(--blue-color);
+  background: var(--color-blue);
 }
 
 /* ===========
@@ -7096,7 +7096,7 @@ Colour theme
 /*
 .dashboard-footer {
    background: var(--color-surface);
-   color: var(--blue-color);
+   color: var(--color-blue);
    padding: 15px;
    border-top: 1px solid #eee;    
  }
@@ -7269,7 +7269,7 @@ Colour theme
 /* # Sidebar-toggle
 ----------------------------------------------- */
 .main-header .sidebar-navbar .sidebar-toggle {
-  color: var(--blue-color-light);
+  color: var(--color-blue-light);
 }
 
 .main-header .sidebar-navbar .sidebar-toggle:hover {
@@ -7446,8 +7446,8 @@ Colour theme
   text-decoration: none;
 }
 
-/* Ícono discreto por defecto; solo se vuelve --blue-color con el
-enlace activo o en hover (regla de abajo) - antes era --blue-color
+/* Ícono discreto por defecto; solo se vuelve --color-blue con el
+enlace activo o en hover (regla de abajo) - antes era --color-blue
 siempre, lo que hacía ver todo el sidebar más cargado. */
 .sidebar-menu > li > a > i {
   color: var(--color-text-muted);
@@ -7456,12 +7456,12 @@ siempre, lo que hacía ver todo el sidebar más cargado. */
 .sidebar-menu > li > a:hover,
 .sidebar-menu > li.active > a {
   background: var(--color-canvas);
-  color: var(--blue-color);
-  border-left-color: var(--blue-color);
+  color: var(--color-blue);
+  border-left-color: var(--color-blue);
 }
 .sidebar-menu > li > a:hover i,
 .sidebar-menu > li.active > a i {
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 
 .sidebar-menu > li > .treeview-menu {
@@ -7474,7 +7474,7 @@ siempre, lo que hacía ver todo el sidebar más cargado. */
 
 .treeview-menu > li.active > a,
 .treeview-menu > li > a:hover {
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 
 /* Solo el activo sube de peso (no el hover, que en wuicho-frame solo
@@ -7575,7 +7575,7 @@ llegar a pesar más que él. */
   text-align: center;
   font-size: var(--fs-xs);
   font-weight: var(--fw-bold);
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 
 @media (max-width: 767px) {
@@ -7601,11 +7601,11 @@ llegar a pesar más que él. */
 }
 
 .quicklinks-menu > li > a > i {
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 
 .quicklinks-menu .dropdown-menu li a > i {
-  color: var(--blue-color);
+  color: var(--color-blue);
 }
 
 .quicklinks-menu > li > a:hover,
@@ -7690,14 +7690,14 @@ llegar a pesar más que él. */
 /* # Colours
 ----------------------------------------------- */
 .user-panel .info p {
-  color: var(--white-color);
+  color: var(--color-white);
   font-weight: bold;
   margin: 0px;
 }
 
 .user-panel > .info,
 .user-panel > .info > a {
-  color: var(--white-color);
+  color: var(--color-white);
 }
 
 /*# sourceMappingURL=main.css.map */

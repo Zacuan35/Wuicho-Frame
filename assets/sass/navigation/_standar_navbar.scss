@@ -74,7 +74,7 @@
   .navbar-link:hover {background-color: $fill-subtle;}
 
   &.active {
-    color: var(--blue-color); 
+    color: var(--color-blue); 
     font-weight: bold;
   }
 }
@@ -182,7 +182,7 @@
   /* # Dropdown toggle
   ----------------------------------------------- */
   .dropdown:hover .dropdown-toggle {
-    color:var(--blue-color); 
+    color:var(--color-blue); 
     background-color: inherit; 
   }
   

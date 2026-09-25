@@ -32,28 +32,28 @@
 
 	#pagetitle h1{
 		margin-bottom:1rem; 
-		color: var(--white-color);
+		color: var(--color-white);
 		text-transform: uppercase;
 	}	
 
   /*Breadcrumb*/
   .breadcrumb ol {
     li {
-      color:var(--white-color);
+      color:var(--color-white);
 
       &::after {
-        color:var(--white-color); 
+        color:var(--color-white); 
       }		
 
       a {
-        color: var(--blue-color-light);
+        color: var(--color-blue-light);
 
         &:hover {
-          color:var(--white-color);
-          .icon{color: var(--white-color);}		
+          color:var(--color-white);
+          .icon{color: var(--color-white);}		
         }	
 
-        .icon{color: var(--blue-color-light);}		
+        .icon{color: var(--color-blue-light);}		
 
       }
 
@@ -79,10 +79,10 @@ header.hero{
     flex-direction: column-reverse;
     h1{
       font-size: 2.3rem;
-      color:var(--white-color);
+      color:var(--color-white);
     }
     p{
-      color:var(--white-color);
+      color:var(--color-white);
       margin-bottom: 0;
     }    
 
