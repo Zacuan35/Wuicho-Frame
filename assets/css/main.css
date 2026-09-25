@@ -68,6 +68,18 @@ Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
   --green-color: #22C55E;
   --orange-color: #F59E0B;
   --red-color: #F43F5E;
+  /* --- Tonos derivados de la marca (se calculan de los colores fijos:
+  al cambiar un --*-color se actualizan solos) ---
+  -light: versión aclarada, fondo de cards de estado, sliders, tooltips.
+  -hover: estado hover de botones sólidos (oscurece en claro, aclara en oscuro). */
+  --blue-color-light: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  --green-color-light: color-mix(in srgb, var(--green-color) 90%, var(--white-color));
+  --orange-color-light: color-mix(in srgb, var(--orange-color) 90%, var(--white-color));
+  --red-color-light: color-mix(in srgb, var(--red-color) 90%, var(--white-color));
+  --blue-color-hover: color-mix(in srgb, var(--blue-color) 88%, var(--dark-color));
+  --green-color-hover: color-mix(in srgb, var(--green-color) 88%, var(--dark-color));
+  --orange-color-hover: color-mix(in srgb, var(--orange-color) 88%, var(--dark-color));
+  --red-color-hover: color-mix(in srgb, var(--red-color) 88%, var(--dark-color));
   /* --- Modo claro (default) --- */
   --color-canvas: #F4F5FA;
   --color-surface: #FFFFFF;
@@ -104,6 +116,11 @@ body.dark-mode {
   --color-warning-text: #FBBF24;
   --color-info-bg: rgba(91, 95, 239, 0.16);
   --color-info-text: #A5A8F7;
+  /* Sobre fondos oscuros el hover aclara en lugar de oscurecer */
+  --blue-color-hover: color-mix(in srgb, var(--blue-color) 85%, var(--white-color));
+  --green-color-hover: color-mix(in srgb, var(--green-color) 85%, var(--white-color));
+  --orange-color-hover: color-mix(in srgb, var(--orange-color) 85%, var(--white-color));
+  --red-color-hover: color-mix(in srgb, var(--red-color) 85%, var(--white-color));
   color-scheme: dark;
 }
 
@@ -152,7 +169,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 a {
-  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  color: var(--blue-color-light);
 }
 a:hover, a:active, a:focus {
   color: var(--blue-color);
@@ -3524,8 +3541,8 @@ Tabletas horizontales */
   color: var(--white-color);
 }
 .btn-primary:hover {
-  background-color: color-mix(in srgb, var(--blue-color) 88%, black);
-  border-color: color-mix(in srgb, var(--blue-color) 88%, black);
+  background-color: var(--blue-color-hover);
+  border-color: var(--blue-color-hover);
 }
 
 /* # Btn-secondary
@@ -3568,8 +3585,8 @@ Tabletas horizontales */
   color: var(--white-color);
 }
 .btn-success:hover {
-  background-color: color-mix(in srgb, var(--green-color) 88%, black);
-  border-color: color-mix(in srgb, var(--green-color) 88%, black);
+  background-color: var(--green-color-hover);
+  border-color: var(--green-color-hover);
 }
 
 /* # Btn-warning
@@ -3580,8 +3597,8 @@ Tabletas horizontales */
   color: var(--white-color);
 }
 .btn-warning:hover {
-  background-color: color-mix(in srgb, var(--orange-color) 88%, black);
-  border-color: color-mix(in srgb, var(--orange-color) 88%, black);
+  background-color: var(--orange-color-hover);
+  border-color: var(--orange-color-hover);
 }
 
 /* # Btn-danger
@@ -3592,8 +3609,8 @@ Tabletas horizontales */
   color: var(--white-color);
 }
 .btn-danger:hover {
-  background-color: color-mix(in srgb, var(--red-color) 88%, black);
-  border-color: color-mix(in srgb, var(--red-color) 88%, black);
+  background-color: var(--red-color-hover);
+  border-color: var(--red-color-hover);
 }
 
 /* =====================
@@ -3639,12 +3656,12 @@ Tabletas horizontales */
 ----------------------------------------------- */
 .button-left {
   background-color: var(--color-canvas);
-  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
-  border: 1px solid color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  color: var(--blue-color-light);
+  border: 1px solid var(--blue-color-light);
   border-radius: var(--radius-xs) 0 0 var(--radius-xs);
 }
 .button-left:hover {
-  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background-color: var(--blue-color-light);
   color: var(--white-color);
 }
 .button-left:hover i {
@@ -3654,9 +3671,9 @@ Tabletas horizontales */
 /* # Botón derecho
 ----------------------------------------------- */
 .button-right {
-  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background-color: var(--blue-color-light);
   color: var(--white-color);
-  border: 1px solid color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  border: 1px solid var(--blue-color-light);
   border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
 }
 .button-right i {
@@ -3738,7 +3755,7 @@ sobre un .card-header/.card-body/.card-footer suelto, o sobre un
 .card completo. Cuando envuelven un header/footer reales, además
 ajustan el borde de esos hijos para que combinen con el marco. */
 .card-highlight {
-  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background-color: var(--blue-color-light);
 }
 .card-highlight h1, .card-highlight h2, .card-highlight h3, .card-highlight h4, .card-highlight h5, .card-highlight h6 {
   color: var(--color-surface);
@@ -3757,7 +3774,7 @@ ajustan el borde de esos hijos para que combinen con el marco. */
 }
 
 .card-success {
-  background-color: color-mix(in srgb, var(--green-color) 85%, white);
+  background-color: var(--green-color-light);
 }
 .card-success h1, .card-success h2, .card-success h3, .card-success h4, .card-success h5, .card-success h6 {
   color: var(--color-surface);
@@ -3776,7 +3793,7 @@ ajustan el borde de esos hijos para que combinen con el marco. */
 }
 
 .card-danger {
-  background-color: color-mix(in srgb, var(--red-color) 75%, white);
+  background-color: var(--red-color-light);
 }
 .card-danger h1, .card-danger h2, .card-danger h3, .card-danger h4, .card-danger h5, .card-danger h6 {
   color: var(--color-surface);
@@ -3795,7 +3812,7 @@ ajustan el borde de esos hijos para que combinen con el marco. */
 }
 
 .card-warning {
-  background-color: color-mix(in srgb, var(--orange-color) 80%, white);
+  background-color: var(--orange-color-light);
 }
 .card-warning h1, .card-warning h2, .card-warning h3, .card-warning h4, .card-warning h5, .card-warning h6 {
   color: var(--color-surface);
@@ -3814,7 +3831,7 @@ ajustan el borde de esos hijos para que combinen con el marco. */
 }
 
 .card-info {
-  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background-color: var(--blue-color-light);
 }
 .card-info h1, .card-info h2, .card-info h3, .card-info h4, .card-info h5, .card-info h6 {
   color: var(--color-surface);
@@ -3839,16 +3856,16 @@ a.card.card-highlight:hover {
   background-color: var(--blue-color);
 }
 a.card.card-success:hover {
-  background-color: color-mix(in srgb, var(--green-color) 85%, white);
+  background-color: var(--green-color);
 }
 a.card.card-danger:hover {
-  background-color: color-mix(in srgb, var(--red-color) 75%, white);
+  background-color: var(--red-color);
 }
 a.card.card-warning:hover {
-  background-color: color-mix(in srgb, var(--orange-color) 80%, white);
+  background-color: var(--orange-color);
 }
 a.card.card-info:hover {
-  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background-color: var(--blue-color);
 }
 
 /* =====================
@@ -4526,7 +4543,7 @@ Tabletas verticales o celulares horizontales*/
 
 .swal2-styled.swal2-confirm {
   border-radius: var(--radius-xs);
-  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color)) !important;
+  background-color: var(--blue-color-light) !important;
   color: #fff;
   font-weight: 500;
   font-size: 1em;
@@ -5095,7 +5112,7 @@ table.zebra tbody tr:hover {
 
 .dataTables_length select:focus,
 .dataTables_filter input:focus {
-  border-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  border-color: var(--blue-color-light);
 }
 
 /* =========================
@@ -5121,19 +5138,19 @@ table.zebra tbody tr:hover {
   margin-left: 3px;
   border-radius: var(--radius-xs);
   background-color: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
-  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  color: var(--blue-color-light);
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .dataTables_paginate .paginate_button:hover {
-  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background-color: var(--blue-color-light);
   color: var(--color-canvas);
 }
 
 .dataTables_paginate .paginate_button.current {
-  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background-color: var(--blue-color-light);
   color: var(--color-canvas);
 }
 
@@ -5857,7 +5874,7 @@ que exista un <select> real detrás. */
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .input:hover, .select:hover, .textarea:hover {
-  border-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  border-color: var(--blue-color-light);
 }
 .input:focus, .select:focus, .textarea:focus {
   border-color: var(--blue-color);
@@ -5961,7 +5978,7 @@ input[type=range]::-webkit-slider-thumb {
   appearance: none;
   width: 20px;
   height: 20px;
-  background: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background: var(--blue-color-light);
   border-radius: var(--radius-full);
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -5970,7 +5987,7 @@ input[type=range]::-webkit-slider-thumb {
 input[type=range]::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background: var(--blue-color-light);
   border-radius: var(--radius-full);
   border: 2px solid #fff;
   cursor: pointer;
@@ -5979,19 +5996,19 @@ input[type=range]::-moz-range-thumb {
 
 /* Efecto de "agrandamiento" al hacer hover sobre el pulgar */
 input[type=range]:hover::-webkit-slider-thumb {
-  background: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background: var(--blue-color-light);
   transform: scale(1.1);
 }
 
 input[type=range]:hover::-moz-range-thumb {
-  background: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background: var(--blue-color-light);
   transform: scale(1.1);
 }
 
 /* Tooltip (output) */
 output {
   position: absolute;
-  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background-color: var(--blue-color-light);
   width: 50px;
   height: 30px;
   text-align: center;
@@ -6010,7 +6027,7 @@ output:after {
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 10px solid color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  border-top: 10px solid var(--blue-color-light);
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   top: 100%;
@@ -6104,8 +6121,8 @@ input::-ms-reveal {
 /* # Search button
 ----------------------------------------------- */
 .search-button {
-  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
-  border: 1px solid color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background-color: var(--blue-color-light);
+  border: 1px solid var(--blue-color-light);
   color: var(--white-color);
   padding: 10px;
   border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
@@ -6715,7 +6732,7 @@ ul.secondary_menu li.active a {
   color: var(--white-color);
 }
 .banner .breadcrumb ol li a {
-  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  color: var(--blue-color-light);
 }
 .banner .breadcrumb ol li a:hover {
   color: var(--white-color);
@@ -6724,7 +6741,7 @@ ul.secondary_menu li.active a {
   color: var(--white-color);
 }
 .banner .breadcrumb ol li a .icon {
-  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  color: var(--blue-color-light);
 }
 
 /* # Hero
@@ -7252,7 +7269,7 @@ Colour theme
 /* # Sidebar-toggle
 ----------------------------------------------- */
 .main-header .sidebar-navbar .sidebar-toggle {
-  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  color: var(--blue-color-light);
 }
 
 .main-header .sidebar-navbar .sidebar-toggle:hover {

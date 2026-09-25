@@ -21,8 +21,8 @@
 /* # Search button
 ----------------------------------------------- */
 .search-button {
-  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
-  border: 1px solid color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background-color: var(--blue-color-light);
+  border: 1px solid var(--blue-color-light);
   color: var(--white-color);
   padding: 10px;
   border-radius: 0 var(--radius-xs) var(--radius-xs) 0;

@@ -80,6 +80,20 @@ $chart-lime: #84CC16;
   --orange-color: #F59E0B;
   --red-color: #F43F5E;
 
+  /* --- Tonos derivados de la marca (se calculan de los colores fijos:
+  al cambiar un --*-color se actualizan solos) ---
+  -light: versión aclarada, fondo de cards de estado, sliders, tooltips.
+  -hover: estado hover de botones sólidos (oscurece en claro, aclara en oscuro). */
+  --blue-color-light: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  --green-color-light: color-mix(in srgb, var(--green-color) 90%, var(--white-color));
+  --orange-color-light: color-mix(in srgb, var(--orange-color) 90%, var(--white-color));
+  --red-color-light: color-mix(in srgb, var(--red-color) 90%, var(--white-color));
+
+  --blue-color-hover: color-mix(in srgb, var(--blue-color) 88%, var(--dark-color));
+  --green-color-hover: color-mix(in srgb, var(--green-color) 88%, var(--dark-color));
+  --orange-color-hover: color-mix(in srgb, var(--orange-color) 88%, var(--dark-color));
+  --red-color-hover: color-mix(in srgb, var(--red-color) 88%, var(--dark-color));
+
   /* --- Modo claro (default) --- */
   --color-canvas: #F4F5FA;
   --color-surface: #FFFFFF;
@@ -121,6 +135,12 @@ body.dark-mode {
   --color-warning-text: #FBBF24;
   --color-info-bg: rgba(91, 95, 239, 0.16);
   --color-info-text: #A5A8F7;
+
+  /* Sobre fondos oscuros el hover aclara en lugar de oscurecer */
+  --blue-color-hover: color-mix(in srgb, var(--blue-color) 85%, var(--white-color));
+  --green-color-hover: color-mix(in srgb, var(--green-color) 85%, var(--white-color));
+  --orange-color-hover: color-mix(in srgb, var(--orange-color) 85%, var(--white-color));
+  --red-color-hover: color-mix(in srgb, var(--red-color) 85%, var(--white-color));
 
   color-scheme: dark;
 }
@@ -173,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  color: var(--blue-color-light);
 
   //Estados de botón
   &:hover, &:active, &:focus {

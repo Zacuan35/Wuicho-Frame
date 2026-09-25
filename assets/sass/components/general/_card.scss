@@ -39,7 +39,7 @@ sobre un .card-header/.card-body/.card-footer suelto, o sobre un
 .card completo. Cuando envuelven un header/footer reales, además
 ajustan el borde de esos hijos para que combinen con el marco. */
 .card-highlight {
-  background-color:color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background-color:var(--blue-color-light);
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
@@ -47,7 +47,7 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   .card-header, .card-footer { border-color: var(--blue-color); }
 }
 .card-success {
-  background-color:color-mix(in srgb, var(--green-color) 85%, white);
+  background-color:var(--green-color-light);
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
@@ -55,7 +55,7 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   .card-header, .card-footer { border-color: var(--green-color); }
 }
 .card-danger {
-  background-color:color-mix(in srgb, var(--red-color) 75%, white);
+  background-color:var(--red-color-light);
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
@@ -63,7 +63,7 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   .card-header, .card-footer { border-color: var(--red-color); }
 }
 .card-warning {
-  background-color:color-mix(in srgb, var(--orange-color) 80%, white);
+  background-color:var(--orange-color-light);
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
@@ -71,7 +71,7 @@ ajustan el borde de esos hijos para que combinen con el marco. */
   .card-header, .card-footer { border-color: var(--orange-color); }
 }
 .card-info {
-  background-color:color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background-color:var(--blue-color-light);
   h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
   p{color:var(--color-surface);}
   i {color: var(--color-surface);}
@@ -87,15 +87,15 @@ a.card {
     &:hover{background-color: var(--blue-color);}
   }
   &.card-success {
-    &:hover{background-color: color-mix(in srgb, var(--green-color) 85%, white);}
+    &:hover{background-color: var(--green-color);}
   }
   &.card-danger {
-    &:hover{background-color: color-mix(in srgb, var(--red-color) 75%, white);}
+    &:hover{background-color: var(--red-color);}
   }
   &.card-warning {
-    &:hover{background-color: color-mix(in srgb, var(--orange-color) 80%, white);}
+    &:hover{background-color: var(--orange-color);}
   }
   &.card-info {
-    &:hover{background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));}
+    &:hover{background-color: var(--blue-color);}
   }
 }

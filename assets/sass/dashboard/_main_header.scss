@@ -130,7 +130,7 @@
 /* # Sidebar-toggle
 ----------------------------------------------- */
 .main-header .sidebar-navbar .sidebar-toggle {
-  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  color: var(--blue-color-light);
 }
 .main-header .sidebar-navbar .sidebar-toggle:hover {
   background-color: var(--color-canvas);

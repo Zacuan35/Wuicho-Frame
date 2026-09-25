@@ -46,14 +46,14 @@
       }		
 
       a {
-        color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+        color: var(--blue-color-light);
 
         &:hover {
           color:var(--white-color);
           .icon{color: var(--white-color);}		
         }	
 
-        .icon{color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));}		
+        .icon{color: var(--blue-color-light);}		
 
       }
 

@@ -59,8 +59,8 @@
   color: var(--white-color);
 
   &:hover {
-    background-color: color-mix(in srgb, var(--blue-color) 88%, black);
-    border-color: color-mix(in srgb, var(--blue-color) 88%, black);
+    background-color: var(--blue-color-hover);
+    border-color: var(--blue-color-hover);
   }
 }
 
@@ -101,8 +101,8 @@
   color: var(--white-color);
 
   &:hover {
-    background-color: color-mix(in srgb, var(--green-color) 88%, black);
-    border-color: color-mix(in srgb, var(--green-color) 88%, black);
+    background-color: var(--green-color-hover);
+    border-color: var(--green-color-hover);
   }
 }
 
@@ -114,8 +114,8 @@
   color: var(--white-color);
 
   &:hover {
-    background-color: color-mix(in srgb, var(--orange-color) 88%, black);
-    border-color: color-mix(in srgb, var(--orange-color) 88%, black);
+    background-color: var(--orange-color-hover);
+    border-color: var(--orange-color-hover);
   }
 }
 
@@ -127,8 +127,8 @@
   color: var(--white-color);
 
   &:hover {
-    background-color: color-mix(in srgb, var(--red-color) 88%, black);
-    border-color: color-mix(in srgb, var(--red-color) 88%, black);
+    background-color: var(--red-color-hover);
+    border-color: var(--red-color-hover);
   }
 }
 
@@ -176,12 +176,12 @@
 ----------------------------------------------- */
 .button-left {
   background-color: var(--color-canvas);
-  color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
-  border: 1px solid color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  color: var(--blue-color-light);
+  border: 1px solid var(--blue-color-light);
   border-radius: var(--radius-xs) 0 0 var(--radius-xs);
 
   &:hover {
-    background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+    background-color: var(--blue-color-light);
     color: var(--white-color);
     i { color: var(--white-color); }
   }
@@ -190,9 +190,9 @@
 /* # Botón derecho
 ----------------------------------------------- */
 .button-right {
-  background-color: color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  background-color: var(--blue-color-light);
   color: var(--white-color);
-  border: 1px solid color-mix(in srgb, var(--blue-color) 90%, var(--white-color));
+  border: 1px solid var(--blue-color-light);
   border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
   i { color: var(--white-color); }
 
