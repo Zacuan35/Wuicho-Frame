@@ -94,8 +94,11 @@ $chart-lime: #84CC16;
   --color-red-hover: color-mix(in srgb, var(--color-red) 88%, var(--color-dark));
 
   /* --- Modo claro (default) --- */
+  color-scheme: light;
+
   --color-canvas: #F4F5FA;
   --color-surface: #FFFFFF;
+
   --color-border: #D3D6E8;
   --color-border-subtle: rgba(211, 214, 232, 0.55);
 
@@ -113,12 +116,13 @@ $chart-lime: #84CC16;
   --color-warning-strong: #9A6208;
   --color-info-subtle: #ECEFFF;
   --color-info-strong: #4548C9;
-
-  color-scheme: light;
+  
 }
 
 /* Dark theme */
 body.dark-mode {
+  color-scheme: dark;
+
   /* Sobre fondos oscuros el hover aclara en lugar de oscurecer */
   --color-blue-hover: color-mix(in srgb, var(--color-blue) 85%, var(--color-white));
   --color-green-hover: color-mix(in srgb, var(--color-green) 85%, var(--color-white));
@@ -128,11 +132,12 @@ body.dark-mode {
   --color-canvas: #0C0E1D;
   --color-surface: #12142A;
 
+  --color-border: #2E3260;
+  --color-border-subtle: rgba(46, 50, 96, 0.55);
+
   --color-text-primary: #EEF0FB;
   --color-text-secondary: #B3B7D0; 
   --color-text-muted: #878BB0; 
-  --color-border: #2E3260;
-  --color-border-subtle: rgba(46, 50, 96, 0.55);
 
   --color-success-subtle: rgba(34, 197, 94, 0.12);
   --color-success-strong: #4ADE80;
@@ -142,8 +147,6 @@ body.dark-mode {
   --color-warning-strong: #FBBF24;
   --color-info-subtle: rgba(91, 95, 239, 0.16);
   --color-info-strong: #A5A8F7;
-
-  color-scheme: dark;
 }
 
 /* Tonos derivados (no son colores nuevos: se calculan variando la
